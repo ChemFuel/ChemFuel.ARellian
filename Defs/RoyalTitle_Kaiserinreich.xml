@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<RoyalTitleDef Abstract="True" Name="CFAR_TitleBase">
+		<tags>
+			<li>CFAR_Title</li>
+		</tags>
+		<commonality>1</commonality>
+		<awardThought>GainedTitle</awardThought>
+		<lostThought>LostTitle</lostThought>
+		<changeHeirQuestPoints>50</changeHeirQuestPoints>
+		<awardWorkerClass>RoyalTitleAwardWorker_Instant</awardWorkerClass>
+	</RoyalTitleDef>
+
+<!--================ Playable Titles ================-->
+
+<!--======== Enlisted ========-->
+
+	<RoyalTitleDef ParentName="CFAR_TitleBase" MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>CFAR_Soldat</defName>
+		<label>Soldat</label>
+		<description>The entry-level Mannschaften of the Reichswehr. Soldat form the Kaiserinreich’s primary infantry units and serve in planetary garrisons, ship security details, and ground assault forces. Their duty is to execute orders efficiently and maintain discipline under all conditions.\n\nEquivalent to Private.</description>
+		<allowDignifiedMeditationFocus>False</allowDignifiedMeditationFocus>
+		<seniority>0</seniority>
+		<favorCost>1</favorCost>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="CFAR_TitleBase" MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>CFAR_Gefreiter</defName>
+		<label>Gefreiter</label>
+		<description>Experienced Mannschaften responsible for supervising small fireteams and assisting Unteroffizier in maintaining squad efficiency. Gefreiter handle field communication, equipment checks, and immediate tactical compliance.\n\nEquivalent to Lance Corporal.</description>
+		<allowDignifiedMeditationFocus>False</allowDignifiedMeditationFocus>
+		<seniority>50</seniority>
+		<favorCost>3</favorCost>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="CFAR_TitleBase" MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>CFAR_Obergefreiter</defName>
+		<label>Obergefreiter</label>
+		<description>Senior Mannschaften who lead fireteams or specialized support groups. Obergefreiter maintain combat readiness, coordinate logistics, and ensure squad objectives are achieved without deviation.\n\nEquivalent to Corporal.</description>
+		<allowDignifiedMeditationFocus>False</allowDignifiedMeditationFocus>
+		<seniority>75</seniority>
+		<favorCost>5</favorCost>
+	</RoyalTitleDef>
+
+<!--======== Non-Commissioned Officers ========-->
+
+	<RoyalTitleDef ParentName="CFAR_TitleBase" MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>CFAR_Unteroffizier</defName>
+		<label>Unteroffizier</label>
+		<description>Junior Unteroffizier serving as squad leaders and field trainers. Unteroffizier enforce discipline, manage reports, and carry out direct supervision of Mannschaften during engagements and drills.\n\nEquivalent to Junior Sergeant.</description>
+		<seniority>100</seniority>
+		<favorCost>8</favorCost>
+		<permitPointsAwarded>1</permitPointsAwarded>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="CFAR_TitleBase" MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>CFAR_Feldwebel</defName>
+		<label>Feldwebel</label>
+		<description>Experienced Unteroffizier commanding multiple squads or specialized sections. Feldwebel oversee field operations, maintain personnel discipline, and act as the direct link between Mannschaften and Offizier.\n\nEquivalent to Sergeant.</description>
+		<seniority>125</seniority>
+		<favorCost>12</favorCost>
+		<permitPointsAwarded>1</permitPointsAwarded>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="CFAR_TitleBase" MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>CFAR_Oberfeldwebel</defName>
+		<label>Oberfeldwebel</label>
+		<description>A senior Unteroffizier responsible for company-level coordination and leadership. Oberfeldwebel supervise squad leaders, manage supply distribution, and serve as deputy commanders during operations.\n\nEquivalent to Senior Sergeant.</description>
+		<seniority>150</seniority>
+		<favorCost>18</favorCost>
+		<permitPointsAwarded>1</permitPointsAwarded>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="CFAR_TitleBase" MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>CFAR_Stabsfeldwebel</defName>
+		<label>Stabsfeldwebel</label>
+		<description>Master Unteroffizier with administrative and operational authority over companies or small battalions. Stabsfeldwebel handle training programs, logistics, and performance assessment in accordance with Imperial standards.\n\nEquivalent to Master Sergeant.</description>
+		<seniority>175</seniority>
+		<favorCost>27</favorCost>
+		<permitPointsAwarded>1</permitPointsAwarded>
+	</RoyalTitleDef>
+
+<!--======== Commissioned Officers ========-->
+
+	<RoyalTitleDef Name="CFAR_COBase" ParentName="CFAR_TitleBase" Abstract="True" MayRequire="Ludeon.RimWorld.Royalty">
+		<bedroomRequirements>
+			<li Class="RoomRequirement_ForbiddenBuildings">
+				<labelKey>RoomRequirementNoProductionFacilities</labelKey>
+				<buildingTags><li>Production</li></buildingTags>
+			</li>
+			<li Class="RoomRequirement_ForbidAltars" MayRequire="Ludeon.RimWorld.Ideology">
+				<labelKey>RoomRequirementNoAltars</labelKey>
+			</li>
+			<li Class="RoomRequirement_ForbiddenBuildings">
+				<labelKey>RoomRequirementNoBiotechBuildings</labelKey>
+				<buildingTags><li>Biotech</li></buildingTags>
+			</li>
+			<li Class="RoomRequirement_ForbiddenBuildings" MayRequire="Ludeon.RimWorld.Anomaly">
+				<labelKey>RoomRequirementNoAnomalyBuildings</labelKey>
+				<buildingTags><li>Anomaly</li></buildingTags>
+			</li>
+		</bedroomRequirements>
+		<grantedAbilities>
+			<!--<li>CFAR_FiringOrder</li>-->
+		</grantedAbilities>
+		<permitPointsAwarded>1</permitPointsAwarded>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="CFAR_COBase" MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>CFAR_Leutnant</defName>
+		<label>Leutnant</label>
+		<description>Entry-level Offizier commanding platoons or small detachments. Leutnante plan minor operations, issue tactical orders, and report directly to company-level command structures.\n\nEquivalent to Second Lieutenant.</description>
+		<seniority>200</seniority>
+		<favorCost>40</favorCost>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="CFAR_COBase" MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>CFAR_Oberleutnant</defName>
+		<label>Oberleutnant</label>
+		<description>Company executive Offizier or assistant division commander aboard smaller vessels. Oberleutnante coordinate between platoons, manage logistics, and ensure consistent combat readiness within their command.\n\nEquivalent to First Lieutenant.</description>
+		<seniority>220</seniority>
+		<favorCost>60</favorCost>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="CFAR_COBase" MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>CFAR_Hauptmann</defName>
+		<label>Hauptmann</label>
+		<description>Company or ship-division commander responsible for independent operations. Hauptleute oversee manpower allocation, mission execution, and enforcement of Imperial code within their area of responsibility.\n\nEquivalent to Captain.</description>
+		<seniority>240</seniority>
+		<favorCost>90</favorCost>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="CFAR_COBase" MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>CFAR_Major</defName>
+		<label>Major</label>
+		<description>Mid-level Offizier commanding battalions or flotillas. Majore coordinate large-unit maneuvers, manage cross-unit communication, and develop operational plans in compliance with Reichswehr doctrine.\n\nEquivalent to Major.</description>
+		<seniority>260</seniority>
+		<favorCost>135</favorCost>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="CFAR_COBase" MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>CFAR_Oberst</defName>
+		<label>Oberst</label>
+		<description>Senior Offizier commanding regiments, planetary defense groups, or cruiser fleets. Oberste manage multi-battalion deployments, enforce military law, and oversee campaign logistics and personnel discipline.\n\nEquivalent to Colonel.</description>
+		<seniority>280</seniority>
+		<favorCost>200</favorCost>
+	</RoyalTitleDef>
+
+<!--======== Flag Officers ========-->
+
+	<RoyalTitleDef Name="CFAR_FOBase" ParentName="CFAR_COBase" Abstract="True" MayRequire="Ludeon.RimWorld.Royalty">
+		<bedroomRequirements>
+		</bedroomRequirements>
+		<grantedAbilities>
+		</grantedAbilities>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="CFAR_FOBase" MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>CFAR_Admiralmajor</defName>
+		<label>Admiralmajor</label>
+		<description>An entry-level Admiralatoffizier responsible for divisional or multi-regiment command. Admiralmajore direct planetary invasions, coordinate fleet-ground operations, and maintain the tempo of conquest across assigned systems.\n\nEquivalent to Rear Admiral.</description>
+		<seniority>300</seniority>
+		<favorCost>350</favorCost>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="CFAR_FOBase" MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>CFAR_Admiralleutnant</defName>
+		<label>Admiralleutnant</label>
+		<description>Experienced Admiralatoffizier controlling entire sectors or regional fleets. Admiralleutnante oversee combined-arms warfare, manage long-range logistics, and ensure efficient execution of Imperial strategy across their region.\n\nEquivalent to Vice Admiral.</description>
+		<seniority>330</seniority>
+		<favorCost>700</favorCost>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="CFAR_FOBase" MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>CFAR_Admiraloberst</defName>
+		<label>Admiraloberst</label>
+		<description>Senior Admiralatoffizier commanding major fleets, planetary assault groups, or system-wide campaigns. Admiraloberste define local military policy, assign Großadmiral directives, and maintain strategic dominance.\n\nEquivalent to "full" Admiral.</description>
+		<seniority>360</seniority>
+		<favorCost>1400</favorCost>
+	</RoyalTitleDef>
+
+<!--================ NPC Titles ================-->
+
+	<RoyalTitleDef ParentName="CFAR_FOBase" MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>CFAR_GroSadmiral</defName>
+		<label>Großadmiral</label>
+		<description>The highest operational rank within the Reichswehr Admiralat. Großadmirale command entire galactic theaters, directing fleets and planetary armies across multiple sectors. They are responsible for implementing Imperial expansion doctrine and answer only to the Archgroßadmiral and the Empress.\n\nEquivalent to Grand Admiral.</description>
+		<seniority>400</seniority>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="CFAR_FOBase" MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>CFAR_ArchgroSadmiral</defName>
+		<label>Archgroßadmiral</label>
+		<description>Supreme commander of the Reichswehr Admiralat and overall military authority of the Groß-Arellian Kaiserinreich. The Archgroßadmiral defines operational doctrine, supervises all major campaigns, and enforces unity across all branches of the Reichswehr, acting directly under the Empress as executor of the Imperial will.\n\nEquivalent to Supreme Grand Admiral.</description>
+		<seniority>500</seniority>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="CFAR_FOBase" MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>CFAR_Flottelegat</defName>
+		<label>Flottelegat</label>
+		<labelFemale>Flottelegatin</labelFemale>
+		<description>WIP</description>
+		<seniority>600</seniority>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="CFAR_FOBase" MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>CFAR_Kaiserin</defName>
+		<label>Kaiserin</label>
+		<description>Founder and sovereign of the Groß-Arellian Kaiserinreich. Former leader of the rebellion against the Matanni overlords, the Kaiserin unified the Arellian systems and established the doctrine of universal expansion. Her Majesty serves as head of state, supreme commander of the Reichswehr, and ultimate arbiter of all political, military, and colonial matters of the Reich.</description>
+		<seniority>700</seniority>
+	</RoyalTitleDef>
+</Defs>

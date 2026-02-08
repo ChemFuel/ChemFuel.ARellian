@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+<!--==== ComradeOutsider ====-->
+
+	<ThoughtDef>
+		<defName>CFAR_Faction</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>ArellianCore.ThoughtWorker_Faction</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+		<nullifyingTraits>
+			<li>Kind</li>
+			<li>Psychopath</li>
+		</nullifyingTraits>
+		<nullifyingHediffs>
+			<li MayRequire="Ludeon.RimWorld.Anomaly">Inhumanized</li>
+		</nullifyingHediffs>
+		<stages>
+			<li>
+				<label>comrade</label>
+				<baseOpinionOffset>10</baseOpinionOffset>
+			</li>
+			<li>
+				<label>outsider</label>
+				<baseOpinionOffset>-10</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+<!--==== KinXeno ====-->
+
+	<ThoughtDef>
+		<defName>CFAR_Xeno</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>ArellianCore.ThoughtWorker_Xeno</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<nullifyingTraits>
+			<li>Kind</li>
+			<li>Psychopath</li>
+		</nullifyingTraits>
+		<nullifyingHediffs>
+			<li MayRequire="Ludeon.RimWorld.Anomaly">Inhumanized</li>
+		</nullifyingHediffs>
+		<stages>
+			<li>
+				<label>xeno</label>
+				<baseOpinionOffset>-5</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>

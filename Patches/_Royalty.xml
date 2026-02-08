@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Royalty</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<!--<li Class="PatchOperationAdd">
+					<xpath>Defs/QuestScriptDef[defName="Util_ChooseRandomQuestHelperKind"]/root/nodes/li[1]/choices</xpath>
+					<value>
+						<li>
+							<factionDef>CFAR_Kaiserinreich</factionDef>
+							<pawnKinds>
+							</pawnKinds>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/QuestScriptDef[defName="Util_ChooseRandomQuestLodgerKind"]/root/nodes/li[1]/node/choices</xpath>
+					<value>
+						<li>
+							<factionDef>CFAR_Kaiserinreich</factionDef>
+							<pawnKinds>
+								<li>CFAR_Lieutenant</li>
+								<li>CFAR_Commander</li>
+								<li>CFAR_Captain</li>
+							</pawnKinds>
+						</li>
+					</value>
+				</li>-->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/FactionDef[defName="CFAR_Kaiserinreich"]</xpath>
+					<value>
+						<leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
+						<royalFavorLabel>credit</royalFavorLabel>
+						<royalFavorIconPath>World/WorldObjects/Expanding/CFAR_Kaiserinreich</royalFavorIconPath>
+						<royalTitleTags>
+							<li>CFAR_Title</li>
+						</royalTitleTags>
+						<royalTitleInheritanceWorkerClass>RoyalTitleInheritanceWorker</royalTitleInheritanceWorkerClass>
+						<royalTitleInheritanceRelations />
+					</value>
+				</li>
+				<!--<li Class="PatchOperationAdd">
+					<xpath>Defs/FactionDef[defName="CFAR_Kaiserinreich"]/caravanTraderKinds</xpath>
+					<value>
+						<li>CFAR_Caravan_ImperialRecruiter</li>
+					</value>
+				</li>-->
+			</operations>
+		</match>
+	</Operation>
+</Patch>

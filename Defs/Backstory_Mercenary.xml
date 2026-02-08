@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<BackstoryDef Name="CFAR_Mercenary" Abstract="True">
+		<requiresSpawnCategory>true</requiresSpawnCategory>
+		<slot>Adulthood</slot>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<disallowedTraits>
+			<PsychicSensitivity>0</PsychicSensitivity>
+		</disallowedTraits>
+	</BackstoryDef>
+
+<!--================ Enlisted ================-->
+
+<!--======== Freikorps ========-->
+
+	<BackstoryDef ParentName="CFAR_Mercenary">
+		<defName>CFAR_FCMercenary1</defName>
+		<title>Freikorps mercenary</title>
+		<titleShort>Freikorps</titleShort>
+		<description>WIP</description>
+		<skillGains>
+			<Shooting>8</Shooting>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_FCMercenary</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+<!--======== Generic ========-->
+
+	<BackstoryDef ParentName="CFAR_Mercenary">
+		<defName>CFAR_ExMilMercenary1</defName>
+		<title>space mercenary</title>
+		<titleShort>mercenary</titleShort>
+		<description>WIP</description>
+		<skillGains>
+			<Shooting>6</Shooting>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_MercExMil</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="CFAR_Mercenary">
+		<defName>CFAR_CivilMercenary1</defName>
+		<title>quickdraw</title>
+		<titleShort>quickdraw</titleShort>
+		<description>Words of the law were never absolute to [PAWN_nameDef]. [PAWN_pronoun] earned a reputation for shooting first and asking questions later—a dependable kind of loose cannon. And to be fair, none of [PAWN_possessive] employers ever hired [PAWN_objective] to ask questions first.</description>
+		<forcedTraits>
+			<ShootingAccuracy>-1</ShootingAccuracy>
+		</forcedTraits>
+		<disallowedTraits>
+			<Kind>0</Kind>
+		</disallowedTraits>
+		<skillGains>
+			<Shooting>6</Shooting>
+			<Melee>-2</Melee>
+			<Social>-4</Social>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_MercCivil</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="CFAR_Mercenary">
+		<defName>CFAR_CivilMercenary2</defName>
+		<title>captain</title>
+		<titleShort>captain</titleShort>
+		<description>Although [PAWN_nameDef] had no military background whatsoever, people ended up calling [PAWN_objective] captain—mostly because [PAWN_pronoun] flew around in a old freighter long enough for the name to stick. With [PAWN_possessive] roguish charm and smooth words, [PAWN_pronoun] made a tidy living bashing in the skulls of [PAWN_possessive] targets and locking down whatever contracts came [PAWN_possessive] way.</description>
+		<forcedTraits>
+			<Beauty>1</Beauty>
+		</forcedTraits>
+		<disallowedTraits>
+			<Abrasive>0</Abrasive>
+		</disallowedTraits>
+		<skillGains>
+			<Shooting>3</Shooting>
+			<Social>6</Social>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_MercCivil</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="CFAR_Mercenary">
+		<defName>CFAR_CivilMercenary3</defName>
+		<title>ace pilot</title>
+		<titleShort>ace</titleShort>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+		<description>Deck of cards or a starfighter, [PAWN_nameDef] could handle either like an ace. [PAWN_pronoun] picked up the nickname at some backwater bar after winning three hands in a row with four-of-a-kind aces—apparently without cheating.</description>
+		<disallowedTraits>
+			<SpeedOffset>-1</SpeedOffset>
+		</disallowedTraits>
+		<skillGains>
+			<Shooting>4</Shooting>
+			<Crafting>2</Crafting>
+			<Social>4</Social>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_MercCivil</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="CFAR_Mercenary">
+		<defName>CFAR_CriminalMercenary1</defName>
+		<title>space mercenary</title>
+		<titleShort>mercenary</titleShort>
+		<description>WIP</description>
+		<skillGains>
+			<Shooting>4</Shooting>
+			<Melee>4</Melee>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_MercCriminal</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+</Defs>

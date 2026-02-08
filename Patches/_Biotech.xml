@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<!--Headtype Gene-->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/GeneDef[defName="Head_Gaunt"]/forcedHeadTypes</xpath>
+					<value>
+						<li>CFAR_Gaunt_Normal</li>
+					</value>
+				</li>
+				<!--Mercenary Pawnkind-->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/FactionDef[defName="OutlanderRoughPig"]/pawnGroupMakers/li[1]/options</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/FactionDef[defName="OutlanderRoughPig"]/pawnGroupMakers/li[1]/options</xpath>
+						<value>
+							<CFAR_Mercenary>0.005</CFAR_Mercenary>
+							<CFAR_MercPirate>0.005</CFAR_MercPirate>
+						</value>
+					</match>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

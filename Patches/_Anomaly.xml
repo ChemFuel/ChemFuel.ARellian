@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Anomaly</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<!--Ghoul Gene Patch-->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/MutantDef[defName="Ghoul"]/disablesGenes</xpath>
+					<value>
+						<li>Eyes_Arellian</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

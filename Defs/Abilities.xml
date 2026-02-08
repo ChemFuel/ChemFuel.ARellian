@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--<AbilityDef>
+		<defName>CFAR_StunBlast</defName>
+		<label>stun blast</label>
+		<description>WIP</description>
+		<iconPath>UI/Abilities/Stun</iconPath>
+		<cooldownTicksRange>3600</cooldownTicksRange>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>3.9</range>
+			<warmupTime>0.5</warmupTime>
+			<soundCast>PiercingSpine_Launch</soundCast>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityLaunchProjectile">
+				<projectileDef>CFAR_StunPulse</projectileDef>
+			</li>
+		</comps>
+	</AbilityDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>CFAR_StunPulse</defName>
+		<label>stun pulse</label>
+		<graphicData>
+			<texPath>Things/Projectile/CFAR_StunPulse</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>CFAR_Stun</damageDef>
+			<armorPenetrationBase>0.25</armorPenetrationBase>
+			<stoppingPower>1</stoppingPower>
+			<speed>55</speed>
+		</projectile>
+	</ThingDef>
+
+	<DamageDef ParentName="Bullet">
+		<defName>CFAR_Stun</defName>
+		<label>stun blast</label>
+		<hediff>CFAR_ElectricStun</hediff>
+		<defaultDamage>1</defaultDamage>
+		<overkillPctToDestroyPart>999~999</overkillPctToDestroyPart>
+		<harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
+		<impactSoundType>Bullet</impactSoundType>
+		<causeStun>true</causeStun>
+	</DamageDef>
+
+	<HediffDef ParentName="DiseaseBase">
+		<defName>CFAR_ElectricStun</defName>
+		<label>electric stun</label>
+		<labelNoun>an electric stun</labelNoun>
+		<description>WIP</description>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-4</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<capMods>
+					<li><capacity>Consciousness</capacity><setMax>0.1</setMax></li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>-->
+</Defs>

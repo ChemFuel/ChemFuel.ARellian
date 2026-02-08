@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Ideology</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/FactionDef[defName="CFAR_Kaiserinreich"]</xpath>
+					<value>
+						<fixedIdeo>true</fixedIdeo>
+						<ideoName>Reichsmandat</ideoName>
+						<ideoDescription>The Reichsmandat is the governing doctrine of the Arellian Kaiserinreich, defining duty, hierarchy, and responsibility as the foundations of imperial strength. It teaches that order is sustained through discipline, reason, and loyalty guided by judgment. Authority exists to serve the Reich’s continuity, and respect for command is inseparable from accountability.\n\nSubjects of the Kaiserinreich are expected to serve according to their station, uphold the chain of command, and exercise discernment in the execution of orders—especially in moments of crisis. The Reichsmandat warns that obedience without reason breeds decay and tyranny, and charges every citizen to act in the true interest of the Reich when circumstances exceed instruction.\n\nCommand is granted by merit, proven capability, and the Kaiserin’s sanction. Those entrusted with authority bear obligation rather than privilege, and are expected to lead with restraint, foresight, and responsibility. Aggression is directed; conquest is obligation, not excess. Through disciplined judgment and unity of purpose, the Arellian Kaiserinreich endures.</ideoDescription>
+						<deityPresets>
+							<li>
+								<nameType>
+									<name>Aria Erisis</name><type>Empress of Steel</type>
+								</nameType>
+								<gender>Female</gender>
+								<iconPath>UI/Deities/DeityGeneric</iconPath>
+							</li>
+						</deityPresets>
+						<styles>
+							<li>CFAR_Style</li>
+						</styles>
+						<forcedMemes>
+							<li>Collectivist</li>
+						</forcedMemes>
+						<structureMemeWeights>
+							<Structure_Ideological>1</Structure_Ideological>
+						</structureMemeWeights>
+						<disallowedPrecepts>
+							<li>Charity_Essential</li>
+							<li>Charity_Important</li>
+							<li>Charity_Worthwhile</li>
+				
+							<li>AutonomousWeapons_Prohibited</li>
+							<li>AutonomousWeapons_Horrible</li>
+							<li>AutonomousWeapons_Disapproved</li>
+				
+							<li>DrugUse_Prohibited</li>
+							<li>DrugUse_MedicalOnly</li>
+							<li>DrugUse_MedicalOrSocial</li>
+				
+							<li>Cannibalism_Acceptable</li>
+							<li>Cannibalism_Preferred</li>
+				
+							<li>Nudity_Male_UncoveredGroinDisapproved</li>
+							<li>Nudity_Male_UncoveredGroinChestOrHairDisapproved</li>
+							<li>Nudity_Male_UncoveredGroinChestHairOrFaceDisapproved</li>
+							<li>Nudity_Female_UncoveredGroinChestOrHairDisapproved</li>
+							<li>Nudity_Female_UncoveredGroinChestHairOrFaceDisapproved</li>
+							<li>ApparelDesired_Strong_Subordinate</li>
+							<li>ApparelDesired_Soft_Subordinate</li>
+						</disallowedPrecepts>
+					</value>
+				</li>
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Biotech</li>
+					</mods>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/FactionDef[defName="CFAR_Kaiserinreich"]/disallowedPrecepts</xpath>
+						<value>
+							<li>Bloodfeeders_Revered</li>
+							<li>ChildLabor_Encouraged</li>
+							<li>GrowthVat_Prohibited</li>
+							<li>MechanoidLabor_Enhanced</li>
+							<li>PreferredXenotype</li>
+						</value>
+					</match>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

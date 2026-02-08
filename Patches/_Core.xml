@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+<!--======== Hediff: Combat Chip ========-->
+
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<!--<li Class="PatchOperationConditional">
+				<xpath>Defs/ThoughtDef[defName="ObservedLayingCorpse" or defName="ObservedLayingRottingCorpse" or defName="WitnessedDeathAlly" or defName="WitnessedDeathNonAlly"]/nullifyingHediffs</xpath>
+				<match Class="PatchOperationAdd">
+					<xpath>Defs/ThoughtDef[defName="ObservedLayingCorpse" or defName="ObservedLayingRottingCorpse" or defName="WitnessedDeathAlly" or defName="WitnessedDeathNonAlly"]/nullifyingHediffs</xpath>
+					<value>
+						<li>CFAR_CombatChip</li>
+					</value>
+				</match>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>Defs/ThoughtDef[defName="ObservedLayingCorpse" or defName="ObservedLayingRottingCorpse" or defName="WitnessedDeathAlly" or defName="WitnessedDeathNonAlly"]</xpath>
+					<value>
+						<nullifyingHediffs><li>CFAR_CombatChip</li></nullifyingHediffs>
+					</value>
+				</nomatch>
+			</li>-->
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[1]/options</xpath>
+				<match Class="PatchOperationAdd">
+					<xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[1]/options</xpath>
+					<value>
+						<CFAR_Mercenary>0.01</CFAR_Mercenary>
+					</value>
+				</match>
+			</li>
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/FactionDef[defName="Pirate"]/pawnGroupMakers/li[1]/options | Defs/FactionDef[defName="Pirate"]/pawnGroupMakers/li[3]/options</xpath>
+				<match Class="PatchOperationAdd">
+					<xpath>Defs/FactionDef[defName="Pirate"]/pawnGroupMakers/li[1]/options | Defs/FactionDef[defName="Pirate"]/pawnGroupMakers/li[3]/options</xpath>
+					<value>
+						<CFAR_MercPirate>0.01</CFAR_MercPirate>
+					</value>
+				</match>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

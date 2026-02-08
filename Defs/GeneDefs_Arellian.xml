@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<XenotypeDef>
+		<defName>CFAR_Arellian</defName>
+		<label>Arellian</label>
+		<description>Forged for conquest and perfected by war, Arellians represent the culmination of the Reich’s military bio-engineering. Their aggression is not a flaw but a design — a relentless drive to dominate, protect, and obey. Accelerated healing and strong immunity make them almost impossible to break, while their dulled psychic sense shields them from manipulation or distraction. Possessing sharp night vision and a mind conditioned for discipline, Arellians thrive both in the chaos of battle and the cold precision of command./n/nOriginating from the Arellia Sector, Arellians are the lifeblood of the Kaiserinreich itself — bred for obedience, refined through war, and bound by unshakable loyalty to the Kaiserin. Every citizen a soldier, every soldier her instrument, and their aggression endures so that the Reich may stand eternal.</description>
+		<descriptionShort>Arellians are aggressive, disciplined, and nearly unbreakable. Their enhanced healing, strong immunity, and sharp night vision make them ideal soldiers and subjects of the Arellian Kaiserinreich.</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/BaseArellian</iconPath>
+		<inheritable>true</inheritable>
+		<nameMaker>CFAR_PawnNamer_C</nameMaker>
+		<nameMakerFemale>CFAR_PawnNamerFemale_C</nameMakerFemale>
+		<chanceToUseNameMaker>1</chanceToUseNameMaker>
+		<factionlessGenerationWeight>5</factionlessGenerationWeight>
+		<genes>
+			<li>Eyes_Arellian</li>
+			<li>Ears_Arellian</li>
+			<li>Voice_Arellian</li>
+			<li>Aggression_HyperAggressive</li>
+			<li>DarkVision</li>
+			<li>PsychicAbility_Dull</li>
+			<li>WoundHealing_Fast</li>
+			<li>Immunity_Strong</li>
+		</genes>
+	</XenotypeDef>
+
+	<XenotypeDef>
+		<defName>CFAR_Erisian</defName>
+		<label>Erisian</label>
+		<description>Erisian enhancement is not inherited, nor granted by birthright. It is bestowed solely by the Kaiserin upon Arellians who have proven exceptional merit in service, command, and strategic foresight. Those elevated to Erisian status are removed from the cycle of generational succession and inducted permanently into the imperial admiralty.\n\nFreed from aging and biological decline, Erisians serve indefinitely as advisors, strategists, and architects of conquest. Their augmented intellect and immutable physiology ensure continuity of doctrine across centuries, binding the Kaiserin’s will to an unbroken cadre of perfected minds. To be made Erisian is not a reward, but a final appointment—service without end, in counsel without replacement.</description>
+		<descriptionShort>Engineered by the Kaiserin and perfected through merit, Erisians are ageless Arellians of the highest order—immune to decay, swift to learn, and bound to serve eternally as the Kaiserin’s strategic advisors.</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/BaseArellian</iconPath>
+		<nameMaker>CFAR_PawnNamer_C</nameMaker>
+		<nameMakerFemale>CFAR_PawnNamerFemale_C</nameMakerFemale>
+		<chanceToUseNameMaker>1</chanceToUseNameMaker>
+		<factionlessGenerationWeight>0</factionlessGenerationWeight>
+		<doubleXenotypeChances>
+			<CFAR_Arellian>1</CFAR_Arellian>
+		</doubleXenotypeChances>
+		<genes>
+			<li>Ageless</li>
+			<li>PerfectImmunity</li>
+			<li>DiseaseFree</li>
+			<li>TotalHealing</li>
+			<li>ArchiteMetabolism</li>
+			<li>Superclotting</li>
+			<li>StrongStomach</li>
+			<li>Learning_Fast</li>
+		</genes>
+	</XenotypeDef>
+
+<!--================ Genes ================-->
+
+<!--======== Basic ========-->
+
+	<GeneCategoryDef>
+		<defName>ArellianGene</defName>
+		<label>Arellian</label>
+		<displayPriorityInXenotype>999</displayPriorityInXenotype>
+	</GeneCategoryDef>
+
+	<GeneDef ParentName="GeneEyeColor">
+		<defName>Eyes_Arellian</defName>
+		<label>amber eyes</label>
+		<labelShortAdj>amber-eyed</labelShortAdj>
+		<description>Carriers of this gene have rich amber eyes.</description>
+		<iconPath>UI/Icons/Genes/Gene_ArellianEyes</iconPath>
+		<displayCategory>ArellianGene</displayCategory>
+		<displayOrderInCategory>2</displayOrderInCategory>
+		<forcedHeadTypes>
+			<li>CFAR_Normal_Plain</li>
+			<li>CFAR_Normal_Freckles</li>
+			<li>CFAR_Gaunt_Normal</li>
+		</forcedHeadTypes>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPaths>
+					<li>Things/Pawn/Arellian/Heads/Eyes/Idle</li>
+					<li>Things/Pawn/Arellian/Heads/Eyes/Determined</li>
+				</texPaths>
+				<texPathsFemale>
+					<li>Things/Pawn/Arellian/Heads/Eyes/Idle</li>
+					<li>Things/Pawn/Arellian/Heads/Eyes/Curious</li>
+					<li>Things/Pawn/Arellian/Heads/Eyes/Gaki</li>
+					<li>Things/Pawn/Arellian/Heads/Eyes/Relaxed</li>
+					<li>Things/Pawn/Arellian/Heads/Eyes/Determined</li>
+				</texPathsFemale>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<useRottenColor>true</useRottenColor>
+				<parentTagDef>Head</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>53</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>1</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneEarsBase">
+		<defName>Ears_Arellian</defName>
+		<label>long cat ears</label>
+		<description>Carriers of this gene have long, fluffy cat ears.</description>
+		<iconPath>UI/Icons/Genes/Gene_ArellianEar</iconPath>
+		<displayCategory>ArellianGene</displayCategory>
+		<displayOrderInCategory>3</displayOrderInCategory>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPaths>
+					<li>Things/Pawn/Arellian/Heads/Ears/A</li>
+					<li>Things/Pawn/Arellian/Heads/Ears/B</li>
+					<li>Things/Pawn/Arellian/Heads/Ears/C</li>
+				</texPaths>
+				<colorType>Hair</colorType>
+				<parentTagDef>Head</parentTagDef>
+				<useRottenColor>true</useRottenColor>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<drawData>
+					<defaultData>
+						<layer>72</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>1</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneVoiceBase">
+		<defName>Voice_Arellian</defName>
+		<label>cat voice</label>
+		<description>Carriers of this gene are known for making cat-like voices.</description>
+		<suppressedTraits>
+			<li><def>AnnoyingVoice</def></li>
+		</suppressedTraits>
+		<iconPath>UI/Icons/Genes/Gene_ArellianVoice</iconPath>
+		<displayCategory>ArellianGene</displayCategory>
+		<displayOrderInCategory>4</displayOrderInCategory>
+		<soundDeath>Pawn_Cat_Death</soundDeath>
+		<soundWounded>Pawn_Cat_Injured</soundWounded>
+		<statFactors>
+			<TameAnimalChance>1.25</TameAnimalChance>
+			<TrainAnimalChance>1.25</TrainAnimalChance>
+		</statFactors>
+	</GeneDef>
+</Defs>
+

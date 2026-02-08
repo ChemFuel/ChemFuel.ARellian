@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<!--================================ Name ================================-->
+
+	<RulePackDef>
+		<defName>CFAR_NamerUtility</defName>
+		<rulePack>
+			<rulesFiles>
+				<li>Name_M->Names/CFAR_Name_M</li>
+				<li>Name_F->Names/CFAR_Name_F</li>
+
+				<li>Surname_C->Names/CFAR_Surname</li>
+				<li>Surname_N->Names/CFAR_Surname</li>
+				<!--<li>Surname_N->Names/CFAR_Surname_N</li>-->
+			</rulesFiles>
+		</rulePack>
+	</RulePackDef>
+
+	<RulePackDef>
+		<defName>CFAR_PawnNamer_C</defName>
+		<include>
+			<li>CFAR_NamerUtility</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name->[Name_M] [Surname_C]</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+	<RulePackDef>
+		<defName>CFAR_PawnNamerFemale_C</defName>
+		<include>
+			<li>CFAR_NamerUtility</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name->[Name_F] [Surname_C]</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+	<RulePackDef>
+		<defName>CFAR_PawnNamer_N</defName>
+		<include>
+			<li>CFAR_NamerUtility</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name->[Name_M] [Surname_N]</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+	<RulePackDef>
+		<defName>CFAR_PawnNamerFemale_N</defName>
+		<include>
+			<li>CFAR_NamerUtility</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name->[Name_F] [Surname_N]</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+<!--================================ Empire ================================-->
+
+	<RulePackDef>
+		<defName>CFAR_FactionNamerEmpire</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name->Arellian Empire</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+	<RulePackDef>
+		<defName>CFAR_LeaderTitleMakerEmpire</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_leaderTitle->Grand Admiral</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+<!--================================ Enclave ================================-->
+
+	<RulePackDef>
+		<defName>CFAR_FactionNamerEnclave</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name->Arellian Enclave</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+</Defs>

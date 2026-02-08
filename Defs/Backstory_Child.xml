@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<BackstoryDef Name="CFAR_Child" Abstract="True">
+		<requiresSpawnCategory>true</requiresSpawnCategory>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>CFAR_Child</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+<!--================ Lowborn ================-->
+
+<!--======== Colony ========-->
+
+	<BackstoryDef ParentName="CFAR_Child">
+		<defName>CFAR_SpaceportStray1</defName>
+		<title>spaceport stray</title>
+		<titleShort>space stray</titleShort>
+		<description>WIP</description>
+		<skillGains>
+			<Animals>4</Animals>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_Lowborn</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+<!--======== Urban ========-->
+
+	<BackstoryDef ParentName="CFAR_Child">
+		<defName>CFAR_StreetUrchin1</defName>
+		<title>street urchin</title>
+		<titleShort>urchin</titleShort>
+		<description>WIP</description>
+		<forcedTraits>
+			<Nimble>0</Nimble>
+		</forcedTraits>
+		<skillGains>
+			<Social>2</Social>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_Lowborn</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="CFAR_Child">
+		<defName>CFAR_StreetFighter1</defName>
+		<title>street fighter</title>
+		<titleShort>fighter</titleShort>
+		<description>WIP</description>
+		<forcedTraits>
+			<Brawler>0</Brawler>
+		</forcedTraits>
+		<skillGains>
+			<Social>-2</Social>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_Lowborn</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+<!--================ Commoner ================-->
+
+<!--======== Freikorps ========-->
+
+	<BackstoryDef ParentName="CFAR_Child">
+		<defName>CFAR_FCKitten1</defName>
+		<title>Freikorps kitten</title>
+		<titleShort>Freikorps</titleShort>
+		<description>WIP</description>
+		<skillGains>
+			<Shooting>4</Shooting>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_FCChild</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+<!--======== Colony ========-->
+
+	<BackstoryDef ParentName="CFAR_Child">
+		<defName>CFAR_FarmKitten1</defName>
+		<title>farm kitten</title>
+		<titleShort>farm kitten</titleShort>
+		<description>It was no secret that [PAWN_nameDef] loved milk. Whenever [PAWN_possessive] parents were milking the cattle, [PAWN_pronoun] drifted over immediately, bouncing on [PAWN_possessive] heels in excitement. Afterward, [PAWN_pronoun] would sit on an old wooden stool, sipping a fresh cup while watching dust motes dance in the barn’s warm light. Most days ended with [PAWN_nameDef] napping on a hay bale, smelling faintly of grass and sunshine.</description>
+		<skillGains>
+			<Animals>4</Animals>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_Commoner</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="CFAR_Child">
+		<defName>CFAR_ColonyKitten1</defName>
+		<title>frontier kitten</title>
+		<titleShort>colonist</titleShort>
+		<description>Despite [PAWN_possessive] parents’ best efforts, the frontier colony was simply too harsh a place for [PAWN_nameDef] to enjoy a peaceful childhood. From a young age, [PAWN_pronoun] learned how to handle a gun and tend to the wounds of [PAWN_possessive] neighbors.</description>
+		<requiredWorkTags>
+			<li>Violent</li>
+			<li>Caring</li>
+		</requiredWorkTags>
+		<disallowedTraits>
+			<Neurotic>0</Neurotic>
+		</disallowedTraits>
+		<skillGains>
+			<Shooting>3</Shooting>
+			<Medicine>2</Medicine>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_Commoner</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="CFAR_Child">
+		<defName>CFAR_ColonyKitten2</defName>
+		<title>frontier healer</title>
+		<titleShort>healer</titleShort>
+		<description>After losing [PAWN_possessive] parents in a particularly vicious pirate raid, [PAWN_nameDef] found the very thought of shooting someone unbearable. Haunted by that day, [PAWN_pronoun] turned away from guns and instead learned to keep others alive, tutoring under a seasoned mercenary medic and picking up whatever skills [PAWN_pronoun] could to patch people back together.</description>
+		<requiredWorkTags>
+			<li>Caring</li>
+		</requiredWorkTags>
+		<workDisables>
+			<li>Violent</li>
+		</workDisables>
+		<disallowedTraits>
+			<Bloodlust>0</Bloodlust>
+			<Psychopath>0</Psychopath>
+		</disallowedTraits>
+		<skillGains>
+			<Medicine>4</Medicine>
+			<Social>-2</Social>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_Commoner</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+<!--======== Urban ========-->
+
+	<BackstoryDef ParentName="CFAR_Child">
+		<defName>CFAR_UrbanKitten1</defName>
+		<title>shy kitten</title>
+		<titleShort>introvert</titleShort>
+		<description>[PAWN_nameDef] grew up in the nightless megabuildings of a hubworld. City life was always crowded yet lonely, but [PAWN_pronoun] managed to keep [PAWN_possessive] small circle of friends together.\n\nThey were a quiet little group—shy kids who ate lunch on the same stairwell every day and shared whispered jokes between classes. Even in a city packed with billions, they stuck close, walking home together through the streets that never truly went dark.</description>
+		<disallowedTraits>
+			<Abrasive>0</Abrasive>
+			<Psychopath>0</Psychopath>
+		</disallowedTraits>
+		<skillGains>
+			<Social>2</Social>
+			<Artistic>1</Artistic>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_Commoner</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="CFAR_Child">
+		<defName>CFAR_UrbanKitten2</defName>
+		<title>shop kitten</title>
+		<titleShort>shop kitten</titleShort>
+		<description>Eager to help [PAWN_pronoun] parents’ small shop, [PAWN_nameDef] greeted customers and talked about the wares—even if it mostly came out as childlike rambles. Somehow, that only made customers like [PAWN_objective] more.</description>
+		<skillGains>
+			<Social>4</Social>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_Commoner</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="CFAR_Child">
+		<defName>CFAR_UrbanKitten3</defName>
+		<title>laid-back kitten</title>
+		<titleShort>easygoing</titleShort>
+		<description>[PAWN_nameDef] never saw the point of rushing or stressing over minor inconveniences. Things always sorted themselves out eventually…well, usually. [PAWN_pronoun] preferred taking long naps in the local park, sunbathing with a bag of chips resting in [PAWN_possessive] hands.</description>
+		<disallowedTraits>
+			<Neurotic>0</Neurotic>
+		</disallowedTraits>
+		<skillGains>
+			<Cooking>1</Cooking>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_Commoner</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="CFAR_Child">
+		<defName>CFAR_UrbanKitten4</defName>
+		<title>collecter kitten</title>
+		<titleShort>collecter</titleShort>
+		<description>[PAWN_nameDef] liked shiny things—pebbles, coins, or a “totally not stolen” medal of honor that [PAWN_possessive] cousin had accidentally dropped from their uniform and then spent weeks searching for. [PAWN_pronoun] kept these treasures hidden away in an old shoebox—right up until [PAWN_pronoun] proudly showed the medal to that same cousin by mistake.</description>
+		<skillGains>
+			<Artistic>3</Artistic>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_Commoner</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="CFAR_Child">
+		<defName>CFAR_UrbanKitten5</defName>
+		<title>explorer kitten</title>
+		<titleShort>explorer</titleShort>
+		<description>Marching through the plains with a slingshot in one hand and a magnifying glass in the other, [PAWN_nameDef] spent hours chasing shiny beetles or digging up anthills. Whenever [PAWN_pronoun] got hungry, [PAWN_pronoun] simply ate wild berries and kept exploring.</description>
+		<skillGains>
+			<Shooting>1</Shooting>
+			<Plants>2</Plants>
+			<Intellectual>1</Intellectual>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_Commoner</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+<!--======== Academy ========-->
+
+	<BackstoryDef ParentName="CFAR_Child">
+		<defName>CFAR_AcademyStudent1</defName>
+		<title>academy student</title>
+		<titleShort>student</titleShort>
+		<description>WIP</description>
+		<skillGains>
+			<Social>1</Social>
+			<Intellectual>2</Intellectual>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_Commoner</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+<!--======== Cadet ========-->
+
+	<BackstoryDef ParentName="CFAR_Child">
+		<defName>CFAR_YoungCadet1</defName>
+		<title>young cadet</title>
+		<titleShort>cadet</titleShort>
+		<description>At the youth cadet academy, [PAWN_nameDef] learned how to handle a firearm and make tactical decisions.</description>
+		<skillGains>
+			<Shooting>2</Shooting>
+			<Intellectual>2</Intellectual>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_Cadet</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="CFAR_Child">
+		<defName>CFAR_YoungCadet2</defName>
+		<title>charismatic cadet</title>
+		<titleShort>cadet</titleShort>
+		<description>Despite struggling to keep up with the marches and exams, [PAWN_nameDef] somehow managed to stay above the failing line thanks to [PAWN_possessive] natural talent for shooting and leading [PAWN_possessive] fellow cadets.</description>
+		<skillGains>
+			<Shooting>3</Shooting>
+			<Social>3</Social>
+			<Intellectual>-1</Intellectual>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_Cadet</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+<!--======== High Class ========-->
+</Defs>

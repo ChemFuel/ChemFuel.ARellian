@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<FactionDef ParentName="FactionBase">
+		<techLevel>Ultra</techLevel>
+		<defName>CFAR_Kaiserinreich</defName>
+		<label>Arellian Kaiserinreich</label>
+		<fixedName>Reichswehr Außenflotte</fixedName>
+		<description>Each Reichswehr Außenflotte is placed under the authority of a prince or princess of the Kaiserinreich, appointed personally by the Kaiserin. These deployments serve as proving grounds—testing judgment, restraint, and command aptitude far from the protections of the homeworld. Success brings honor and legitimacy; failure is remembered.\n\nThough the Außenflotte operates under full Reichswehr doctrine and the Reichsmandat, its commander bears personal responsibility for every decision made in the Kaiserin’s name. Civilian colonists, military personnel, and imperial assets alike are entrusted to their leadership. Advisors may guide, and officers may execute, but the burden of command rests solely with the Kaiserin’s child.\n\nIn this way, the Außenflotte is not merely an expedition—it is an examination conducted under live fire. Cut off from diplomacy and surrounded by potential enemies, its commander is judged by the ability to impose order, eliminate threats, and complete the mandate without hesitation.\n\nWhile imperial authority permits the appointment of foreign legions or the establishment of compliant puppet-states, such overtures are almost always met with defiance and declarations of war. The Reich expands, endures, or bleeds according to the resolve and judgment of those sent to prove themselves worthy of succession.</description>
+		<categoryTag>CFAR_Kaiserinreich</categoryTag>
+		<pawnSingular>Arellian</pawnSingular>
+		<pawnsPlural>Arellians</pawnsPlural>
+		<!--<allowedCultures><li>CFAR_Culture</li></allowedCultures>-->
+		<colorSpectrum><li>(255,212,83)</li></colorSpectrum>
+		<factionIconPath>World/WorldObjects/Expanding/CFAR_Kaiserinreich</factionIconPath>
+		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+		<settlementGenerationWeight>1</settlementGenerationWeight>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<maxCountAtGameStart>1</maxCountAtGameStart>
+		<maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>117</configurationListOrderPriority>
+		<canSiege>false</canSiege>
+		<autoFlee>false</autoFlee>
+		<hostileToFactionlessHumanlikes>true</hostileToFactionlessHumanlikes>
+		<permanentEnemyToEveryoneExceptPlayer>true</permanentEnemyToEveryoneExceptPlayer>
+		<canRequestOrbitalTrader>true</canRequestOrbitalTrader>
+		<fixedLeaderKinds><li>CFAR_Flottelegat</li></fixedLeaderKinds>
+		<basicMemberKind>CFAR_RW_Trooper</basicMemberKind>
+		<backstoryFilters>
+			<li>
+				<categoriesChildhood>
+					<li>CFAR_Child</li>
+				</categoriesChildhood>
+				<categoriesAdulthood>
+					<li>CFAR_Colonist</li>
+				</categoriesAdulthood>
+			</li>
+		</backstoryFilters>
+		<baseTraderKinds>
+			<li>Base_Outlander_Standard</li>
+		</baseTraderKinds>
+		<caravanTraderKinds>
+			<li>Caravan_Outlander_BulkGoods</li>
+		</caravanTraderKinds>
+		<orbitalTraderKinds>
+			<li>Orbital_BulkGoods</li>
+			<li>Orbital_CombatSupplier</li>
+		</orbitalTraderKinds>
+		<allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+		<arrivalModeBlacklist>
+			<li>RandomDrop</li>
+		</arrivalModeBlacklist>
+		<raidLootMaker>OutlanderRaidLootMaker</raidLootMaker>
+		<raidCommonalityFromPointsCurve>
+			<points>
+				<li>(0, 1)</li>
+				<li>(5000, 1.5)</li>
+				<li>(10000, 2)</li>
+			</points>
+		</raidCommonalityFromPointsCurve>
+		<maxPawnCostPerTotalPointsCurve>
+			<points>
+				<li>(500, 200)</li>
+				<li>(1000, 450)</li>
+				<li>(10000, 10000)</li>
+			</points>
+		</maxPawnCostPerTotalPointsCurve>
+		<pawnGroupMakers>
+			<li>
+				<kindDef>Trader</kindDef>
+				<traders>
+					<Town_Trader>1</Town_Trader>
+				</traders>
+				<carriers>
+					<Muffalo>6</Muffalo>
+					<Dromedary>5</Dromedary>
+					<Alpaca>2</Alpaca>
+					<Elephant>1</Elephant>
+				</carriers>
+				<guards>
+					<CFAR_RW_Trooper>1</CFAR_RW_Trooper>
+				</guards>
+			</li>
+			<li>
+				<!--Reichswehr-->
+				<kindDef>Combat</kindDef>
+				<disallowedStrategies>
+					<li>ImmediateAttackBreaching</li>
+					<li>ImmediateAttackBreachingSmart</li>
+				</disallowedStrategies>
+				<options>
+					<CFAR_RW_Trooper>35</CFAR_RW_Trooper>
+					<CFAR_RW_Grenadier>15</CFAR_RW_Grenadier>
+					<CFAR_RW_Gunner>20</CFAR_RW_Gunner>
+					<CFAR_RW_ShieldGunner>8</CFAR_RW_ShieldGunner>
+					<CFAR_RW_Artillery>12</CFAR_RW_Artillery>
+					<CFAR_RW_Railgunner>6</CFAR_RW_Railgunner>
+					<CFAR_RW_Officer>4</CFAR_RW_Officer>
+				</options>
+			</li>
+			<!--<li>
+				Blitzkommando
+				<kindDef>Combat</kindDef>
+				<disallowedStrategies>
+					<li>ImmediateAttack</li>
+					<li>ImmediateAttackBreaching</li>
+					<li>StageThenAttack</li>
+					<li>ImmediateAttackSappers</li>
+				</disallowedStrategies>
+				<options>
+					<CFAR_RW_Trooper>1</CFAR_RW_Trooper>
+					<CFAR_RW_Gunner>1</CFAR_RW_Gunner>
+					<CFAR_RW_Grenadier>1</CFAR_RW_Grenadier>
+				</options>
+			</li>-->
+			<!--<li>
+				<kindDef>Peaceful</kindDef>
+				<options>
+				</options>
+			</li>-->
+			<li>
+				<kindDef>Settlement</kindDef>
+				<options>
+					<CFAR_RW_Trooper>1</CFAR_RW_Trooper>
+				</options>
+			</li>
+		</pawnGroupMakers>
+		<xenotypeSet><xenotypeChances>
+			<CFAR_Arellian>999</CFAR_Arellian>
+		</xenotypeChances></xenotypeSet>
+		<disallowedRaidAgeRestrictions>
+			<li>Children</li>
+		</disallowedRaidAgeRestrictions>
+	</FactionDef>
+</Defs>
