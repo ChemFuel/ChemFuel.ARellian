@@ -21,6 +21,22 @@
 	</ThingDef>
 
 	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_CFAR_Shotgun</defName>
+		<label>buckshot</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>4</damageAmountBase><!--4Dmg*4 = 16Dmg Ttl, 0.97%ChnPerDmg-->
+			<stoppingPower>3</stoppingPower>
+			<armorPenetrationBase>0.14</armorPenetrationBase>
+			<speed>55</speed>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
 		<defName>Bullet_CFAR_Rifle</defName>
 		<label>bullet</label>
 		<graphicData>
@@ -29,48 +45,10 @@
 		</graphicData>
 		<projectile>
 			<damageDef>Bullet</damageDef>
-			<damageAmountBase>12</damageAmountBase>
+			<damageAmountBase>11</damageAmountBase>
 			<stoppingPower>1</stoppingPower>
 			<armorPenetrationBase>0.20</armorPenetrationBase>
 			<speed>70</speed>
-		</projectile>
-	</ThingDef>
-
-	<ThingDef ParentName="BaseBullet">
-		<defName>Bullet_CFAR_Railgun</defName>
-		<label>bullet</label>
-		<graphicData>
-			<texPath>Things/Projectile/Bullet_big</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<projectile>
-			<damageDef>Bullet</damageDef>
-			<damageAmountBase>50</damageAmountBase>
-			<stoppingPower>3</stoppingPower>
-			<armorPenetrationBase>0.75</armorPenetrationBase>
-			<speed>140</speed>
-		</projectile>
-	</ThingDef>
-
-	<ThingDef ParentName="BaseBullet">
-		<defName>Shell_CFAR_Mortar</defName>
-		<label>HE shell</label>
-		<graphicData>
-			<texPath>Things/Projectile/Bullet_big</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<thingClass>Projectile_Explosive</thingClass>
-		<projectile>
-			<damageDef>Bomb</damageDef>
-			<stoppingPower>3</stoppingPower>
-			<speed>41</speed>
-			<explosionRadius>2.9</explosionRadius>
-			<flyOverhead>true</flyOverhead>
-			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
-			<soundExplode>MortarBomb_Explode</soundExplode>
-			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
-			<soundAmbient>MortarRound_Ambient</soundAmbient>
-			<preExplosionSpawnSingleThingDef>Filth_BlastMark</preExplosionSpawnSingleThingDef>
 		</projectile>
 	</ThingDef>
 
@@ -122,7 +100,7 @@
 			<AccuracyShort>0.80</AccuracyShort>
 			<AccuracyMedium>0.65</AccuracyMedium>
 			<AccuracyLong>0.50</AccuracyLong>
-			<RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
 		</statBases>
 		<weaponTags>
 			<li>CFAR_Pistol</li>
@@ -137,7 +115,7 @@
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_CFAR_Pistol</defaultProjectile>
-				<warmupTime>0.25</warmupTime>
+				<warmupTime>0.3</warmupTime>
 				<burstShotCount>1</burstShotCount>
 				<range>25.9</range>
 				<soundCast>Shot_HeavySMG</soundCast>
@@ -148,6 +126,75 @@
 		<tools>
 			<li>
 				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tradeTags>
+			<li>CFAR_WeaponRanged</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="Base_CFAR_GunIndustrial">
+		<defName>Gun_CFAR_SG</defName>
+		<label>Arellian Shotgun</label>
+		<description>WIP</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_MPK</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_SMG</soundInteract>
+		<recipeMaker>
+			<researchPrerequisite>GasOperation</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+			<displayPriority>1172</displayPriority>
+		</recipeMaker>
+		<statBases>
+			<WorkToMake>16000</WorkToMake>
+			<Mass>2.5</Mass>
+			<AccuracyTouch>0.9</AccuracyTouch>
+			<AccuracyShort>0.85</AccuracyShort>
+			<AccuracyMedium>0.72</AccuracyMedium>
+			<AccuracyLong>0.57</AccuracyLong>
+			<RangedWeapon_Cooldown>1.15</RangedWeapon_Cooldown>
+		</statBases>
+		<weaponTags>
+			<li>CFAR_SG</li>
+		</weaponTags>
+		<costList>
+			<Steel>45</Steel>
+			<Plasteel>15</Plasteel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_CFAR_Shotgun</defaultProjectile>
+				<burstShotCount>1</burstShotCount>
+				<warmupTime>0.9</warmupTime>
+				<range>13.9</range>
+				<soundCast>Shot_HeavySMG</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>8</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>stock</label>
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
@@ -179,17 +226,17 @@
 		<statBases>
 			<WorkToMake>16000</WorkToMake>
 			<Mass>2.5</Mass>
-			<AccuracyTouch>0.85</AccuracyTouch>
-			<AccuracyShort>0.90</AccuracyShort>
-			<AccuracyMedium>0.50</AccuracyMedium>
-			<AccuracyLong>0.25</AccuracyLong>
+			<AccuracyTouch>0.90</AccuracyTouch>
+			<AccuracyShort>0.72</AccuracyShort>
+			<AccuracyMedium>0.40</AccuracyMedium>
+			<AccuracyLong>0.23</AccuracyLong>
 			<RangedWeapon_Cooldown>1.6</RangedWeapon_Cooldown>
 		</statBases>
 		<weaponTags>
 			<li>CFAR_MPK</li>
 		</weaponTags>
 		<costList>
-			<Steel>35</Steel>
+			<Steel>50</Steel>
 			<Plasteel>15</Plasteel>
 			<ComponentIndustrial>4</ComponentIndustrial>
 		</costList>
@@ -249,10 +296,10 @@
 		<statBases>
 			<WorkToMake>45000</WorkToMake>
 			<Mass>3.2</Mass>
-			<AccuracyTouch>0.75</AccuracyTouch>
-			<AccuracyShort>0.87</AccuracyShort>
-			<AccuracyMedium>0.80</AccuracyMedium>
-			<AccuracyLong>0.65</AccuracyLong>
+			<AccuracyTouch>0.65</AccuracyTouch>
+			<AccuracyShort>0.72</AccuracyShort>
+			<AccuracyMedium>0.75</AccuracyMedium>
+			<AccuracyLong>0.55</AccuracyLong>
 			<RangedWeapon_Cooldown>1.60</RangedWeapon_Cooldown>
 		</statBases>
 		<weaponTags>
@@ -270,7 +317,7 @@
 				<defaultProjectile>Bullet_CFAR_Rifle</defaultProjectile>
 				<burstShotCount>4</burstShotCount>
 				<ticksBetweenBurstShots>9</ticksBetweenBurstShots>
-				<warmupTime>0.9</warmupTime>
+				<warmupTime>1.0</warmupTime>
 				<range>32.9</range>
 				<soundCast>Shot_AssaultRifle</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
@@ -320,10 +367,10 @@
 		<statBases>
 			<WorkToMake>60000</WorkToMake>
 			<Mass>8</Mass>
-			<AccuracyTouch>0.65</AccuracyTouch>
-			<AccuracyShort>0.70</AccuracyShort>
-			<AccuracyMedium>0.65</AccuracyMedium>
-			<AccuracyLong>0.50</AccuracyLong>
+			<AccuracyTouch>0.45</AccuracyTouch>
+			<AccuracyShort>0.55</AccuracyShort>
+			<AccuracyMedium>0.70</AccuracyMedium>
+			<AccuracyLong>0.55</AccuracyLong>
 			<RangedWeapon_Cooldown>2.20</RangedWeapon_Cooldown>
 		</statBases>
 		<equippedStatOffsets>
@@ -347,175 +394,11 @@
 				<defaultProjectile>Bullet_CFAR_Rifle</defaultProjectile>
 				<burstShotCount>12</burstShotCount>
 				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
-				<warmupTime>1.6</warmupTime>
+				<warmupTime>1.8</warmupTime>
 				<range>32.9</range>
 				<soundCast>Shot_AssaultRifle</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
-			</li>
-		</verbs>
-		<tools>
-			<li>
-				<label>barrel</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-			<li>
-				<label>stock</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-		</tools>
-		<tradeTags>
-			<li>CFAR_WeaponRanged</li>
-		</tradeTags>
-	</ThingDef>
-
-	<ThingDef ParentName="Base_CFAR_GunIndustrial">
-		<defName>Gun_CFAR_Railgun</defName>
-		<label>Arellian Railgun</label>
-		<description>A high-energy electromagnetic weapon that accelerates magnetized depleted-uranium projectiles to extreme velocities. Typically issued to Arellian Railgunners, it is employed for the deliberate elimination of high-value targets. Its immense stopping power and exceptional armor penetration allow it to reliably destroy heavily armored infantry and mechanized threats, trading rate of fire for decisive impact.</description>
-		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_AutoRifle</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<soundInteract>Interact_Rifle</soundInteract>
-		<recipeMaker>
-			<researchPrerequisite>PrecisionRifling</researchPrerequisite>
-			<skillRequirements>
-				<Crafting>6</Crafting>
-			</skillRequirements>
-			<displayPriority>1173</displayPriority>
-		</recipeMaker>
-		<statBases>
-			<WorkToMake>75000</WorkToMake>
-			<Mass>8</Mass>
-			<AccuracyTouch>0.82</AccuracyTouch>
-			<AccuracyShort>0.90</AccuracyShort>
-			<AccuracyMedium>0.97</AccuracyMedium>
-			<AccuracyLong>0.95</AccuracyLong>
-			<RangedWeapon_Cooldown>2.50</RangedWeapon_Cooldown>
-		</statBases>
-		<equippedStatOffsets>
-			<MoveSpeed>-0.06</MoveSpeed>
-		</equippedStatOffsets>
-		<weaponTags>
-			<li>CFAR_Railgun</li>
-		</weaponTags>
-		<weaponClasses>
-			<li>LongShots</li>
-			<li>RangedHeavy</li>
-    	</weaponClasses>
-		<costList>
-			<Steel>50</Steel>
-			<Plasteel>25</Plasteel>
-			<Uranium>5</Uranium>
-			<ComponentIndustrial>4</ComponentIndustrial>
-			<ComponentSpacer>1</ComponentSpacer>
-		</costList>
-		<verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_CFAR_Railgun</defaultProjectile>
-				<warmupTime>4</warmupTime>
-				<range>49.9</range>
-				<soundCast>Shot_SniperRifle</soundCast>
-				<soundCastTail>GunTail_Heavy</soundCastTail>
-				<muzzleFlashScale>9</muzzleFlashScale>
-			</li>
-		</verbs>
-		<tools>
-			<li>
-				<label>barrel</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-			<li>
-				<label>stock</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-		</tools>
-		<tradeTags>
-			<li>CFAR_WeaponRanged</li>
-		</tradeTags>
-	</ThingDef>
-
-	<ThingDef ParentName="Base_CFAR_GunIndustrial">
-		<defName>Gun_CFAR_Mortar</defName>
-		<label>Arellian Mortar</label>
-		<description>WIP</description>
-		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_Mortar</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<soundInteract>Interact_Rifle</soundInteract>
-		<recipeMaker>
-			<researchPrerequisites>
-			<li>PrecisionRifling</li>
-			<li>Mortars</li>
-			</researchPrerequisites>
-			<skillRequirements>
-				<Crafting>6</Crafting>
-			</skillRequirements>
-			<displayPriority>1173</displayPriority>
-		</recipeMaker>
-		<statBases>
-			<WorkToMake>75000</WorkToMake>
-			<Mass>15</Mass>
-			<AccuracyTouch>0.75</AccuracyTouch>
-			<AccuracyShort>0.75</AccuracyShort>
-			<AccuracyMedium>0.75</AccuracyMedium>
-			<AccuracyLong>0.75</AccuracyLong>
-			<RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
-		</statBases>
-		<equippedStatOffsets>
-			<MoveSpeed>-0.48</MoveSpeed>
-		</equippedStatOffsets>
-		<weaponTags>
-			<li>CFAR_Artillery</li>
-		</weaponTags>
-		<weaponClasses>
-			<li>LongShots</li>
-			<li>RangedHeavy</li>
-    	</weaponClasses>
-		<costList>
-			<Steel>75</Steel>
-			<Plasteel>25</Plasteel>
-			<Chemfuel>75</Chemfuel>
-			<ComponentIndustrial>4</ComponentIndustrial>
-			<ComponentSpacer>1</ComponentSpacer>
-		</costList>
-		<verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Shell_CFAR_Mortar</defaultProjectile>
-				<warmupTime>8</warmupTime>
-				<forcedMissRadius>4.9</forcedMissRadius>
-				<ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
-				<range>99.9</range>
-				<minRange>7.9</minRange>
-				<requireLineOfSight>false</requireLineOfSight>
-				<soundCast>Mortar_LaunchA</soundCast>
-				<targetParams>
-					<canTargetLocations>true</canTargetLocations>
-				</targetParams>
-				<muzzleFlashScale>16</muzzleFlashScale>
 			</li>
 		</verbs>
 		<tools>
