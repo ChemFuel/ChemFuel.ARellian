@@ -132,6 +132,7 @@
 			<EquipDelay>1</EquipDelay>
 		</statBases>
 		<apparel>
+			<wearPerDay>0</wearPerDay>
 			<countsAsClothingForNudity>false</countsAsClothingForNudity>
 			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
 			<bodyPartGroups>
