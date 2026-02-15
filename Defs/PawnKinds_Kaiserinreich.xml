@@ -58,12 +58,11 @@
 <!--================ Reichswehr - Trooper ================-->
 
 	<PawnKindDef ParentName="CFAR_RW_SoldierBase">
-		<defName>CFAR_RW_Trooper</defName>
-		<label>Reichswehr trooper</label>
+		<defName>CFAR_RW_HeerTrooperAR</defName>
+		<label>trooper</label><!--KR : 소총병-->
 		<apparelRequired>
 			<li>Apparel_CFAR_ServiceUniform</li>
 			<li>Apparel_CFAR_ServiceArmor</li>
-			<li>Apparel_CFAR_PauldronsService</li>
 			<li>Apparel_CFAR_ServiceHelm</li>
 		</apparelRequired>
 		<apparelTags>
@@ -71,6 +70,33 @@
 		</apparelTags>
 		<weaponTags>
 			<li>CFAR_AutoRifle</li>
+			<li>CFAR_AutoRifle</li>
+		</weaponTags>
+		<backstoryFiltersOverride>
+			<li>
+				<categoriesChildhood>
+					<li>CFAR_Child</li>
+				</categoriesChildhood>
+				<categoriesAdulthood>
+					<li>CFAR_RW_Infantry</li>
+				</categoriesAdulthood>
+			</li>
+		</backstoryFiltersOverride>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="CFAR_RW_SoldierBase">
+		<defName>CFAR_RW_HeerTrooperMG</defName>
+		<label>MG trooper</label><!--KR : 기관총병-->
+		<apparelRequired>
+			<li>Apparel_CFAR_ServiceUniform</li>
+			<li>Apparel_CFAR_ServiceArmor</li>
+			<li>Apparel_CFAR_ServiceHelm</li>
+		</apparelRequired>
+		<apparelTags>
+			<li>CFAR_Uniform</li>
+		</apparelTags>
+		<weaponTags>
+			<li>CFAR_GPMG</li>
 		</weaponTags>
 		<backstoryFiltersOverride>
 			<li>
