@@ -155,7 +155,7 @@
 
 	<ThingDef ParentName="CFAR_VisorBase">
 		<defName>Apparel_CFAR_VisorCombat</defName>
-		<label>Reichswehr combat visor</label>
+		<label>combat visor</label>
 		<description>WIP</description>
 		<recipeMaker>
 			<displayPriority>1160</displayPriority>
@@ -307,3 +307,4 @@
 		</apparel>
 	</ThingDef>
 </Defs>
+
