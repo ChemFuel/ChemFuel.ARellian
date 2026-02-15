@@ -24,7 +24,7 @@
 		<permanentEnemyToEveryoneExceptPlayer>true</permanentEnemyToEveryoneExceptPlayer>
 		<canRequestOrbitalTrader>true</canRequestOrbitalTrader>
 		<fixedLeaderKinds><li>CFAR_Flottelegat</li></fixedLeaderKinds>
-		<basicMemberKind>CFAR_RW_Trooper</basicMemberKind>
+		<basicMemberKind>CFAR_RW_HeerTrooperAR</basicMemberKind>
 		<backstoryFilters>
 			<li>
 				<categoriesChildhood>
@@ -112,7 +112,9 @@
 			<li>
 				<kindDef>Settlement</kindDef>
 				<options>
-					<CFAR_RW_Trooper>1</CFAR_RW_Trooper>
+					<CFAR_RW_HeerTrooper>6</CFAR_RW_HeerTrooper>
+					<CFAR_RW_HeerMGTrooper>2</CFAR_RW_HeerMGTrooper>
+					<CFAR_RW_HeerSquadLeader>1</CFAR_RW_HeerSquadLeader>
 				</options>
 			</li>
 		</pawnGroupMakers>
