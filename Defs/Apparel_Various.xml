@@ -87,7 +87,18 @@
 		</recipeMaker>
 		<statBases>
 			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.50</ArmorRating_Heat>
+			<Insulation_Cold>50</Insulation_Cold>
+			<Insulation_Heat>0</Insulation_Heat>
 		</statBases>
+		<equippedStatOffsets>
+			<ToxicEnvironmentResistance>0.15</ToxicEnvironmentResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.30</VacuumResistance>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
+			<MoveSpeed>-0.24</MoveSpeed>
+		</equippedStatOffsets>
 		<thingCategories>
 			<li>ApparelArmor</li>
 		</thingCategories>
@@ -98,6 +109,7 @@
 			</layers>
 			<defaultOutfitTags>
 				<li>Soldier</li>
+				<li>Spacefarer</li>
 			</defaultOutfitTags>
 			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
 		</apparel>
@@ -130,21 +142,9 @@
 		<statBases>
 			<WorkToMake>36000</WorkToMake>
 			<MaxHitPoints>360</MaxHitPoints>
-			<ArmorRating_Sharp>0.80</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.50</ArmorRating_Heat>
-			<Insulation_Cold>50</Insulation_Cold>
-			<Insulation_Heat>0</Insulation_Heat>
 			<Mass>10</Mass>
 			<EquipDelay>10</EquipDelay>
 		</statBases>
-		<equippedStatOffsets>
-			<StaggerDurationFactor>-0.25</StaggerDurationFactor>
-			<ToxicEnvironmentResistance>0.15</ToxicEnvironmentResistance>
-			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.30</VacuumResistance>
-			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
-			<MoveSpeed>-0.24</MoveSpeed>
-		</equippedStatOffsets>
 		<apparel>
 			<bodyPartGroups>
 				<li>Neck</li>
@@ -162,3 +162,4 @@
 		</apparel>
 	</ThingDef>
 </Defs>
+
