@@ -6,7 +6,7 @@
 
 	<ThingDef ParentName="BaseBullet">
 		<defName>Bullet_CFAR_Pistol</defName>
-		<label>bullet</label>
+		<label>pistol bullet</label>
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Small</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -22,9 +22,9 @@
 
 	<ThingDef ParentName="BaseBullet">
 		<defName>Bullet_CFAR_Shotgun</defName>
-		<label>buckshot</label>
+		<label>shotgun blast</label>
 		<graphicData>
-			<texPath>Things/Projectile/Bullet_big</texPath>
+			<texPath>Things/Projectile/Bullet_Shotgun</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<projectile>
@@ -38,7 +38,7 @@
 
 	<ThingDef ParentName="BaseBullet">
 		<defName>Bullet_CFAR_Rifle</defName>
-		<label>bullet</label>
+		<label>rifle bullet</label>
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Small</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -78,8 +78,8 @@
 
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
 		<defName>Gun_CFAR_Pistol</defName>
-		<label>Arellian Pistol</label>
-		<description>An autopistol issued to officers and non-combat personnel for personal defense and command security.</description>
+		<label>Arellian Autopistol</label>
+		<description>A Reichswehr standard-issue automatic sidearm, built for reliability under shipboard and terrestrial combat conditions.</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_Pistol</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -141,7 +141,7 @@
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
 		<defName>Gun_CFAR_SG</defName>
 		<label>Arellian Shotgun</label>
-		<description>WIP</description>
+		<description>A stockless Reichswehr shotgun designed for close-quarters and shipboard combat. Issued primarily for confined engagements and breaching roles.</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_MPK</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -179,7 +179,7 @@
 				<burstShotCount>1</burstShotCount>
 				<warmupTime>0.9</warmupTime>
 				<range>13.9</range>
-				<soundCast>Shot_HeavySMG</soundCast>
+				<soundCast>Shot_Shotgun</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
 				<muzzleFlashScale>8</muzzleFlashScale>
 			</li>
@@ -187,14 +187,6 @@
 		<tools>
 			<li>
 				<label>barrel</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-			<li>
-				<label>stock</label>
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
@@ -210,7 +202,7 @@
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
 		<defName>Gun_CFAR_MPK</defName>
 		<label>Arellian MPK</label>
-		<description>A compact submachine gun issued to military police and engineers for patrols, close-quarters response, and utility tasks.</description>
+		<description>A standard-issue Reichswehr submachine gun favored for its compact profile and high rate of fire. It is commonly issued to shipboard security, support personnel, and units operating in confined environments.</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_MPK</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -280,7 +272,7 @@
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
 		<defName>Gun_CFAR_AutoRifle</defName>
 		<label>Arellian Automatic Rifle</label>
-		<description>An automatic service rifle issued to Reichswehr line infantry as the standard squad weapon for general combat and sustained engagement.</description>
+		<description>A standard-issue Reichswehr assault rifle engineered for versatility across varied combat environments. While not specialized for any single role, it provides reliable performance in most engagements.</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_AutoRifle</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -297,8 +289,8 @@
 			<WorkToMake>45000</WorkToMake>
 			<Mass>3.2</Mass>
 			<AccuracyTouch>0.65</AccuracyTouch>
-			<AccuracyShort>0.72</AccuracyShort>
-			<AccuracyMedium>0.75</AccuracyMedium>
+			<AccuracyShort>0.75</AccuracyShort>
+			<AccuracyMedium>0.72</AccuracyMedium>
 			<AccuracyLong>0.55</AccuracyLong>
 			<RangedWeapon_Cooldown>1.60</RangedWeapon_Cooldown>
 		</statBases>
@@ -350,7 +342,7 @@
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
 		<defName>Gun_CFAR_GPMG</defName>
 		<label>Arellian GPMG</label>
-		<description>A belt-fed general-purpose support gun designed for high-volume fire and sustained suppression. Issued to Blitzkommando fire teams for point defense during boarding and breach operations, and adopted by Reichswehr gunners as a reliable platform for lane control and anti-horde engagements.</description>
+		<description>A heavy squad-support machine gun of the Reichswehr. It delivers sustained and punishing fire at the cost of reduced mobility.</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_GPMG</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -367,14 +359,14 @@
 		<statBases>
 			<WorkToMake>60000</WorkToMake>
 			<Mass>8</Mass>
-			<AccuracyTouch>0.45</AccuracyTouch>
-			<AccuracyShort>0.55</AccuracyShort>
-			<AccuracyMedium>0.70</AccuracyMedium>
-			<AccuracyLong>0.55</AccuracyLong>
+			<AccuracyTouch>0.55</AccuracyTouch>
+			<AccuracyShort>0.60</AccuracyShort>
+			<AccuracyMedium>0.45</AccuracyMedium>
+			<AccuracyLong>0.35</AccuracyLong>
 			<RangedWeapon_Cooldown>2.20</RangedWeapon_Cooldown>
 		</statBases>
 		<equippedStatOffsets>
-			<MoveSpeed>-0.12</MoveSpeed>
+			<MoveSpeed>-0.18</MoveSpeed>
 		</equippedStatOffsets>
 		<weaponTags>
 			<li>CFAR_GPMG</li>
