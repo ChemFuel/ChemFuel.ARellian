@@ -89,12 +89,6 @@
 				</disallowedStrategies>
 				<options>
 					<CFAR_RW_Trooper>35</CFAR_RW_Trooper>
-					<CFAR_RW_Grenadier>15</CFAR_RW_Grenadier>
-					<CFAR_RW_Gunner>20</CFAR_RW_Gunner>
-					<CFAR_RW_ShieldGunner>8</CFAR_RW_ShieldGunner>
-					<CFAR_RW_Artillery>12</CFAR_RW_Artillery>
-					<CFAR_RW_Railgunner>6</CFAR_RW_Railgunner>
-					<CFAR_RW_Officer>4</CFAR_RW_Officer>
 				</options>
 			</li>
 			<!--<li>
@@ -108,8 +102,6 @@
 				</disallowedStrategies>
 				<options>
 					<CFAR_RW_Trooper>1</CFAR_RW_Trooper>
-					<CFAR_RW_Gunner>1</CFAR_RW_Gunner>
-					<CFAR_RW_Grenadier>1</CFAR_RW_Grenadier>
 				</options>
 			</li>-->
 			<!--<li>
