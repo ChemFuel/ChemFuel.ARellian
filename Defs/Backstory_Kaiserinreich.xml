@@ -72,6 +72,7 @@
 		</skillGains>
 		<spawnCategories>
 			<li>CFAR_RW_Infantry</li>
+			<li>CFAR_RW_Trooper</li>
 		</spawnCategories>
 	</BackstoryDef>
 
@@ -110,90 +111,6 @@
 		</skillGains>
 		<spawnCategories>
 			<li>CFAR_RW_Infantry</li>
-		</spawnCategories>
-	</BackstoryDef>
-
-<!--======== Artillery ========-->
-
-	<BackstoryDef ParentName="CFAR_Reichswehr">
-		<defName>CFAR_RW_Artillery1</defName>
-		<title>Reichswehr artillery trooper</title>
-		<titleShort>trooper</titleShort>
-		<description>[PAWN_nameDef] had a simple job—raining shells on enemy bases at faster, more accurate intervals. Suffice it to say, [PAWN_pronoun] was good at it. Trigonometry was no easy task, but it beat fighting giant insects at melee range.</description>
-		<requiredWorkTags>
-			<li>Intellectual</li>
-			<li>Hauling</li>
-		</requiredWorkTags>
-		<skillGains>
-			<Shooting>6</Shooting>
-			<Melee>2</Melee>
-			<Intellectual>6</Intellectual>
-		</skillGains>
-		<spawnCategories>
-			<li>CFAR_RW_Artillery</li>
-		</spawnCategories>
-	</BackstoryDef>
-
-	<BackstoryDef ParentName="CFAR_Reichswehr">
-		<defName>CFAR_RW_Artillery2</defName>
-		<title>Reichswehr artillery trooper</title>
-		<titleShort>trooper</titleShort>
-		<description>WIP</description>
-		<requiredWorkTags>
-			<li>Intellectual</li>
-			<li>Hauling</li>
-		</requiredWorkTags>
-		<skillGains>
-			<Shooting>6</Shooting>
-			<Melee>2</Melee>
-			<Intellectual>6</Intellectual>
-		</skillGains>
-		<spawnCategories>
-			<li>CFAR_RW_Artillery</li>
-		</spawnCategories>
-	</BackstoryDef>
-
-<!--================ Officer - Low ================-->
-
-<!--======== Officer ========-->
-
-	<BackstoryDef ParentName="CFAR_Reichswehr">
-		<defName>CFAR_RW_InfantryOfficer1</defName>
-		<title>Reichswehr infantry officer</title>
-		<titleShort>officer</titleShort>
-		<description>WIP</description>
-		<requiredWorkTags>
-			<li>Social</li>
-			<li>Intellectual</li>
-		</requiredWorkTags>
-		<skillGains>
-			<Shooting>6</Shooting>
-			<Melee>4</Melee>
-			<Social>2</Social>
-			<Intellectual>4</Intellectual>
-		</skillGains>
-		<spawnCategories>
-			<li>CFAR_RW_InfantryOfficer</li>
-		</spawnCategories>
-	</BackstoryDef>
-
-	<BackstoryDef ParentName="CFAR_Reichswehr">
-		<defName>CFAR_RW_InfantryOfficer2</defName>
-		<title>Reichswehr infantry officer</title>
-		<titleShort>officer</titleShort>
-		<description>WIP</description>
-		<requiredWorkTags>
-			<li>Social</li>
-			<li>Intellectual</li>
-		</requiredWorkTags>
-		<skillGains>
-			<Shooting>6</Shooting>
-			<Melee>4</Melee>
-			<Social>2</Social>
-			<Intellectual>4</Intellectual>
-		</skillGains>
-		<spawnCategories>
-			<li>CFAR_RW_InfantryOfficer</li>
 		</spawnCategories>
 	</BackstoryDef>
 </Defs>
