@@ -24,7 +24,7 @@
 		<permanentEnemyToEveryoneExceptPlayer>true</permanentEnemyToEveryoneExceptPlayer>
 		<canRequestOrbitalTrader>true</canRequestOrbitalTrader>
 		<fixedLeaderKinds><li>CFAR_Flottelegat</li></fixedLeaderKinds>
-		<basicMemberKind>CFAR_RW_HeerTrooperAR</basicMemberKind>
+		<basicMemberKind>CFAR_RW_HeerTrooper</basicMemberKind>
 		<backstoryFilters>
 			<li>
 				<categoriesChildhood>
@@ -77,7 +77,7 @@
 					<Elephant>1</Elephant>
 				</carriers>
 				<guards>
-					<CFAR_RW_Trooper>1</CFAR_RW_Trooper>
+					<CFAR_RW_HeerTrooper>1</CFAR_RW_HeerTrooper>
 				</guards>
 			</li>
 			<li>
@@ -88,7 +88,7 @@
 					<li>ImmediateAttackBreachingSmart</li>
 				</disallowedStrategies>
 				<options>
-					<CFAR_RW_Trooper>35</CFAR_RW_Trooper>
+					<CFAR_RW_HeerTrooper>35</CFAR_RW_HeerTrooper>
 				</options>
 			</li>
 			<!--<li>
@@ -101,7 +101,7 @@
 					<li>ImmediateAttackSappers</li>
 				</disallowedStrategies>
 				<options>
-					<CFAR_RW_Trooper>1</CFAR_RW_Trooper>
+					<CFAR_RW_HeerTrooper>1</CFAR_RW_HeerTrooper>
 				</options>
 			</li>-->
 			<!--<li>

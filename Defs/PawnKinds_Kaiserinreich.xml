@@ -115,7 +115,7 @@
 		<label>Squad Leader</label><!--KR : 분대장-->
 		<apparelRequired>
 			<li>Apparel_CFAR_ReichswehrUniform</li>
-			<li>Apparel_CFAR_ServiceArmor</li>
+			<li>Apparel_CFAR_ReichswehrArmor</li>
 			<li>Apparel_CFAR_ReichswehrHelmet</li>
 		</apparelRequired>
 		<apparelTags>
