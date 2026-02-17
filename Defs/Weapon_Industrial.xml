@@ -33,6 +33,9 @@
 			<stoppingPower>3</stoppingPower>
 			<armorPenetrationBase>0.14</armorPenetrationBase>
 			<speed>55</speed>
+			<extraDamages>
+				<li><def>Bullet</def><amount>4</amount><armorPenetration>0.14</armorPenetration></li>
+			</extraDamages>
 		</projectile>
 	</ThingDef>
 
@@ -416,3 +419,4 @@
 		</tradeTags>
 	</ThingDef>
 </Defs>
+
