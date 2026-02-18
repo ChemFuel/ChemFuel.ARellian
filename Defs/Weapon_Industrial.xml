@@ -56,6 +56,27 @@
 		</projectile>
 	</ThingDef>
 
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_CFAR_Canister</defName>
+		<label>canister blast</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Shotgun</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>25</damageAmountBase>
+			<stoppingPower>3</stoppingPower>
+			<armorPenetrationBase>0.50</armorPenetrationBase>
+			<speed>55</speed>
+			<extraDamages>
+				<li><def>Bomb</def><amount>5</amount><armorPenetration>0.10</armorPenetration></li>
+				<li><def>Bomb</def><amount>5</amount><armorPenetration>0.10</armorPenetration></li>
+				<li><def>Bomb</def><amount>5</amount><armorPenetration>0.10</armorPenetration></li>
+			</extraDamages>
+		</projectile>
+	</ThingDef>
+
 <!--======== WeaponDefs ========-->
 
 	<ThingDef Name="Base_CFAR_GunIndustrial" ParentName="BaseGunWithQuality" Abstract="True">
@@ -420,6 +441,7 @@
 		</tradeTags>
 	</ThingDef>
 </Defs>
+
 
 
 
