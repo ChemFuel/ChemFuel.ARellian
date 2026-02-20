@@ -166,7 +166,7 @@
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
 		<defName>Gun_CFAR_Shotgun</defName>
 		<label>Arellian Tactical Shotgun</label>
-		<description>A stockless Reichswehr shotgun designed for close-quarters and shipboard combat. Issued primarily for confined engagements and breaching roles.</description>
+		<description>A stockless shotgun designed for close-quarters and shipboard combat. Issued primarily for confined engagements and breaching roles.</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_MPK</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -227,7 +227,7 @@
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
 		<defName>Gun_CFAR_MPK</defName>
 		<label>Arellian MPK</label>
-		<description>A standard-issue Reichswehr submachine gun favored for its compact profile and high rate of fire. It is commonly issued to shipboard security, support personnel, and units operating in confined environments.</description>
+		<description>A compact submachine gun favored for its compact profile and high rate of fire. It is commonly issued to shipboard security, support personnel, and units operating in confined environments.</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_MPK</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -297,7 +297,7 @@
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
 		<defName>Gun_CFAR_AutoRifle</defName>
 		<label>Arellian Automatic Rifle</label>
-		<description>A standard-issue Reichswehr assault rifle engineered for versatility across varied combat environments. While not specialized for any single role, it provides reliable performance in most engagements.</description>
+		<description>A standard-issue automatic rifle of the Reichswehr, engineered for versatility across varied combat environments. While not specialized for any single role, it provides reliable performance in most engagements.</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_AutoRifle</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -440,8 +440,76 @@
 			<li>CFAR_WeaponRanged</li>
 		</tradeTags>
 	</ThingDef>
+
+	<ThingDef ParentName="Base_CFAR_GunIndustrial">
+		<defName>Gun_CFAR_CanisterRifle</defName>
+		<label>Arellian Canister Rifle</label>
+		<description>WIP</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_AutoRifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<recipeMaker>
+			<researchPrerequisite>PrecisionRifling</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+			<displayPriority>1173</displayPriority>
+		</recipeMaker>
+		<statBases>
+			<WorkToMake>45000</WorkToMake>
+			<Mass>6</Mass>
+			<AccuracyTouch>0.55</AccuracyTouch>
+			<AccuracyShort>0.75</AccuracyShort>
+			<AccuracyMedium>0.95</AccuracyMedium>
+			<AccuracyLong>0.85</AccuracyLong>
+			<RangedWeapon_Cooldown>1.80</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.12</MoveSpeed>
+		</equippedStatOffsets>
+		<weaponTags>
+			<li>CFAR_CanisterRifle</li>
+		</weaponTags>
+		<costList>
+			<Steel>55</Steel>
+			<Plasteel>20</Plasteel>
+			<ComponentIndustrial>6</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_CFAR_Canister</defaultProjectile>
+				<burstShotCount>1</burstShotCount>
+				<warmupTime>2.5</warmupTime>
+				<range>44.9</range>
+				<soundCast>Shot_AssaultRifle</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tradeTags>
+			<li>CFAR_WeaponRanged</li>
+		</tradeTags>
+	</ThingDef>
 </Defs>
-
-
-
-
