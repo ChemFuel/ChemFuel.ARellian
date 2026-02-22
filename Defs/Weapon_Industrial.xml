@@ -150,16 +150,16 @@
 			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_MPK</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
-		<soundInteract>Interact_SMG</soundInteract>
+		<soundInteract>Interact_Shotgun</soundInteract>
 		<recipeMaker>
-			<researchPrerequisite>GasOperation</researchPrerequisite>
+			<researchPrerequisite>BlowbackOperation</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>5</Crafting>
+				<Crafting>3</Crafting>
 			</skillRequirements>
-			<displayPriority>1172</displayPriority>
+			<displayPriority>1171</displayPriority>
 		</recipeMaker>
 		<statBases>
-			<WorkToMake>16000</WorkToMake>
+			<WorkToMake>12500</WorkToMake>
 			<Mass>2.5</Mass>
 			<AccuracyTouch>0.9</AccuracyTouch>
 			<AccuracyShort>0.85</AccuracyShort>
@@ -184,7 +184,7 @@
 				<warmupTime>0.75</warmupTime>
 				<range>13.9</range>
 				<soundCast>Shot_Shotgun</soundCast>
-				<soundCastTail>GunTail_Medium</soundCastTail>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>8</muzzleFlashScale>
 			</li>
 		</verbs>
@@ -220,7 +220,7 @@
 			<displayPriority>1172</displayPriority>
 		</recipeMaker>
 		<statBases>
-			<WorkToMake>16000</WorkToMake>
+			<WorkToMake>18000</WorkToMake>
 			<Mass>2.5</Mass>
 			<AccuracyTouch>0.90</AccuracyTouch>
 			<AccuracyShort>0.72</AccuracyShort>
@@ -420,6 +420,3 @@
 		</tradeTags>
 	</ThingDef>
 </Defs>
-
-
-
