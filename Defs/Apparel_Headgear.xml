@@ -2,11 +2,10 @@
 <Defs>
 <!--================ Industrial Apparel ================-->
 
-<!--======== Service Cap Base ========-->
+<!--======== Reichswehr Cap Base ========-->
 
 	<ThingDef ParentName="HatMakeableBase" Name="CFAR_CapBase" Abstract="True">
 		<techLevel>Industrial</techLevel>
-		<uiIconScale>1.15</uiIconScale>
 		<recipeMaker>
 			<researchPrerequisite>ComplexClothing</researchPrerequisite>
 			<skillRequirements>
@@ -51,7 +50,7 @@
 		</tradeTags>
 	</ThingDef>
 
-<!--======== Service Cap ========-->
+<!--======== Reichswehr Cap ========-->
 
 	<ThingDef ParentName="CFAR_CapBase">
 		<defName>Apparel_CFAR_OfficerCap</defName>
@@ -62,7 +61,7 @@
 		</recipeMaker>
 		<costStuffCount>35</costStuffCount>
 		<graphicData>
-			<texPath>Things/Pawn/Arellian/Apparel/OfficerCap/Hat</texPath>
+			<texPath>Things/Pawn/Arellian/Apparel/ReichswehrUniform/OfficerCap/Hat</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.80</drawSize>
 		</graphicData>
@@ -71,7 +70,7 @@
 			<SocialImpact>0.10</SocialImpact>
 		</equippedStatOffsets>
 		<apparel>
-			<wornGraphicPath>Things/Pawn/Arellian/Apparel/OfficerCap/Hat</wornGraphicPath>
+			<wornGraphicPath>Things/Pawn/Arellian/Apparel/ReichswehrUniform/OfficerCap/Hat</wornGraphicPath>
 			<tags>
 				<li>CFAR_Officer</li>
 			</tags>
@@ -89,7 +88,7 @@
 		</recipeMaker>
 		<costStuffCount>50</costStuffCount>
 		<graphicData>
-			<texPath>Things/Pawn/Arellian/Apparel/CommanderCap/Hat</texPath>
+			<texPath>Things/Pawn/Arellian/Apparel/ReichswehrUniform/CommanderCap/Hat</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.80</drawSize>
 		</graphicData>
@@ -97,7 +96,7 @@
 			<SocialImpact>0.20</SocialImpact>
 		</equippedStatOffsets>
 		<apparel>
-			<wornGraphicPath>Things/Pawn/Arellian/Apparel/CommanderCap/Hat</wornGraphicPath>
+			<wornGraphicPath>Things/Pawn/Arellian/Apparel/ReichswehrUniform/CommanderCap/Hat</wornGraphicPath>
 			<tags>
 				<li>CFAR_OfficerHigh</li>
 			</tags>
@@ -155,7 +154,7 @@
 
 <!--======== Combat Visor ========-->
 
-	<ThingDef ParentName="CFAR_VisorBase">
+	<ThingDef ParentName="CFAR_VisorBase" MayRequire="Ludeon.RimWorld.Royalty">
 		<defName>Apparel_CFAR_VisorCombat</defName>
 		<label>combat visor</label>
 		<description>WIP</description>
@@ -240,7 +239,7 @@
 			</skillRequirements>
 		</recipeMaker>
 		<graphicData>
-			<texPath>Things/Pawn/Arellian/Apparel/ServiceHelm/Hat</texPath>
+			<texPath>Things/Pawn/Arellian/Apparel/ReichswehrArmor/Helm/Hat</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.80</drawSize>
 		</graphicData>
@@ -254,7 +253,7 @@
 			<EquipDelay>1.5</EquipDelay>
 		</statBases>
 		<apparel>
-			<wornGraphicPath>Things/Pawn/Arellian/Apparel/ServiceHelm/Hat</wornGraphicPath>
+			<wornGraphicPath>Things/Pawn/Arellian/Apparel/ReichswehrArmor/Helm/Hat</wornGraphicPath>
 			<bodyPartGroups>
 				<li>UpperHead</li>
 			</bodyPartGroups>
@@ -280,7 +279,7 @@
 			</researchPrerequisites>
 		</recipeMaker>
 		<graphicData>
-			<texPath>Things/Pawn/Arellian/Apparel/OrbitHelmet/Hat</texPath>
+			<texPath>Things/Pawn/Arellian/Apparel/ReichswehrArmor/Helmet/Hat</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.80</drawSize>
 		</graphicData>
@@ -299,7 +298,7 @@
 			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.65</VacuumResistance>
 		</equippedStatOffsets>
 		<apparel>
-			<wornGraphicPath>Things/Pawn/Arellian/Apparel/OrbitHelmet/Hat</wornGraphicPath>
+			<wornGraphicPath>Things/Pawn/Arellian/Apparel/ReichswehrArmor/Helmet/Hat</wornGraphicPath>
 			<bodyPartGroups>
 				<li>FullHead</li>
 			</bodyPartGroups>

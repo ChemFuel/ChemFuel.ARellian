@@ -27,14 +27,6 @@
 		<apparelMoney>9999~9999</apparelMoney>
 		<specificApparelRequirements>
 			<li>
-				<apparelLayer>Overhead</apparelLayer>
-				<stuff>Plasteel</stuff>
-			</li>
-			<li>
-				<apparelLayer>Middle</apparelLayer>
-				<stuff>Plasteel</stuff>
-			</li>
-			<li>
 				<apparelLayer>OnSkin</apparelLayer>
 				<stuff>Synthread</stuff>
 			</li>
@@ -90,7 +82,7 @@
 			<li>Apparel_CFAR_ReichswehrUniform</li>
 			<li>Apparel_CFAR_ReichswehrArmor</li>
 			<li>Apparel_CFAR_ReichswehrHelm</li>
-			<li>Apparel_CFAR_VisorCombat</li>
+			<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_CFAR_VisorCombat</li>
 		</apparelRequired>
 		<apparelTags>
 			<li>CFAR_Uniform</li>
@@ -117,6 +109,7 @@
 			<li>Apparel_CFAR_ReichswehrUniform</li>
 			<li>Apparel_CFAR_ReichswehrArmor</li>
 			<li>Apparel_CFAR_ReichswehrHelmet</li>
+			<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_CFAR_VisorCombat</li>
 		</apparelRequired>
 		<apparelTags>
 			<li>CFAR_Uniform</li>

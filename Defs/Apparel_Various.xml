@@ -2,9 +2,9 @@
 <Defs>
 <!--================ Industrial Apparel ================-->
 
-<!--======== Service Uniform ========-->
+<!--======== Reichswehr Uniform ========-->
 
-	<ThingDef ParentName="ApparelMakeableBase" Name="CFAR_UniformBase">
+	<ThingDef ParentName="ApparelMakeableBase">
 		<techLevel>Industrial</techLevel>
 		<defName>Apparel_CFAR_ReichswehrUniform</defName>
 		<label>Reichswehr uniform</label>
@@ -17,10 +17,10 @@
 			</skillRequirements>
 		</recipeMaker>
 		<graphicData>
-			<texPath>Things/Pawn/Arellian/Apparel/ServiceUniform/Apparel</texPath>
+			<texPath>Things/Pawn/Arellian/Apparel/ReichswehrUniform/Apparel</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
-		<costStuffCount>100</costStuffCount>
+		<costStuffCount>50</costStuffCount>
 		<stuffCategories>
 			<li>Fabric</li>
 			<li>Leathery</li>
@@ -29,14 +29,13 @@
 			<li>ApparelMisc</li>
 		</thingCategories>
 		<statBases>
-			<WorkToMake>10000</WorkToMake>
-			<MaxHitPoints>200</MaxHitPoints>
-			<Mass>1.25</Mass>
+			<WorkToMake>3000</WorkToMake>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>0.4</Mass>
 			<StuffEffectMultiplierArmor>0.20</StuffEffectMultiplierArmor>
-			<StuffEffectMultiplierInsulation_Cold>0.75</StuffEffectMultiplierInsulation_Cold>
-			<StuffEffectMultiplierInsulation_Heat>0.25</StuffEffectMultiplierInsulation_Heat>
-			<Insulation_Cold>5</Insulation_Cold>
-			<EquipDelay>6</EquipDelay>
+			<StuffEffectMultiplierInsulation_Cold>0.25</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.15</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>3</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
 			<MentalBreakThreshold>-0.1</MentalBreakThreshold>
@@ -48,9 +47,8 @@
 				<li>Neck</li>
 				<li>Shoulders</li>
 				<li>Arms</li>
-				<li>Legs</li>
 			</bodyPartGroups>
-			<wornGraphicPath>Things/Pawn/Arellian/Apparel/ServiceUniform/Apparel</wornGraphicPath>
+			<wornGraphicPath>Things/Pawn/Arellian/Apparel/ReichswehrUniform/Apparel</wornGraphicPath>
 			<layers>
 				<li>OnSkin</li>
 			</layers>
@@ -71,12 +69,13 @@
 
 <!--================ Industrial Armor ================-->
 
-<!--======== Service Armor Base ========-->
+<!--======== Reichswehr Armor Base ========-->
 
 	<ThingDef Name="CFAR_ArmorBase" ParentName="ArmorMachineableBase" Abstract="True">
 		<techLevel>Spacer</techLevel>
 		<recipeMaker>
 			<researchPrerequisites>
+				<li>FlakArmor</li>
 				<li>FlakArmor</li>
 				<li MayRequire="Ludeon.Rimworld.Odyssey">OrbitalTech</li>
 			</researchPrerequisites>
@@ -135,7 +134,7 @@
 			<ComponentSpacer>1</ComponentSpacer>
 		</costList>
 		<graphicData>
-			<texPath>Things/Pawn/Arellian/Apparel/ServiceArmor/Apparel</texPath>
+			<texPath>Things/Pawn/Arellian/Apparel/ReichswehrArmor/Armor</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.90</drawSize>
 		</graphicData>
@@ -153,7 +152,7 @@
 				<li>Arms</li>
 				<li>Legs</li>
 			</bodyPartGroups>
-			<wornGraphicPath>Things/Pawn/Arellian/Apparel/ServiceArmor/Apparel</wornGraphicPath>
+			<wornGraphicPath>Things/Pawn/Arellian/Apparel/ReichswehrArmor/Armor</wornGraphicPath>
 			<tags>
 				<li>CFAR_Soldier</li>
 				<li>CFAR_Officer</li>
@@ -162,4 +161,3 @@
 		</apparel>
 	</ThingDef>
 </Defs>
-

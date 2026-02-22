@@ -77,7 +77,9 @@
 					<Elephant>1</Elephant>
 				</carriers>
 				<guards>
-					<CFAR_RW_HeerTrooper>1</CFAR_RW_HeerTrooper>
+					<CFAR_RW_HeerTrooper>6</CFAR_RW_HeerTrooper>
+					<CFAR_RW_HeerMGTrooper>1</CFAR_RW_HeerMGTrooper>
+					<CFAR_RW_HeerSquadLeader>1</CFAR_RW_HeerSquadLeader>
 				</guards>
 			</li>
 			<li>
@@ -88,7 +90,9 @@
 					<li>ImmediateAttackBreachingSmart</li>
 				</disallowedStrategies>
 				<options>
-					<CFAR_RW_HeerTrooper>35</CFAR_RW_HeerTrooper>
+					<CFAR_RW_HeerTrooper>6</CFAR_RW_HeerTrooper>
+					<CFAR_RW_HeerMGTrooper>1</CFAR_RW_HeerMGTrooper>
+					<CFAR_RW_HeerSquadLeader>1</CFAR_RW_HeerSquadLeader>
 				</options>
 			</li>
 			<!--<li>
@@ -118,6 +122,72 @@
 				</options>
 			</li>
 		</pawnGroupMakers>
+
+		<leaderForceGenerateNewPawn MayRequire="Ludeon.RimWorld.Royalty">true</leaderForceGenerateNewPawn>
+		<royalFavorLabel MayRequire="Ludeon.RimWorld.Royalty">credit</royalFavorLabel>
+		<royalFavorIconPath MayRequire="Ludeon.RimWorld.Royalty">World/WorldObjects/Expanding/CFAR_Kaiserinreich</royalFavorIconPath>
+		<royalTitleTags>
+			<li MayRequire="Ludeon.RimWorld.Royalty">CFAR_Title</li>
+		</royalTitleTags>
+		<royalTitleInheritanceWorkerClass MayRequire="Ludeon.RimWorld.Royalty">RoyalTitleInheritanceWorker</royalTitleInheritanceWorkerClass>
+		<royalTitleInheritanceRelations MayRequire="Ludeon.RimWorld.Royalty" />
+
+		<fixedIdeo MayRequire="Ludeon.RimWorld.Ideology">true</fixedIdeo>
+		<ideoName MayRequire="Ludeon.RimWorld.Ideology">Reichsmandat</ideoName>
+		<ideoDescription MayRequire="Ludeon.RimWorld.Ideology">The Reichsmandat is the governing doctrine of the Arellian Kaiserinreich, defining duty, hierarchy, and responsibility as the foundations of imperial strength. It teaches that order is sustained through discipline, reason, and loyalty guided by judgment. Authority exists to serve the Reich’s continuity, and respect for command is inseparable from accountability.\n\nSubjects of the Kaiserinreich are expected to serve according to their station, uphold the chain of command, and exercise discernment in the execution of orders—especially in moments of crisis. The Reichsmandat warns that obedience without reason breeds decay and tyranny, and charges every citizen to act in the true interest of the Reich when circumstances exceed instruction.\n\nCommand is granted by merit, proven capability, and the Kaiserin’s sanction. Those entrusted with authority bear obligation rather than privilege, and are expected to lead with restraint, foresight, and responsibility. Aggression is directed; conquest is obligation, not excess. Through disciplined judgment and unity of purpose, the Arellian Kaiserinreich endures.</ideoDescription>
+		<deityPresets>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<nameType>
+					<name>Aria Erisis</name><type>Empress of Steel</type>
+				</nameType>
+				<gender>Female</gender>
+				<iconPath>UI/Deities/DeityGeneric</iconPath>
+			</li>
+		</deityPresets>
+		<styles>
+			<!--<li>CFAR_Style</li>-->
+		</styles>
+		<forcedMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
+		</forcedMemes>
+		<structureMemeWeights>
+			<Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
+		</structureMemeWeights>
+		<disallowedPrecepts>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Essential</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Important</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Worthwhile</li>
+
+			<li MayRequire="Ludeon.RimWorld.Ideology">AutonomousWeapons_Prohibited</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">AutonomousWeapons_Horrible</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">AutonomousWeapons_Disapproved</li>
+
+			<li MayRequire="Ludeon.RimWorld.Ideology">DrugUse_Prohibited</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">DrugUse_MedicalOnly</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">DrugUse_MedicalOrSocial</li>
+
+			<li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_Acceptable</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_Preferred</li>
+				
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_UncoveredGroinDisapproved</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_UncoveredGroinChestOrHairDisapproved</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_UncoveredGroinChestHairOrFaceDisapproved</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_UncoveredGroinChestOrHairDisapproved</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_UncoveredGroinChestHairOrFaceDisapproved</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Strong_Subordinate</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Soft_Subordinate</li>
+
+			<li MayRequire="Ludeon.RimWorld.Ideology">Bloodfeeders_Revered</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">ChildLabor_Encouraged</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">GrowthVat_Prohibited</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">MechanoidLabor_Enhanced</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">PreferredXenotype</li>
+		</disallowedPrecepts>
+
+		<layerWhitelist>
+			<li MayRequire="Ludeon.RimWorld.Odyssey">Orbit</li>
+		</layerWhitelist>
+
 		<xenotypeSet><xenotypeChances>
 			<CFAR_Arellian>999</CFAR_Arellian>
 		</xenotypeChances></xenotypeSet>

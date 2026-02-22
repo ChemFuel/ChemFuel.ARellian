@@ -29,13 +29,16 @@
 		</graphicData>
 		<projectile>
 			<damageDef>Bullet</damageDef>
-			<damageAmountBase>6</damageAmountBase><!--6Dmg*3 = 18Dmg-->
+			<damageAmountBase>3</damageAmountBase><!--3Dmg*6 = 18Dmg-->
 			<stoppingPower>3</stoppingPower>
 			<armorPenetrationBase>0.14</armorPenetrationBase>
 			<speed>55</speed>
 			<extraDamages>
-				<li><def>Bullet</def><amount>6</amount><armorPenetration>0.14</armorPenetration></li>
-				<li><def>Bullet</def><amount>6</amount><armorPenetration>0.14</armorPenetration></li>
+				<li><def>Bullet</def><amount>3</amount><armorPenetration>0.14</armorPenetration></li>
+				<li><def>Bullet</def><amount>3</amount><armorPenetration>0.14</armorPenetration></li>
+				<li><def>Bullet</def><amount>3</amount><armorPenetration>0.14</armorPenetration></li>
+				<li><def>Bullet</def><amount>3</amount><armorPenetration>0.14</armorPenetration></li>
+				<li><def>Bullet</def><amount>3</amount><armorPenetration>0.14</armorPenetration></li>
 			</extraDamages>
 		</projectile>
 	</ThingDef>
@@ -53,6 +56,30 @@
 			<stoppingPower>1</stoppingPower>
 			<armorPenetrationBase>0.20</armorPenetrationBase>
 			<speed>70</speed>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_CFAR_Canister</defName>
+		<label>canister blast</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>25</damageAmountBase>
+			<stoppingPower>3</stoppingPower>
+			<armorPenetrationBase>0.50</armorPenetrationBase>
+			<speed>100</speed>
+			<extraDamages>
+				<li><def>Bomb</def><amount>5</amount><armorPenetration>0.10</armorPenetration></li>
+				<li><def>Bullet</def><amount>2</amount><armorPenetration>0.14</armorPenetration></li>
+				<li><def>Bullet</def><amount>2</amount><armorPenetration>0.14</armorPenetration></li>
+				<li><def>Bullet</def><amount>2</amount><armorPenetration>0.14</armorPenetration></li>
+				<li><def>Bullet</def><amount>2</amount><armorPenetration>0.14</armorPenetration></li>
+				<li><def>Bullet</def><amount>2</amount><armorPenetration>0.14</armorPenetration></li>
+			</extraDamages>
 		</projectile>
 	</ThingDef>
 
@@ -145,27 +172,27 @@
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
 		<defName>Gun_CFAR_Shotgun</defName>
 		<label>Arellian Tactical Shotgun</label>
-		<description>A stockless Reichswehr shotgun designed for close-quarters and shipboard combat. Issued primarily for confined engagements and breaching roles.</description>
+		<description>A stockless combat shotgun designed for close-quarters and shipboard combat. Issued primarily for confined engagements and breaching roles.</description>
 		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_MPK</texPath>
+			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_TacticalShotgun</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<soundInteract>Interact_Shotgun</soundInteract>
 		<recipeMaker>
 			<researchPrerequisite>BlowbackOperation</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>3</Crafting>
+				<Crafting>4</Crafting>
 			</skillRequirements>
 			<displayPriority>1171</displayPriority>
 		</recipeMaker>
 		<statBases>
 			<WorkToMake>12500</WorkToMake>
 			<Mass>2.5</Mass>
-			<AccuracyTouch>0.9</AccuracyTouch>
+			<AccuracyTouch>0.90</AccuracyTouch>
 			<AccuracyShort>0.85</AccuracyShort>
 			<AccuracyMedium>0.72</AccuracyMedium>
 			<AccuracyLong>0.57</AccuracyLong>
-			<RangedWeapon_Cooldown>1.25</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
 		</statBases>
 		<weaponTags>
 			<li>CFAR_Shotgun</li>
@@ -182,7 +209,7 @@
 				<defaultProjectile>Bullet_CFAR_Shotgun</defaultProjectile>
 				<burstShotCount>1</burstShotCount>
 				<warmupTime>0.75</warmupTime>
-				<range>13.9</range>
+				<range>15.9</range>
 				<soundCast>Shot_Shotgun</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>8</muzzleFlashScale>
@@ -392,6 +419,78 @@
 				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
 				<warmupTime>1.8</warmupTime>
 				<range>32.9</range>
+				<soundCast>Shot_AssaultRifle</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tradeTags>
+			<li>CFAR_WeaponRanged</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="Base_CFAR_GunIndustrial">
+		<defName>Gun_CFAR_CanisterRifle</defName>
+		<label>Arellian Canister Rifle</label>
+		<description>WIP</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_CanisterRifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<recipeMaker>
+			<researchPrerequisite>PrecisionRifling</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+			<displayPriority>1175</displayPriority>
+		</recipeMaker>
+		<statBases>
+			<WorkToMake>75000</WorkToMake>
+			<Mass>6</Mass>
+			<AccuracyTouch>0.55</AccuracyTouch>
+			<AccuracyShort>0.75</AccuracyShort>
+			<AccuracyMedium>0.95</AccuracyMedium>
+			<AccuracyLong>0.85</AccuracyLong>
+			<RangedWeapon_Cooldown>1.80</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.12</MoveSpeed>
+		</equippedStatOffsets>
+		<weaponTags>
+			<li>CFAR_CanisterRifle</li>
+		</weaponTags>
+		<costList>
+			<Steel>50</Steel>
+			<Plasteel>30</Plasteel>
+			<ComponentIndustrial>8</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_CFAR_Canister</defaultProjectile>
+				<burstShotCount>1</burstShotCount>
+				<warmupTime>2.5</warmupTime>
+				<range>44.9</range>
 				<soundCast>Shot_AssaultRifle</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
