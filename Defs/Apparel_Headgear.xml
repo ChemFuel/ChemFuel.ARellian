@@ -110,7 +110,9 @@
 		<techLevel>Spacer</techLevel>
 		<uiIconScale>1.15</uiIconScale>
 		<recipeMaker>
-			<researchPrerequisite>ComplexClothing</researchPrerequisite>
+			<researchPrerequisites>
+				<li>MicroelectronicsBasics</li>
+			</researchPrerequisites>
 			<skillRequirements>
 				<Crafting>4</Crafting>
 			</skillRequirements>
@@ -158,6 +160,9 @@
 		<label>combat visor</label>
 		<description>WIP</description>
 		<recipeMaker>
+			<researchPrerequisites>
+				<li>Gunlink</li>
+			</researchPrerequisites>
 			<displayPriority>1160</displayPriority>
 		</recipeMaker>
 		<graphicData>
@@ -307,4 +312,5 @@
 		</apparel>
 	</ThingDef>
 </Defs>
+
 
