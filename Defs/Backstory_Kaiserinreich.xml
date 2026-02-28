@@ -36,7 +36,7 @@
 			<Melee>4</Melee>
 		</skillGains>
 		<requiredWorkTags>
-			<li>Construction</li>
+			<li>Constructing</li>
 			<li>PlantWork</li>
 			<li>Mining</li>
 		</requiredWorkTags>
@@ -55,7 +55,7 @@
 			<Melee>4</Melee>
 		</skillGains>
 		<requiredWorkTags>
-			<li>Construction</li>
+			<li>Constructing</li>
 			<li>PlantWork</li>
 			<li>Mining</li>
 		</requiredWorkTags>
@@ -74,7 +74,7 @@
 			<Melee>4</Melee>
 		</skillGains>
 		<requiredWorkTags>
-			<li>Construction</li>
+			<li>Constructing</li>
 			<li>PlantWork</li>
 			<li>Mining</li>
 		</requiredWorkTags>
@@ -93,7 +93,7 @@
 			<Melee>4</Melee>
 		</skillGains>
 		<requiredWorkTags>
-			<li>Construction</li>
+			<li>Constructing</li>
 			<li>PlantWork</li>
 			<li>Mining</li>
 		</requiredWorkTags>
@@ -112,7 +112,7 @@
 			<Melee>4</Melee>
 		</skillGains>
 		<requiredWorkTags>
-			<li>Construction</li>
+			<li>Constructing</li>
 			<li>PlantWork</li>
 			<li>Mining</li>
 		</requiredWorkTags>
@@ -131,7 +131,7 @@
 			<Melee>4</Melee>
 		</skillGains>
 		<requiredWorkTags>
-			<li>Construction</li>
+			<li>Constructing</li>
 			<li>PlantWork</li>
 			<li>Mining</li>
 		</requiredWorkTags>
@@ -153,7 +153,7 @@
 			<Medicine>3</Medicine>
 		</skillGains>
 		<requiredWorkTags>
-			<li>Construction</li>
+			<li>Constructing</li>
 			<li>PlantWork</li>
 			<li>Mining</li>
 			<li>Caring</li>
@@ -173,7 +173,7 @@
 			<Melee>6</Melee>
 		</skillGains>
 		<requiredWorkTags>
-			<li>Construction</li>
+			<li>Constructing</li>
 			<li>PlantWork</li>
 			<li>Mining</li>
 		</requiredWorkTags>
@@ -200,7 +200,7 @@
 			<Melee>6</Melee>
 		</skillGains>
 		<requiredWorkTags>
-			<li>Construction</li>
+			<li>Constructing</li>
 			<li>PlantWork</li>
 			<li>Mining</li>
 		</requiredWorkTags>
@@ -219,7 +219,7 @@
 			<Melee>6</Melee>
 		</skillGains>
 		<requiredWorkTags>
-			<li>Construction</li>
+			<li>Constructing</li>
 			<li>PlantWork</li>
 			<li>Mining</li>
 		</requiredWorkTags>
