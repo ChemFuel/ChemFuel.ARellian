@@ -77,9 +77,9 @@
 					<Elephant>1</Elephant>
 				</carriers>
 				<guards>
-					<CFAR_RW_HeerTrooper>6</CFAR_RW_HeerTrooper>
-					<CFAR_RW_HeerMGTrooper>1</CFAR_RW_HeerMGTrooper>
-					<CFAR_RW_HeerSquadLeader>1</CFAR_RW_HeerSquadLeader>
+					<CFAR_RW_Trooper>6</CFAR_RW_Trooper>
+					<CFAR_RW_MGTrooper>1</CFAR_RW_MGTrooper>
+					<CFAR_RW_SquadLeader>1</CFAR_RW_SquadLeader>
 				</guards>
 			</li>
 			<li>
@@ -90,9 +90,9 @@
 					<li>ImmediateAttackBreachingSmart</li>
 				</disallowedStrategies>
 				<options>
-					<CFAR_RW_HeerTrooper>6</CFAR_RW_HeerTrooper>
-					<CFAR_RW_HeerMGTrooper>1</CFAR_RW_HeerMGTrooper>
-					<CFAR_RW_HeerSquadLeader>1</CFAR_RW_HeerSquadLeader>
+					<CFAR_RW_Trooper>6</CFAR_RW_Trooper>
+					<CFAR_RW_MGTrooper>1</CFAR_RW_MGTrooper>
+					<CFAR_RW_SquadLeader>1</CFAR_RW_SquadLeader>
 				</options>
 			</li>
 			<!--<li>
@@ -108,17 +108,20 @@
 					<CFAR_RW_HeerTrooper>1</CFAR_RW_HeerTrooper>
 				</options>
 			</li>-->
-			<!--<li>
+			<li>
 				<kindDef>Peaceful</kindDef>
 				<options>
+					<CFAR_RW_Trooper>6</CFAR_RW_Trooper>
+					<CFAR_RW_MGTrooper>1</CFAR_RW_MGTrooper>
+					<CFAR_RW_SquadLeader>1</CFAR_RW_SquadLeader>
 				</options>
-			</li>-->
+			</li>
 			<li>
 				<kindDef>Settlement</kindDef>
 				<options>
-					<CFAR_RW_HeerTrooper>6</CFAR_RW_HeerTrooper>
-					<CFAR_RW_HeerMGTrooper>2</CFAR_RW_HeerMGTrooper>
-					<CFAR_RW_HeerSquadLeader>1</CFAR_RW_HeerSquadLeader>
+					<CFAR_RW_Trooper>6</CFAR_RW_Trooper>
+					<CFAR_RW_MGTrooper>1</CFAR_RW_MGTrooper>
+					<CFAR_RW_SquadLeader>1</CFAR_RW_SquadLeader>
 				</options>
 			</li>
 		</pawnGroupMakers>
@@ -138,7 +141,7 @@
 		<deityPresets>
 			<li MayRequire="Ludeon.RimWorld.Ideology">
 				<nameType>
-					<name>Aria Erisis</name><type>Empress of Steel</type>
+					<name>Aria Erisis</name><type>Kaiserin of Steel</type>
 				</nameType>
 				<gender>Female</gender>
 				<iconPath>UI/Deities/DeityGeneric</iconPath>
