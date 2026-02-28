@@ -10,49 +10,15 @@
 
 <!--================ Lowborn ================-->
 
-<!--======== Colony ========-->
-
-	<BackstoryDef ParentName="CFAR_Child">
-		<defName>CFAR_SpaceportStray1</defName>
-		<title>spaceport stray</title>
-		<titleShort>space stray</titleShort>
-		<description>WIP</description>
-		<skillGains>
-			<Animals>4</Animals>
-		</skillGains>
-		<spawnCategories>
-			<li>CFAR_Lowborn</li>
-		</spawnCategories>
-	</BackstoryDef>
-
 <!--======== Urban ========-->
 
 	<BackstoryDef ParentName="CFAR_Child">
-		<defName>CFAR_StreetUrchin1</defName>
-		<title>street urchin</title>
-		<titleShort>urchin</titleShort>
+		<defName>CFAR_StreetChild1</defName>
+		<title>street kitten</title>
+		<titleShort>kitten</titleShort>
 		<description>WIP</description>
-		<forcedTraits>
-			<Nimble>0</Nimble>
-		</forcedTraits>
 		<skillGains>
 			<Social>2</Social>
-		</skillGains>
-		<spawnCategories>
-			<li>CFAR_Lowborn</li>
-		</spawnCategories>
-	</BackstoryDef>
-
-	<BackstoryDef ParentName="CFAR_Child">
-		<defName>CFAR_StreetFighter1</defName>
-		<title>street fighter</title>
-		<titleShort>fighter</titleShort>
-		<description>WIP</description>
-		<forcedTraits>
-			<Brawler>0</Brawler>
-		</forcedTraits>
-		<skillGains>
-			<Social>-2</Social>
 		</skillGains>
 		<spawnCategories>
 			<li>CFAR_Lowborn</li>
@@ -261,4 +227,5 @@
 	</BackstoryDef>
 
 <!--======== High Class ========-->
+
 </Defs>
