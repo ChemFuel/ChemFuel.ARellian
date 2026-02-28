@@ -206,10 +206,26 @@
 		<defName>CFAR_RW_LineOfficer1</defName>
 		<title>Reichswehr line officer</title>
 		<titleShort>officer</titleShort>
-		<description>WIP</description>
+		<description>[PAWN_nameDef] served as a line officer of the Reichswehr. At the cadet academy, [PAWN_pronoun] trained in tactics, leadership, marksmanship, and swordplay.</description>
 		<skillGains>
 			<Shooting>6</Shooting>
-			<Melee>4</Melee>
+			<Melee>6</Melee>
+			<Social>4</Social>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_RW_LineOfficer</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="CFAR_RW_CompanyOfficerBase">
+		<defName>CFAR_RW_LineOfficer2</defName>
+		<title>Reichswehr line officer</title>
+		<titleShort>officer</titleShort>
+		<description>[PAWN_nameDef] served as a line officer of the Reichswehr. After graduating from cadet school, [PAWN_pronoun] swore that one day [PAWN_pronoun] would achieve the rank of Archgroßadmiral.</description>
+		<skillGains>
+			<Shooting>6</Shooting>
+			<Melee>6</Melee>
+			<Social>4</Social>
 		</skillGains>
 		<spawnCategories>
 			<li>CFAR_RW_LineOfficer</li>
