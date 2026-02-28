@@ -13,7 +13,7 @@
 
 <!--================ Soldier ================-->
 
-	<BackstoryDef Name="CFAR_RW_SoldierBase" Abstract="True">
+	<BackstoryDef Name="CFAR_RW_TrooperBase" Abstract="True">
 		<requiresSpawnCategory>true</requiresSpawnCategory>
 		<slot>Adulthood</slot>
 		<bodyTypeMale>Male</bodyTypeMale>
@@ -26,7 +26,7 @@
 
 <!--======== Line Trooper ========-->
 
-	<BackstoryDef ParentName="CFAR_RW_SoldierBase">
+	<BackstoryDef ParentName="CFAR_RW_TrooperBase">
 		<defName>CFAR_RW_LineTrooper1</defName>
 		<title>Reichswehr line trooper</title>
 		<titleShort>trooper</titleShort>
@@ -45,7 +45,7 @@
 		</spawnCategories>
 	</BackstoryDef>
 
-	<BackstoryDef ParentName="CFAR_RW_SoldierBase">
+	<BackstoryDef ParentName="CFAR_RW_TrooperBase">
 		<defName>CFAR_RW_LineTrooper2</defName>
 		<title>Reichswehr line trooper</title>
 		<titleShort>trooper</titleShort>
@@ -64,7 +64,7 @@
 		</spawnCategories>
 	</BackstoryDef>
 
-	<BackstoryDef ParentName="CFAR_RW_SoldierBase">
+	<BackstoryDef ParentName="CFAR_RW_TrooperBase">
 		<defName>CFAR_RW_LineTrooper3</defName>
 		<title>Reichswehr line trooper</title>
 		<titleShort>trooper</titleShort>
@@ -83,7 +83,7 @@
 		</spawnCategories>
 	</BackstoryDef>
 
-	<BackstoryDef ParentName="CFAR_RW_SoldierBase">
+	<BackstoryDef ParentName="CFAR_RW_TrooperBase">
 		<defName>CFAR_RW_LineTrooper4</defName>
 		<title>Reichswehr line trooper</title>
 		<titleShort>trooper</titleShort>
@@ -102,7 +102,7 @@
 		</spawnCategories>
 	</BackstoryDef>
 
-	<BackstoryDef ParentName="CFAR_RW_SoldierBase">
+	<BackstoryDef ParentName="CFAR_RW_TrooperBase">
 		<defName>CFAR_RW_LineTrooper5</defName>
 		<title>Reichswehr line trooper</title>
 		<titleShort>trooper</titleShort>
@@ -121,7 +121,7 @@
 		</spawnCategories>
 	</BackstoryDef>
 
-	<BackstoryDef ParentName="CFAR_RW_SoldierBase">
+	<BackstoryDef ParentName="CFAR_RW_TrooperBase">
 		<defName>CFAR_RW_LineTrooper6</defName>
 		<title>Reichswehr line trooper</title>
 		<titleShort>trooper</titleShort>
@@ -142,7 +142,7 @@
 
 <!--======== Line Trooper (Quirky) ========-->
 
-	<BackstoryDef ParentName="CFAR_RW_SoldierBase">
+	<BackstoryDef ParentName="CFAR_RW_TrooperBase">
 		<defName>CFAR_RW_LineTrooperQ1</defName>
 		<title>Reichswehr line trooper</title>
 		<titleShort>patch</titleShort>
@@ -163,7 +163,7 @@
 		</spawnCategories>
 	</BackstoryDef>
 
-	<BackstoryDef ParentName="CFAR_RW_SoldierBase">
+	<BackstoryDef ParentName="CFAR_RW_TrooperBase">
 		<defName>CFAR_RW_LineTrooperQ2</defName>
 		<title>Reichswehr line trooper</title>
 		<titleShort>boxer</titleShort>
@@ -190,7 +190,7 @@
 
 <!--======== Line Sergeant ========-->
 
-	<BackstoryDef ParentName="CFAR_RW_SoldierBase">
+	<BackstoryDef ParentName="CFAR_RW_TrooperBase">
 		<defName>CFAR_RW_LineSergeant1</defName>
 		<title>Reichswehr line sergeant</title>
 		<titleShort>sergeant</titleShort>
@@ -209,7 +209,7 @@
 		</spawnCategories>
 	</BackstoryDef>
 
-	<BackstoryDef ParentName="CFAR_RW_SoldierBase">
+	<BackstoryDef ParentName="CFAR_RW_TrooperBase">
 		<defName>CFAR_RW_LineSergeant2</defName>
 		<title>Reichswehr line sergeant</title>
 		<titleShort>sergeant</titleShort>
