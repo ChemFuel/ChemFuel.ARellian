@@ -24,7 +24,7 @@
 		<permanentEnemyToEveryoneExceptPlayer>true</permanentEnemyToEveryoneExceptPlayer>
 		<canRequestOrbitalTrader>true</canRequestOrbitalTrader>
 		<fixedLeaderKinds><li>CFAR_Flottelegat</li></fixedLeaderKinds>
-		<basicMemberKind>CFAR_RW_HeerTrooper</basicMemberKind>
+		<basicMemberKind>CFAR_RW_Trooper</basicMemberKind>
 		<backstoryFilters>
 			<li>
 				<categoriesChildhood>
