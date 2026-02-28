@@ -80,6 +80,33 @@
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="CFAR_RW_SoldierBase">
+		<defName>CFAR_RW_Grenadier</defName>
+		<label>grenadier</label><!--KR : 척탄병-->
+		<apparelRequired>
+			<li>Apparel_CFAR_ReichswehrUniform</li>
+			<li>Apparel_CFAR_ReichswehrArmor</li>
+			<li>Apparel_CFAR_ReichswehrHelm</li>
+		</apparelRequired>
+		<apparelTags>
+			<li>CFAR_Uniform</li>
+		</apparelTags>
+		<weaponTags>
+			<li>CFAR_Shotgun</li>
+			<li>CFAR_MPK</li>
+		</weaponTags>
+		<backstoryFiltersOverride>
+			<li>
+				<categoriesChildhood>
+					<li>CFAR_Child</li>
+				</categoriesChildhood>
+				<categoriesAdulthood>
+					<li>CFAR_RW_LineTrooper</li>
+				</categoriesAdulthood>
+			</li>
+		</backstoryFiltersOverride>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="CFAR_RW_SoldierBase">
 		<defName>CFAR_RW_MGTrooper</defName>
 		<label>MG trooper</label><!--KR : 기관총병-->
 		<apparelRequired>
