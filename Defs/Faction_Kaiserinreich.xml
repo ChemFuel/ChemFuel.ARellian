@@ -77,7 +77,8 @@
 					<Elephant>1</Elephant>
 				</carriers>
 				<guards>
-					<CFAR_RW_Trooper>6</CFAR_RW_Trooper>
+					<CFAR_RW_Trooper>5</CFAR_RW_Trooper>
+					<CFAR_RW_Grenadier>1</CFAR_RW_Grenadier>
 					<CFAR_RW_MGTrooper>1</CFAR_RW_MGTrooper>
 					<CFAR_RW_SquadLeader>1</CFAR_RW_SquadLeader>
 				</guards>
@@ -90,7 +91,8 @@
 					<li>ImmediateAttackBreachingSmart</li>
 				</disallowedStrategies>
 				<options>
-					<CFAR_RW_Trooper>6</CFAR_RW_Trooper>
+					<CFAR_RW_Trooper>5</CFAR_RW_Trooper>
+					<CFAR_RW_Grenadier>1</CFAR_RW_Grenadier>
 					<CFAR_RW_MGTrooper>1</CFAR_RW_MGTrooper>
 					<CFAR_RW_SquadLeader>1</CFAR_RW_SquadLeader>
 				</options>
@@ -159,7 +161,6 @@
 		<disallowedPrecepts>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Essential</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Important</li>
-			<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Worthwhile</li>
 
 			<li MayRequire="Ludeon.RimWorld.Ideology">AutonomousWeapons_Prohibited</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">AutonomousWeapons_Horrible</li>
