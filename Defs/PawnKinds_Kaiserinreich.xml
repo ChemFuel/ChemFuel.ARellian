@@ -23,7 +23,6 @@
 		<combatPower>150</combatPower>
 		<minGenerationAge>20</minGenerationAge>
 		<maxGenerationAge>25</maxGenerationAge>
-		<forceNormalGearQuality>true</forceNormalGearQuality>
 		<apparelMoney>9999~9999</apparelMoney>
 		<specificApparelRequirements>
 			<li>
@@ -40,8 +39,13 @@
 		<combatPower>125</combatPower>
 		<minGenerationAge>22</minGenerationAge>
 		<maxGenerationAge>28</maxGenerationAge>
-		<forceNormalGearQuality>true</forceNormalGearQuality>
 		<apparelMoney>9999~9999</apparelMoney>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<stuff>Synthread</stuff>
+			</li>
+		</specificApparelRequirements>
 		<weaponMoney>9999~9999</weaponMoney>
 		<initialResistanceRange>15~25</initialResistanceRange>
 		<initialWillRange>1.5~2.5</initialWillRange>
@@ -50,7 +54,7 @@
 <!--================ Reichswehr - Trooper ================-->
 
 	<PawnKindDef ParentName="CFAR_RW_SoldierBase">
-		<defName>CFAR_RW_HeerTrooper</defName>
+		<defName>CFAR_RW_Trooper</defName>
 		<label>trooper</label><!--KR : 소총병-->
 		<apparelRequired>
 			<li>Apparel_CFAR_ReichswehrUniform</li>
@@ -69,14 +73,14 @@
 					<li>CFAR_Child</li>
 				</categoriesChildhood>
 				<categoriesAdulthood>
-					<li>CFAR_RW_Infantry</li>
+					<li>CFAR_RW_LineTrooper</li>
 				</categoriesAdulthood>
 			</li>
 		</backstoryFiltersOverride>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="CFAR_RW_SoldierBase">
-		<defName>CFAR_RW_HeerMGTrooper</defName>
+		<defName>CFAR_RW_MGTrooper</defName>
 		<label>MG trooper</label><!--KR : 기관총병-->
 		<apparelRequired>
 			<li>Apparel_CFAR_ReichswehrUniform</li>
@@ -103,7 +107,7 @@
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="CFAR_RW_SoldierBase">
-		<defName>CFAR_RW_HeerSquadLeader</defName>
+		<defName>CFAR_RW_SquadLeader</defName>
 		<label>Squad Leader</label><!--KR : 분대장-->
 		<apparelRequired>
 			<li>Apparel_CFAR_ReichswehrUniform</li>
@@ -123,7 +127,7 @@
 					<li>CFAR_Child</li>
 				</categoriesChildhood>
 				<categoriesAdulthood>
-					<li>CFAR_RW_Infantry</li>
+					<li>CFAR_RW_LineSergeant</li>
 				</categoriesAdulthood>
 			</li>
 		</backstoryFiltersOverride>
@@ -155,7 +159,7 @@
 					<li>CFAR_Cadet</li>
 				</categoriesChildhood>
 				<categoriesAdulthood>
-					<li>CFAR_RW_InfantryOfficer</li>
+					<li>CFAR_RW_LineOfficer</li>
 				</categoriesAdulthood>
 			</li>
 		</backstoryFiltersOverride>
