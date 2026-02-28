@@ -21,26 +21,6 @@
 	</ThingDef>
 
 	<ThingDef ParentName="BaseBullet">
-		<defName>Bullet_CFAR_Shotgun</defName>
-		<label>shotgun blast</label>
-		<graphicData>
-			<texPath>Things/Projectile/Bullet_Shotgun</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<projectile>
-			<damageDef>Bullet</damageDef>
-			<damageAmountBase>6</damageAmountBase>
-			<stoppingPower>3</stoppingPower>
-			<armorPenetrationBase>0.14</armorPenetrationBase>
-			<speed>55</speed>
-			<extraDamages>
-				<li><def>Bullet</def><amount>6</amount><armorPenetration>0.14</armorPenetration></li>
-				<li><def>Bullet</def><amount>6</amount><armorPenetration>0.14</armorPenetration></li>
-			</extraDamages>
-		</projectile>
-	</ThingDef>
-
-	<ThingDef ParentName="BaseBullet">
 		<defName>Bullet_CFAR_Rifle</defName>
 		<label>rifle bullet</label>
 		<graphicData>
@@ -70,7 +50,8 @@
 			<armorPenetrationBase>0.50</armorPenetrationBase>
 			<speed>100</speed>
 			<extraDamages>
-				<li><def>Bomb</def><amount>10</amount><armorPenetration>0.10</armorPenetration></li>
+				<li><def>Bomb</def><amount>5</amount><armorPenetration>0.10</armorPenetration></li>
+				<li><def>Bomb</def><amount>5</amount><armorPenetration>0.10</armorPenetration></li>
 			</extraDamages>
 		</projectile>
 	</ThingDef>
@@ -180,25 +161,25 @@
 		<statBases>
 			<WorkToMake>12500</WorkToMake>
 			<Mass>2.5</Mass>
-			<AccuracyTouch>0.90</AccuracyTouch>
-			<AccuracyShort>0.85</AccuracyShort>
+			<AccuracyTouch>0.95</AccuracyTouch>
+			<AccuracyShort>0.87</AccuracyShort>
 			<AccuracyMedium>0.72</AccuracyMedium>
 			<AccuracyLong>0.57</AccuracyLong>
-			<RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
 		</statBases>
 		<weaponTags>
 			<li>CFAR_Shotgun</li>
 		</weaponTags>
 		<costList>
 			<Steel>45</Steel>
-			<Plasteel>15</Plasteel>
+			<Plasteel>10</Plasteel>
 			<ComponentIndustrial>5</ComponentIndustrial>
 		</costList>
 		<verbs>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_CFAR_Shotgun</defaultProjectile>
+				<defaultProjectile>Bullet_Shotgun</defaultProjectile>
 				<burstShotCount>1</burstShotCount>
 				<warmupTime>0.75</warmupTime>
 				<range>15.9</range>
@@ -251,7 +232,7 @@
 			<li>CFAR_MPK</li>
 		</weaponTags>
 		<costList>
-			<Steel>50</Steel>
+			<Steel>40</Steel>
 			<Plasteel>15</Plasteel>
 			<ComponentIndustrial>4</ComponentIndustrial>
 		</costList>
@@ -381,7 +362,7 @@
 		</recipeMaker>
 		<statBases>
 			<WorkToMake>60000</WorkToMake>
-			<Mass>8</Mass>
+			<Mass>7.5</Mass>
 			<AccuracyTouch>0.55</AccuracyTouch>
 			<AccuracyShort>0.60</AccuracyShort>
 			<AccuracyMedium>0.45</AccuracyMedium>
@@ -457,15 +438,15 @@
 		</recipeMaker>
 		<statBases>
 			<WorkToMake>75000</WorkToMake>
-			<Mass>6</Mass>
-			<AccuracyTouch>0.55</AccuracyTouch>
-			<AccuracyShort>0.75</AccuracyShort>
+			<Mass>7.5</Mass>
+			<AccuracyTouch>0.70</AccuracyTouch>
+			<AccuracyShort>0.85</AccuracyShort>
 			<AccuracyMedium>0.95</AccuracyMedium>
-			<AccuracyLong>0.85</AccuracyLong>
+			<AccuracyLong>0.87</AccuracyLong>
 			<RangedWeapon_Cooldown>1.80</RangedWeapon_Cooldown>
 		</statBases>
 		<equippedStatOffsets>
-			<MoveSpeed>-0.12</MoveSpeed>
+			<MoveSpeed>-0.18</MoveSpeed>
 		</equippedStatOffsets>
 		<weaponTags>
 			<li>CFAR_CanisterRifle</li>
@@ -473,7 +454,8 @@
 		<costList>
 			<Steel>50</Steel>
 			<Plasteel>30</Plasteel>
-			<ComponentIndustrial>8</ComponentIndustrial>
+			<Uranium>5</Uranium>
+			<ComponentIndustrial>7</ComponentIndustrial>
 		</costList>
 		<verbs>
 			<li>
@@ -481,9 +463,9 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_CFAR_Canister</defaultProjectile>
 				<burstShotCount>1</burstShotCount>
-				<warmupTime>2.5</warmupTime>
+				<warmupTime>2.6</warmupTime>
 				<range>44.9</range>
-				<soundCast>Shot_AssaultRifle</soundCast>
+				<soundCast>Shot_SniperRifle</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
 			</li>
