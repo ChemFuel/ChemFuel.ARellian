@@ -186,6 +186,48 @@
 		</spawnCategories>
 	</BackstoryDef>
 
+<!--================ NCO ================-->
+
+<!--======== Line Sergeant ========-->
+
+	<BackstoryDef ParentName="CFAR_RW_SoldierBase">
+		<defName>CFAR_RW_LineSergeant1</defName>
+		<title>Reichswehr line sergeant</title>
+		<titleShort>sergeant</titleShort>
+		<description>WIP</description>
+		<skillGains>
+			<Shooting>8</Shooting>
+			<Melee>6</Melee>
+		</skillGains>
+		<requiredWorkTags>
+			<li>Construction</li>
+			<li>PlantWork</li>
+			<li>Mining</li>
+		</requiredWorkTags>
+		<spawnCategories>
+			<li>CFAR_RW_LineSergeant</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="CFAR_RW_SoldierBase">
+		<defName>CFAR_RW_LineSergeant2</defName>
+		<title>Reichswehr line sergeant</title>
+		<titleShort>sergeant</titleShort>
+		<description>WIP</description>
+		<skillGains>
+			<Shooting>8</Shooting>
+			<Melee>6</Melee>
+		</skillGains>
+		<requiredWorkTags>
+			<li>Construction</li>
+			<li>PlantWork</li>
+			<li>Mining</li>
+		</requiredWorkTags>
+		<spawnCategories>
+			<li>CFAR_RW_LineSergeant</li>
+		</spawnCategories>
+	</BackstoryDef>
+
 <!--================ Officer (Company-grade) ================-->
 
 	<BackstoryDef Name="CFAR_RW_CompanyOfficerBase" Abstract="True">
