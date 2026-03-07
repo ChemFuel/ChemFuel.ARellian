@@ -20,6 +20,9 @@
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<requiredWorkTags>
 			<li>Violent</li>
+			<li>Constructing</li>
+			<li>PlantWork</li>
+			<li>Mining</li>
 			<li>ManualDumb</li>
 		</requiredWorkTags>
 	</BackstoryDef>
@@ -35,11 +38,6 @@
 			<Shooting>6</Shooting>
 			<Melee>4</Melee>
 		</skillGains>
-		<requiredWorkTags>
-			<li>Constructing</li>
-			<li>PlantWork</li>
-			<li>Mining</li>
-		</requiredWorkTags>
 		<spawnCategories>
 			<li>CFAR_RW_LineTrooper</li>
 		</spawnCategories>
@@ -54,11 +52,9 @@
 			<Shooting>6</Shooting>
 			<Melee>4</Melee>
 		</skillGains>
-		<requiredWorkTags>
-			<li>Constructing</li>
-			<li>PlantWork</li>
-			<li>Mining</li>
-		</requiredWorkTags>
+		<workDisables>
+			<li>Artistic</li>
+		</workDisables>
 		<spawnCategories>
 			<li>CFAR_RW_LineTrooper</li>
 		</spawnCategories>
@@ -73,11 +69,6 @@
 			<Shooting>6</Shooting>
 			<Melee>4</Melee>
 		</skillGains>
-		<requiredWorkTags>
-			<li>Constructing</li>
-			<li>PlantWork</li>
-			<li>Mining</li>
-		</requiredWorkTags>
 		<spawnCategories>
 			<li>CFAR_RW_LineTrooper</li>
 		</spawnCategories>
@@ -91,12 +82,8 @@
 		<skillGains>
 			<Shooting>6</Shooting>
 			<Melee>4</Melee>
+			<Intellectual>-4</Intellectual>
 		</skillGains>
-		<requiredWorkTags>
-			<li>Constructing</li>
-			<li>PlantWork</li>
-			<li>Mining</li>
-		</requiredWorkTags>
 		<spawnCategories>
 			<li>CFAR_RW_LineTrooper</li>
 		</spawnCategories>
@@ -110,12 +97,8 @@
 		<skillGains>
 			<Shooting>6</Shooting>
 			<Melee>4</Melee>
+			<Social>2</Social>
 		</skillGains>
-		<requiredWorkTags>
-			<li>Constructing</li>
-			<li>PlantWork</li>
-			<li>Mining</li>
-		</requiredWorkTags>
 		<spawnCategories>
 			<li>CFAR_RW_LineTrooper</li>
 		</spawnCategories>
@@ -131,9 +114,7 @@
 			<Melee>4</Melee>
 		</skillGains>
 		<requiredWorkTags>
-			<li>Constructing</li>
-			<li>PlantWork</li>
-			<li>Mining</li>
+			<li>Caring</li>
 		</requiredWorkTags>
 		<spawnCategories>
 			<li>CFAR_RW_LineTrooper</li>
@@ -149,8 +130,8 @@
 		<description>[PAWN_nameDef] was the unofficial medic of [PAWN_possessive] squad. Whenever a brawl happened in the barracks, [PAWN_pronoun] was the one tending the wounds of [PAWN_possessive] idiots-in-arms.</description>
 		<skillGains>
 			<Shooting>6</Shooting>
-			<Melee>3</Melee>
-			<Medicine>3</Medicine>
+			<Melee>4</Melee>
+			<Medicine>2</Medicine>
 		</skillGains>
 		<requiredWorkTags>
 			<li>Constructing</li>
@@ -188,40 +169,37 @@
 
 <!--================ NCO ================-->
 
-<!--======== Line Sergeant ========-->
+<!--======== Line Sergeant (Base Shooting 8 Melee 6, Extra point 4) ========-->
 
 	<BackstoryDef ParentName="CFAR_RW_TrooperBase">
-		<defName>CFAR_RW_LineSergeant1</defName>
+		<defName>CFAR_RW_LineSergeantI1</defName>
 		<title>Reichswehr line sergeant</title>
 		<titleShort>sergeant</titleShort>
-		<description>WIP</description>
+		<description>Sergeant [PAWN_nameDef] served as a line trooper of the Reichswehr. [PAWN_pronoun] was bestowed the rank of sergeant after cracking open countless bug shells for the Kaiserin. Unfortunately, the memory of so much gore and viscera now makes [PAWN_objective] queasy whenever [PAWN_pronoun] enters the kitchen.</description>
 		<skillGains>
 			<Shooting>8</Shooting>
-			<Melee>6</Melee>
+			<Melee>10</Melee>
 		</skillGains>
-		<requiredWorkTags>
-			<li>Constructing</li>
-			<li>PlantWork</li>
-			<li>Mining</li>
-		</requiredWorkTags>
+		<workDisables>
+			<li>Cooking</li>
+		</workDisables>
 		<spawnCategories>
 			<li>CFAR_RW_LineSergeant</li>
 		</spawnCategories>
 	</BackstoryDef>
 
 	<BackstoryDef ParentName="CFAR_RW_TrooperBase">
-		<defName>CFAR_RW_LineSergeant2</defName>
+		<defName>CFAR_RW_LineSergeantM1</defName>
 		<title>Reichswehr line sergeant</title>
 		<titleShort>sergeant</titleShort>
-		<description>WIP</description>
+		<description>Sergeant [PAWN_nameDef] served as a line trooper of the Reichswehr. [PAWN_pronoun] fought on the mechanoid front, dodging enemy fire and turning hostile machines into scrap. Because [PAWN_pronoun] had first-hand experience disassembling mechanoids, [PAWN_pronoun] learned a thing or two about electronics and machinery.</description>
 		<skillGains>
 			<Shooting>8</Shooting>
 			<Melee>6</Melee>
+			<Crafting>4</Crafting>
 		</skillGains>
 		<requiredWorkTags>
-			<li>Constructing</li>
-			<li>PlantWork</li>
-			<li>Mining</li>
+			<li>Crafting</li>
 		</requiredWorkTags>
 		<spawnCategories>
 			<li>CFAR_RW_LineSergeant</li>
