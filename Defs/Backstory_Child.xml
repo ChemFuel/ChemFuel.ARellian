@@ -21,7 +21,6 @@
 			<Melee>4</Melee>
 			<Medicine>2</Medicine>
 			<Social>-2</Social>
-			<Intellectual>-4</Intellectual>
 		</skillGains>
 		<requiredWorkTags>
 			<li>Violent</li>
@@ -29,6 +28,7 @@
 		</requiredWorkTags>
 		<workDisables>
 			<li>Artistic</li>
+			<li>Intellectual</li>
 		</workDisables>
 		<spawnCategories>
 			<li>CFAR_ChildNone</li>
@@ -43,8 +43,9 @@
 		<titleShort>streetling</titleShort>
 		<description>[PAWN_nameDef] was a child performer. [PAWN_pronoun] would approach families or groups of officers with a charming smile, performing parlor tricks and making them laugh—earning bread in [PAWN_possessive] jar in exchange.</description>
 		<skillGains>
-			<Artistic>2</Artistic>
-			<Social>2</Social>
+			<Artistic>3</Artistic>
+			<Social>3</Social>
+			<Intellectual>-2</Intellectual>
 		</skillGains>
 		<requiredWorkTags>
 			<li>Artistic</li>
