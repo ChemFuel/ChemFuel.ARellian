@@ -13,14 +13,15 @@
 <!--======== Slum ========-->
 
 	<BackstoryDef ParentName="CFAR_Child">
-		<defName>CFAR_SlumChild1</defName>
-		<title>slum kitten</title>
-		<titleShort>kitten</titleShort>
+		<defName>CFAR_StreetUrchin1</defName>
+		<title>street urchin</title>
+		<titleShort>urchin</titleShort>
 		<description>[PAWN_nameDef] grew up in the slums, where [PAWN_pronoun] learned how to swing a knife before [PAWN_pronoun] could properly speak. With everything and everyone potentially hostile, [PAWN_pronoun] couldn't trust anyone with [PAWN_possessive] wounds.</description>
 		<skillGains>
 			<Melee>4</Melee>
+			<Medicine>2</Medicine>
 			<Social>-2</Social>
-			<Intellectual>-2</Intellectual>
+			<Intellectual>-4</Intellectual>
 		</skillGains>
 		<requiredWorkTags>
 			<li>Violent</li>
@@ -37,15 +38,17 @@
 <!--======== Street ========-->
 
 	<BackstoryDef ParentName="CFAR_Child">
-		<defName>CFAR_StreetChild1</defName>
-		<title>street kitten</title>
-		<titleShort>kitten</titleShort>
-		<description>WIP</description>
+		<defName>CFAR_StreetPerformer1</defName>
+		<title>street performer</title>
+		<titleShort>streetling</titleShort>
+		<description>[PAWN_nameDef] was a child performer. [PAWN_pronoun] would approach families or groups of officers with a charming smile, performing parlor tricks and making them laugh—earning bread in [PAWN_possessive] jar in exchange.</description>
 		<skillGains>
+			<Artistic>2</Artistic>
 			<Social>2</Social>
-			<Social>2</Social>
-			<Intellectual>-4</Intellectual>
 		</skillGains>
+		<requiredWorkTags>
+			<li>Artistic</li>
+		</requiredWorkTags>
 		<spawnCategories>
 			<li>CFAR_ChildNone</li>
 		</spawnCategories>
@@ -57,8 +60,8 @@
 
 	<BackstoryDef ParentName="CFAR_Child">
 		<defName>CFAR_DockChild1</defName>
-		<title>street kitten</title>
-		<titleShort>kitten</titleShort>
+		<title>dock child</title>
+		<titleShort>dockhand</titleShort>
 		<description>WIP</description>
 		<skillGains>
 			<Social>2</Social>
@@ -74,12 +77,11 @@
 
 	<BackstoryDef ParentName="CFAR_Child">
 		<defName>CFAR_AcademyChild1</defName>
-		<title>academy kitten</title>
+		<title>academy child</title>
 		<titleShort>student</titleShort>
 		<description>WIP</description>
 		<skillGains>
-			<Social>2</Social>
-			<Intellectual>2</Intellectual>
+			<Intellectual>3</Intellectual>
 		</skillGains>
 		<spawnCategories>
 			<li>CFAR_ChildMid</li>
@@ -92,8 +94,8 @@
 
 	<!--<BackstoryDef ParentName="CFAR_Child">
 		<defName>CFAR_StreetChild1</defName>
-		<title>street kitten</title>
-		<titleShort>kitten</titleShort>
+		<title>street child</title>
+		<titleShort>streetling</titleShort>
 		<description>WIP</description>
 		<skillGains>
 			<Social>2</Social>
@@ -107,11 +109,10 @@
 
 <!--======== Urban ========-->
 
-	<!--<BackstoryDef ParentName="CFAR_Child">
-		<defName>CFAR_OfficerChild1</defName>
-		<title>military kitten</title>
-		<titleShort>young lord</titleShort>
-		<titleShortFemale>young lady</titleShortFemale>
+	<BackstoryDef ParentName="CFAR_Child">
+		<defName>CFAR_PatricianChild1</defName>
+		<title>patrician child</title>
+		<titleShort>patrician</titleShort>
 		<description>WIP</description>
 		<skillGains>
 			<Social>4</Social>
@@ -119,5 +120,5 @@
 		<spawnCategories>
 			<li>CFAR_ChildNoble</li>
 		</spawnCategories>
-	</BackstoryDef>-->
+	</BackstoryDef>
 </Defs>
