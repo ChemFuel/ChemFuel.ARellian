@@ -5,22 +5,6 @@
 <!--======== BulletDefs ========-->
 
 	<ThingDef ParentName="BaseBullet">
-		<defName>Bullet_CFAR_Pistol</defName>
-		<label>pistol bullet</label>
-		<graphicData>
-			<texPath>Things/Projectile/Bullet_Small</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<projectile>
-			<damageDef>Bullet</damageDef>
-			<damageAmountBase>12</damageAmountBase>
-			<stoppingPower>2</stoppingPower>
-			<armorPenetrationBase>0.16</armorPenetrationBase>
-			<speed>55</speed>
-		</projectile>
-	</ThingDef>
-
-	<ThingDef ParentName="BaseBullet">
 		<defName>Bullet_CFAR_AR</defName>
 		<label>rifle bullet</label>
 		<graphicData>
@@ -31,22 +15,22 @@
 			<damageDef>Bullet</damageDef>
 			<damageAmountBase>12</damageAmountBase>
 			<stoppingPower>1</stoppingPower>
-			<armorPenetrationBase>0.25</armorPenetrationBase>
+			<armorPenetrationBase>0.2</armorPenetrationBase>
 			<speed>70</speed>
 		</projectile>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseBullet">
 		<defName>Bullet_CFAR_MG</defName>
-		<label>rifle bullet</label>
+		<label>MG bullet</label>
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Small</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<projectile>
 			<damageDef>Bullet</damageDef>
-			<damageAmountBase>12</damageAmountBase>
-			<stoppingPower>1</stoppingPower>
+			<damageAmountBase>14</damageAmountBase>
+			<stoppingPower>3</stoppingPower>
 			<armorPenetrationBase>0.25</armorPenetrationBase>
 			<speed>70</speed>
 		</projectile>
@@ -54,7 +38,7 @@
 
 	<ThingDef ParentName="BaseBullet">
 		<defName>Bullet_CFAR_SR</defName>
-		<label>APHE-F shell</label>
+		<label>APHE-F bullet</label>
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Big</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -97,135 +81,17 @@
 		</tradeTags>
 	</ThingDef>
 
-	<ThingDef ParentName="Base_CFAR_GunIndustrial">
-		<defName>Gun_CFAR_Pistol</defName>
+	<!--<ThingDef ParentName="Base_CFAR_GunIndustrial">
 		<label>Arellian Autopistol</label>
 		<description>A Reichswehr standard-issue automatic sidearm, built for reliability under shipboard and terrestrial combat conditions.</description>
-		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_Pistol</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<uiIconScale>1.5</uiIconScale>
-		<soundInteract>Interact_Autopistol</soundInteract>
-		<recipeMaker>
-			<researchPrerequisite>BlowbackOperation</researchPrerequisite>
-			<skillRequirements>
-				<Crafting>4</Crafting>
-			</skillRequirements>
-			<displayPriority>1170</displayPriority>
-		</recipeMaker>
-		<statBases>
-			<WorkToMake>8000</WorkToMake>
-			<Mass>1.0</Mass>
-			<AccuracyTouch>0.95</AccuracyTouch>
-			<AccuracyShort>0.80</AccuracyShort>
-			<AccuracyMedium>0.65</AccuracyMedium>
-			<AccuracyLong>0.50</AccuracyLong>
-			<RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
-		</statBases>
-		<weaponTags>
-			<li>CFAR_Pistol</li>
-		</weaponTags>
-		<costList>
-			<Steel>25</Steel>
-			<Plasteel>5</Plasteel>
-			<ComponentIndustrial>2</ComponentIndustrial>
-		</costList>
-		<verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_CFAR_Pistol</defaultProjectile>
-				<warmupTime>0.3</warmupTime>
-				<burstShotCount>1</burstShotCount>
-				<range>25.9</range>
-				<soundCast>Shot_HeavySMG</soundCast>
-				<soundCastTail>GunTail_Medium</soundCastTail>
-				<muzzleFlashScale>8</muzzleFlashScale>
-			</li>
-		</verbs>
-		<tools>
-			<li>
-				<label>barrel</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-		</tools>
-		<tradeTags>
-			<li>CFAR_WeaponRanged</li>
-		</tradeTags>
-	</ThingDef>
+	</ThingDef>-->
 
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
-		<defName>Gun_CFAR_Shotgun</defName>
-		<label>Arellian Tactical Shotgun</label>
-		<description>A stockless combat shotgun designed for close-quarters and shipboard combat. Issued primarily for confined engagements and breaching roles.</description>
-		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_TacticalShotgun</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<soundInteract>Interact_Shotgun</soundInteract>
-		<recipeMaker>
-			<researchPrerequisite>BlowbackOperation</researchPrerequisite>
-			<skillRequirements>
-				<Crafting>4</Crafting>
-			</skillRequirements>
-			<displayPriority>1171</displayPriority>
-		</recipeMaker>
-		<statBases>
-			<WorkToMake>12500</WorkToMake>
-			<Mass>2.5</Mass>
-			<AccuracyTouch>0.95</AccuracyTouch>
-			<AccuracyShort>0.87</AccuracyShort>
-			<AccuracyMedium>0.72</AccuracyMedium>
-			<AccuracyLong>0.57</AccuracyLong>
-			<RangedWeapon_Cooldown>1.25</RangedWeapon_Cooldown>
-		</statBases>
-		<weaponTags>
-			<li>CFAR_Shotgun</li>
-		</weaponTags>
-		<costList>
-			<Steel>45</Steel>
-			<Plasteel>10</Plasteel>
-			<ComponentIndustrial>5</ComponentIndustrial>
-		</costList>
-		<verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_Shotgun</defaultProjectile>
-				<burstShotCount>1</burstShotCount>
-				<warmupTime>0.5</warmupTime>
-				<range>15.9</range>
-				<soundCast>Shot_Shotgun</soundCast>
-				<soundCastTail>GunTail_Heavy</soundCastTail>
-				<muzzleFlashScale>8</muzzleFlashScale>
-			</li>
-		</verbs>
-		<tools>
-			<li>
-				<label>barrel</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-		</tools>
-		<tradeTags>
-			<li>CFAR_WeaponRanged</li>
-		</tradeTags>
-	</ThingDef>
-
-	<ThingDef ParentName="Base_CFAR_GunIndustrial">
-		<defName>Gun_CFAR_MPK</defName>
+		<defName>Gun_CFAR_SMG</defName>
 		<label>Arellian MPK</label>
 		<description>A standard-issue Reichswehr submachine gun favored for its compact profile and high rate of fire. It is commonly issued to shipboard security, support personnel, and units operating in confined environments.</description>
 		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_MPK</texPath>
+			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_SMG</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<soundInteract>Interact_SMG</soundInteract>
@@ -240,27 +106,26 @@
 			<WorkToMake>18000</WorkToMake>
 			<Mass>2.5</Mass>
 			<AccuracyTouch>0.90</AccuracyTouch>
-			<AccuracyShort>0.72</AccuracyShort>
-			<AccuracyMedium>0.40</AccuracyMedium>
-			<AccuracyLong>0.23</AccuracyLong>
+			<AccuracyShort>0.75</AccuracyShort>
+			<AccuracyMedium>0.4</AccuracyMedium>
+			<AccuracyLong>0.25</AccuracyLong>
 			<RangedWeapon_Cooldown>1.6</RangedWeapon_Cooldown>
 		</statBases>
 		<weaponTags>
 			<li>CFAR_MPK</li>
 		</weaponTags>
 		<costList>
-			<Steel>40</Steel>
-			<Plasteel>15</Plasteel>
-			<ComponentIndustrial>4</ComponentIndustrial>
+			<Steel>50</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
 		</costList>
 		<verbs>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_CFAR_Pistol</defaultProjectile>
+				<defaultProjectile>Bullet_Autopistol</defaultProjectile>
 				<burstShotCount>3</burstShotCount>
 				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-				<warmupTime>0.9</warmupTime>
+				<warmupTime>0.75</warmupTime>
 				<range>25.9</range>
 				<soundCast>Shot_HeavySMG</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
@@ -291,7 +156,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
-		<defName>Gun_CFAR_AutoRifle</defName>
+		<defName>Gun_CFAR_AR</defName>
 		<label>Arellian Automatic Rifle</label>
 		<description>A standard-issue Reichswehr assault rifle engineered for versatility across varied combat environments. While not specialized for any single role, it provides reliable performance in most engagements.</description>
 		<graphicData>
@@ -308,29 +173,29 @@
 		</recipeMaker>
 		<statBases>
 			<WorkToMake>45000</WorkToMake>
-			<Mass>3.2</Mass>
+			<Mass>6</Mass>
 			<AccuracyTouch>0.65</AccuracyTouch>
 			<AccuracyShort>0.75</AccuracyShort>
-			<AccuracyMedium>0.72</AccuracyMedium>
-			<AccuracyLong>0.55</AccuracyLong>
-			<RangedWeapon_Cooldown>1.60</RangedWeapon_Cooldown>
+			<AccuracyMedium>0.65</AccuracyMedium>
+			<AccuracyLong>0.5</AccuracyLong>
+			<RangedWeapon_Cooldown>1.80</RangedWeapon_Cooldown>
 		</statBases>
 		<weaponTags>
 			<li>CFAR_AutoRifle</li>
 		</weaponTags>
 		<costList>
-			<Steel>55</Steel>
-			<Plasteel>20</Plasteel>
-			<ComponentIndustrial>6</ComponentIndustrial>
+			<Steel>75</Steel>
+			<Plasteel>25</Plasteel>
+			<ComponentIndustrial>7</ComponentIndustrial>
 		</costList>
 		<verbs>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_CFAR_Rifle</defaultProjectile>
+				<defaultProjectile>Bullet_CFAR_AR</defaultProjectile>
 				<burstShotCount>4</burstShotCount>
 				<ticksBetweenBurstShots>9</ticksBetweenBurstShots>
-				<warmupTime>1.0</warmupTime>
+				<warmupTime>0.9</warmupTime>
 				<range>32.9</range>
 				<soundCast>Shot_AssaultRifle</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
@@ -339,11 +204,19 @@
 		</verbs>
 		<tools>
 			<li>
-				<label>barrel</label>
+				<label>bayonet</label>
 				<capacities>
-					<li>Blunt</li>
+					<li>Stab</li>
 				</capacities>
-				<power>9</power>
+				<power>13</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>bayonet</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>12</power>
 				<cooldownTime>2</cooldownTime>
 			</li>
 			<li>
@@ -361,7 +234,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
-		<defName>Gun_CFAR_GPMG</defName>
+		<defName>Gun_CFAR_MG</defName>
 		<label>Arellian GPMG</label>
 		<description>A heavy squad-support machine gun of the Reichswehr. It delivers sustained and punishing fire at the cost of reduced mobility.</description>
 		<graphicData>
@@ -379,15 +252,15 @@
 		</recipeMaker>
 		<statBases>
 			<WorkToMake>60000</WorkToMake>
-			<Mass>7.5</Mass>
-			<AccuracyTouch>0.55</AccuracyTouch>
-			<AccuracyShort>0.60</AccuracyShort>
-			<AccuracyMedium>0.45</AccuracyMedium>
-			<AccuracyLong>0.35</AccuracyLong>
-			<RangedWeapon_Cooldown>2.20</RangedWeapon_Cooldown>
+			<Mass>12.5</Mass>
+			<AccuracyTouch>0.45</AccuracyTouch>
+			<AccuracyShort>0.65</AccuracyShort>
+			<AccuracyMedium>0.25</AccuracyMedium>
+			<AccuracyLong>0.15</AccuracyLong>
+			<RangedWeapon_Cooldown>2.80</RangedWeapon_Cooldown>
 		</statBases>
 		<equippedStatOffsets>
-			<MoveSpeed>-0.18</MoveSpeed>
+			<MoveSpeed>-0.50</MoveSpeed>
 		</equippedStatOffsets>
 		<weaponTags>
 			<li>CFAR_GPMG</li>
@@ -404,10 +277,10 @@
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_CFAR_Rifle</defaultProjectile>
+				<defaultProjectile>Bullet_CFAR_MG</defaultProjectile>
 				<burstShotCount>12</burstShotCount>
-				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
-				<warmupTime>1.8</warmupTime>
+				<ticksBetweenBurstShots>13</ticksBetweenBurstShots>
+				<warmupTime>1.2</warmupTime>
 				<range>32.9</range>
 				<soundCast>Shot_AssaultRifle</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
@@ -455,15 +328,15 @@
 		</recipeMaker>
 		<statBases>
 			<WorkToMake>75000</WorkToMake>
-			<Mass>7.5</Mass>
+			<Mass>10.5</Mass>
 			<AccuracyTouch>0.70</AccuracyTouch>
-			<AccuracyShort>0.85</AccuracyShort>
-			<AccuracyMedium>0.95</AccuracyMedium>
-			<AccuracyLong>0.87</AccuracyLong>
-			<RangedWeapon_Cooldown>1.80</RangedWeapon_Cooldown>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>0.90</AccuracyMedium>
+			<AccuracyLong>0.85</AccuracyLong>
+			<RangedWeapon_Cooldown>2.50</RangedWeapon_Cooldown>
 		</statBases>
 		<equippedStatOffsets>
-			<MoveSpeed>-0.18</MoveSpeed>
+			<MoveSpeed>-0.25</MoveSpeed>
 		</equippedStatOffsets>
 		<weaponTags>
 			<li>CFAR_CanisterRifle</li>
@@ -480,7 +353,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_CFAR_Canister</defaultProjectile>
 				<burstShotCount>1</burstShotCount>
-				<warmupTime>2.6</warmupTime>
+				<warmupTime>3.5</warmupTime>
 				<range>44.9</range>
 				<soundCast>Shot_SniperRifle</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
@@ -510,4 +383,3 @@
 		</tradeTags>
 	</ThingDef>
 </Defs>
-
