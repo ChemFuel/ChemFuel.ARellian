@@ -21,7 +21,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName="BaseBullet">
-		<defName>Bullet_CFAR_Rifle</defName>
+		<defName>Bullet_CFAR_AR</defName>
 		<label>rifle bullet</label>
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Small</texPath>
@@ -29,29 +29,46 @@
 		</graphicData>
 		<projectile>
 			<damageDef>Bullet</damageDef>
-			<damageAmountBase>11</damageAmountBase>
+			<damageAmountBase>12</damageAmountBase>
 			<stoppingPower>1</stoppingPower>
-			<armorPenetrationBase>0.20</armorPenetrationBase>
+			<armorPenetrationBase>0.25</armorPenetrationBase>
 			<speed>70</speed>
 		</projectile>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseBullet">
-		<defName>Bullet_CFAR_Canister</defName>
-		<label>canister blast</label>
+		<defName>Bullet_CFAR_MG</defName>
+		<label>rifle bullet</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>12</damageAmountBase>
+			<stoppingPower>1</stoppingPower>
+			<armorPenetrationBase>0.25</armorPenetrationBase>
+			<speed>70</speed>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_CFAR_SR</defName>
+		<label>APHE-F shell</label>
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Big</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<projectile>
 			<damageDef>Bullet</damageDef>
-			<damageAmountBase>30</damageAmountBase>
+			<damageAmountBase>25</damageAmountBase>
 			<stoppingPower>3</stoppingPower>
-			<armorPenetrationBase>0.50</armorPenetrationBase>
+			<armorPenetrationBase>1</armorPenetrationBase>
 			<speed>100</speed>
 			<extraDamages>
-				<li><def>Bomb</def><amount>5</amount><armorPenetration>0.10</armorPenetration></li>
-				<li><def>Bomb</def><amount>5</amount><armorPenetration>0.10</armorPenetration></li>
+				<li><def>Bomb</def><amount>5</amount><armorPenetration>0.15</armorPenetration></li>
+				<li><def>Bomb</def><amount>5</amount><armorPenetration>0.15</armorPenetration></li>
+				<li><def>Bomb</def><amount>5</amount><armorPenetration>0.15</armorPenetration></li>
 			</extraDamages>
 		</projectile>
 	</ThingDef>
