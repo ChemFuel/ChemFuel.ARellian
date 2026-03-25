@@ -5,6 +5,22 @@
 <!--======== BulletDefs ========-->
 
 	<ThingDef Name="Bullet_CFAR_AR" ParentName="BaseBullet">
+		<defName>Bullet_CFAR_HG</defName>
+		<label>magnum round</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>12</damageAmountBase>
+			<stoppingPower>1</stoppingPower>
+			<armorPenetrationBase>0.25</armorPenetrationBase>
+			<speed>55</speed>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Name="Bullet_CFAR_AR" ParentName="BaseBullet">
 		<defName>Bullet_CFAR_AR</defName>
 		<label>rifle bullet</label>
 		<graphicData>
@@ -13,7 +29,7 @@
 		</graphicData>
 		<projectile>
 			<damageDef>Bullet</damageDef>
-			<damageAmountBase>13</damageAmountBase>
+			<damageAmountBase>14</damageAmountBase>
 			<stoppingPower>1</stoppingPower>
 			<armorPenetrationBase>0.25</armorPenetrationBase>
 			<speed>70</speed>
@@ -23,7 +39,7 @@
 	<ThingDef ParentName="Bullet_CFAR_AR">
 		<defName>Bullet_CFAR_ARL</defName>
 		<projectile>
-			<damageAmountBase>26</damageAmountBase>
+			<damageAmountBase>28</damageAmountBase>
 			<stoppingPower>3</stoppingPower>
 			<armorPenetrationBase>0.45</armorPenetrationBase>
 			<speed>140</speed>
@@ -66,34 +82,36 @@
 		<recipeMaker>
 			<researchPrerequisite>GasOperation</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>5</Crafting>
+				<Crafting>4</Crafting>
 			</skillRequirements>
-			<displayPriority>1172</displayPriority>
+			<displayPriority>1170</displayPriority>
 		</recipeMaker>
 		<statBases>
-			<WorkToMake>18000</WorkToMake>
-			<Mass>2.5</Mass>
-			<AccuracyTouch>0.90</AccuracyTouch>
+			<MarketValue>275</MarketValue>
+			<WorkToMake>5000</WorkToMake>
+			<Mass>1.8</Mass>
+			<AccuracyTouch>0.80</AccuracyTouch>
 			<AccuracyShort>0.75</AccuracyShort>
-			<AccuracyMedium>0.4</AccuracyMedium>
-			<AccuracyLong>0.25</AccuracyLong>
-			<RangedWeapon_Cooldown>1.6</RangedWeapon_Cooldown>
+			<AccuracyMedium>0.60</AccuracyMedium>
+			<AccuracyLong>0.40</AccuracyLong>
+			<RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
 		</statBases>
 		<weaponTags>
 			<li>CFAR_HG</li>
 		</weaponTags>
 		<costList>
-			<Steel>50</Steel>
-			<ComponentIndustrial>5</ComponentIndustrial>
+			<Steel>25</Steel>
+			<Uranium>2</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
 		</costList>
 		<verbs>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_CFAR_AR</defaultProjectile>
-				<burstShotCount>3</burstShotCount>
-				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-				<warmupTime>0.75</warmupTime>
+				<defaultProjectile>Bullet_CFAR_HG</defaultProjectile>
+				<burstShotCount>2</burstShotCount>
+				<ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+				<warmupTime>0.3</warmupTime>
 				<range>25.9</range>
 				<soundCast>Shot_HeavySMG</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
@@ -135,17 +153,18 @@
 		<recipeMaker>
 			<researchPrerequisite>GasOperation</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>5</Crafting>
+				<Crafting>6</Crafting>
 			</skillRequirements>
-			<displayPriority>1172</displayPriority>
+			<displayPriority>1171</displayPriority>
 		</recipeMaker>
 		<statBases>
-			<WorkToMake>18000</WorkToMake>
-			<Mass>2.5</Mass>
+			<MarketValue>525</MarketValue>
+			<WorkToMake>37500</WorkToMake>
+			<Mass>4.5</Mass>
 			<AccuracyTouch>0.90</AccuracyTouch>
 			<AccuracyShort>0.75</AccuracyShort>
-			<AccuracyMedium>0.4</AccuracyMedium>
-			<AccuracyLong>0.25</AccuracyLong>
+			<AccuracyMedium>0.30</AccuracyMedium>
+			<AccuracyLong>0.10</AccuracyLong>
 			<RangedWeapon_Cooldown>1.6</RangedWeapon_Cooldown>
 		</statBases>
 		<weaponTags>
@@ -153,7 +172,8 @@
 		</weaponTags>
 		<costList>
 			<Steel>50</Steel>
-			<ComponentIndustrial>5</ComponentIndustrial>
+			<Uranium>3</Steel>
+			<ComponentIndustrial>6</ComponentIndustrial>
 		</costList>
 		<verbs>
 			<li>
@@ -161,8 +181,8 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_CFAR_AR</defaultProjectile>
 				<burstShotCount>3</burstShotCount>
-				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-				<warmupTime>0.75</warmupTime>
+				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+				<warmupTime>0.8</warmupTime>
 				<range>25.9</range>
 				<soundCast>Shot_HeavySMG</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
@@ -206,23 +226,24 @@
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>
-			<displayPriority>1173</displayPriority>
+			<displayPriority>1172</displayPriority>
 		</recipeMaker>
 		<statBases>
+			<MarketValue>650</MarketValue>
 			<WorkToMake>45000</WorkToMake>
 			<Mass>6</Mass>
-			<AccuracyTouch>0.65</AccuracyTouch>
-			<AccuracyShort>0.75</AccuracyShort>
-			<AccuracyMedium>0.65</AccuracyMedium>
-			<AccuracyLong>0.5</AccuracyLong>
-			<RangedWeapon_Cooldown>1.80</RangedWeapon_Cooldown>
+			<AccuracyTouch>0.55</AccuracyTouch>
+			<AccuracyShort>0.65</AccuracyShort>
+			<AccuracyMedium>0.75</AccuracyMedium>
+			<AccuracyLong>0.65</AccuracyLong>
+			<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
 		</statBases>
 		<weaponTags>
 			<li>CFAR_AR</li>
 		</weaponTags>
 		<costList>
-			<Steel>75</Steel>
-			<Plasteel>25</Plasteel>
+			<Steel>60</Steel>
+			<Uranium>5</Steel>
 			<ComponentIndustrial>7</ComponentIndustrial>
 		</costList>
 		<verbs>
@@ -231,8 +252,8 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_CFAR_AR</defaultProjectile>
 				<burstShotCount>4</burstShotCount>
-				<ticksBetweenBurstShots>9</ticksBetweenBurstShots>
-				<warmupTime>0.9</warmupTime>
+				<ticksBetweenBurstShots>13</ticksBetweenBurstShots>
+				<warmupTime>1.2</warmupTime>
 				<range>32.9</range>
 				<soundCast>Shot_AssaultRifle</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
@@ -284,16 +305,17 @@
 			<skillRequirements>
 				<Crafting>8</Crafting>
 			</skillRequirements>
-			<displayPriority>1175</displayPriority>
+			<displayPriority>1173</displayPriority>
 		</recipeMaker>
 		<statBases>
-			<WorkToMake>75000</WorkToMake>
-			<Mass>10.5</Mass>
-			<AccuracyTouch>0.70</AccuracyTouch>
-			<AccuracyShort>0.80</AccuracyShort>
-			<AccuracyMedium>0.90</AccuracyMedium>
-			<AccuracyLong>0.85</AccuracyLong>
-			<RangedWeapon_Cooldown>2.50</RangedWeapon_Cooldown>
+			<MarketValue>750</MarketValue>
+			<WorkToMake>50000</WorkToMake>
+			<Mass>8</Mass>
+			<AccuracyTouch>0.45</AccuracyTouch>
+			<AccuracyShort>0.60</AccuracyShort>
+			<AccuracyMedium>0.85</AccuracyMedium>
+			<AccuracyLong>0.95</AccuracyLong>
+			<RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
 		</statBases>
 		<equippedStatOffsets>
 			<MoveSpeed>-0.25</MoveSpeed>
@@ -302,10 +324,9 @@
 			<li>CFAR_ARL</li>
 		</weaponTags>
 		<costList>
-			<Steel>50</Steel>
-			<Plasteel>30</Plasteel>
-			<Uranium>5</Uranium>
-			<ComponentIndustrial>7</ComponentIndustrial>
+			<Steel>75</Steel>
+			<Uranium>5</Steel>
+			<ComponentIndustrial>8</ComponentIndustrial>
 		</costList>
 		<verbs>
 			<li>
@@ -313,8 +334,8 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_CFAR_ARL</defaultProjectile>
 				<burstShotCount>1</burstShotCount>
-				<warmupTime>3.5</warmupTime>
-				<range>44.9</range>
+				<warmupTime>2.5</warmupTime>
+				<range>49.9</range>
 				<soundCast>Shot_SniperRifle</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
