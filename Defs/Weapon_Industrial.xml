@@ -13,9 +13,9 @@
 		</graphicData>
 		<projectile>
 			<damageDef>Bullet</damageDef>
-			<damageAmountBase>14</damageAmountBase>
+			<damageAmountBase>13</damageAmountBase>
 			<stoppingPower>1</stoppingPower>
-			<armorPenetrationBase>0.2</armorPenetrationBase>
+			<armorPenetrationBase>0.25</armorPenetrationBase>
 			<speed>70</speed>
 		</projectile>
 	</ThingDef>
@@ -23,9 +23,9 @@
 	<ThingDef ParentName="Bullet_CFAR_AR">
 		<defName>Bullet_CFAR_ARL</defName>
 		<projectile>
-			<damageAmountBase>28</damageAmountBase>
+			<damageAmountBase>26</damageAmountBase>
 			<stoppingPower>3</stoppingPower>
-			<armorPenetrationBase>0.4</armorPenetrationBase>
+			<armorPenetrationBase>0.45</armorPenetrationBase>
 			<speed>140</speed>
 		</projectile>
 	</ThingDef>
@@ -54,15 +54,79 @@
 		</tradeTags>
 	</ThingDef>
 
-	<!--<ThingDef ParentName="Base_CFAR_GunIndustrial">
-		<label>Arellian Autopistol</label>
-		<description>A Reichswehr standard-issue automatic sidearm, built for reliability under shipboard and terrestrial combat conditions.</description>
-	</ThingDef>-->
+	<ThingDef ParentName="Base_CFAR_GunIndustrial">
+		<defName>Gun_CFAR_HG</defName>
+		<label>Arellian Magnum</label>
+		<description>WIP</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_HG</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_SMG</soundInteract>
+		<recipeMaker>
+			<researchPrerequisite>GasOperation</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+			<displayPriority>1172</displayPriority>
+		</recipeMaker>
+		<statBases>
+			<WorkToMake>18000</WorkToMake>
+			<Mass>2.5</Mass>
+			<AccuracyTouch>0.90</AccuracyTouch>
+			<AccuracyShort>0.75</AccuracyShort>
+			<AccuracyMedium>0.4</AccuracyMedium>
+			<AccuracyLong>0.25</AccuracyLong>
+			<RangedWeapon_Cooldown>1.6</RangedWeapon_Cooldown>
+		</statBases>
+		<weaponTags>
+			<li>CFAR_HG</li>
+		</weaponTags>
+		<costList>
+			<Steel>50</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_CFAR_AR</defaultProjectile>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+				<warmupTime>0.75</warmupTime>
+				<range>25.9</range>
+				<soundCast>Shot_HeavySMG</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>8</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tradeTags>
+			<li>CFAR_WeaponRanged</li>
+		</tradeTags>
+	</ThingDef>
 
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
 		<defName>Gun_CFAR_ARK</defName>
-		<label>Arellian MPK</label>
-		<description>A standard-issue Reichswehr submachine gun favored for its compact profile and high rate of fire. It is commonly issued to shipboard security, support personnel, and units operating in confined environments.</description>
+		<label>Arellian Assault Carbine</label>
+		<description>WIP</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_SMG</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -130,8 +194,8 @@
 
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
 		<defName>Gun_CFAR_AR</defName>
-		<label>Arellian Automatic Rifle</label>
-		<description>A standard-issue Reichswehr assault rifle engineered for versatility across varied combat environments. While not specialized for any single role, it provides reliable performance in most engagements.</description>
+		<label>Arellian Assault Rifle</label>
+		<description>WIP</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_AutoRifle</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -208,7 +272,7 @@
 
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
 		<defName>Gun_CFAR_ARL</defName>
-		<label>Arellian Canister Rifle</label>
+		<label>Arellian Sniper Rifle</label>
 		<description>WIP</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_CanisterRifle</texPath>
