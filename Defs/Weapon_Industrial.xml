@@ -15,7 +15,7 @@
 			<damageDef>Bullet</damageDef>
 			<damageAmountBase>12</damageAmountBase>
 			<stoppingPower>1</stoppingPower>
-			<armorPenetrationBase>0.25</armorPenetrationBase>
+			<armorPenetrationBase>0.20</armorPenetrationBase>
 			<speed>55</speed>
 		</projectile>
 	</ThingDef>
@@ -41,7 +41,7 @@
 		<projectile>
 			<damageAmountBase>28</damageAmountBase>
 			<stoppingPower>3</stoppingPower>
-			<armorPenetrationBase>0.45</armorPenetrationBase>
+			<armorPenetrationBase>0.6</armorPenetrationBase>
 			<speed>140</speed>
 		</projectile>
 	</ThingDef>
@@ -87,14 +87,14 @@
 			<displayPriority>1170</displayPriority>
 		</recipeMaker>
 		<statBases>
-			<MarketValue>275</MarketValue>
+			<MarketValue>220</MarketValue>
 			<WorkToMake>5000</WorkToMake>
 			<Mass>1.8</Mass>
-			<AccuracyTouch>0.80</AccuracyTouch>
-			<AccuracyShort>0.75</AccuracyShort>
+			<AccuracyTouch>0.90</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
 			<AccuracyMedium>0.60</AccuracyMedium>
 			<AccuracyLong>0.40</AccuracyLong>
-			<RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
 		</statBases>
 		<weaponTags>
 			<li>CFAR_HG</li>
@@ -112,7 +112,7 @@
 				<burstShotCount>2</burstShotCount>
 				<ticksBetweenBurstShots>30</ticksBetweenBurstShots>
 				<warmupTime>0.3</warmupTime>
-				<range>25.9</range>
+				<range>24.9</range>
 				<soundCast>Shot_HeavySMG</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
 				<muzzleFlashScale>8</muzzleFlashScale>
@@ -128,7 +128,7 @@
 				<cooldownTime>2</cooldownTime>
 			</li>
 			<li>
-				<label>stock</label>
+				<label>grip</label>
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
@@ -163,8 +163,8 @@
 			<Mass>4.5</Mass>
 			<AccuracyTouch>0.90</AccuracyTouch>
 			<AccuracyShort>0.75</AccuracyShort>
-			<AccuracyMedium>0.30</AccuracyMedium>
-			<AccuracyLong>0.10</AccuracyLong>
+			<AccuracyMedium>0.50</AccuracyMedium>
+			<AccuracyLong>0.35</AccuracyLong>
 			<RangedWeapon_Cooldown>1.6</RangedWeapon_Cooldown>
 		</statBases>
 		<weaponTags>
@@ -181,7 +181,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_CFAR_AR</defaultProjectile>
 				<burstShotCount>3</burstShotCount>
-				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
 				<warmupTime>0.8</warmupTime>
 				<range>29.9</range>
 				<soundCast>Shot_AssaultRifle</soundCast>
@@ -232,8 +232,8 @@
 			<MarketValue>890</MarketValue>
 			<WorkToMake>45000</WorkToMake>
 			<Mass>6</Mass>
-			<AccuracyTouch>0.55</AccuracyTouch>
-			<AccuracyShort>0.65</AccuracyShort>
+			<AccuracyTouch>0.60</AccuracyTouch>
+			<AccuracyShort>0.70</AccuracyShort>
 			<AccuracyMedium>0.75</AccuracyMedium>
 			<AccuracyLong>0.65</AccuracyLong>
 			<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
@@ -251,8 +251,8 @@
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_CFAR_AR</defaultProjectile>
-				<burstShotCount>5</burstShotCount>
-				<ticksBetweenBurstShots>13</ticksBetweenBurstShots>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>11</ticksBetweenBurstShots>
 				<warmupTime>1.2</warmupTime>
 				<range>34.9</range>
 				<soundCast>Shot_AssaultRifle</soundCast>
@@ -311,8 +311,8 @@
 			<MarketValue>1430</MarketValue>
 			<WorkToMake>50000</WorkToMake>
 			<Mass>8</Mass>
-			<AccuracyTouch>0.50</AccuracyTouch>
-			<AccuracyShort>0.70</AccuracyShort>
+			<AccuracyTouch>0.55</AccuracyTouch>
+			<AccuracyShort>0.75</AccuracyShort>
 			<AccuracyMedium>0.85</AccuracyMedium>
 			<AccuracyLong>0.95</AccuracyLong>
 			<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
