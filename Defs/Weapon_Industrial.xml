@@ -149,7 +149,7 @@
 			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_SMG</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
-		<soundInteract>Interact_SMG</soundInteract>
+		<soundInteract>Interact_Rifle</soundInteract>
 		<recipeMaker>
 			<researchPrerequisite>GasOperation</researchPrerequisite>
 			<skillRequirements>
@@ -158,8 +158,8 @@
 			<displayPriority>1171</displayPriority>
 		</recipeMaker>
 		<statBases>
-			<MarketValue>525</MarketValue>
-			<WorkToMake>37500</WorkToMake>
+			<MarketValue>660</MarketValue>
+			<WorkToMake>42500</WorkToMake>
 			<Mass>4.5</Mass>
 			<AccuracyTouch>0.90</AccuracyTouch>
 			<AccuracyShort>0.75</AccuracyShort>
@@ -183,8 +183,8 @@
 				<burstShotCount>3</burstShotCount>
 				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
 				<warmupTime>0.8</warmupTime>
-				<range>25.9</range>
-				<soundCast>Shot_HeavySMG</soundCast>
+				<range>29.9</range>
+				<soundCast>Shot_AssaultRifle</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
 				<muzzleFlashScale>8</muzzleFlashScale>
 			</li>
@@ -229,7 +229,7 @@
 			<displayPriority>1172</displayPriority>
 		</recipeMaker>
 		<statBases>
-			<MarketValue>650</MarketValue>
+			<MarketValue>890</MarketValue>
 			<WorkToMake>45000</WorkToMake>
 			<Mass>6</Mass>
 			<AccuracyTouch>0.55</AccuracyTouch>
@@ -254,7 +254,7 @@
 				<burstShotCount>4</burstShotCount>
 				<ticksBetweenBurstShots>13</ticksBetweenBurstShots>
 				<warmupTime>1.2</warmupTime>
-				<range>32.9</range>
+				<range>34.9</range>
 				<soundCast>Shot_AssaultRifle</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
@@ -308,14 +308,14 @@
 			<displayPriority>1173</displayPriority>
 		</recipeMaker>
 		<statBases>
-			<MarketValue>750</MarketValue>
+			<MarketValue>1160</MarketValue>
 			<WorkToMake>50000</WorkToMake>
 			<Mass>8</Mass>
-			<AccuracyTouch>0.45</AccuracyTouch>
-			<AccuracyShort>0.60</AccuracyShort>
+			<AccuracyTouch>0.50</AccuracyTouch>
+			<AccuracyShort>0.70</AccuracyShort>
 			<AccuracyMedium>0.85</AccuracyMedium>
 			<AccuracyLong>0.95</AccuracyLong>
-			<RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
 		</statBases>
 		<equippedStatOffsets>
 			<MoveSpeed>-0.25</MoveSpeed>
