@@ -30,7 +30,7 @@
 		<projectile>
 			<damageDef>Bullet</damageDef>
 			<damageAmountBase>14</damageAmountBase>
-			<stoppingPower>1</stoppingPower>
+			<stoppingPower>1.5</stoppingPower>
 			<armorPenetrationBase>0.25</armorPenetrationBase>
 			<speed>70</speed>
 		</projectile>
@@ -172,7 +172,7 @@
 		</weaponTags>
 		<costList>
 			<Steel>50</Steel>
-			<Uranium>3</Steel>
+			<Uranium>3</Uranium>
 			<ComponentIndustrial>6</ComponentIndustrial>
 		</costList>
 		<verbs>
@@ -243,7 +243,7 @@
 		</weaponTags>
 		<costList>
 			<Steel>60</Steel>
-			<Uranium>5</Steel>
+			<Uranium>5</Uranium>
 			<ComponentIndustrial>7</ComponentIndustrial>
 		</costList>
 		<verbs>
@@ -251,7 +251,7 @@
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_CFAR_AR</defaultProjectile>
-				<burstShotCount>4</burstShotCount>
+				<burstShotCount>5</burstShotCount>
 				<ticksBetweenBurstShots>13</ticksBetweenBurstShots>
 				<warmupTime>1.2</warmupTime>
 				<range>34.9</range>
@@ -308,7 +308,7 @@
 			<displayPriority>1173</displayPriority>
 		</recipeMaker>
 		<statBases>
-			<MarketValue>1160</MarketValue>
+			<MarketValue>1430</MarketValue>
 			<WorkToMake>50000</WorkToMake>
 			<Mass>8</Mass>
 			<AccuracyTouch>0.50</AccuracyTouch>
@@ -325,8 +325,9 @@
 		</weaponTags>
 		<costList>
 			<Steel>75</Steel>
-			<Uranium>5</Steel>
-			<ComponentIndustrial>8</ComponentIndustrial>
+			<Uranium>1</Uranium>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<ComponentSpacer>1</ComponentSpacer>
 		</costList>
 		<verbs>
 			<li>
