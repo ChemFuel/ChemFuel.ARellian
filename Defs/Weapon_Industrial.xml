@@ -87,21 +87,21 @@
 			<displayPriority>1170</displayPriority>
 		</recipeMaker>
 		<statBases>
-			<MarketValue>220</MarketValue>
+			<MarketValue>230</MarketValue>
 			<WorkToMake>5000</WorkToMake>
 			<Mass>1.8</Mass>
-			<AccuracyTouch>0.80</AccuracyTouch>
+			<AccuracyTouch>0.85</AccuracyTouch>
 			<AccuracyShort>0.75</AccuracyShort>
-			<AccuracyMedium>0.60</AccuracyMedium>
-			<AccuracyLong>0.40</AccuracyLong>
+			<AccuracyMedium>0.50</AccuracyMedium>
+			<AccuracyLong>0.25</AccuracyLong>
 			<RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown>
 		</statBases>
 		<weaponTags>
 			<li>CFAR_HG</li>
 		</weaponTags>
 		<costList>
-			<Steel>25</Steel>
-			<Uranium>2</Steel>
+			<Steel>30</Steel>
+			<Uranium>1</Steel>
 			<ComponentIndustrial>2</ComponentIndustrial>
 		</costList>
 		<verbs>
