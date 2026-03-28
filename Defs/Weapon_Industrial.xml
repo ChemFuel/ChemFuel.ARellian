@@ -4,7 +4,7 @@
 
 <!--======== BulletDefs ========-->
 
-	<ThingDef Name="Bullet_CFAR_AR" ParentName="BaseBullet">
+	<ThingDef ParentName="BaseBullet">
 		<defName>Bullet_CFAR_HG</defName>
 		<label>magnum round</label>
 		<graphicData>
