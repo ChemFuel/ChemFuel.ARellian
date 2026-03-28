@@ -394,7 +394,7 @@
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_CFAR_ARL</defaultProjectile>
+				<defaultProjectile>Bullet_CFAR_SR</defaultProjectile>
 				<burstShotCount>1</burstShotCount>
 				<warmupTime>2.8</warmupTime>
 				<range>47.9</range>
