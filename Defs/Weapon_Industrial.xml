@@ -140,52 +140,95 @@
 		</tradeTags>
 	</ThingDef>
 
-	<ThingDef ParentName="Base_CFAR_GunIndustrial">
-		<defName>Gun_CFAR_ARK</defName>
-		<label>Arellian Assault Carbine</label>
-		<description>WIP</description>
-		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_SMG</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
+	<ThingDef Name="Base_CFAR_AssaultRifle" ParentName="Base_CFAR_GunIndustrial" Abstract="True">
 		<soundInteract>Interact_Rifle</soundInteract>
 		<recipeMaker>
-			<researchPrerequisite>GasOperation</researchPrerequisite>
+			<researchPrerequisite>PrecisionRifling</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>
-			<displayPriority>1171</displayPriority>
 		</recipeMaker>
 		<statBases>
-			<MarketValue>660</MarketValue>
-			<WorkToMake>42500</WorkToMake>
-			<Mass>4.5</Mass>
-			<AccuracyTouch>0.90</AccuracyTouch>
-			<AccuracyShort>0.75</AccuracyShort>
-			<AccuracyMedium>0.50</AccuracyMedium>
-			<AccuracyLong>0.35</AccuracyLong>
-			<RangedWeapon_Cooldown>1.6</RangedWeapon_Cooldown>
+			<WorkToMake>50000</WorkToMake>
+			<Mass>7</Mass>
+			<AccuracyTouch>0.60</AccuracyTouch>
+			<AccuracyShort>0.70</AccuracyShort>
+			<AccuracyMedium>0.75</AccuracyMedium>
+			<AccuracyLong>0.65</AccuracyLong>
+			<RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
 		</statBases>
 		<weaponTags>
-			<li>CFAR_ARK</li>
+			<li>CFAR_ARBase</li>
 		</weaponTags>
-		<costList>
-			<Steel>50</Steel>
-			<Uranium>3</Uranium>
-			<ComponentIndustrial>6</ComponentIndustrial>
-		</costList>
 		<verbs>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_CFAR_AR</defaultProjectile>
-				<burstShotCount>3</burstShotCount>
-				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-				<warmupTime>0.8</warmupTime>
-				<range>29.9</range>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>11</ticksBetweenBurstShots>
+				<warmupTime>1.2</warmupTime>
+				<range>32.9</range>
 				<soundCast>Shot_AssaultRifle</soundCast>
-				<soundCastTail>GunTail_Medium</soundCastTail>
-				<muzzleFlashScale>8</muzzleFlashScale>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tradeTags>
+			<li>CFAR_WeaponRanged</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="Base_CFAR_AssaultRifle">
+		<defName>Gun_CFAR_ARA</defName>
+		<label>Arellian Assault Rifle</label>
+		<description>WIP</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_AutoRifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<recipeMaker>
+			<displayPriority>1172</displayPriority>
+		</recipeMaker>
+		<statBases>
+			<MarketValue>790</MarketValue>
+			<WorkToMake>47500</WorkToMake>
+			<Mass>6</Mass>
+			<AccuracyTouch>0.65</AccuracyTouch>
+			<AccuracyShort>0.75</AccuracyShort>
+			<AccuracyMedium>0.80</AccuracyMedium>
+			<AccuracyLong>0.70</AccuracyLong>
+		</statBases>
+		<weaponTags>
+			<li>CFAR_ARA</li>
+		</weaponTags>
+		<costList>
+			<Steel>60</Steel>
+			<Uranium>5</Uranium>
+			<ComponentIndustrial>7</ComponentIndustrial>
+		</costList>
+		<verbs Inherit="False">
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_CFAR_AR</defaultProjectile>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>11</ticksBetweenBurstShots>
+				<warmupTime>1</warmupTime>
+				<range>32.9</range>
+				<soundCast>Shot_AssaultRifle</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
 			</li>
 		</verbs>
 		<tools>
@@ -197,87 +240,77 @@
 				<power>9</power>
 				<cooldownTime>2</cooldownTime>
 			</li>
-			<li>
-				<label>stock</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
 		</tools>
-		<tradeTags>
-			<li>CFAR_WeaponRanged</li>
-		</tradeTags>
 	</ThingDef>
 
-	<ThingDef ParentName="Base_CFAR_GunIndustrial">
-		<defName>Gun_CFAR_AR</defName>
-		<label>Arellian Assault Rifle</label>
+	<ThingDef ParentName="Base_CFAR_AssaultRifle">
+		<defName>Gun_CFAR_ARB</defName>
+		<label>Arellian Bayonet Rifle</label>
 		<description>WIP</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_AutoRifle</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
-		<soundInteract>Interact_Rifle</soundInteract>
 		<recipeMaker>
-			<researchPrerequisite>PrecisionRifling</researchPrerequisite>
-			<skillRequirements>
-				<Crafting>6</Crafting>
-			</skillRequirements>
 			<displayPriority>1172</displayPriority>
 		</recipeMaker>
 		<statBases>
-			<MarketValue>890</MarketValue>
-			<WorkToMake>45000</WorkToMake>
-			<Mass>6</Mass>
-			<AccuracyTouch>0.60</AccuracyTouch>
-			<AccuracyShort>0.70</AccuracyShort>
-			<AccuracyMedium>0.75</AccuracyMedium>
-			<AccuracyLong>0.65</AccuracyLong>
-			<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+			<MarketValue>900</MarketValue>
 		</statBases>
 		<weaponTags>
-			<li>CFAR_AR</li>
+			<li>CFAR_ARA</li>
 		</weaponTags>
 		<costList>
 			<Steel>60</Steel>
 			<Uranium>5</Uranium>
 			<ComponentIndustrial>7</ComponentIndustrial>
 		</costList>
-		<verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_CFAR_AR</defaultProjectile>
-				<burstShotCount>4</burstShotCount>
-				<ticksBetweenBurstShots>11</ticksBetweenBurstShots>
-				<warmupTime>1.2</warmupTime>
-				<range>34.9</range>
-				<soundCast>Shot_AssaultRifle</soundCast>
-				<soundCastTail>GunTail_Heavy</soundCastTail>
-				<muzzleFlashScale>9</muzzleFlashScale>
-			</li>
-		</verbs>
 		<tools>
 			<li>
-				<label>bayonet</label>
+				<label>point</label>
 				<capacities>
 					<li>Stab</li>
 				</capacities>
-				<power>13</power>
+				<power>15</power>
 				<cooldownTime>2</cooldownTime>
 			</li>
 			<li>
-				<label>bayonet</label>
+				<label>edge</label>
 				<capacities>
 					<li>Cut</li>
 				</capacities>
 				<power>12</power>
 				<cooldownTime>2</cooldownTime>
 			</li>
+		</tools>
+	</ThingDef>
+
+	<ThingDef ParentName="Base_CFAR_AssaultRifle">
+		<defName>Gun_CFAR_ARC</defName>
+		<label>Arellian Grenade Rifle</label>
+		<description>WIP</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_AutoRifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<recipeMaker>
+			<displayPriority>1172</displayPriority>
+		</recipeMaker>
+		<statBases>
+			<MarketValue>1010</MarketValue>
+			<WorkToMake>50000</WorkToMake>7
+		</statBases>
+		<weaponTags>
+			<li>CFAR_ARA</li>
+		</weaponTags>
+		<costList>
+			<Steel>60</Steel>
+			<Uranium>5</Uranium>
+			<ComponentIndustrial>7</ComponentIndustrial>
+		</costList>
+		<tools>
 			<li>
-				<label>stock</label>
+				<label>barrel</label>
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
@@ -285,13 +318,10 @@
 				<cooldownTime>2</cooldownTime>
 			</li>
 		</tools>
-		<tradeTags>
-			<li>CFAR_WeaponRanged</li>
-		</tradeTags>
 	</ThingDef>
 
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
-		<defName>Gun_CFAR_ARL</defName>
+		<defName>Gun_CFAR_SR</defName>
 		<label>Arellian Sniper Rifle</label>
 		<description>WIP</description>
 		<graphicData>
@@ -320,7 +350,7 @@
 			<MoveSpeed>-0.25</MoveSpeed>
 		</equippedStatOffsets>
 		<weaponTags>
-			<li>CFAR_ARL</li>
+			<li>CFAR_SR</li>
 		</weaponTags>
 		<costList>
 			<Steel>75</Steel>
@@ -334,8 +364,8 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_CFAR_ARL</defaultProjectile>
 				<burstShotCount>1</burstShotCount>
-				<warmupTime>2.5</warmupTime>
-				<range>49.9</range>
+				<warmupTime>2.8</warmupTime>
+				<range>47.9</range>
 				<soundCast>Shot_SniperRifle</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
