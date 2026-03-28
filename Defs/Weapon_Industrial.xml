@@ -158,7 +158,7 @@
 			<RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
 		</statBases>
 		<weaponTags>
-			<li>CFAR_ARBase</li>
+			<li>CFAR_AssaultRifleBase</li>
 		</weaponTags>
 		<verbs>
 			<li>
@@ -190,7 +190,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName="Base_CFAR_AssaultRifle">
-		<defName>Gun_CFAR_ARA</defName>
+		<defName>Gun_CFAR_AssaultRifle</defName>
 		<label>Arellian Assault Rifle</label>
 		<description>WIP</description>
 		<graphicData>
@@ -198,7 +198,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<recipeMaker>
-			<displayPriority>1172</displayPriority>
+			<displayPriority>1171</displayPriority>
 		</recipeMaker>
 		<statBases>
 			<MarketValue>790</MarketValue>
@@ -210,7 +210,7 @@
 			<AccuracyLong>0.70</AccuracyLong>
 		</statBases>
 		<weaponTags>
-			<li>CFAR_ARA</li>
+			<li>CFAR_AssaultRifle</li>
 		</weaponTags>
 		<costList>
 			<Steel>60</Steel>
@@ -244,7 +244,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName="Base_CFAR_AssaultRifle">
-		<defName>Gun_CFAR_ARB</defName>
+		<defName>Gun_CFAR_BayonetRifle</defName>
 		<label>Arellian Bayonet Rifle</label>
 		<description>WIP</description>
 		<graphicData>
@@ -258,10 +258,10 @@
 			<MarketValue>900</MarketValue>
 		</statBases>
 		<weaponTags>
-			<li>CFAR_ARA</li>
+			<li>CFAR_BayonetRifle</li>
 		</weaponTags>
 		<costList>
-			<Steel>60</Steel>
+			<Steel>90</Steel>
 			<Uranium>5</Uranium>
 			<ComponentIndustrial>7</ComponentIndustrial>
 		</costList>
@@ -286,7 +286,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName="Base_CFAR_AssaultRifle">
-		<defName>Gun_CFAR_ARC</defName>
+		<defName>Gun_CFAR_GrenadeRifle</defName>
 		<label>Arellian Grenade Rifle</label>
 		<description>WIP</description>
 		<graphicData>
@@ -294,19 +294,18 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<recipeMaker>
-			<displayPriority>1172</displayPriority>
+			<displayPriority>1173</displayPriority>
 		</recipeMaker>
 		<statBases>
 			<MarketValue>1010</MarketValue>
-			<WorkToMake>50000</WorkToMake>7
 		</statBases>
 		<weaponTags>
-			<li>CFAR_ARA</li>
+			<li>CFAR_GrenadeRifle</li>
 		</weaponTags>
 		<costList>
-			<Steel>60</Steel>
+			<Steel>85</Steel>
 			<Uranium>5</Uranium>
-			<ComponentIndustrial>7</ComponentIndustrial>
+			<ComponentIndustrial>8</ComponentIndustrial>
 		</costList>
 		<tools>
 			<li>
@@ -321,7 +320,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
-		<defName>Gun_CFAR_SR</defName>
+		<defName>Gun_CFAR_SniperRifle</defName>
 		<label>Arellian Sniper Rifle</label>
 		<description>WIP</description>
 		<graphicData>
@@ -334,16 +333,16 @@
 			<skillRequirements>
 				<Crafting>8</Crafting>
 			</skillRequirements>
-			<displayPriority>1173</displayPriority>
+			<displayPriority>1174</displayPriority>
 		</recipeMaker>
 		<statBases>
-			<MarketValue>1430</MarketValue>
-			<WorkToMake>50000</WorkToMake>
-			<Mass>8</Mass>
-			<AccuracyTouch>0.55</AccuracyTouch>
-			<AccuracyShort>0.75</AccuracyShort>
-			<AccuracyMedium>0.85</AccuracyMedium>
-			<AccuracyLong>0.95</AccuracyLong>
+			<MarketValue>1800</MarketValue>
+			<WorkToMake>60000</WorkToMake>
+			<Mass>8.5</Mass>
+			<AccuracyTouch>0.64</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>0.88</AccuracyMedium>
+			<AccuracyLong>0.90</AccuracyLong>
 			<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
 		</statBases>
 		<equippedStatOffsets>
@@ -353,9 +352,9 @@
 			<li>CFAR_SR</li>
 		</weaponTags>
 		<costList>
-			<Steel>75</Steel>
-			<Uranium>1</Uranium>
-			<ComponentIndustrial>6</ComponentIndustrial>
+			<Steel>80</Steel>
+			<Uranium>10</Uranium>
+			<ComponentIndustrial>8</ComponentIndustrial>
 			<ComponentSpacer>1</ComponentSpacer>
 		</costList>
 		<verbs>
