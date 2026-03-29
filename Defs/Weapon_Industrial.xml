@@ -16,7 +16,7 @@
 			<damageAmountBase>12</damageAmountBase>
 			<stoppingPower>1</stoppingPower>
 			<armorPenetrationBase>0.20</armorPenetrationBase>
-			<speed>55</speed>
+			<speed>75</speed>
 		</projectile>
 	</ThingDef>
 
@@ -32,7 +32,7 @@
 			<damageAmountBase>14</damageAmountBase>
 			<stoppingPower>1.5</stoppingPower>
 			<armorPenetrationBase>0.25</armorPenetrationBase>
-			<speed>70</speed>
+			<speed>100</speed>
 		</projectile>
 	</ThingDef>
 
@@ -42,7 +42,39 @@
 			<damageAmountBase>28</damageAmountBase>
 			<stoppingPower>3</stoppingPower>
 			<armorPenetrationBase>0.5</armorPenetrationBase>
-			<speed>100</speed>
+			<speed>150</speed>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseGrenadeProjectile">
+		<defName>Proj_CFAR_FragGrenade</defName>
+		<label>frag grenade</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/Grenade</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<stoppingPower>5</stoppingPower>
+			<explosionRadius>1.9</explosionRadius>
+			<damageDef>Bomb</damageDef>
+			<speed>20</speed>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Proj_CFAR_EMPShot</defName>
+		<label>EMP shot</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>EMP</damageDef>
+			<explosionRadius>3.5</explosionRadius>
+			<speed>40</speed>
 		</projectile>
 	</ThingDef>
 
@@ -289,7 +321,7 @@
 		</tools>
 	</ThingDef>
 
-	<ThingDef ParentName="Base_CFAR_AssaultRifle" MayRequire="Ludeon.Rimworld.Odyssey">
+	<ThingDef ParentName="Base_CFAR_AssaultRifle">
 		<defName>Gun_CFAR_GrenadeRifle</defName>
 		<label>Arellian Grenade Rifle</label>
 		<description>WIP</description>
@@ -351,28 +383,80 @@
 			</li>
 		</tools>
 		<comps Inherit="False">
-		<li Class="CompProperties_EquippableAbilityReloadable">
-			<abilityDef MayRequire="Ludeon.Rimworld.Odyssey">LaunchFragGrenade</abilityDef>
-			<maxCharges>1</maxCharges>
-			<soundReload>Standard_Reload</soundReload>
-			<chargeNoun>grenade charge</chargeNoun>
-			<ammoDef>Steel</ammoDef>
-			<ammoCountPerCharge>25</ammoCountPerCharge>
-			<baseReloadTicks>60</baseReloadTicks>
-		</li>
-		<li Class="CompProperties_Forbiddable"/>
-		<li Class="CompProperties_Styleable"/>
-		<li Class="CompProperties_Biocodable"/>
-		<li>
-			<compClass>CompQuality</compClass>
-		</li>
-		<li Class="CompProperties_Art">
-			<nameMaker>NamerArtWeaponGun</nameMaker>
-			<descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
-			<minQualityForArtistic>Excellent</minQualityForArtistic>
-		</li>
+			<li Class="CompProperties_EquippableAbilityReloadable">
+				<abilityDef>Ability_CFAR_FragGrenade</abilityDef>
+				<maxCharges>1</maxCharges>
+				<soundReload>Standard_Reload</soundReload>
+				<chargeNoun>grenade charge</chargeNoun>
+				<ammoDef>Steel</ammoDef>
+				<ammoCountPerCharge>25</ammoCountPerCharge>
+				<baseReloadTicks>60</baseReloadTicks>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Styleable"/>
+			<li Class="CompProperties_Biocodable"/>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtWeaponGun</nameMaker>
+				<descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+				<minQualityForArtistic>Excellent</minQualityForArtistic>
+			</li>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>1.9</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+			</li>
 		</comps>
 	</ThingDef>
+
+	<AbilityDef>
+		<defName>Ability_CFAR_FragGrenade</defName>
+		<label>launch frag grenade</label>
+		<description>Launch a grenade. Can be reloaded using steel.</description>
+		<iconPath>UI/Commands/LaunchFragGrenade</iconPath>
+		<aiCanUse>true</aiCanUse>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>12.9</range>
+			<warmupTime>1.5</warmupTime>
+			<forcedMissRadius>1.9</forcedMissRadius>
+			<soundCast>Shot_IncendiaryLauncher</soundCast>
+			<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityLaunchProjectile">
+				<projectileDef>Proj_CFAR_FragGrenade</projectileDef>
+			</li>
+		</comps>
+	</AbilityDef>
+	
+	<AbilityDef>
+		<defName>Ability_CFAR_EMPShot</defName>
+		<label>launch EMP shot</label>
+		<description>Launch a self-propelling shell that releases a burst of electromagnetic energy, stunning mechanical targets. Can be reloaded using EMP shot.</description>
+		<iconPath>UI/Commands/LaunchEMPShell</iconPath>
+		<aiCanUse>true</aiCanUse>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>32.9</range>
+			<warmupTime>5</warmupTime>
+			<soundCast>Shot_IncendiaryLauncher</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityLaunchProjectile">
+				<projectileDef>Proj_CFAR_EMPShot</projectileDef>
+			</li>
+		</comps>
+	</AbilityDef>
 
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
 		<defName>Gun_CFAR_SniperRifle</defName>
@@ -394,10 +478,10 @@
 			<MarketValue>1800</MarketValue>
 			<WorkToMake>60000</WorkToMake>
 			<Mass>8.5</Mass>
-			<AccuracyTouch>0.64</AccuracyTouch>
+			<AccuracyTouch>0.65</AccuracyTouch>
 			<AccuracyShort>0.80</AccuracyShort>
-			<AccuracyMedium>0.88</AccuracyMedium>
-			<AccuracyLong>0.90</AccuracyLong>
+			<AccuracyMedium>0.90</AccuracyMedium>
+			<AccuracyLong>0.95</AccuracyLong>
 			<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
 		</statBases>
 		<equippedStatOffsets>
@@ -443,6 +527,33 @@
 				<cooldownTime>2</cooldownTime>
 			</li>
 		</tools>
+		<comps Inherit="False">
+			<li Class="CompProperties_EquippableAbilityReloadable">
+				<abilityDef>LaunchFragGrenade</abilityDef>
+				<maxCharges>1</maxCharges>
+				<soundReload>Standard_Reload</soundReload>
+				<chargeNoun>grenade charge</chargeNoun>
+				<ammoDef>Steel</ammoDef>
+				<ammoCountPerCharge>25</ammoCountPerCharge>
+				<baseReloadTicks>60</baseReloadTicks>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Styleable"/>
+			<li Class="CompProperties_Biocodable"/>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtWeaponGun</nameMaker>
+				<descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+				<minQualityForArtistic>Excellent</minQualityForArtistic>
+			</li>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>1.9</explosiveRadius>
+				<explosiveDamageType>EMP</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+			</li>
+		</comps>
 		<tradeTags>
 			<li>CFAR_WeaponRanged</li>
 		</tradeTags>
