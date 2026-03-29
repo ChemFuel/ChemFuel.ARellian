@@ -410,7 +410,6 @@
 			</li>
 		</comps>
 	</ThingDef>
-
 	<AbilityDef>
 		<defName>Ability_CFAR_FragGrenade</defName>
 		<label>launch frag grenade</label>
@@ -431,29 +430,6 @@
 		<comps>
 			<li Class="CompProperties_AbilityLaunchProjectile">
 				<projectileDef>Proj_CFAR_FragGrenade</projectileDef>
-			</li>
-		</comps>
-	</AbilityDef>
-	
-	<AbilityDef>
-		<defName>Ability_CFAR_EMPShot</defName>
-		<label>launch EMP shot</label>
-		<description>Launch a self-propelling shell that releases a burst of electromagnetic energy, stunning mechanical targets. Can be reloaded using EMP shot.</description>
-		<iconPath>UI/Commands/LaunchEMPShell</iconPath>
-		<aiCanUse>true</aiCanUse>
-		<verbProperties>
-			<verbClass>Verb_CastAbility</verbClass>
-			<range>32.9</range>
-			<warmupTime>5</warmupTime>
-			<soundCast>Shot_IncendiaryLauncher</soundCast>
-			<soundCastTail>GunTail_Medium</soundCastTail>
-			<targetParams>
-				<canTargetLocations>true</canTargetLocations>
-			</targetParams>
-		</verbProperties>
-		<comps>
-			<li Class="CompProperties_AbilityLaunchProjectile">
-				<projectileDef>Proj_CFAR_EMPShot</projectileDef>
 			</li>
 		</comps>
 	</AbilityDef>
@@ -478,11 +454,11 @@
 			<MarketValue>1800</MarketValue>
 			<WorkToMake>60000</WorkToMake>
 			<Mass>8.5</Mass>
-			<AccuracyTouch>0.65</AccuracyTouch>
-			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyTouch>0.55</AccuracyTouch>
+			<AccuracyShort>0.75</AccuracyShort>
 			<AccuracyMedium>0.90</AccuracyMedium>
 			<AccuracyLong>0.95</AccuracyLong>
-			<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
 		</statBases>
 		<equippedStatOffsets>
 			<MoveSpeed>-0.25</MoveSpeed>
@@ -500,9 +476,9 @@
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_CFAR_SR</defaultProjectile>
+				<defaultProjectile>Bullet_CFAR_AR</defaultProjectile>
 				<burstShotCount>1</burstShotCount>
-				<warmupTime>2.8</warmupTime>
+				<warmupTime>1.8</warmupTime>
 				<range>47.9</range>
 				<soundCast>Shot_SniperRifle</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
@@ -529,7 +505,7 @@
 		</tools>
 		<comps Inherit="False">
 			<li Class="CompProperties_EquippableAbilityReloadable">
-				<abilityDef>LaunchFragGrenade</abilityDef>
+				<abilityDef>Ability_CFAR_EMPShot</abilityDef>
 				<maxCharges>1</maxCharges>
 				<soundReload>Standard_Reload</soundReload>
 				<chargeNoun>grenade charge</chargeNoun>
@@ -558,4 +534,26 @@
 			<li>CFAR_WeaponRanged</li>
 		</tradeTags>
 	</ThingDef>
+	<AbilityDef>
+		<defName>Ability_CFAR_EMPShot</defName>
+		<label>launch EMP shot</label>
+		<description>Launch a self-propelling shell that releases a burst of electromagnetic energy, stunning mechanical targets. Can be reloaded using EMP shot.</description>
+		<iconPath>UI/Commands/LaunchEMPShell</iconPath>
+		<aiCanUse>true</aiCanUse>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>32.9</range>
+			<warmupTime>5</warmupTime>
+			<soundCast>Shot_IncendiaryLauncher</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityLaunchProjectile">
+				<projectileDef>Proj_CFAR_EMPShot</projectileDef>
+			</li>
+		</comps>
+	</AbilityDef>
 </Defs>
