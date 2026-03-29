@@ -39,9 +39,9 @@
 	<ThingDef ParentName="Bullet_CFAR_AR">
 		<defName>Bullet_CFAR_SR</defName>
 		<projectile>
-			<damageAmountBase>28</damageAmountBase>
+			<damageAmountBase>21</damageAmountBase>
 			<stoppingPower>3</stoppingPower>
-			<armorPenetrationBase>0.5</armorPenetrationBase>
+			<armorPenetrationBase>0.75</armorPenetrationBase>
 			<speed>150</speed>
 		</projectile>
 	</ThingDef>
@@ -476,7 +476,7 @@
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_CFAR_AR</defaultProjectile>
+				<defaultProjectile>Bullet_CFAR_SR</defaultProjectile>
 				<burstShotCount>1</burstShotCount>
 				<warmupTime>1.8</warmupTime>
 				<range>47.9</range>
