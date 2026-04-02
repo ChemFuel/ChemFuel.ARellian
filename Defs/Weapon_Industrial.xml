@@ -46,19 +46,14 @@
 		</projectile>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseGrenadeProjectile">
-		<defName>Proj_CFAR_HEGrenade</defName>
+	<ThingDef ParentName="BaseFragGrenadeProjectile">
+		<defName>Proj_CFAR_FragGrenade</defName>
 		<label>frag grenade</label>
-		<thingClass>Projectile_Explosive</thingClass>
-		<graphicData>
-			<texPath>Things/Projectile/Grenade</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<projectile>
+		<projectile Inherit="False">
 			<stoppingPower>5</stoppingPower>
-			<explosionRadius>3.5</explosionRadius>
+			<explosionRadius>1.9</explosionRadius>
 			<damageDef>Bomb</damageDef>
-			<speed>20</speed>
+			<speed>25</speed>
 		</projectile>
 	</ThingDef>
 
@@ -74,7 +69,7 @@
 		<projectile>
 			<damageDef>EMP</damageDef>
 			<explosionRadius>1.9</explosionRadius>
-			<speed>40</speed>
+			<speed>50</speed>
 		</projectile>
 	</ThingDef>
 
@@ -250,7 +245,7 @@
 				<burstShotCount>5</burstShotCount>
 				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
 				<warmupTime>0.8</warmupTime>
-				<range>32.9</range>
+				<range>31.9</range>
 				<soundCast>Shot_AssaultRifle</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
@@ -281,6 +276,7 @@
 			<Steel>85</Steel>
 			<Uranium>5</Uranium>
 			<ComponentIndustrial>8</ComponentIndustrial>
+			<Chemfuel>80</Chemfuel>
 		</costList>
 		<verbs>
 			<li>
@@ -290,7 +286,7 @@
 				<burstShotCount>3</burstShotCount>
 				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
 				<warmupTime>0.8</warmupTime>
-				<range>32.9</range>
+				<range>31.9</range>
 				<soundCast>Shot_AssaultRifle</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
@@ -298,7 +294,7 @@
 		</verbs>
 		<comps Inherit="False">
 			<li Class="CompProperties_EquippableAbility">
-				<abilityDef>Ability_CFAR_HEGrenade</abilityDef>
+				<abilityDef>Ability_CFAR_FragGrenade</abilityDef>
 			</li>
 			<li Class="CompProperties_Forbiddable"/>
 			<li Class="CompProperties_Styleable"/>
@@ -319,15 +315,15 @@
 		</comps>
 	</ThingDef>
 	<AbilityDef>
-		<defName>Ability_CFAR_HEGrenade</defName>
-		<label>launch HE grenade</label>
-		<description>Launch a HE grenade.</description>
+		<defName>Ability_CFAR_FragGrenade</defName>
+		<label>launch frag grenade</label>
+		<description>Launch a frag grenade.</description>
 		<iconPath>UI/Commands/LaunchFragGrenade</iconPath>
-		<cooldownTicksRange>2000~3000</cooldownTicksRange>
+		<cooldownTicksRange>225~275</cooldownTicksRange>
 		<aiCanUse>true</aiCanUse>
 		<verbProperties>
 			<verbClass>Verb_CastAbility</verbClass>
-			<range>12.9</range>
+			<range>15.9</range>
 			<warmupTime>0.75</warmupTime>
 			<forcedMissRadius>1.9</forcedMissRadius>
 			<soundCast>Shot_IncendiaryLauncher</soundCast>
@@ -338,7 +334,7 @@
 		</verbProperties>
 		<comps>
 			<li Class="CompProperties_AbilityLaunchProjectile">
-				<projectileDef>Proj_CFAR_HEGrenade</projectileDef>
+				<projectileDef>Proj_CFAR_FragGrenade</projectileDef>
 			</li>
 		</comps>
 	</AbilityDef>
