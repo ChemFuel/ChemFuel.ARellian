@@ -56,7 +56,7 @@
 		</graphicData>
 		<projectile>
 			<stoppingPower>5</stoppingPower>
-			<explosionRadius>1.9</explosionRadius>
+			<explosionRadius>3.5</explosionRadius>
 			<damageDef>Bomb</damageDef>
 			<speed>20</speed>
 		</projectile>
@@ -73,7 +73,7 @@
 		</graphicData>
 		<projectile>
 			<damageDef>EMP</damageDef>
-			<explosionRadius>3.5</explosionRadius>
+			<explosionRadius>1.9</explosionRadius>
 			<speed>40</speed>
 		</projectile>
 	</ThingDef>
@@ -195,20 +195,6 @@
 		<weaponTags>
 			<li>CFAR_AssaultRifleBase</li>
 		</weaponTags>
-		<verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_CFAR_AR</defaultProjectile>
-				<burstShotCount>4</burstShotCount>
-				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-				<warmupTime>0.8</warmupTime>
-				<range>32.9</range>
-				<soundCast>Shot_AssaultRifle</soundCast>
-				<soundCastTail>GunTail_Heavy</soundCastTail>
-				<muzzleFlashScale>9</muzzleFlashScale>
-			</li>
-		</verbs>
 		<tools>
 			<li>
 				<label>barrel</label>
@@ -256,6 +242,20 @@
 			<Uranium>5</Uranium>
 			<ComponentIndustrial>7</ComponentIndustrial>
 		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_CFAR_AR</defaultProjectile>
+				<burstShotCount>5</burstShotCount>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<warmupTime>0.8</warmupTime>
+				<range>32.9</range>
+				<soundCast>Shot_AssaultRifle</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
 	</ThingDef>
 
 	<ThingDef ParentName="Base_CFAR_AssaultRifle">
@@ -282,6 +282,20 @@
 			<Uranium>5</Uranium>
 			<ComponentIndustrial>8</ComponentIndustrial>
 		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_CFAR_AR</defaultProjectile>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<warmupTime>0.8</warmupTime>
+				<range>32.9</range>
+				<soundCast>Shot_AssaultRifle</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
 		<comps Inherit="False">
 			<li Class="CompProperties_EquippableAbilityReloadable">
 				<abilityDef>Ability_CFAR_FragGrenade</abilityDef>
