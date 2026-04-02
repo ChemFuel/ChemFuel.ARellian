@@ -165,6 +165,11 @@
 				</capacities>
 				<power>9</power>
 				<cooldownTime>2</cooldownTime>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li><def>Stun</def><amount>14</amount></li>
+					</extraMeleeDamages>
+				</surpriseAttack>
 			</li>
 		</tools>
 		<tradeTags>
@@ -184,7 +189,7 @@
 			<AccuracyTouch>0.65</AccuracyTouch>
 			<AccuracyShort>0.70</AccuracyShort>
 			<AccuracyMedium>0.75</AccuracyMedium>
-			<AccuracyLong>0.65</AccuracyLong>
+			<AccuracyLong>0.60</AccuracyLong>
 			<RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
 		</statBases>
 		<weaponTags>
@@ -196,7 +201,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_CFAR_AR</defaultProjectile>
 				<burstShotCount>4</burstShotCount>
-				<ticksBetweenBurstShots>11</ticksBetweenBurstShots>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
 				<warmupTime>0.8</warmupTime>
 				<range>32.9</range>
 				<soundCast>Shot_AssaultRifle</soundCast>
