@@ -107,16 +107,8 @@
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="CFAR_RW_TrooperBase">
-		<defName>CFAR_RW_PlatoonLeader</defName>
-		<label>platoon leader</label><!--KR : 소대장-->
-		<weaponTags>
-			<li>CFAR_SniperRifle</li>
-		</weaponTags>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="CFAR_RW_TrooperBase">
-		<defName>CFAR_RW_PlatoonLeader</defName>
-		<label>company leader</label><!--KR : 중대장-->
+		<defName>CFAR_RW_CompanyCommander</defName>
+		<label>company commander</label><!--KR : 중대장-->
 		<weaponTags>
 			<li>CFAR_Magnum</li>
 		</weaponTags>
