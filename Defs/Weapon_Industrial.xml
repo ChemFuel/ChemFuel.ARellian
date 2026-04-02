@@ -47,7 +47,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName="BaseGrenadeProjectile">
-		<defName>Proj_CFAR_FragGrenade</defName>
+		<defName>Proj_CFAR_HEGrenade</defName>
 		<label>frag grenade</label>
 		<thingClass>Projectile_Explosive</thingClass>
 		<graphicData>
@@ -297,14 +297,8 @@
 			</li>
 		</verbs>
 		<comps Inherit="False">
-			<li Class="CompProperties_EquippableAbilityReloadable">
-				<abilityDef>Ability_CFAR_FragGrenade</abilityDef>
-				<maxCharges>1</maxCharges>
-				<soundReload>Standard_Reload</soundReload>
-				<chargeNoun>grenade charge</chargeNoun>
-				<ammoDef>Steel</ammoDef>
-				<ammoCountPerCharge>25</ammoCountPerCharge>
-				<baseReloadTicks>60</baseReloadTicks>
+			<li Class="CompProperties_EquippableAbility">
+				<abilityDef>Ability_CFAR_HEGrenade</abilityDef>
 			</li>
 			<li Class="CompProperties_Forbiddable"/>
 			<li Class="CompProperties_Styleable"/>
@@ -325,10 +319,11 @@
 		</comps>
 	</ThingDef>
 	<AbilityDef>
-		<defName>Ability_CFAR_FragGrenade</defName>
-		<label>launch frag grenade</label>
-		<description>Launch a grenade. Can be reloaded using steel.</description>
+		<defName>Ability_CFAR_HEGrenade</defName>
+		<label>launch HE grenade</label>
+		<description>Launch a HE grenade.</description>
 		<iconPath>UI/Commands/LaunchFragGrenade</iconPath>
+		<cooldownTicksRange>2000~3000</cooldownTicksRange>
 		<aiCanUse>true</aiCanUse>
 		<verbProperties>
 			<verbClass>Verb_CastAbility</verbClass>
@@ -343,7 +338,7 @@
 		</verbProperties>
 		<comps>
 			<li Class="CompProperties_AbilityLaunchProjectile">
-				<projectileDef>Proj_CFAR_FragGrenade</projectileDef>
+				<projectileDef>Proj_CFAR_HEGrenade</projectileDef>
 			</li>
 		</comps>
 	</AbilityDef>
