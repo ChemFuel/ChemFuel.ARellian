@@ -24,7 +24,7 @@
 		<permanentEnemyToEveryoneExceptPlayer>true</permanentEnemyToEveryoneExceptPlayer>
 		<canRequestOrbitalTrader>true</canRequestOrbitalTrader>
 		<fixedLeaderKinds><li>CFAR_Flottelegat</li></fixedLeaderKinds>
-		<basicMemberKind>CFAR_RW_Trooper</basicMemberKind>
+		<basicMemberKind>CFAR_RW_TrooperAR</basicMemberKind>
 		<backstoryFilters>
 			<li>
 				<categoriesChildhood>
@@ -77,10 +77,11 @@
 					<Elephant>1</Elephant>
 				</carriers>
 				<guards>
-					<CFAR_RW_Trooper>5</CFAR_RW_Trooper>
-					<CFAR_RW_Grenadier>1</CFAR_RW_Grenadier>
-					<CFAR_RW_MGTrooper>1</CFAR_RW_MGTrooper>
-					<CFAR_RW_SquadLeader>1</CFAR_RW_SquadLeader>
+					<CFAR_RW_TrooperAR>96</CFAR_RW_TrooperAR>
+					<CFAR_RW_TrooperGR>32</CFAR_RW_TrooperGR>
+					<CFAR_RW_TrooperMG>4</CFAR_RW_TrooperMG>
+					<CFAR_RW_PlatoonLeader>4</CFAR_RW_PlatoonLeader>
+					<CFAR_RW_CompanyCommander>1</CFAR_RW_CompanyCommander>
 				</guards>
 			</li>
 			<li>
@@ -91,10 +92,11 @@
 					<li>ImmediateAttackBreachingSmart</li>
 				</disallowedStrategies>
 				<options>
-					<CFAR_RW_Trooper>5</CFAR_RW_Trooper>
-					<CFAR_RW_Grenadier>1</CFAR_RW_Grenadier>
-					<CFAR_RW_MGTrooper>1</CFAR_RW_MGTrooper>
-					<CFAR_RW_SquadLeader>1</CFAR_RW_SquadLeader>
+					<CFAR_RW_TrooperAR>96</CFAR_RW_TrooperAR>
+					<CFAR_RW_TrooperGR>32</CFAR_RW_TrooperGR>
+					<CFAR_RW_TrooperMG>4</CFAR_RW_TrooperMG>
+					<CFAR_RW_PlatoonLeader>4</CFAR_RW_PlatoonLeader>
+					<CFAR_RW_CompanyCommander>1</CFAR_RW_CompanyCommander>
 				</options>
 			</li>
 			<!--<li>
@@ -107,23 +109,26 @@
 					<li>ImmediateAttackSappers</li>
 				</disallowedStrategies>
 				<options>
-					<CFAR_RW_HeerTrooper>1</CFAR_RW_HeerTrooper>
 				</options>
 			</li>-->
 			<li>
 				<kindDef>Peaceful</kindDef>
 				<options>
-					<CFAR_RW_Trooper>6</CFAR_RW_Trooper>
-					<CFAR_RW_MGTrooper>1</CFAR_RW_MGTrooper>
-					<CFAR_RW_SquadLeader>1</CFAR_RW_SquadLeader>
+					<CFAR_RW_TrooperAR>96</CFAR_RW_TrooperAR>
+					<CFAR_RW_TrooperGR>32</CFAR_RW_TrooperGR>
+					<CFAR_RW_TrooperMG>4</CFAR_RW_TrooperMG>
+					<CFAR_RW_PlatoonLeader>4</CFAR_RW_PlatoonLeader>
+					<CFAR_RW_CompanyCommander>1</CFAR_RW_CompanyCommander>
 				</options>
 			</li>
 			<li>
 				<kindDef>Settlement</kindDef>
 				<options>
-					<CFAR_RW_Trooper>6</CFAR_RW_Trooper>
-					<CFAR_RW_MGTrooper>1</CFAR_RW_MGTrooper>
-					<CFAR_RW_SquadLeader>1</CFAR_RW_SquadLeader>
+					<CFAR_RW_TrooperAR>96</CFAR_RW_TrooperAR>
+					<CFAR_RW_TrooperGR>32</CFAR_RW_TrooperGR>
+					<CFAR_RW_TrooperMG>4</CFAR_RW_TrooperMG>
+					<CFAR_RW_PlatoonLeader>4</CFAR_RW_PlatoonLeader>
+					<CFAR_RW_CompanyCommander>1</CFAR_RW_CompanyCommander>
 				</options>
 			</li>
 		</pawnGroupMakers>
