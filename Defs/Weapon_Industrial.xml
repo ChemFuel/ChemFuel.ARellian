@@ -188,7 +188,7 @@
 			<RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
 		</statBases>
 		<weaponTags>
-			<li>CFAR_AssaultRifleBase</li>
+			<li>CFAR_BaseRifle</li>
 		</weaponTags>
 		<tools>
 			<li>
@@ -344,7 +344,7 @@
 		<label>Arellian Sniper Rifle</label>
 		<description>WIP</description>
 		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_CanisterRifle</texPath>
+			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_SniperRifle</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
@@ -353,12 +353,12 @@
 			<skillRequirements>
 				<Crafting>8</Crafting>
 			</skillRequirements>
-			<displayPriority>1174</displayPriority>
+			<displayPriority>1173</displayPriority>
 		</recipeMaker>
 		<statBases>
-			<MarketValue>1800</MarketValue>
+			<MarketValue>1720</MarketValue>
 			<WorkToMake>60000</WorkToMake>
-			<Mass>8.5</Mass>
+			<Mass>8</Mass>
 			<AccuracyTouch>0.55</AccuracyTouch>
 			<AccuracyShort>0.75</AccuracyShort>
 			<AccuracyMedium>0.90</AccuracyMedium>
@@ -366,10 +366,10 @@
 			<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
 		</statBases>
 		<equippedStatOffsets>
-			<MoveSpeed>-0.25</MoveSpeed>
+			<MoveSpeed>-0.48</MoveSpeed>
 		</equippedStatOffsets>
 		<weaponTags>
-			<li>CFAR_SR</li>
+			<li>CFAR_SniperRifle</li>
 		</weaponTags>
 		<costList>
 			<Steel>80</Steel>
@@ -461,4 +461,78 @@
 			</li>
 		</comps>
 	</AbilityDef>
+
+	<ThingDef ParentName="Base_CFAR_GunIndustrial">
+		<defName>Gun_CFAR_MachineGun</defName>
+		<label>Arellian Machine Gun</label>
+		<description>WIP</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_MachineGun</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<recipeMaker>
+			<researchPrerequisite>PrecisionRifling</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+			<displayPriority>1174</displayPriority>
+		</recipeMaker>
+		<statBases>
+			<MarketValue>1720</MarketValue>
+			<WorkToMake>55000</WorkToMake>
+			<Mass>12.5</Mass>
+			<AccuracyTouch>0.35</AccuracyTouch>
+			<AccuracyShort>0.45</AccuracyShort>
+			<AccuracyMedium>0.35</AccuracyMedium>
+			<AccuracyLong>0.20</AccuracyLong>
+			<RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.72</MoveSpeed>
+		</equippedStatOffsets>
+		<weaponTags>
+			<li>CFAR_MachineGun</li>
+		</weaponTags>
+		<costList>
+			<Steel>100</Steel>
+			<Uranium>20</Uranium>
+			<ComponentIndustrial>12</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_CFAR_AR</defaultProjectile>
+				<burstShotCount>20</burstShotCount>
+				<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+				<warmupTime>1.5</warmupTime>
+				<range>31.9</range>
+				<soundCast>Shot_Minigun</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tradeTags>
+			<li>CFAR_WeaponRanged</li>
+		</tradeTags>
+	</ThingDef>
 </Defs>
