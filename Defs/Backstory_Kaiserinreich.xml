@@ -13,7 +13,7 @@
 
 <!--================ Soldier ================-->
 
-	<BackstoryDef Name="CFAR_RW_TrooperBase" Abstract="True">
+	<BackstoryDef Name="CFAR_RW_Soldier" Abstract="True">
 		<requiresSpawnCategory>true</requiresSpawnCategory>
 		<slot>Adulthood</slot>
 		<bodyTypeMale>Male</bodyTypeMale>
@@ -29,7 +29,7 @@
 
 <!--======== Line Trooper ========-->
 
-	<BackstoryDef ParentName="CFAR_RW_TrooperBase">
+	<BackstoryDef ParentName="CFAR_RW_Soldier">
 		<defName>CFAR_RW_LineTrooper1</defName>
 		<title>Reichswehr line trooper</title>
 		<titleShort>trooper</titleShort>
@@ -43,7 +43,7 @@
 		</spawnCategories>
 	</BackstoryDef>
 
-	<BackstoryDef ParentName="CFAR_RW_TrooperBase">
+	<BackstoryDef ParentName="CFAR_RW_Soldier">
 		<defName>CFAR_RW_LineTrooper2</defName>
 		<title>Reichswehr line trooper</title>
 		<titleShort>trooper</titleShort>
@@ -60,7 +60,7 @@
 		</spawnCategories>
 	</BackstoryDef>
 
-	<BackstoryDef ParentName="CFAR_RW_TrooperBase">
+	<BackstoryDef ParentName="CFAR_RW_Soldier">
 		<defName>CFAR_RW_LineTrooper3</defName>
 		<title>Reichswehr line trooper</title>
 		<titleShort>trooper</titleShort>
@@ -74,7 +74,7 @@
 		</spawnCategories>
 	</BackstoryDef>
 
-	<BackstoryDef ParentName="CFAR_RW_TrooperBase">
+	<BackstoryDef ParentName="CFAR_RW_Soldier">
 		<defName>CFAR_RW_LineTrooper4</defName>
 		<title>Reichswehr line trooper</title>
 		<titleShort>trooper</titleShort>
@@ -89,7 +89,7 @@
 		</spawnCategories>
 	</BackstoryDef>
 
-	<BackstoryDef ParentName="CFAR_RW_TrooperBase">
+	<BackstoryDef ParentName="CFAR_RW_Soldier">
 		<defName>CFAR_RW_LineTrooper5</defName>
 		<title>Reichswehr line trooper</title>
 		<titleShort>trooper</titleShort>
@@ -104,7 +104,7 @@
 		</spawnCategories>
 	</BackstoryDef>
 
-	<BackstoryDef ParentName="CFAR_RW_TrooperBase">
+	<BackstoryDef ParentName="CFAR_RW_Soldier">
 		<defName>CFAR_RW_LineTrooper6</defName>
 		<title>Reichswehr line trooper</title>
 		<titleShort>trooper</titleShort>
@@ -123,7 +123,7 @@
 
 <!--======== Line Trooper (Quirky) ========-->
 
-	<BackstoryDef ParentName="CFAR_RW_TrooperBase">
+	<BackstoryDef ParentName="CFAR_RW_Soldier">
 		<defName>CFAR_RW_LineTrooperQ1</defName>
 		<title>Reichswehr line trooper</title>
 		<titleShort>patch</titleShort>
@@ -144,7 +144,7 @@
 		</spawnCategories>
 	</BackstoryDef>
 
-	<BackstoryDef ParentName="CFAR_RW_TrooperBase">
+	<BackstoryDef ParentName="CFAR_RW_Soldier">
 		<defName>CFAR_RW_LineTrooperQ2</defName>
 		<title>Reichswehr line trooper</title>
 		<titleShort>boxer</titleShort>
@@ -169,9 +169,9 @@
 
 <!--================ NCO ================-->
 
-<!--======== Line Sergeant (Base Shooting 8 Melee 6, Extra point 4) ========-->
+<!--======== Line Sergeant ( Shooting 8 Melee 6, Extra point 4) ========-->
 
-	<BackstoryDef ParentName="CFAR_RW_TrooperBase">
+	<BackstoryDef ParentName="CFAR_RW_Soldier">
 		<defName>CFAR_RW_LineSergeantI1</defName>
 		<title>Reichswehr line sergeant</title>
 		<titleShort>sergeant</titleShort>
@@ -188,7 +188,7 @@
 		</spawnCategories>
 	</BackstoryDef>
 
-	<BackstoryDef ParentName="CFAR_RW_TrooperBase">
+	<BackstoryDef ParentName="CFAR_RW_Soldier">
 		<defName>CFAR_RW_LineSergeantM1</defName>
 		<title>Reichswehr line sergeant</title>
 		<titleShort>sergeant</titleShort>
@@ -208,7 +208,7 @@
 
 <!--================ Officer (Company-grade) ================-->
 
-	<BackstoryDef Name="CFAR_RW_CompanyOfficerBase" Abstract="True">
+	<BackstoryDef Name="CFAR_RW_CompanyOfficer" Abstract="True">
 		<requiresSpawnCategory>true</requiresSpawnCategory>
 		<slot>Adulthood</slot>
 		<bodyTypeMale>Male</bodyTypeMale>
@@ -222,7 +222,7 @@
 
 <!--======== Line Officer ========-->
 
-	<BackstoryDef ParentName="CFAR_RW_CompanyOfficerBase">
+	<BackstoryDef ParentName="CFAR_RW_CompanyOfficer">
 		<defName>CFAR_RW_LineOfficer1</defName>
 		<title>Reichswehr line officer</title>
 		<titleShort>officer</titleShort>
@@ -237,7 +237,7 @@
 		</spawnCategories>
 	</BackstoryDef>
 
-	<BackstoryDef ParentName="CFAR_RW_CompanyOfficerBase">
+	<BackstoryDef ParentName="CFAR_RW_CompanyOfficer">
 		<defName>CFAR_RW_LineOfficer2</defName>
 		<title>Reichswehr line officer</title>
 		<titleShort>officer</titleShort>

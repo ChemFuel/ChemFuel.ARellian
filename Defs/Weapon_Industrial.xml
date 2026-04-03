@@ -218,7 +218,7 @@
 		<label>Arellian Assault Rifle</label>
 		<description>WIP</description>
 		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_AutoRifle</texPath>
+			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_AssaultRifle</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<recipeMaker>
@@ -257,8 +257,9 @@
 		<defName>Gun_CFAR_GrenadeRifle</defName>
 		<label>Arellian Grenade Rifle</label>
 		<description>WIP</description>
+		<tickerType>Normal</tickerType>
 		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_AutoRifle</texPath>
+			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_GrenadeRifle</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<recipeMaker>
@@ -343,6 +344,7 @@
 		<defName>Gun_CFAR_SniperRifle</defName>
 		<label>Arellian Sniper Rifle</label>
 		<description>WIP</description>
+		<tickerType>Normal</tickerType>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_SniperRifle</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -409,14 +411,8 @@
 			</li>
 		</tools>
 		<comps Inherit="False">
-			<li Class="CompProperties_EquippableAbilityReloadable">
+			<li Class="CompProperties_EquippableAbility">
 				<abilityDef>Ability_CFAR_EMPShot</abilityDef>
-				<maxCharges>1</maxCharges>
-				<soundReload>Standard_Reload</soundReload>
-				<chargeNoun>grenade charge</chargeNoun>
-				<ammoDef>Steel</ammoDef>
-				<ammoCountPerCharge>25</ammoCountPerCharge>
-				<baseReloadTicks>60</baseReloadTicks>
 			</li>
 			<li Class="CompProperties_Forbiddable"/>
 			<li Class="CompProperties_Styleable"/>
@@ -442,15 +438,17 @@
 	<AbilityDef>
 		<defName>Ability_CFAR_EMPShot</defName>
 		<label>launch EMP shot</label>
-		<description>Launch a self-propelling shell that releases a burst of electromagnetic energy, stunning mechanical targets. Can be reloaded using EMP shot.</description>
+		<description>Launch a self-propelling shell that releases a burst of electromagnetic energy, stunning mechanical targets.</description>
 		<iconPath>UI/Commands/LaunchEMPShell</iconPath>
+		<cooldownTicksRange>225~275</cooldownTicksRange>
 		<aiCanUse>true</aiCanUse>
 		<verbProperties>
 			<verbClass>Verb_CastAbility</verbClass>
-			<range>32.9</range>
-			<warmupTime>5</warmupTime>
+			<range>15.9</range>
+			<warmupTime>0.75</warmupTime>
+			<forcedMissRadius>1.9</forcedMissRadius>
 			<soundCast>Shot_IncendiaryLauncher</soundCast>
-			<soundCastTail>GunTail_Medium</soundCastTail>
+			<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
 			<targetParams>
 				<canTargetLocations>true</canTargetLocations>
 			</targetParams>
@@ -505,7 +503,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_CFAR_AR</defaultProjectile>
 				<burstShotCount>20</burstShotCount>
-				<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
 				<warmupTime>1.5</warmupTime>
 				<range>31.9</range>
 				<soundCast>Shot_Minigun</soundCast>

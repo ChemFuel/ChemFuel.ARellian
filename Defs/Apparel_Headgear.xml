@@ -61,7 +61,7 @@
 		</recipeMaker>
 		<costStuffCount>35</costStuffCount>
 		<graphicData>
-			<texPath>Things/Pawn/Arellian/Apparel/ReichswehrUniform/OfficerCap/Hat</texPath>
+			<texPath>Things/Pawn/Arellian/Apparel/Uniform/OfficerCap/Hat</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.80</drawSize>
 		</graphicData>
@@ -70,7 +70,7 @@
 			<SocialImpact>0.10</SocialImpact>
 		</equippedStatOffsets>
 		<apparel>
-			<wornGraphicPath>Things/Pawn/Arellian/Apparel/ReichswehrUniform/OfficerCap/Hat</wornGraphicPath>
+			<wornGraphicPath>Things/Pawn/Arellian/Apparel/Uniform/OfficerCap/Hat</wornGraphicPath>
 			<tags>
 				<li>CFAR_Officer</li>
 			</tags>
@@ -88,7 +88,7 @@
 		</recipeMaker>
 		<costStuffCount>50</costStuffCount>
 		<graphicData>
-			<texPath>Things/Pawn/Arellian/Apparel/ReichswehrUniform/CommanderCap/Hat</texPath>
+			<texPath>Things/Pawn/Arellian/Apparel/Uniform/CommanderCap/Hat</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.80</drawSize>
 		</graphicData>
@@ -96,7 +96,7 @@
 			<SocialImpact>0.20</SocialImpact>
 		</equippedStatOffsets>
 		<apparel>
-			<wornGraphicPath>Things/Pawn/Arellian/Apparel/ReichswehrUniform/CommanderCap/Hat</wornGraphicPath>
+			<wornGraphicPath>Things/Pawn/Arellian/Apparel/Uniform/CommanderCap/Hat</wornGraphicPath>
 			<tags>
 				<li>CFAR_OfficerHigh</li>
 			</tags>
@@ -183,133 +183,4 @@
 			</defaultOutfitTags>
 		</apparel>
 	</ThingDef>
-
-<!--======== Helmet Base ========-->
-
-	<ThingDef ParentName="ArmorHelmetMakeableBase" Name="CFAR_HelmetBase" Abstract="True">
-		<techLevel>Spacer</techLevel>
-		<uiIconScale>1.15</uiIconScale>
-		<recipeMaker>
-			<researchPrerequisites>
-				<li>FlakArmor</li>
-			</researchPrerequisites>
-		</recipeMaker>
-		<statBases>
-			<MaxHitPoints>150</MaxHitPoints>
-			<Flammability>0.4</Flammability>
-			<ArmorRating_Sharp>0.80</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.50</ArmorRating_Heat>
-			<Insulation_Cold>50</Insulation_Cold>
-			<Insulation_Heat>0</Insulation_Heat>
-		</statBases>
-		<equippedStatOffsets>
-			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
-		</equippedStatOffsets>
-		<apparel>
-			<wearPerDay>0.02</wearPerDay>
-			<developmentalStageFilter>Adult</developmentalStageFilter>
-			<countsAsClothingForNudity>false</countsAsClothingForNudity>
-			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
-			<layers>
-				<li>Overhead</li>
-			</layers>
-			<defaultOutfitTags>
-				<li>Soldier</li>
-			</defaultOutfitTags>
-			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
-		</apparel>
-		<colorGenerator Class="ColorGenerator_StandardApparel" />
-		<tradeTags>
-			<li>BasicClothing</li>
-			<li>CFAR_Armor</li>
-		</tradeTags>
-	</ThingDef>
-
-<!--======== Reichswehr Helm (Surface) ========-->
-
-	<ThingDef ParentName="CFAR_HelmetBase">
-		<defName>Apparel_CFAR_ReichswehrHelm</defName>
-		<label>Reichswehr helm</label>
-		<description>WIP</description>
-		<recipeMaker>
-			<displayPriority>1160</displayPriority>
-			<skillRequirements>
-				<Crafting>5</Crafting>
-			</skillRequirements>
-		</recipeMaker>
-		<graphicData>
-			<texPath>Things/Pawn/Arellian/Apparel/ReichswehrArmor/Helm/Hat</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>0.80</drawSize>
-		</graphicData>
-		<costList>
-			<Plasteel>15</Plasteel>
-			<ComponentIndustrial>1</ComponentIndustrial>
-		</costList>
-		<statBases>
-			<WorkToMake>10000</WorkToMake>
-			<Mass>1.5</Mass>
-			<EquipDelay>1.5</EquipDelay>
-		</statBases>
-		<apparel>
-			<wornGraphicPath>Things/Pawn/Arellian/Apparel/ReichswehrArmor/Helm/Hat</wornGraphicPath>
-			<bodyPartGroups>
-				<li>UpperHead</li>
-			</bodyPartGroups>
-			<tags>
-				<li>CFAR_RW_HeerHelmet</li>
-			</tags>
-		</apparel>
-	</ThingDef>
-
-<!--======== Reichswehr Helmet (Orbit) ========-->
-
-	<ThingDef ParentName="CFAR_HelmetBase">
-		<defName>Apparel_CFAR_ReichswehrHelmet</defName>
-		<label>Reichswehr helmet</label>
-		<description>WIP</description>
-		<recipeMaker>
-			<displayPriority>1160</displayPriority>
-			<skillRequirements>
-				<Crafting>6</Crafting>
-			</skillRequirements>
-			<researchPrerequisites>
-				<li MayRequire="Ludeon.Rimworld.Odyssey">OrbitalTech</li>
-			</researchPrerequisites>
-		</recipeMaker>
-		<graphicData>
-			<texPath>Things/Pawn/Arellian/Apparel/ReichswehrArmor/Helmet/Hat</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>0.80</drawSize>
-		</graphicData>
-		<costList>
-			<Plasteel>25</Plasteel>
-			<ComponentIndustrial>1</ComponentIndustrial>
-		</costList>
-		<statBases>
-			<WorkToMake>18000</WorkToMake>
-			<Mass>2</Mass>
-			<Insulation_Cold>5</Insulation_Cold>
-			<EquipDelay>3</EquipDelay>
-		</statBases>
-		<equippedStatOffsets>
-			<ToxicEnvironmentResistance>0.85</ToxicEnvironmentResistance>
-			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.65</VacuumResistance>
-		</equippedStatOffsets>
-		<apparel>
-			<wornGraphicPath>Things/Pawn/Arellian/Apparel/ReichswehrArmor/Helmet/Hat</wornGraphicPath>
-			<bodyPartGroups>
-				<li>FullHead</li>
-			</bodyPartGroups>
-			<tags>
-				<li>CFAR_RW_MarineHelmet</li>
-			</tags>
-			<defaultOutfitTags>
-				<li>Spacefarer</li>
-			</defaultOutfitTags>
-		</apparel>
-	</ThingDef>
 </Defs>
-
-

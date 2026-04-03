@@ -6,7 +6,7 @@
 
 	<ThingDef ParentName="ApparelMakeableBase">
 		<techLevel>Industrial</techLevel>
-		<defName>Apparel_CFAR_ReichswehrUniform</defName>
+		<defName>Apparel_CFAR_Uniform</defName>
 		<label>Reichswehr uniform</label>
 		<description>WIP</description>
 		<recipeMaker>
@@ -17,7 +17,7 @@
 			</skillRequirements>
 		</recipeMaker>
 		<graphicData>
-			<texPath>Things/Pawn/Arellian/Apparel/ReichswehrUniform/Apparel</texPath>
+			<texPath>Things/Pawn/Arellian/Apparel/Uniform/Apparel</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<costStuffCount>50</costStuffCount>
@@ -48,7 +48,7 @@
 				<li>Shoulders</li>
 				<li>Arms</li>
 			</bodyPartGroups>
-			<wornGraphicPath>Things/Pawn/Arellian/Apparel/ReichswehrUniform/Apparel</wornGraphicPath>
+			<wornGraphicPath>Things/Pawn/Arellian/Apparel/Uniform/Apparel</wornGraphicPath>
 			<layers>
 				<li>OnSkin</li>
 			</layers>
@@ -70,6 +70,46 @@
 <!--================ Industrial Armor ================-->
 
 <!--======== Reichswehr Armor Base ========-->
+
+	<ThingDef ParentName="ArmorHelmetMakeableBase" Name="CFAR_HelmetBase" Abstract="True">
+		<techLevel>Spacer</techLevel>
+		<uiIconScale>1.15</uiIconScale>
+		<recipeMaker>
+			<researchPrerequisites>
+				<li>FlakArmor</li>
+			</researchPrerequisites>
+		</recipeMaker>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.50</ArmorRating_Heat>
+			<Insulation_Cold>50</Insulation_Cold>
+			<Insulation_Heat>0</Insulation_Heat>
+		</statBases>
+		<equippedStatOffsets>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<apparel>
+			<wearPerDay>0.02</wearPerDay>
+			<developmentalStageFilter>Adult</developmentalStageFilter>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+		<tradeTags>
+			<li>BasicClothing</li>
+			<li>CFAR_Armor</li>
+		</tradeTags>
+	</ThingDef>
 
 	<ThingDef Name="CFAR_ArmorBase" ParentName="ArmorMachineableBase" Abstract="True">
 		<techLevel>Spacer</techLevel>
@@ -116,12 +156,58 @@
 	    <tradeTags>
 			<li>Armor</li>
 		</tradeTags>
+	</ThingDef>-->
+
+<!--======== Reichswehr Armor ========-->
+
+	<ThingDef ParentName="CFAR_HelmetBase">
+		<defName>Apparel_CFAR_T1Helmet</defName>
+		<label>Reichswehr helmet</label>
+		<description>WIP</description>
+		<recipeMaker>
+			<displayPriority>1160</displayPriority>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<researchPrerequisites>
+				<li MayRequire="Ludeon.Rimworld.Odyssey">OrbitalTech</li>
+			</researchPrerequisites>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Things/Pawn/Arellian/Apparel/T1Armor/Helmet/Hat</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.80</drawSize>
+		</graphicData>
+		<costList>
+			<Plasteel>25</Plasteel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<WorkToMake>18000</WorkToMake>
+			<Mass>2</Mass>
+			<Insulation_Cold>5</Insulation_Cold>
+			<EquipDelay>3</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<ToxicEnvironmentResistance>0.85</ToxicEnvironmentResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.65</VacuumResistance>
+		</equippedStatOffsets>
+		<apparel>
+			<wornGraphicPath>Things/Pawn/Arellian/Apparel/T1Armor/Helmet/Hat</wornGraphicPath>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<tags>
+				<li>CFAR_RW_MarineHelmet</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Spacefarer</li>
+			</defaultOutfitTags>
+		</apparel>
 	</ThingDef>
 
-<!--======== Reichswehr Armor - Universal ========-->
-
 	<ThingDef ParentName="CFAR_ArmorBase">
-		<defName>Apparel_CFAR_ReichswehrArmor</defName>
+		<defName>Apparel_CFAR_T1Armor</defName>
 		<label>Reichswehr armor</label>
 		<description>WIP</description>
 		<recipeMaker>
@@ -134,7 +220,7 @@
 			<ComponentSpacer>1</ComponentSpacer>
 		</costList>
 		<graphicData>
-			<texPath>Things/Pawn/Arellian/Apparel/ReichswehrArmor/Armor</texPath>
+			<texPath>Things/Pawn/Arellian/Apparel/T1Armor/Apparel</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.90</drawSize>
 		</graphicData>
@@ -152,7 +238,7 @@
 				<li>Arms</li>
 				<li>Legs</li>
 			</bodyPartGroups>
-			<wornGraphicPath>Things/Pawn/Arellian/Apparel/ReichswehrArmor/Armor</wornGraphicPath>
+			<wornGraphicPath>Things/Pawn/Arellian/Apparel/T1Armor/Apparel</wornGraphicPath>
 			<tags>
 				<li>CFAR_Soldier</li>
 				<li>CFAR_Officer</li>

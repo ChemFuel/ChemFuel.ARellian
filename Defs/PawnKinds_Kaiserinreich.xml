@@ -55,9 +55,9 @@
 
 	<PawnKindDef Name="CFAR_RW_TrooperBase" ParentName="CFAR_RW_SoldierBase" Abstract="True">
 		<apparelRequired>
-			<li>Apparel_CFAR_ReichswehrUniform</li>
-			<li>Apparel_CFAR_ReichswehrArmor</li>
-			<li>Apparel_CFAR_ReichswehrHelm</li>
+			<li>Apparel_CFAR_Uniform</li>
+			<li>Apparel_CFAR_T1Armor</li>
+			<li>Apparel_CFAR_T1Helmet</li>
 		</apparelRequired>
 		<apparelTags>
 			<li>CFAR_Uniform</li>
@@ -78,7 +78,7 @@
 		<defName>CFAR_RW_TrooperAR</defName>
 		<label>trooper</label><!--KR : 소총병-->
 		<weaponTags>
-			<li>CFAR_AutoRifle</li>
+			<li>CFAR_AssaultRifle</li>
 		</weaponTags>
 	</PawnKindDef>
 
@@ -131,7 +131,7 @@
 		</apparelTags>
 		<apparelMoney>2500~3500</apparelMoney>
 		<weaponTags Inherit="False">
-			<li>CFAR_AutoRifle</li>
+			<li>CFAR_Magnum</li>
 		</weaponTags>
 		<weaponMoney>660~1300</weaponMoney>
 		<backstoryFiltersOverride>
