@@ -468,6 +468,7 @@
 			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_MachineGun</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
+		<equippedAngleOffset>45</equippedAngleOffset>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<recipeMaker>
 			<researchPrerequisite>PrecisionRifling</researchPrerequisite>
