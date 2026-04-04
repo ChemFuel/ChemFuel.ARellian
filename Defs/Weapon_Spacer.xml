@@ -6,7 +6,7 @@
 		<degreeDatas>
 			<li>
 				<label>Loyalist</label>
-				<description>{PAWN_nameDef} holds unwavering allegiance to their faction, prioritizing unity, order, and collective purpose above personal gain.</description>
+				<description>{PAWN_nameDef} holds unwavering allegiance to {PAWN_possessive} faction, prioritizing unity, order, and collective purpose above personal gain.</description>
 				<statFactors>
 					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.5</CertaintyLossFactor>
 				</statFactors>
