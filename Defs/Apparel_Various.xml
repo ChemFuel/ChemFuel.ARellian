@@ -136,13 +136,19 @@
 			<ToxicEnvironmentResistance>0.15</ToxicEnvironmentResistance>
 			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.30</VacuumResistance>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
-			<MoveSpeed>-0.24</MoveSpeed>
 		</equippedStatOffsets>
 		<thingCategories>
 			<li>ApparelArmor</li>
 		</thingCategories>
 		<apparel>
 			<wearPerDay>0.02</wearPerDay>
+			<bodyPartGroups>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Torso</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
 			<layers>
 				<li>Middle</li>
 			</layers>
@@ -231,13 +237,6 @@
 			<EquipDelay>10</EquipDelay>
 		</statBases>
 		<apparel>
-			<bodyPartGroups>
-				<li>Neck</li>
-				<li>Shoulders</li>
-				<li>Torso</li>
-				<li>Arms</li>
-				<li>Legs</li>
-			</bodyPartGroups>
 			<wornGraphicPath>Things/Pawn/Arellian/Apparel/T1Armor/Apparel</wornGraphicPath>
 			<tags>
 				<li>CFAR_Soldier</li>
