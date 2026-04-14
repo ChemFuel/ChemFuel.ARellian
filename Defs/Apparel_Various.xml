@@ -38,7 +38,7 @@
 			<EquipDelay>3</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
-			<MentalBreakThreshold>-0.1</MentalBreakThreshold>
+			<PainShockThreshold>0.1</PainShockThreshold>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
 		</equippedStatOffsets>
 		<apparel>
@@ -97,6 +97,7 @@
 			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 		<statBases>
+			<MarketValue>730</MarketValue>
 			<WorkToMake>18000</WorkToMake>
 			<Mass>2</Mass>
 			<MaxHitPoints>210</MaxHitPoints>
@@ -168,6 +169,7 @@
 			<ComponentSpacer>1</ComponentSpacer>
 		</costList>
 		<statBases>
+			<MarketValue>2130</MarketValue>
 			<WorkToMake>36000</WorkToMake>
 			<MaxHitPoints>360</MaxHitPoints>
 			<Mass>10</Mass>
