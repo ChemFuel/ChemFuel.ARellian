@@ -71,102 +71,8 @@
 
 <!--======== Reichswehr Armor Base ========-->
 
-	<ThingDef ParentName="ArmorHelmetMakeableBase" Name="CFAR_HelmetBase" Abstract="True">
+	<ThingDef ParentName="ArmorHelmetMakeableBase">
 		<techLevel>Spacer</techLevel>
-		<uiIconScale>1.15</uiIconScale>
-		<recipeMaker>
-			<researchPrerequisites>
-				<li>FlakArmor</li>
-			</researchPrerequisites>
-		</recipeMaker>
-		<statBases>
-			<MaxHitPoints>150</MaxHitPoints>
-			<Flammability>0.4</Flammability>
-			<ArmorRating_Sharp>0.80</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.50</ArmorRating_Heat>
-			<Insulation_Cold>50</Insulation_Cold>
-			<Insulation_Heat>0</Insulation_Heat>
-		</statBases>
-		<equippedStatOffsets>
-			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
-		</equippedStatOffsets>
-		<apparel>
-			<wearPerDay>0.02</wearPerDay>
-			<developmentalStageFilter>Adult</developmentalStageFilter>
-			<countsAsClothingForNudity>false</countsAsClothingForNudity>
-			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
-			<layers>
-				<li>Overhead</li>
-			</layers>
-			<defaultOutfitTags>
-				<li>Soldier</li>
-			</defaultOutfitTags>
-			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
-		</apparel>
-		<colorGenerator Class="ColorGenerator_StandardApparel" />
-		<tradeTags>
-			<li>BasicClothing</li>
-			<li>CFAR_Armor</li>
-		</tradeTags>
-	</ThingDef>
-
-	<ThingDef Name="CFAR_ArmorBase" ParentName="ArmorMachineableBase" Abstract="True">
-		<techLevel>Spacer</techLevel>
-		<recipeMaker>
-			<researchPrerequisites>
-				<li>FlakArmor</li>
-				<li>FlakArmor</li>
-				<li MayRequire="Ludeon.Rimworld.Odyssey">OrbitalTech</li>
-			</researchPrerequisites>
-			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
-			<skillRequirements>
-				<Crafting>6</Crafting>
-			</skillRequirements>
-		</recipeMaker>
-		<statBases>
-			<Flammability>0.4</Flammability>
-			<ArmorRating_Sharp>0.80</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.50</ArmorRating_Heat>
-			<Insulation_Cold>50</Insulation_Cold>
-			<Insulation_Heat>0</Insulation_Heat>
-		</statBases>
-		<equippedStatOffsets>
-			<ToxicEnvironmentResistance>0.15</ToxicEnvironmentResistance>
-			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.30</VacuumResistance>
-			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
-		</equippedStatOffsets>
-		<thingCategories>
-			<li>ApparelArmor</li>
-		</thingCategories>
-		<apparel>
-			<wearPerDay>0.02</wearPerDay>
-			<bodyPartGroups>
-				<li>Neck</li>
-				<li>Shoulders</li>
-				<li>Torso</li>
-				<li>Arms</li>
-				<li>Legs</li>
-			</bodyPartGroups>
-			<layers>
-				<li>Middle</li>
-			</layers>
-			<defaultOutfitTags>
-				<li>Soldier</li>
-				<li>Spacefarer</li>
-			</defaultOutfitTags>
-			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
-		</apparel>
-		<colorGenerator Class="ColorGenerator_StandardApparel" />
-	    <tradeTags>
-			<li>Armor</li>
-		</tradeTags>
-	</ThingDef>-->
-
-<!--======== Reichswehr Armor ========-->
-
-	<ThingDef ParentName="CFAR_HelmetBase">
 		<defName>Apparel_CFAR_T1Helmet</defName>
 		<label>Reichswehr helmet</label>
 		<description>WIP</description>
@@ -176,6 +82,7 @@
 				<Crafting>6</Crafting>
 			</skillRequirements>
 			<researchPrerequisites>
+				<li>FlakArmor</li>
 				<li MayRequire="Ludeon.Rimworld.Odyssey">OrbitalTech</li>
 			</researchPrerequisites>
 		</recipeMaker>
@@ -184,6 +91,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.80</drawSize>
 		</graphicData>
+		<uiIconScale>1.15</uiIconScale>
 		<costList>
 			<Plasteel>25</Plasteel>
 			<ComponentIndustrial>1</ComponentIndustrial>
@@ -191,15 +99,28 @@
 		<statBases>
 			<WorkToMake>18000</WorkToMake>
 			<Mass>2</Mass>
-			<Insulation_Cold>5</Insulation_Cold>
+			<MaxHitPoints>210</MaxHitPoints>
+			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>1.00</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.60</ArmorRating_Heat>
+			<Insulation_Cold>4</Insulation_Cold>
+			<Insulation_Heat>2</Insulation_Heat>
 			<EquipDelay>3</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
-			<ToxicEnvironmentResistance>0.85</ToxicEnvironmentResistance>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
+			<ToxicEnvironmentResistance>0.80</ToxicEnvironmentResistance>
 			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.65</VacuumResistance>
 		</equippedStatOffsets>
 		<apparel>
+			<wearPerDay>0.02</wearPerDay>
+			<developmentalStageFilter>Adult</developmentalStageFilter>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
 			<wornGraphicPath>Things/Pawn/Arellian/Apparel/T1Armor/Helmet/Hat</wornGraphicPath>
+			<layers>
+				<li>Overhead</li>
+			</layers>
 			<bodyPartGroups>
 				<li>FullHead</li>
 			</bodyPartGroups>
@@ -207,42 +128,93 @@
 				<li>CFAR_RW_MarineHelmet</li>
 			</tags>
 			<defaultOutfitTags>
-				<li>Spacefarer</li>
+				<li>Soldier</li>
+				<li MayRequire="Ludeon.Rimworld.Odyssey">Spacefarer</li>
 			</defaultOutfitTags>
+			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
 		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+		<tradeTags>
+			<li>Armor</li>
+			<li>CFAR_Armor</li>
+		</tradeTags>
 	</ThingDef>
 
-	<ThingDef ParentName="CFAR_ArmorBase">
+	<ThingDef ParentName="ArmorMachineableBase">
+		<techLevel>Spacer</techLevel>
 		<defName>Apparel_CFAR_T1Armor</defName>
 		<label>Reichswehr armor</label>
 		<description>WIP</description>
 		<recipeMaker>
 			<displayPriority>1163</displayPriority>
+			<researchPrerequisites>
+				<li>FlakArmor</li>
+				<li MayRequire="Ludeon.Rimworld.Odyssey">OrbitalTech</li>
+			</researchPrerequisites>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
 		</recipeMaker>
+		<graphicData>
+			<texPath>Things/Pawn/Arellian/Apparel/T1Armor/Apparel</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.90</drawSize>
+		</graphicData>
 		<costList>
 			<Steel>50</Steel>
 			<Plasteel>30</Plasteel>
 			<ComponentIndustrial>1</ComponentIndustrial>
 			<ComponentSpacer>1</ComponentSpacer>
 		</costList>
-		<graphicData>
-			<texPath>Things/Pawn/Arellian/Apparel/T1Armor/Apparel</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>0.90</drawSize>
-		</graphicData>
 		<statBases>
 			<WorkToMake>36000</WorkToMake>
 			<MaxHitPoints>360</MaxHitPoints>
 			<Mass>10</Mass>
+			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>1.00</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.60</ArmorRating_Heat>
+			<Insulation_Cold>70</Insulation_Cold>
+			<Insulation_Heat>12</Insulation_Heat>
 			<EquipDelay>10</EquipDelay>
 		</statBases>
+		<equippedStatOffsets>
+			<Flammability>-0.4</Flammability>
+			<ToxicEnvironmentResistance>0.15</ToxicEnvironmentResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.30</VacuumResistance>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
 		<apparel>
+			<wearPerDay>0.02</wearPerDay>
 			<wornGraphicPath>Things/Pawn/Arellian/Apparel/T1Armor/Apparel</wornGraphicPath>
+			<bodyPartGroups>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Torso</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
 			<tags>
 				<li>CFAR_Soldier</li>
-				<li>CFAR_Officer</li>
-				<li>CFAR_HighOfficer</li>
 			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+				<li>Spacefarer</li>
+			</defaultOutfitTags>
+			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
 		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	    <tradeTags>
+			<li>Armor</li>
+			<li>CFAR_Armor</li>
+		</tradeTags>
 	</ThingDef>
 </Defs>
