@@ -114,7 +114,7 @@
 			<displayPriority>1170</displayPriority>
 		</recipeMaker>
 		<statBases>
-			<MarketValue>270</MarketValue>
+			<MarketValue>180</MarketValue>
 			<WorkToMake>6000</WorkToMake>
 			<Mass>1.8</Mass>
 			<AccuracyTouch>0.85</AccuracyTouch>
@@ -225,7 +225,7 @@
 			<displayPriority>1171</displayPriority>
 		</recipeMaker>
 		<statBases>
-			<MarketValue>790</MarketValue>
+			<MarketValue>640</MarketValue>
 			<WorkToMake>47500</WorkToMake>
 			<Mass>6</Mass>
 		</statBases>
@@ -266,7 +266,7 @@
 			<displayPriority>1173</displayPriority>
 		</recipeMaker>
 		<statBases>
-			<MarketValue>1010</MarketValue>
+			<MarketValue>750</MarketValue>
 			<WorkToMake>50000</WorkToMake>
 			<Mass>7</Mass>
 		</statBases>
@@ -358,7 +358,7 @@
 			<displayPriority>1173</displayPriority>
 		</recipeMaker>
 		<statBases>
-			<MarketValue>1720</MarketValue>
+			<MarketValue>1020</MarketValue>
 			<WorkToMake>60000</WorkToMake>
 			<Mass>8</Mass>
 			<AccuracyTouch>0.55</AccuracyTouch>
@@ -478,7 +478,7 @@
 			<displayPriority>1174</displayPriority>
 		</recipeMaker>
 		<statBases>
-			<MarketValue>1720</MarketValue>
+			<MarketValue>1070</MarketValue>
 			<WorkToMake>55000</WorkToMake>
 			<Mass>12.5</Mass>
 			<AccuracyTouch>0.35</AccuracyTouch>
