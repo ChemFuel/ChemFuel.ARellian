@@ -82,7 +82,7 @@
 				<Crafting>6</Crafting>
 			</skillRequirements>
 			<researchPrerequisites>
-				<li>FlakArmor</li>
+				<li>ReconArmor</li>
 				<li MayRequire="Ludeon.Rimworld.Odyssey">OrbitalTech</li>
 			</researchPrerequisites>
 		</recipeMaker>
@@ -93,7 +93,8 @@
 		</graphicData>
 		<uiIconScale>1.15</uiIconScale>
 		<costList>
-			<Plasteel>25</Plasteel>
+			<Plasteel>35</Plasteel>
+			<ComponentSpacer>1</ComponentSpacer>
 			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 		<statBases>
@@ -147,14 +148,14 @@
 		<label>Reichswehr armor</label>
 		<description>WIP</description>
 		<recipeMaker>
-			<displayPriority>1163</displayPriority>
+			<displayPriority>1161</displayPriority>
 			<researchPrerequisites>
-				<li>FlakArmor</li>
+				<li>ReconArmor</li>
 				<li MayRequire="Ludeon.Rimworld.Odyssey">OrbitalTech</li>
 			</researchPrerequisites>
 			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
 			<skillRequirements>
-				<Crafting>6</Crafting>
+				<Crafting>7</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<graphicData>
@@ -163,10 +164,10 @@
 			<drawSize>0.90</drawSize>
 		</graphicData>
 		<costList>
-			<Steel>50</Steel>
-			<Plasteel>30</Plasteel>
-			<ComponentIndustrial>1</ComponentIndustrial>
-			<ComponentSpacer>1</ComponentSpacer>
+			<Plasteel>95</Plasteel>
+			<Uranium>10</Uranium>
+			<ComponentSpacer>3</ComponentSpacer>
+			<ComponentIndustrial>2</ComponentIndustrial>
 		</costList>
 		<statBases>
 			<MarketValue>2130</MarketValue>
@@ -177,12 +178,12 @@
 			<ArmorRating_Sharp>1.00</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
 			<ArmorRating_Heat>0.60</ArmorRating_Heat>
-			<Insulation_Cold>70</Insulation_Cold>
-			<Insulation_Heat>12</Insulation_Heat>
-			<EquipDelay>10</EquipDelay>
+			<Insulation_Cold>68</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
+			<EquipDelay>12</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
-			<Flammability>-0.4</Flammability>
+			<Flammability>-0.2</Flammability>
 			<ToxicEnvironmentResistance>0.15</ToxicEnvironmentResistance>
 			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.30</VacuumResistance>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
@@ -220,7 +221,7 @@
 		</tradeTags>
 	</ThingDef>
 
-<!--======== T1 Armor ========-->
+<!--======== T2 Armor ========-->
 
 	<ThingDef ParentName="ArmorHelmetMakeableBase">
 		<techLevel>Spacer</techLevel>
@@ -228,12 +229,12 @@
 		<label>Blitzkommando helmet</label>
 		<description>WIP</description>
 		<recipeMaker>
-			<displayPriority>1160</displayPriority>
+			<displayPriority>1162</displayPriority>
 			<skillRequirements>
-				<Crafting>6</Crafting>
+				<Crafting>7</Crafting>
 			</skillRequirements>
 			<researchPrerequisites>
-				<li>FlakArmor</li>
+				<li>MarineArmor</li>
 				<li MayRequire="Ludeon.Rimworld.Odyssey">OrbitalTech</li>
 			</researchPrerequisites>
 		</recipeMaker>
@@ -244,26 +245,27 @@
 		</graphicData>
 		<uiIconScale>1.15</uiIconScale>
 		<costList>
-			<Plasteel>25</Plasteel>
+			<Plasteel>40</Plasteel>
+			<ComponentSpacer>1</ComponentSpacer>
 			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 		<statBases>
-			<MarketValue>730</MarketValue>
-			<WorkToMake>18000</WorkToMake>
-			<MaxHitPoints>290</MaxHitPoints>
-			<Mass>2</Mass>
+			<MarketValue>810</MarketValue>
+			<WorkToMake>24000</WorkToMake>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Mass>1.5</Mass>
 			<Flammability>0.4</Flammability>
-			<ArmorRating_Sharp>1.00</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.60</ArmorRating_Heat>
+			<ArmorRating_Sharp>1.10</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.48</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.80</ArmorRating_Heat>
 			<Insulation_Cold>4</Insulation_Cold>
 			<Insulation_Heat>2</Insulation_Heat>
-			<EquipDelay>3</EquipDelay>
+			<EquipDelay>4</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
 			<ToxicEnvironmentResistance>0.80</ToxicEnvironmentResistance>
-			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.65</VacuumResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.68</VacuumResistance>
 		</equippedStatOffsets>
 		<apparel>
 			<wearPerDay>0.02</wearPerDay>
@@ -300,12 +302,12 @@
 		<recipeMaker>
 			<displayPriority>1163</displayPriority>
 			<researchPrerequisites>
-				<li>FlakArmor</li>
+				<li>MarineArmor</li>
 				<li MayRequire="Ludeon.Rimworld.Odyssey">OrbitalTech</li>
 			</researchPrerequisites>
 			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
 			<skillRequirements>
-				<Crafting>6</Crafting>
+				<Crafting>8</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<graphicData>
@@ -314,28 +316,29 @@
 			<drawSize>0.90</drawSize>
 		</graphicData>
 		<costList>
-			<Steel>50</Steel>
-			<Plasteel>30</Plasteel>
-			<ComponentIndustrial>1</ComponentIndustrial>
-			<ComponentSpacer>1</ComponentSpacer>
+			<Plasteel>125</Plasteel>
+			<Uranium>25</Uranium>
+			<ComponentSpacer>4</ComponentSpacer>
+			<ComponentIndustrial>2</ComponentIndustrial>
 		</costList>
 		<statBases>
-			<MarketValue>2130</MarketValue>
-			<WorkToMake>36000</WorkToMake>
-			<MaxHitPoints>510</MaxHitPoints>
-			<Mass>10</Mass>
+			<MarketValue>2870</MarketValue>
+			<WorkToMake>70000</WorkToMake>
+			<MaxHitPoints>460</MaxHitPoints>
+			<Mass>15</Mass>
 			<Flammability>0.4</Flammability>
-			<ArmorRating_Sharp>1.00</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.60</ArmorRating_Heat>
+			<ArmorRating_Sharp>1.10</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.48</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.80</ArmorRating_Heat>
 			<Insulation_Cold>70</Insulation_Cold>
 			<Insulation_Heat>12</Insulation_Heat>
-			<EquipDelay>10</EquipDelay>
+			<EquipDelay>16</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
 			<Flammability>-0.4</Flammability>
+			<MoveSpeed>-0.15</MoveSpeed>
 			<ToxicEnvironmentResistance>0.15</ToxicEnvironmentResistance>
-			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.30</VacuumResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.32</VacuumResistance>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
 		</equippedStatOffsets>
 		<thingCategories>
