@@ -96,4 +96,13 @@
 			</li>
 		</renderNodeProperties>
 	</GeneDef>
+
+	<GeneDef ParentName="GeneVoiceBase">
+		<defName>Voice_Arellian</defName>
+		<label>cat voice</label>
+		<description>Carriers of this gene are known for making cat-like voices.</description>
+		<iconPath>UI/Icons/Genes/Gene_ArellianVoice</iconPath>
+		<soundDeath>Pawn_Cat_Death</soundDeath>
+		<soundWounded>Pawn_Cat_Injured</soundWounded>
+	</GeneDef>
 </Defs>
