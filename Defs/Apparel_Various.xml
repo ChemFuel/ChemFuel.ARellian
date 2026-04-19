@@ -2,12 +2,77 @@
 <Defs>
 <!--================ Industrial Apparel ================-->
 
+<!--======== Battle Uniform ========-->
+
+	<ThingDef ParentName="ApparelMakeableBase">
+		<techLevel>Industrial</techLevel>
+		<defName>Apparel_CFAR_CombatUniform</defName>
+		<label>Arellian combat uniform</label>
+		<description>WIP</description>
+		<recipeMaker>
+			<researchPrerequisite>ComplexClothing</researchPrerequisite>
+			<displayPriority>1172</displayPriority>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Things/Pawn/Arellian/Apparel/Uniform/Apparel</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>50</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>ApparelMisc</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>3000</WorkToMake>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>0.4</Mass>
+			<StuffEffectMultiplierArmor>0.20</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.25</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.15</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>3</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<PainShockThreshold>0.1</PainShockThreshold>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Arellian/Apparel/Uniform/Apparel</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<tags>
+				<li>CFAR_Uniform</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+		<tradeTags>
+			<li>BasicClothing</li>
+			<li>CFAR_Apparel</li>
+		</tradeTags>
+	</ThingDef>
+
 <!--======== Reichswehr Uniform ========-->
 
 	<ThingDef ParentName="ApparelMakeableBase">
 		<techLevel>Industrial</techLevel>
-		<defName>Apparel_CFAR_Uniform</defName>
-		<label>Reichswehr uniform</label>
+		<defName>Apparel_CFAR_ServiceUniform</defName>
+		<label>Arellian service uniform</label>
 		<description>WIP</description>
 		<recipeMaker>
 			<researchPrerequisite>ComplexClothing</researchPrerequisite>
@@ -104,8 +169,8 @@
 			<ArmorRating_Sharp>0.90</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
 			<ArmorRating_Heat>0.40</ArmorRating_Heat>
-			<Insulation_Cold>4</Insulation_Cold>
-			<Insulation_Heat>2</Insulation_Heat>
+			<Insulation_Cold>2</Insulation_Cold>
+			<Insulation_Heat>0</Insulation_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
@@ -123,7 +188,7 @@
 				<li>FullHead</li>
 			</bodyPartGroups>
 			<tags>
-				<li>CFAR_RW_Planetary</li>
+				<li>CFAR_Planetary</li>
 			</tags>
 			<defaultOutfitTags>
 				<li>Soldier</li>
@@ -144,17 +209,14 @@
 		<description>WIP</description>
 		<recipeMaker>
 			<displayPriority>1161</displayPriority>
-			<researchPrerequisites>
-				<li>ReconArmor</li>
-				<li MayRequire="Ludeon.Rimworld.Odyssey">OrbitalTech</li>
-			</researchPrerequisites>
+			<researchPrerequisite>FlakArmor</researchPrerequisite>
 			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
 			<skillRequirements>
 				<Crafting>4</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<graphicData>
-			<texPath>Things/Pawn/Arellian/Apparel/T1Armor/Apparel</texPath>
+			<texPath>Things/Pawn/Arellian/Apparel/T0Armor/Apparel</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.90</drawSize>
 		</graphicData>
@@ -172,8 +234,8 @@
 			<ArmorRating_Sharp>0.90</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
 			<ArmorRating_Heat>0.40</ArmorRating_Heat>
-			<Insulation_Cold>68</Insulation_Cold>
-			<Insulation_Heat>10</Insulation_Heat>
+			<Insulation_Cold>18</Insulation_Cold>
+			<Insulation_Heat>4</Insulation_Heat>
 			<EquipDelay>10</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
@@ -184,7 +246,7 @@
 			<li>ApparelArmor</li>
 		</thingCategories>
 		<apparel>
-			<wornGraphicPath>Things/Pawn/Arellian/Apparel/T1Armor/Apparel</wornGraphicPath>
+			<wornGraphicPath>Things/Pawn/Arellian/Apparel/T0Armor/Apparel</wornGraphicPath>
 			<bodyPartGroups>
 				<li>Neck</li>
 				<li>Shoulders</li>
@@ -196,7 +258,7 @@
 				<li>Middle</li>
 			</layers>
 			<tags>
-				<li>CFAR_RW_Planetary</li>
+				<li>CFAR_Planetary</li>
 			</tags>
 			<defaultOutfitTags>
 				<li>Soldier</li>
@@ -244,7 +306,7 @@
 		<statBases>
 			<MarketValue>730</MarketValue>
 			<WorkToMake>18000</WorkToMake>
-			<Mass>2</Mass>
+			<Mass>1.5</Mass>
 			<MaxHitPoints>210</MaxHitPoints>
 			<Flammability>0.4</Flammability>
 			<ArmorRating_Sharp>1.00</ArmorRating_Sharp>
@@ -271,7 +333,7 @@
 				<li>FullHead</li>
 			</bodyPartGroups>
 			<tags>
-				<li>CFAR_RW_MarineHelmet</li>
+				<li>CFAR_Space</li>
 			</tags>
 			<defaultOutfitTags>
 				<li>Soldier</li>
@@ -323,7 +385,7 @@
 		<statBases>
 			<MarketValue>2130</MarketValue>
 			<WorkToMake>36000</WorkToMake>
-			<MaxHitPoints>360</MaxHitPoints>
+			<MaxHitPoints>420</MaxHitPoints>
 			<Mass>10</Mass>
 			<Flammability>0.4</Flammability>
 			<ArmorRating_Sharp>1.00</ArmorRating_Sharp>
@@ -356,7 +418,7 @@
 				<li>Shell</li>
 			</layers>
 			<tags>
-				<li>CFAR_Soldier</li>
+				<li>CFAR_Space</li>
 			</tags>
 			<defaultOutfitTags>
 				<li>Soldier</li>
@@ -407,11 +469,11 @@
 			<MarketValue>810</MarketValue>
 			<WorkToMake>24000</WorkToMake>
 			<MaxHitPoints>250</MaxHitPoints>
-			<Mass>1.5</Mass>
+			<Mass>2</Mass>
 			<Flammability>0.4</Flammability>
-			<ArmorRating_Sharp>1.10</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.48</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.80</ArmorRating_Heat>
+			<ArmorRating_Sharp>1.20</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+			<ArmorRating_Heat>1.00</ArmorRating_Heat>
 			<Insulation_Cold>4</Insulation_Cold>
 			<Insulation_Heat>2</Insulation_Heat>
 			<EquipDelay>4</EquipDelay>
@@ -433,7 +495,7 @@
 				<li>FullHead</li>
 			</bodyPartGroups>
 			<tags>
-				<li>CFAR_RW_MarineHelmet</li>
+				<li>CFAR_SpaceHeavy</li>
 			</tags>
 			<defaultOutfitTags>
 				<li>Soldier</li>
@@ -485,9 +547,9 @@
 			<MaxHitPoints>460</MaxHitPoints>
 			<Mass>15</Mass>
 			<Flammability>0.4</Flammability>
-			<ArmorRating_Sharp>1.10</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.48</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.80</ArmorRating_Heat>
+			<ArmorRating_Sharp>1.20</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+			<ArmorRating_Heat>1.00</ArmorRating_Heat>
 			<Insulation_Cold>70</Insulation_Cold>
 			<Insulation_Heat>12</Insulation_Heat>
 			<EquipDelay>16</EquipDelay>
@@ -516,7 +578,7 @@
 				<li>Shell</li>
 			</layers>
 			<tags>
-				<li>CFAR_Soldier</li>
+				<li>CFAR_SpaceHeavy</li>
 			</tags>
 			<defaultOutfitTags>
 				<li>Soldier</li>
