@@ -69,12 +69,153 @@
 
 <!--================ Armor ================-->
 
+<!--======== T0 Armor ========-->
+
+	<ThingDef ParentName="ArmorHelmetMakeableBase">
+		<techLevel>Spacer</techLevel>
+		<defName>Apparel_CFAR_T0Helmet</defName>
+		<label>Arellian field helmet</label>
+		<description>WIP</description>
+		<recipeMaker>
+			<displayPriority>1160</displayPriority>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>FlakArmor</researchPrerequisite>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Things/Pawn/Arellian/Apparel/T0Armor/Helmet/Hat</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.80</drawSize>
+		</graphicData>
+		<uiIconScale>1.15</uiIconScale>
+		<costList>
+			<Steel>40</Steel>
+			<Plasteel>15</Plasteel>
+			<Chemfuel>15</Chemfuel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<MarketValue>380</MarketValue>
+			<WorkToMake>12000</WorkToMake>
+			<Mass>1</Mass>
+			<MaxHitPoints>170</MaxHitPoints>
+			<Flammability>0.6</Flammability>
+			<ArmorRating_Sharp>0.90</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.40</ArmorRating_Heat>
+			<Insulation_Cold>4</Insulation_Cold>
+			<Insulation_Heat>2</Insulation_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
+			<ToxicEnvironmentResistance>0.80</ToxicEnvironmentResistance>
+		</equippedStatOffsets>
+		<apparel>
+			<developmentalStageFilter>Adult</developmentalStageFilter>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<wornGraphicPath>Things/Pawn/Arellian/Apparel/T0Armor/Helmet/Hat</wornGraphicPath>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<tags>
+				<li>CFAR_RW_Planetary</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+		<tradeTags>
+			<li>Armor</li>
+			<li>CFAR_Armor</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="ArmorMachineableBase">
+		<techLevel>Spacer</techLevel>
+		<defName>Apparel_CFAR_T0Armor</defName>
+		<label>Arellian field armor</label>
+		<description>WIP</description>
+		<recipeMaker>
+			<displayPriority>1161</displayPriority>
+			<researchPrerequisites>
+				<li>ReconArmor</li>
+				<li MayRequire="Ludeon.Rimworld.Odyssey">OrbitalTech</li>
+			</researchPrerequisites>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Things/Pawn/Arellian/Apparel/T1Armor/Apparel</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.90</drawSize>
+		</graphicData>
+		<costList>
+			<Steel>80</Steel>
+			<Plasteel>40</Plasteel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<MarketValue>870</MarketValue>
+			<WorkToMake>22500</WorkToMake>
+			<MaxHitPoints>380</MaxHitPoints>
+			<Mass>8</Mass>
+			<Flammability>0.6</Flammability>
+			<ArmorRating_Sharp>0.90</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.40</ArmorRating_Heat>
+			<Insulation_Cold>68</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
+			<EquipDelay>10</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.12</MoveSpeed>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<apparel>
+			<wornGraphicPath>Things/Pawn/Arellian/Apparel/T1Armor/Apparel</wornGraphicPath>
+			<bodyPartGroups>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Torso</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<tags>
+				<li>CFAR_RW_Planetary</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	    <tradeTags>
+			<li>Armor</li>
+			<li>CFAR_Armor</li>
+		</tradeTags>
+	</ThingDef>
+
 <!--======== T1 Armor ========-->
 
 	<ThingDef ParentName="ArmorHelmetMakeableBase">
 		<techLevel>Spacer</techLevel>
 		<defName>Apparel_CFAR_T1Helmet</defName>
-		<label>Reichswehr helmet</label>
+		<label>Arellian orbit helmet</label>
 		<description>WIP</description>
 		<recipeMaker>
 			<displayPriority>1160</displayPriority>
@@ -85,6 +226,9 @@
 				<li>ReconArmor</li>
 				<li MayRequire="Ludeon.Rimworld.Odyssey">OrbitalTech</li>
 			</researchPrerequisites>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
 		</recipeMaker>
 		<graphicData>
 			<texPath>Things/Pawn/Arellian/Apparel/T1Armor/Helmet/Hat</texPath>
@@ -104,7 +248,7 @@
 			<MaxHitPoints>210</MaxHitPoints>
 			<Flammability>0.4</Flammability>
 			<ArmorRating_Sharp>1.00</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+			<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
 			<ArmorRating_Heat>0.60</ArmorRating_Heat>
 			<Insulation_Cold>4</Insulation_Cold>
 			<Insulation_Heat>2</Insulation_Heat>
@@ -133,9 +277,13 @@
 				<li>Soldier</li>
 				<li MayRequire="Ludeon.Rimworld.Odyssey">Spacefarer</li>
 			</defaultOutfitTags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
 			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
 		</apparel>
 		<colorGenerator Class="ColorGenerator_StandardApparel" />
+		<comps>
+			<li Class="CompProperties_Biocodable"/>
+		</comps>
 		<tradeTags>
 			<li>Armor</li>
 			<li>CFAR_Armor</li>
@@ -145,7 +293,7 @@
 	<ThingDef ParentName="ArmorMachineableBase">
 		<techLevel>Spacer</techLevel>
 		<defName>Apparel_CFAR_T1Armor</defName>
-		<label>Reichswehr armor</label>
+		<label>Arellian orbit armor</label>
 		<description>WIP</description>
 		<recipeMaker>
 			<displayPriority>1161</displayPriority>
@@ -157,6 +305,9 @@
 			<skillRequirements>
 				<Crafting>7</Crafting>
 			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
 		</recipeMaker>
 		<graphicData>
 			<texPath>Things/Pawn/Arellian/Apparel/T1Armor/Apparel</texPath>
@@ -176,14 +327,13 @@
 			<Mass>10</Mass>
 			<Flammability>0.4</Flammability>
 			<ArmorRating_Sharp>1.00</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+			<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
 			<ArmorRating_Heat>0.60</ArmorRating_Heat>
 			<Insulation_Cold>68</Insulation_Cold>
 			<Insulation_Heat>10</Insulation_Heat>
 			<EquipDelay>12</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
-			<Flammability>-0.2</Flammability>
 			<ToxicEnvironmentResistance>0.15</ToxicEnvironmentResistance>
 			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.30</VacuumResistance>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
@@ -210,11 +360,15 @@
 			</tags>
 			<defaultOutfitTags>
 				<li>Soldier</li>
-				<li>Spacefarer</li>
+				<li MayRequire="Ludeon.RimWorld.Odyssey">Spacefarer</li>
 			</defaultOutfitTags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
 			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
 		</apparel>
 		<colorGenerator Class="ColorGenerator_StandardApparel" />
+		<comps>
+			<li Class="CompProperties_Biocodable"/>
+		</comps>
 	    <tradeTags>
 			<li>Armor</li>
 			<li>CFAR_Armor</li>
@@ -226,7 +380,7 @@
 	<ThingDef ParentName="ArmorHelmetMakeableBase">
 		<techLevel>Spacer</techLevel>
 		<defName>Apparel_CFAR_T2Helmet</defName>
-		<label>Blitzkommando helmet</label>
+		<label>Arellian breacher helmet</label>
 		<description>WIP</description>
 		<recipeMaker>
 			<displayPriority>1162</displayPriority>
@@ -234,7 +388,7 @@
 				<Crafting>7</Crafting>
 			</skillRequirements>
 			<researchPrerequisites>
-				<li>MarineArmor</li>
+				<li>PoweredArmor</li>
 				<li MayRequire="Ludeon.Rimworld.Odyssey">OrbitalTech</li>
 			</researchPrerequisites>
 		</recipeMaker>
@@ -285,9 +439,13 @@
 				<li>Soldier</li>
 				<li MayRequire="Ludeon.Rimworld.Odyssey">Spacefarer</li>
 			</defaultOutfitTags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
 			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
 		</apparel>
 		<colorGenerator Class="ColorGenerator_StandardApparel" />
+		<comps>
+			<li Class="CompProperties_Biocodable"/>
+		</comps>
 		<tradeTags>
 			<li>Armor</li>
 			<li>CFAR_Armor</li>
@@ -297,12 +455,12 @@
 	<ThingDef ParentName="ArmorMachineableBase">
 		<techLevel>Spacer</techLevel>
 		<defName>Apparel_CFAR_T2Armor</defName>
-		<label>Blitzkommando armor</label>
+		<label>Arellian breacher armor</label>
 		<description>WIP</description>
 		<recipeMaker>
 			<displayPriority>1163</displayPriority>
 			<researchPrerequisites>
-				<li>MarineArmor</li>
+				<li>PoweredArmor</li>
 				<li MayRequire="Ludeon.Rimworld.Odyssey">OrbitalTech</li>
 			</researchPrerequisites>
 			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
@@ -335,8 +493,7 @@
 			<EquipDelay>16</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
-			<Flammability>-0.4</Flammability>
-			<MoveSpeed>-0.15</MoveSpeed>
+			<MoveSpeed>-0.30</MoveSpeed>
 			<ToxicEnvironmentResistance>0.15</ToxicEnvironmentResistance>
 			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.32</VacuumResistance>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
@@ -363,11 +520,15 @@
 			</tags>
 			<defaultOutfitTags>
 				<li>Soldier</li>
-				<li>Spacefarer</li>
+				<li MayRequire="Ludeon.RimWorld.Odyssey">Spacefarer</li>
 			</defaultOutfitTags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
 			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
 		</apparel>
 		<colorGenerator Class="ColorGenerator_StandardApparel" />
+		<comps>
+			<li Class="CompProperties_Biocodable"/>
+		</comps>
 	    <tradeTags>
 			<li>Armor</li>
 			<li>CFAR_Armor</li>
