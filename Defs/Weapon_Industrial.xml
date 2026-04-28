@@ -20,6 +20,42 @@
 		</projectile>
 	</ThingDef>
 
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_CFAR_Shotgun</defName>
+		<label>shotgun blast</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>6</damageAmountBase>
+			<stoppingPower>3</stoppingPower>
+			<armorPenetrationBase>0.16</armorPenetrationBase>
+			<speed>50</speed>
+			<extraDamages>
+				<li><def>Bullet</def><amount>6</amount><armorPenetration>0.16</armorPenetration></li>
+				<li><def>Bullet</def><amount>6</amount><armorPenetration>0.16</armorPenetration></li>
+			</extraDamages>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_CFAR_Shotgun</defName>
+		<label>magnum round</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>12</damageAmountBase>
+			<stoppingPower>1</stoppingPower>
+			<armorPenetrationBase>0.20</armorPenetrationBase>
+			<speed>75</speed>
+		</projectile>
+	</ThingDef>
+
 	<ThingDef Name="Bullet_CFAR_AR" ParentName="BaseBullet">
 		<defName>Bullet_CFAR_AR</defName>
 		<label>rifle bullet</label>
@@ -121,7 +157,7 @@
 			<AccuracyShort>0.75</AccuracyShort>
 			<AccuracyMedium>0.50</AccuracyMedium>
 			<AccuracyLong>0.25</AccuracyLong>
-			<RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
 		</statBases>
 		<weaponTags>
 			<li>CFAR_Magnum</li>
@@ -137,8 +173,84 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_CFAR_Magnum</defaultProjectile>
 				<burstShotCount>1</burstShotCount>
-				<warmupTime>0.4</warmupTime>
+				<warmupTime>0.3</warmupTime>
 				<range>24.9</range>
+				<soundCast>Shot_HeavySMG</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>8</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li><def>Stun</def><amount>14</amount></li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+		</tools>
+		<tradeTags>
+			<li>CFAR_WeaponRanged</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="Base_CFAR_GunIndustrial">
+		<defName>Gun_CFAR_Shotgun</defName>
+		<label>Arellian Shotgun</label>
+		<description>WIP</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_Magnum</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_SMG</soundInteract>
+		<recipeMaker><!--WIP-->
+			<researchPrerequisite>GasOperation</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+			<displayPriority>1170</displayPriority>
+		</recipeMaker><!--WIP-->
+		<statBases>
+			<MarketValue>180</MarketValue><!--WIP-->
+			<WorkToMake>6000</WorkToMake><!--WIP-->
+			<Mass>1.8</Mass><!--WIP-->
+			<AccuracyTouch>0.90</AccuracyTouch>
+			<AccuracyShort>0.70</AccuracyShort>
+			<AccuracyMedium>0.40</AccuracyMedium>
+			<AccuracyLong>0.20</AccuracyLong>
+			<RangedWeapon_Cooldown>1.25</RangedWeapon_Cooldown>
+		</statBases>
+		<weaponTags>
+			<li>CFAR_Magnum</li>
+		</weaponTags>
+		<costList>
+			<Steel>30</Steel>
+			<Uranium>1</Uranium>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_CFAR_Shotgun</defaultProjectile>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>14</ticksBetweenBurstShots>
+				<warmupTime>0.8</warmupTime>
+				<range>13.9</range>
 				<soundCast>Shot_HeavySMG</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
 				<muzzleFlashScale>8</muzzleFlashScale>
