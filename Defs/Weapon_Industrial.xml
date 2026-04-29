@@ -24,7 +24,7 @@
 		<defName>Bullet_CFAR_Shotgun</defName>
 		<label>shotgun blast</label>
 		<graphicData>
-			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<texPath>Things/Projectile/Bullet_Shotgun</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<projectile>
@@ -32,27 +32,11 @@
 			<damageAmountBase>6</damageAmountBase>
 			<stoppingPower>3</stoppingPower>
 			<armorPenetrationBase>0.16</armorPenetrationBase>
-			<speed>50</speed>
+			<speed>5</speed>
 			<extraDamages>
 				<li><def>Bullet</def><amount>6</amount><armorPenetration>0.16</armorPenetration></li>
 				<li><def>Bullet</def><amount>6</amount><armorPenetration>0.16</armorPenetration></li>
 			</extraDamages>
-		</projectile>
-	</ThingDef>
-
-	<ThingDef ParentName="BaseBullet">
-		<defName>Bullet_CFAR_Shotgun</defName>
-		<label>magnum round</label>
-		<graphicData>
-			<texPath>Things/Projectile/Bullet_Small</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<projectile>
-			<damageDef>Bullet</damageDef>
-			<damageAmountBase>12</damageAmountBase>
-			<stoppingPower>1</stoppingPower>
-			<armorPenetrationBase>0.20</armorPenetrationBase>
-			<speed>75</speed>
 		</projectile>
 	</ThingDef>
 
