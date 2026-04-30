@@ -88,7 +88,7 @@
 		<recipeMaker>
 			<displayPriority>1161</displayPriority>
 		</recipeMaker>
-		<costStuffCount>25</costStuffCount>
+		<costStuffCount>30</costStuffCount>
 		<costList>
 			<Gold>10</Gold>
 		</costList>
@@ -116,9 +116,9 @@
 		<recipeMaker>
 			<displayPriority>1162</displayPriority>
 		</recipeMaker>
-		<costStuffCount>25</costStuffCount>
+		<costStuffCount>30</costStuffCount>
 		<costList>
-			<Gold>25</Gold>
+			<Gold>20</Gold>
 		</costList>
 		<equippedStatOffsets>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.2</SlaveSuppressionOffset>
