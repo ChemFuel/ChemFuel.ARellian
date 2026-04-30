@@ -26,7 +26,6 @@
 			<EquipDelay>0.5</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
-			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
 			<SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">0.1</SuppressionPower>
 		</equippedStatOffsets>
 		<apparel>
@@ -53,52 +52,82 @@
 <!--======== Reichswehr Cap ========-->
 
 	<ThingDef ParentName="CFAR_CapBase">
-		<defName>Apparel_CFAR_OfficerCap</defName>
-		<label>Reichswehr officer cap</label>
-		<description>A structured service cap for junior officers, intended for daily field use. Practical and comfortable, it protects against the elements while retaining a clear mark of authority.</description>
+		<defName>Apparel_CFAR_T0Cap</defName>
+		<label>Arellian T0 Cap</label>
+		<description>WIP</description>
 		<recipeMaker>
 			<displayPriority>1160</displayPriority>
 		</recipeMaker>
-		<costStuffCount>35</costStuffCount>
+		<costStuffCount>25</costStuffCount>
 		<graphicData>
-			<texPath>Things/Pawn/Arellian/Apparel/Uniform/OfficerCap/Hat</texPath>
+			<texPath>Things/Pawn/Arellian/Apparel/T0Cap/Hat</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.80</drawSize>
 		</graphicData>
 		<equippedStatOffsets>
-			<PainShockThreshold>0.05</PainShockThreshold>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
+			<PainShockThreshold>0.10</PainShockThreshold>
+		</equippedStatOffsets>
+		<apparel>
+			<wornGraphicPath>Things/Pawn/Arellian/Apparel/T0Cap/Hat</wornGraphicPath>
+			<tags>
+				<li>CFAR_Soldier</li>
+			</tags>
+		</apparel>
+	</ThingDef>
+
+	<ThingDef ParentName="CFAR_CapBase">
+		<defName>Apparel_CFAR_T1Cap</defName>
+		<label>Arellian T1 Cap</label>
+		<description>WIP</description>
+		<graphicData>
+			<texPath>Things/Pawn/Arellian/Apparel/T1Cap/Hat</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.80</drawSize>
+		</graphicData>
+		<recipeMaker>
+			<displayPriority>1161</displayPriority>
+		</recipeMaker>
+		<costStuffCount>25</costStuffCount>
+		<costList>
+			<Gold>10</Gold>
+		</costList>
+		<equippedStatOffsets>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.15</SlaveSuppressionOffset>
 			<SocialImpact>0.10</SocialImpact>
 		</equippedStatOffsets>
 		<apparel>
-			<wornGraphicPath>Things/Pawn/Arellian/Apparel/Uniform/OfficerCap/Hat</wornGraphicPath>
+			<wornGraphicPath>Things/Pawn/Arellian/Apparel/T1Cap/Hat</wornGraphicPath>
 			<tags>
 				<li>CFAR_Officer</li>
 			</tags>
 		</apparel>
 	</ThingDef>
 
-<!--======== Commander Cap ========-->
-
 	<ThingDef ParentName="CFAR_CapBase">
-		<defName>Apparel_CFAR_CommanderCap</defName>
-		<label>Reichswehr commander cap</label>
-		<description>A service cap issued to experienced officers. Its formal profile signifies authority and operational oversight, worn by those entrusted with command beyond the front line.</description>
-		<recipeMaker>
-			<displayPriority>1161</displayPriority>
-		</recipeMaker>
-		<costStuffCount>50</costStuffCount>
+		<defName>Apparel_CFAR_T2Cap</defName>
+		<label>Arellian T2 Cap</label>
+		<description>WIP</description>
 		<graphicData>
-			<texPath>Things/Pawn/Arellian/Apparel/Uniform/CommanderCap/Hat</texPath>
+			<texPath>Things/Pawn/Arellian/Apparel/T2Cap/Hat</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.80</drawSize>
 		</graphicData>
+		<recipeMaker>
+			<displayPriority>1162</displayPriority>
+		</recipeMaker>
+		<costStuffCount>25</costStuffCount>
+		<costList>
+			<Gold>25</Gold>
+		</costList>
 		<equippedStatOffsets>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.2</SlaveSuppressionOffset>
 			<SocialImpact>0.20</SocialImpact>
 		</equippedStatOffsets>
 		<apparel>
-			<wornGraphicPath>Things/Pawn/Arellian/Apparel/Uniform/CommanderCap/Hat</wornGraphicPath>
+			<wornGraphicPath>Things/Pawn/Arellian/Apparel/T2Cap/Hat</wornGraphicPath>
 			<tags>
-				<li>CFAR_OfficerHigh</li>
+				<li>CFAR_HighOfficer</li>
 			</tags>
 		</apparel>
 	</ThingDef>
