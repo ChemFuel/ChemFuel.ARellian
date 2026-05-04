@@ -55,9 +55,9 @@
 
 	<PawnKindDef Name="CFAR_RW_TrooperBase" ParentName="CFAR_RW_SoldierBase" Abstract="True">
 		<apparelRequired>
-			<li>Apparel_CFAR_Uniform</li>
-			<li>Apparel_CFAR_T1Armor</li>
-			<li>Apparel_CFAR_T1Helmet</li>
+			<li>Apparel_CFAR_UniformField</li>
+			<li>Apparel_CFAR_ArmorJager</li>
+			<li>Apparel_CFAR_HelmetJager</li>
 		</apparelRequired>
 		<apparelTags>
 			<li>CFAR_Uniform</li>
