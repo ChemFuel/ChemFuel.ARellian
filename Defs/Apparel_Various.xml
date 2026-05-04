@@ -139,7 +139,7 @@
 	<ThingDef ParentName="ArmorHelmetMakeableBase">
 		<techLevel>Spacer</techLevel>
 		<defName>Apparel_CFAR_T0Helmet</defName>
-		<label>Arellian field helmet</label>
+		<label>Arellian füsilier helmet</label>
 		<description>WIP</description>
 		<recipeMaker>
 			<displayPriority>1160</displayPriority>
@@ -205,7 +205,7 @@
 	<ThingDef ParentName="ArmorMachineableBase">
 		<techLevel>Spacer</techLevel>
 		<defName>Apparel_CFAR_T0Armor</defName>
-		<label>Arellian field armor</label>
+		<label>Arellian füsilier armor</label>
 		<description>WIP</description>
 		<recipeMaker>
 			<displayPriority>1161</displayPriority>
@@ -277,7 +277,7 @@
 	<ThingDef ParentName="ArmorHelmetMakeableBase">
 		<techLevel>Spacer</techLevel>
 		<defName>Apparel_CFAR_T1Helmet</defName>
-		<label>Arellian orbit helmet</label>
+		<label>Arellian jäger helmet</label>
 		<description>WIP</description>
 		<recipeMaker>
 			<displayPriority>1160</displayPriority>
@@ -355,7 +355,7 @@
 	<ThingDef ParentName="ArmorMachineableBase">
 		<techLevel>Spacer</techLevel>
 		<defName>Apparel_CFAR_T1Armor</defName>
-		<label>Arellian orbit armor</label>
+		<label>Arellian jäger armor</label>
 		<description>WIP</description>
 		<recipeMaker>
 			<displayPriority>1161</displayPriority>
@@ -442,7 +442,7 @@
 	<ThingDef ParentName="ArmorHelmetMakeableBase">
 		<techLevel>Spacer</techLevel>
 		<defName>Apparel_CFAR_T2Helmet</defName>
-		<label>Arellian breacher helmet</label>
+		<label>Arellian sturmtiger helmet</label>
 		<description>WIP</description>
 		<recipeMaker>
 			<displayPriority>1162</displayPriority>
@@ -517,7 +517,7 @@
 	<ThingDef ParentName="ArmorMachineableBase">
 		<techLevel>Spacer</techLevel>
 		<defName>Apparel_CFAR_T2Armor</defName>
-		<label>Arellian breacher armor</label>
+		<label>Arellian sturmtiger armor</label>
 		<description>WIP</description>
 		<recipeMaker>
 			<displayPriority>1163</displayPriority>
