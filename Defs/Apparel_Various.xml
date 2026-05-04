@@ -52,8 +52,8 @@
 <!--======== Field Caps ========-->
 
 	<ThingDef ParentName="CFAR_CapBase">
-		<defName>Apparel_CFAR_CapSoldier</defName>
-		<label>Arellian soldier cap</label>
+		<defName>Apparel_CFAR_CapField</defName>
+		<label>Arellian field cap</label>
 		<description>WIP</description>
 		<recipeMaker>
 			<displayPriority>1160</displayPriority>
