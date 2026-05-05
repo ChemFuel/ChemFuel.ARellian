@@ -15,97 +15,117 @@
 
 	<RoyalTitleDef ParentName="CFAR_TitleBase" MayRequire="Ludeon.RimWorld.Royalty">
 		<defName>CFAR_RankA</defName>
-		<label>Soldat</label>
+		<label>Subjekt</label>
 		<description>WIP</description>
 		<allowDignifiedMeditationFocus>False</allowDignifiedMeditationFocus>
 		<seniority>0</seniority>
 		<favorCost>1</favorCost>
-		<permitPointsAwarded>1</permitPointsAwarded>
 	</RoyalTitleDef>
 
 	<RoyalTitleDef ParentName="CFAR_TitleBase" MayRequire="Ludeon.RimWorld.Royalty">
 		<defName>CFAR_RankB</defName>
-		<label>Unteroffizier</label>
+		<label>Soldat</label>
 		<description>WIP</description>
 		<allowDignifiedMeditationFocus>False</allowDignifiedMeditationFocus>
 		<seniority>100</seniority>
-		<favorCost>1</favorCost>
+		<favorCost>7</favorCost>
 		<permitPointsAwarded>1</permitPointsAwarded>
 	</RoyalTitleDef>
 
 	<RoyalTitleDef ParentName="CFAR_TitleBase" MayRequire="Ludeon.RimWorld.Royalty">
 		<defName>CFAR_RankC</defName>
-		<label>Hauptfeldwebel</label>
+		<label>Unteroffizier</label>
 		<description>WIP</description>
 		<allowDignifiedMeditationFocus>False</allowDignifiedMeditationFocus>
 		<seniority>200</seniority>
-		<favorCost>1</favorCost>
+		<favorCost>14</favorCost>
 		<permitPointsAwarded>1</permitPointsAwarded>
 	</RoyalTitleDef>
 
 	<RoyalTitleDef ParentName="CFAR_TitleBase" MayRequire="Ludeon.RimWorld.Royalty">
 		<defName>CFAR_RankD</defName>
-		<label>Leutnant</label>
+		<label>Stabsfeldwebel</label>
 		<description>WIP</description>
+		<allowDignifiedMeditationFocus>False</allowDignifiedMeditationFocus>
 		<seniority>300</seniority>
-		<favorCost>1</favorCost>
+		<favorCost>21</favorCost>
 		<permitPointsAwarded>1</permitPointsAwarded>
 	</RoyalTitleDef>
 
 	<RoyalTitleDef ParentName="CFAR_TitleBase" MayRequire="Ludeon.RimWorld.Royalty">
 		<defName>CFAR_RankE</defName>
-		<label>Hauptmann</label>
+		<label>Leutnant</label>
 		<description>WIP</description>
 		<seniority>400</seniority>
-		<favorCost>1</favorCost>
+		<favorCost>35</favorCost>
 		<permitPointsAwarded>1</permitPointsAwarded>
 	</RoyalTitleDef>
 
 	<RoyalTitleDef ParentName="CFAR_TitleBase" MayRequire="Ludeon.RimWorld.Royalty">
 		<defName>CFAR_RankF</defName>
-		<label>Oberst</label>
+		<label>Hauptmann</label>
 		<description>WIP</description>
 		<seniority>500</seniority>
-		<favorCost>1</favorCost>
+		<favorCost>56</favorCost>
 		<permitPointsAwarded>1</permitPointsAwarded>
 	</RoyalTitleDef>
 
 	<RoyalTitleDef ParentName="CFAR_TitleBase" MayRequire="Ludeon.RimWorld.Royalty">
 		<defName>CFAR_RankG</defName>
-		<label>Admiralmajor</label>
+		<label>Oberst</label>
 		<description>WIP</description>
 		<seniority>600</seniority>
-		<favorCost>1</favorCost>
+		<favorCost>91</favorCost>
+		<permitPointsAwarded>1</permitPointsAwarded>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="CFAR_TitleBase" MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>CFAR_RankH</defName>
+		<label>Admiralmajor</label>
+		<description>WIP</description>
+		<seniority>700</seniority>
+		<favorCost>147</favorCost>
+		<permitPointsAwarded>1</permitPointsAwarded>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="CFAR_TitleBase" MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>CFAR_RankI</defName>
+		<label>Admiralleutnant</label>
+		<description>WIP</description>
+		<seniority>800</seniority>
+		<favorCost>238</favorCost>
 		<permitPointsAwarded>1</permitPointsAwarded>
 	</RoyalTitleDef>
 
 <!--================ NPC Titles ================-->
 
 	<RoyalTitleDef ParentName="CFAR_TitleBase" MayRequire="Ludeon.RimWorld.Royalty">
-		<defName>CFAR_RankG</defName>
-		<label>Admiralleutnant</label>
-		<description>WIP</description>
-		<seniority>700</seniority>
-	</RoyalTitleDef>
-
-	<RoyalTitleDef ParentName="CFAR_TitleBase" MayRequire="Ludeon.RimWorld.Royalty">
-		<defName>CFAR_RankH</defName>
+		<defName>CFAR_RankJ</defName>
 		<label>Admiraloberst</label>
-		<description>WIP</description>
-		<seniority>800</seniority>
-	</RoyalTitleDef>
-
-	<RoyalTitleDef ParentName="CFAR_TitleBase" MayRequire="Ludeon.RimWorld.Royalty">
-		<defName>CFAR_RankI</defName>
-		<label>Flottelegat</label>
 		<description>WIP</description>
 		<seniority>900</seniority>
 	</RoyalTitleDef>
 
 	<RoyalTitleDef ParentName="CFAR_TitleBase" MayRequire="Ludeon.RimWorld.Royalty">
-		<defName>CFAR_RankJ</defName>
-		<label>Kaiser</label>
+		<defName>CFAR_RankK</defName>
+		<label>Großadmiral</label>
 		<description>WIP</description>
 		<seniority>1000</seniority>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="CFAR_TitleBase" MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>CFAR_RankL</defName>
+		<label>Flottelegat</label>
+		<labelFemale>Flottelegatin</labelFemale>
+		<description>WIP</description>
+		<seniority>1100</seniority>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="CFAR_TitleBase" MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>CFAR_RankM</defName>
+		<label>Kaiser</label>
+		<labelFemale>Kaiserin</labelFemale>
+		<description>WIP</description>
+		<seniority>1200</seniority>
 	</RoyalTitleDef>
 </Defs>
