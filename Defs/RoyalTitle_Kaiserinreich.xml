@@ -7,7 +7,8 @@
 		<commonality>1</commonality>
 		<awardThought>GainedTitle</awardThought>
 		<lostThought>LostTitle</lostThought>
-		<changeHeirQuestPoints>50</changeHeirQuestPoints>
+		<canBeInherited>False</canBeInherited>
+		<changeHeirQuestPoints>1000</changeHeirQuestPoints>
 		<awardWorkerClass>RoyalTitleAwardWorker_Instant</awardWorkerClass>
 	</RoyalTitleDef>
 
@@ -29,7 +30,6 @@
 		<allowDignifiedMeditationFocus>False</allowDignifiedMeditationFocus>
 		<seniority>100</seniority>
 		<favorCost>7</favorCost>
-		<permitPointsAwarded>1</permitPointsAwarded>
 	</RoyalTitleDef>
 
 	<RoyalTitleDef ParentName="CFAR_TitleBase" MayRequire="Ludeon.RimWorld.Royalty">
@@ -37,6 +37,7 @@
 		<label>Unteroffizier</label>
 		<description>WIP</description>
 		<allowDignifiedMeditationFocus>False</allowDignifiedMeditationFocus>
+		<recruitmentResistanceOffset>10</recruitmentResistanceOffset>
 		<seniority>200</seniority>
 		<favorCost>14</favorCost>
 		<permitPointsAwarded>1</permitPointsAwarded>
@@ -47,6 +48,7 @@
 		<label>Stabsfeldwebel</label>
 		<description>WIP</description>
 		<allowDignifiedMeditationFocus>False</allowDignifiedMeditationFocus>
+		<recruitmentResistanceOffset>25</recruitmentResistanceOffset>
 		<seniority>300</seniority>
 		<favorCost>21</favorCost>
 		<permitPointsAwarded>1</permitPointsAwarded>
@@ -56,6 +58,7 @@
 		<defName>CFAR_RankE</defName>
 		<label>Leutnant</label>
 		<description>WIP</description>
+		<recruitmentResistanceOffset>40</recruitmentResistanceOffset>
 		<seniority>400</seniority>
 		<favorCost>35</favorCost>
 		<permitPointsAwarded>1</permitPointsAwarded>
@@ -65,6 +68,7 @@
 		<defName>CFAR_RankF</defName>
 		<label>Hauptmann</label>
 		<description>WIP</description>
+		<recruitmentResistanceOffset>60</recruitmentResistanceOffset>
 		<seniority>500</seniority>
 		<favorCost>56</favorCost>
 		<permitPointsAwarded>1</permitPointsAwarded>
@@ -74,6 +78,7 @@
 		<defName>CFAR_RankG</defName>
 		<label>Oberst</label>
 		<description>WIP</description>
+		<recruitmentResistanceOffset>75</recruitmentResistanceOffset>
 		<seniority>600</seniority>
 		<favorCost>91</favorCost>
 		<permitPointsAwarded>1</permitPointsAwarded>
@@ -83,6 +88,7 @@
 		<defName>CFAR_RankH</defName>
 		<label>Admiralmajor</label>
 		<description>WIP</description>
+		<recruitmentResistanceOffset>100</recruitmentResistanceOffset>
 		<seniority>700</seniority>
 		<favorCost>147</favorCost>
 		<permitPointsAwarded>1</permitPointsAwarded>
@@ -92,6 +98,7 @@
 		<defName>CFAR_RankI</defName>
 		<label>Admiralleutnant</label>
 		<description>WIP</description>
+		<recruitmentResistanceOffset>125</recruitmentResistanceOffset>
 		<seniority>800</seniority>
 		<favorCost>238</favorCost>
 		<permitPointsAwarded>1</permitPointsAwarded>
@@ -103,14 +110,18 @@
 		<defName>CFAR_RankJ</defName>
 		<label>Admiraloberst</label>
 		<description>WIP</description>
+		<recruitmentResistanceOffset>150</recruitmentResistanceOffset>
 		<seniority>900</seniority>
+		<permitPointsAwarded>1</permitPointsAwarded>
 	</RoyalTitleDef>
 
 	<RoyalTitleDef ParentName="CFAR_TitleBase" MayRequire="Ludeon.RimWorld.Royalty">
 		<defName>CFAR_RankK</defName>
 		<label>Großadmiral</label>
 		<description>WIP</description>
+		<recruitmentResistanceOffset>175</recruitmentResistanceOffset>
 		<seniority>1000</seniority>
+		<permitPointsAwarded>1</permitPointsAwarded>
 	</RoyalTitleDef>
 
 	<RoyalTitleDef ParentName="CFAR_TitleBase" MayRequire="Ludeon.RimWorld.Royalty">
@@ -118,6 +129,9 @@
 		<label>Flottelegat</label>
 		<labelFemale>Flottelegatin</labelFemale>
 		<description>WIP</description>
+		<commonality>0.1</commonality>
+		<recruitmentResistanceOffset>200</recruitmentResistanceOffset>
+		<replaceOnRecruited>CFAR_RankK</replaceOnRecruited>
 		<seniority>1100</seniority>
 	</RoyalTitleDef>
 
@@ -126,6 +140,7 @@
 		<label>Kaiser</label>
 		<labelFemale>Kaiserin</labelFemale>
 		<description>WIP</description>
+		<commonality>0</commonality>
 		<seniority>1200</seniority>
 	</RoyalTitleDef>
 </Defs>
