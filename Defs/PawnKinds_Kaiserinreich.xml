@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<!--================================ Reichswehr ================================-->
+
+	<PawnKindDef Name="CFAR_AKR_Base" Abstract="True">
+		<race>Human</race>
+		<defaultFactionType>CFAR_Kaiserinreich</defaultFactionType>
+		<chemicalAddictionChance>0</chemicalAddictionChance>
+		<combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
+		<combatEnhancingDrugsCount>0~0</combatEnhancingDrugsCount>
+		<backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<xenotypeSet><xenotypeChances>
+			<CFAR_Arellian>999</CFAR_Arellian>
+		</xenotypeChances></xenotypeSet>
+		<initialResistanceRange>5~10</initialResistanceRange>
+		<initialWillRange>0.5~1</initialWillRange>
+	</PawnKindDef>
+
+<!--================================ Reichswehr ================================-->
+
+	<PawnKindDef Name="CFAR_RW_SoldierBase" ParentName="CFAR_AKR_Base" Abstract="True">
+		<combatPower>150</combatPower>
+		<minGenerationAge>20</minGenerationAge>
+		<maxGenerationAge>25</maxGenerationAge>
+		<apparelMoney>9999~9999</apparelMoney>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<stuff>Synthread</stuff>
+			</li>
+		</specificApparelRequirements>
+		<weaponMoney>9999~9999</weaponMoney>
+		<initialResistanceRange>10~20</initialResistanceRange>
+		<initialWillRange>1~2</initialWillRange>
+	</PawnKindDef>
+
+	<PawnKindDef Name="CFAR_RW_OfficerBase" ParentName="CFAR_AKR_Base" Abstract="True">
+		<combatPower>125</combatPower>
+		<minGenerationAge>22</minGenerationAge>
+		<maxGenerationAge>28</maxGenerationAge>
+		<apparelMoney>9999~9999</apparelMoney>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<stuff>Synthread</stuff>
+			</li>
+		</specificApparelRequirements>
+		<weaponMoney>9999~9999</weaponMoney>
+		<initialResistanceRange>15~25</initialResistanceRange>
+		<initialWillRange>1.5~2.5</initialWillRange>
+	</PawnKindDef>
+
+<!--================ Reichswehr - Trooper ================-->
+
+	<PawnKindDef Name="CFAR_RW_TrooperBase" ParentName="CFAR_RW_SoldierBase" Abstract="True">
+		<apparelRequired>
+			<li>Apparel_CFAR_UniformField</li>
+			<li>Apparel_CFAR_ArmorJager</li>
+			<li>Apparel_CFAR_HelmetJager</li>
+		</apparelRequired>
+		<apparelTags>
+			<li>CFAR_Uniform</li>
+		</apparelTags>
+		<backstoryFiltersOverride>
+			<li>
+				<categoriesChildhood>
+					<li>CFAR_Child</li>
+				</categoriesChildhood>
+				<categoriesAdulthood>
+					<li>CFAR_RW_LineTrooper</li>
+				</categoriesAdulthood>
+			</li>
+		</backstoryFiltersOverride>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="CFAR_RW_TrooperBase">
+		<defName>CFAR_RW_TrooperAR</defName>
+		<label>trooper</label><!--KR : 소총병-->
+		<weaponTags>
+			<li>CFAR_AssaultRifle</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="CFAR_RW_TrooperBase">
+		<defName>CFAR_RW_TrooperGR</defName>
+		<label>grenadier</label><!--KR : 척탄병-->
+		<weaponTags>
+			<li>CFAR_GrenadeRifle</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="CFAR_RW_TrooperBase">
+		<defName>CFAR_RW_TrooperMG</defName>
+		<label>MG trooper</label><!--KR : 기관총병-->
+		<weaponTags>
+			<li>CFAR_MachineGun</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="CFAR_RW_TrooperBase">
+		<defName>CFAR_RW_PlatoonLeader</defName>
+		<label>platoon leader</label><!--KR : 소대장-->
+		<weaponTags>
+			<li>CFAR_SniperRifle</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="CFAR_RW_TrooperBase">
+		<defName>CFAR_RW_CompanyCommander</defName>
+		<label>company commander</label><!--KR : 중대장-->
+		<weaponTags>
+			<li>CFAR_Magnum</li>
+		</weaponTags>
+	</PawnKindDef>
+
+<!--================ Reichswehr - Flottelegat ================-->
+
+	<PawnKindDef ParentName="CFAR_RW_OfficerBase">
+		<combatPower>50</combatPower>
+		<factionHostileOnDeath>true</factionHostileOnDeath>
+		<factionLeader>true</factionLeader>
+		<defName>CFAR_Flottelegat</defName>
+		<label>Flottelegat</label>
+		<labelFemale>Flottelegatin</labelFemale>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<minGenerationAge>20</minGenerationAge>
+		<maxGenerationAge>25</maxGenerationAge>
+		<apparelTags>
+			<li>CFAR_MilitaryPlanetary</li>
+		</apparelTags>
+		<apparelMoney>2500~3500</apparelMoney>
+		<weaponTags Inherit="False">
+			<li>CFAR_Magnum</li>
+		</weaponTags>
+		<weaponMoney>660~1300</weaponMoney>
+		<backstoryFiltersOverride>
+			<li>
+				<categoriesChildhood>
+					<li>CFAR_Cadet</li>
+				</categoriesChildhood>
+				<categoriesAdulthood>
+					<li>CFAR_RW_LineOfficer</li>
+				</categoriesAdulthood>
+			</li>
+		</backstoryFiltersOverride>
+		<initialResistanceRange>5~15</initialResistanceRange>
+		<initialWillRange>0.5~1.5</initialWillRange>
+	</PawnKindDef>
+</Defs>
