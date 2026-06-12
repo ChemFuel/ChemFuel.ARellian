@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-	<RoyalTitlePermitDef Name="CFAR_ShuttleBase">
-		<defName>CFAR_CallShuttleA</defName>
+	<RoyalTitlePermitDef>
+		<defName>CFAR_CallShuttle</defName>
 		<label>call transport shuttle</label>
 		<description>Call a shuttle for your own use. It will transport colonists, items, and animals anywhere you like within 70 world tiles.</description>
 		<workerClass>RoyalTitlePermitWorker_CallShuttle</workerClass>
-		<minTitle>CFAR_RankE</minTitle><!--Leutnant-->
+		<minTitle>CFAR_RankH</minTitle><!--Admiralmajor-->
 		<faction>CFAR_Kaiserinreich</faction>
 		<permitPointCost>1</permitPointCost>
-		<cooldownDays>15</cooldownDays>
+		<cooldownDays>5</cooldownDays>
 		<usableOnWorldMap>true</usableOnWorldMap>
-		<uiPosition>(0,0)</uiPosition>
+		<uiPosition>(0,3)</uiPosition>
 		<royalAid>
 			<favorCost>4</favorCost>
 			<targetingRange>44.9</targetingRange>
@@ -18,19 +18,78 @@
 		</royalAid>
 	</RoyalTitlePermitDef>
 
-	<RoyalTitlePermitDef ParentName="CFAR_ShuttleBase">
-		<defName>CFAR_CallShuttleB</defName>
-		<minTitle>CFAR_RankG</minTitle><!--Oberst-->
-		<prerequisite>CFAR_CallShuttleA</prerequisite>
-		<cooldownDays>5</cooldownDays>
-		<uiPosition>(0,1)</uiPosition>
+<!-- Econ -->
+
+	<RoyalTitlePermitDef Name="CFAR_DropResources" Abstract="True">
+		<workerClass>RoyalTitlePermitWorker_DropResources</workerClass>
+		<faction>CFAR_Kaiserinreich</faction>
+		<permitPointCost>1</permitPointCost>
+		<cooldownDays>45</cooldownDays>
+		<usableOnWorldMap>true</usableOnWorldMap>
+		<royalAid>
+			<targetingRange>39.9</targetingRange>
+		</royalAid>
 	</RoyalTitlePermitDef>
 
-	<RoyalTitlePermitDef ParentName="CFAR_ShuttleBase">
-		<defName>CFAR_CallShuttleC</defName>
-		<minTitle>CFAR_RankH</minTitle><!--Admiralmajor-->
-		<prerequisite>CFAR_CallShuttleB</prerequisite>
-		<cooldownDays>0.5</cooldownDays>
-		<uiPosition>(0,2)</uiPosition>
+	<RoyalTitlePermitDef ParentName="CFAR_DropResources">
+		<defName>CFAR_MedDropA</defName>
+		<label>medicine kit drop</label>
+		<description>Call for a drop of 5 medicine.</description>
+		<minTitle>CFAR_RankE</minTitle><!--Leutnant-->
+		<cooldownDays>15</cooldownDays>
+		<uiPosition>(0,0)</uiPosition>
+		<royalAid>
+			<itemsToDrop>
+				<MedicineIndustrial>5</MedicineIndustrial>
+			</itemsToDrop>
+			<favorCost>4</favorCost><!--WIP-->
+		</royalAid>
+	</RoyalTitlePermitDef>
+
+	<RoyalTitlePermitDef ParentName="CFAR_DropResources">
+		<prerequisite>CFAR_MedDropA</prerequisite>
+		<defName>CFAR_MedDropB</defName>
+		<label>medicine shipment drop</label>
+		<description>Call for a drop of 25 medicine.</description>
+		<minTitle>CFAR_RankF</minTitle><!--Hauptmann-->
+		<cooldownDays>30</cooldownDays>
+		<uiPosition>(1,0)</uiPosition>
+		<royalAid>
+			<itemsToDrop>
+				<MedicineIndustrial>25</MedicineIndustrial>
+			</itemsToDrop>
+			<favorCost>4</favorCost><!--WIP-->
+		</royalAid>
+	</RoyalTitlePermitDef>
+
+	<RoyalTitlePermitDef ParentName="CFAR_DropResources">
+		<defName>CFAR_RationDropA</defName>
+		<label>ration kit drop</label>
+		<description>Call for a drop of 20 packaged survival meals.</description>
+		<minTitle>CFAR_RankE</minTitle><!--Leutnant-->
+		<cooldownDays>15</cooldownDays>
+		<uiPosition>(2,0)</uiPosition>
+		<royalAid>
+			<itemsToDrop>
+				<MealSurvivalPack>15</MealSurvivalPack>
+			</itemsToDrop>
+			<favorCost>4</favorCost><!--WIP-->
+		</royalAid>
+	</RoyalTitlePermitDef>
+
+	<RoyalTitlePermitDef ParentName="CFAR_DropResources">
+		<prerequisite>CFAR_RationDropA</prerequisite>
+		<defName>CFAR_RationDropB</defName>
+		<label>ration shipment drop</label>
+		<description>Call for a drop of 100 packaged survival meals.</description>
+		<minTitle>CFAR_RankF</minTitle><!--Hauptmann-->
+		<cooldownDays>30</cooldownDays>
+		<uiPosition>(3,0)</uiPosition>
+		<royalAid>
+			<itemsToDrop>
+				<MealSurvivalPack>90</MealSurvivalPack>
+			</itemsToDrop>
+			<favorCost>4</favorCost><!--WIP-->
+		</royalAid>
 	</RoyalTitlePermitDef>
 </Defs>
