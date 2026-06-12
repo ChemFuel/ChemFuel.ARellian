@@ -40,7 +40,6 @@
 		<recruitmentResistanceOffset>10</recruitmentResistanceOffset>
 		<seniority>200</seniority>
 		<favorCost>14</favorCost>
-		<permitPointsAwarded>1</permitPointsAwarded>
 	</RoyalTitleDef>
 
 	<RoyalTitleDef ParentName="CFAR_TitleBase" MayRequire="Ludeon.RimWorld.Royalty">
@@ -51,7 +50,6 @@
 		<recruitmentResistanceOffset>25</recruitmentResistanceOffset>
 		<seniority>300</seniority>
 		<favorCost>21</favorCost>
-		<permitPointsAwarded>1</permitPointsAwarded>
 	</RoyalTitleDef>
 
 	<RoyalTitleDef ParentName="CFAR_TitleBase" MayRequire="Ludeon.RimWorld.Royalty">
