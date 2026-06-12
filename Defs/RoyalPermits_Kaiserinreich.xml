@@ -71,7 +71,7 @@
 		<uiPosition>(2,0)</uiPosition>
 		<royalAid>
 			<itemsToDrop>
-				<MealSurvivalPack>15</MealSurvivalPack>
+				<MealSurvivalPack>20</MealSurvivalPack>
 			</itemsToDrop>
 			<favorCost>4</favorCost><!--WIP-->
 		</royalAid>
@@ -87,7 +87,7 @@
 		<uiPosition>(3,0)</uiPosition>
 		<royalAid>
 			<itemsToDrop>
-				<MealSurvivalPack>90</MealSurvivalPack>
+				<MealSurvivalPack>100</MealSurvivalPack>
 			</itemsToDrop>
 			<favorCost>4</favorCost><!--WIP-->
 		</royalAid>
