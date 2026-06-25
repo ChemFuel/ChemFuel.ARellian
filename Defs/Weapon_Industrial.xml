@@ -383,7 +383,7 @@
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
 		<defName>Gun_CFAR_MachineGun</defName>
 		<label>Arellian Machine Gun</label>
-		<description>WIP</description>
+		<description>The MG21 is the standard "light" machine gun of the Reichswehr. Its exceptional rate of fire makes it a formidable suppressive weapon. Unfortunately, its indiscriminate bullet distribution has also earned it the nickname "Meat Chopper" among Reichswehr personnel.</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_MachineGun</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
