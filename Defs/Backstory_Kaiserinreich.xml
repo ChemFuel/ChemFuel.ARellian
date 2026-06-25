@@ -27,16 +27,16 @@
 		</requiredWorkTags>
 	</BackstoryDef>
 
-<!--======== Line Trooper ========-->
+<!--======== Jäger ========-->
 
 	<BackstoryDef ParentName="CFAR_RW_Soldier">
 		<defName>CFAR_JagerTrooper1</defName>
-		<title>jäger trooper</title>
+		<title>jäger</title>
 		<titleShort>jäger</titleShort>
 		<description>[PAWN_nameDef] served as a trooper in the Reichswehr Jägerkorps. Whether defending a breach or creating one aboard a hostile vessel, [PAWN_pronoun] was always in the thick of battle.</description>
 		<skillGains>
 			<Shooting>6</Shooting>
-			<Melee>6</Melee>
+			<Melee>8</Melee>
 		</skillGains>
 		<spawnCategories>
 			<li>CFAR_JagerTrooper</li>
@@ -45,12 +45,12 @@
 
 	<BackstoryDef ParentName="CFAR_RW_Soldier">
 		<defName>CFAR_JagerTrooper2</defName>
-		<title>Raumjäger trooper</title>
+		<title>jäger<title>
 		<titleShort>jäger</titleShort>
-		<description>WIP</description>
+		<description>[PAWN_nameDef] served as a trooper in the Reichswehr Jägerkorps. Trained for ship-to-ship combat, [PAWN_pronoun] fought in the narrow corridors of friendly and hostile vessels alike, where every breach could decide the battle.</description>
 		<skillGains>
 			<Shooting>6</Shooting>
-			<Melee>6</Melee>
+			<Melee>8</Melee>
 		</skillGains>
 		<spawnCategories>
 			<li>CFAR_JagerTrooper</li>
