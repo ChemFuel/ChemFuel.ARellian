@@ -197,7 +197,7 @@
 
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
 		<defName>Gun_CFAR_Shotgun</defName>
-		<label>Arellian Shotgun</label>
+		<label>Arellian Shotgun</label><!--JG12-->
 		<description>WIP</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_Shotgun</texPath>
@@ -283,8 +283,8 @@
 
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
 		<defName>Gun_CFAR_AssaultRifle</defName>
-		<label>Arellian Assault Rifle</label>
-		<description>WIP</description>
+		<label>Arellian Assault Rifle</label><!--GG117-->
+		<description>The GG117 is the standard service rifle of the Reichswehr. Designed to meet the demands of modern warfare, it remains reliable, accurate, and effective against pirates, insects, and mechanoids alike.</description>
 		<tickerType>Normal</tickerType>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_AssaultRifle</texPath>
@@ -382,8 +382,8 @@
 
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
 		<defName>Gun_CFAR_MachineGun</defName>
-		<label>Arellian Machine Gun</label>
-		<description>The MG21 is the standard "light" machine gun of the Reichswehr. Its exceptional rate of fire makes it a formidable suppressive weapon. Unfortunately, its indiscriminate bullet distribution has also earned it the nickname "Meat Chopper" among Reichswehr personnel.</description>
+		<label>Arellian Machine Gun</label><!--MG21-->
+		<description>The MG21 is the standard "light" machine gun of the Reichswehr. Despite weighing 12.5 kilograms, it is considered highly portable by Reichswehr standards. Its exceptional rate of fire makes it a formidable suppressive weapon, but its indiscriminate bullet distribution has also earned it the nickname "Meat Chopper" among Reichswehr personnel.</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_MachineGun</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
