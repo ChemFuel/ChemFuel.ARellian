@@ -98,6 +98,18 @@
 			<li>CFAR_Shotgun</li>
 			<li>CFAR_AssaultRifle</li>
 		</weaponTags>
+		<backstoryFiltersOverride>
+			<li>
+				<categoriesChildhood>
+					<li>CFAR_None</li>
+					<li>CFAR_Low</li>
+					<li>CFAR_Mid</li>
+				</categoriesChildhood>
+				<categoriesAdulthood>
+					<li>CFAR_JagerTrooper</li>
+				</categoriesAdulthood>
+			</li>
+		</backstoryFiltersOverride>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="CFAR_JagerBase">
@@ -110,6 +122,18 @@
 		<weaponTags>
 			<li>CFAR_MachineGun</li>
 		</weaponTags>
+		<backstoryFiltersOverride>
+			<li>
+				<categoriesChildhood>
+					<li>CFAR_None</li>
+					<li>CFAR_Low</li>
+					<li>CFAR_Mid</li>
+				</categoriesChildhood>
+				<categoriesAdulthood>
+					<li>CFAR_JagerTrooper</li>
+				</categoriesAdulthood>
+			</li>
+		</backstoryFiltersOverride>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="CFAR_JagerBase">
