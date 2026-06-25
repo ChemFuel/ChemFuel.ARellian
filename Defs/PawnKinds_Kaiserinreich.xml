@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<!--================================ Reichswehr ================================-->
+
+	<PawnKindDef Name="CFAR_KaiserinreichBase" Abstract="True">
+		<race>Human</race>
+		<defaultFactionType>CFAR_Kaiserinreich</defaultFactionType>
+		<minTitleRequired>CFAR_RankA</minTitleRequired>
+		<chemicalAddictionChance>0</chemicalAddictionChance>
+		<combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
+		<combatEnhancingDrugsCount>0~0</combatEnhancingDrugsCount>
+		<backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<xenotypeSet><xenotypeChances>
+			<CFAR_Arellian>999</CFAR_Arellian>
+		</xenotypeChances></xenotypeSet>
+		<initialResistanceRange>5~10</initialResistanceRange>
+		<initialWillRange>0.5~1</initialWillRange>
+	</PawnKindDef>
+
+<!--================================ Reichswehr ================================-->
+
+	<PawnKindDef Name="CFAR_SoldierBase" ParentName="CFAR_KaiserinreichBase" Abstract="True">
+		<combatPower>150</combatPower>
+		<minGenerationAge>20</minGenerationAge>
+		<maxGenerationAge>30</maxGenerationAge>
+		<defaultFactionType>CFAR_Kaiserinreich</defaultFactionType>
+		<minTitleRequired>CFAR_RankB</minTitleRequired>
+		<apparelMoney>9999~9999</apparelMoney>
+		<specificApparelRequirements>
+			<li>
+				<colorGenerator Class="ColorGenerator_Options">
+					<options>
+						<li><only>(0.75,0.75,0.75)</only></li>
+					</options>
+				</colorGenerator>
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<stuff>Synthread</stuff>
+			</li>
+		</specificApparelRequirements>
+		<weaponMoney>9999~9999</weaponMoney>
+		<initialResistanceRange>10~20</initialResistanceRange>
+		<initialWillRange>1~2</initialWillRange>
+	</PawnKindDef>
+
+	<PawnKindDef Name="CFAR_OfficerBase" ParentName="CFAR_KaiserinreichBase" Abstract="True">
+		<combatPower>125</combatPower>
+		<minGenerationAge>22</minGenerationAge>
+		<maxGenerationAge>28</maxGenerationAge>
+		<defaultFactionType>CFAR_Kaiserinreich</defaultFactionType>
+		<minTitleRequired>CFAR_RankE</minTitleRequired>
+		<apparelMoney>9999~9999</apparelMoney>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<stuff>Synthread</stuff>
+			</li>
+		</specificApparelRequirements>
+		<weaponMoney>9999~9999</weaponMoney>
+		<initialResistanceRange>15~25</initialResistanceRange>
+		<initialWillRange>1.5~2.5</initialWillRange>
+	</PawnKindDef>
+
+<!--================ Reichswehr - Trooper ================-->
+
+	<PawnKindDef Name="CFAR_JagerBase" ParentName="CFAR_SoldierBase" Abstract="True">
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<apparelRequired>
+			<li>Apparel_CFAR_UniformField</li>
+			<li>Apparel_CFAR_ArmorJager</li>
+			<li>Apparel_CFAR_HelmetJager</li>
+		</apparelRequired>
+		<apparelTags>
+			<li>CFAR_Uniform</li>
+		</apparelTags>
+		<backstoryFiltersOverride>
+			<li>
+				<categoriesChildhood>
+					<li>CFAR_Child</li>
+				</categoriesChildhood>
+				<categoriesAdulthood>
+					<li>CFAR_RW_LineTrooper</li>
+				</categoriesAdulthood>
+			</li>
+		</backstoryFiltersOverride>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="CFAR_JagerBase">
+		<defName>CFAR_JagerAssault</defName>
+		<label>Jäger assault</label><!--KR : 예거 돌격병-->
+		<titleSelectOne>
+			<li>CFAR_RankB</li>
+			<li>CFAR_RankC</li>
+		</titleSelectOne>
+		<weaponTags>
+			<li>CFAR_Shotgun</li>
+			<li>CFAR_AssaultRifle</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="CFAR_JagerBase">
+		<defName>CFAR_JagerHeavy</defName>
+		<label>Jäger heavy</label><!--KR : 예거 중화기병-->
+		<titleSelectOne>
+			<li>CFAR_RankB</li>
+			<li>CFAR_RankC</li>
+		</titleSelectOne>
+		<weaponTags>
+			<li>CFAR_MachineGun</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="CFAR_JagerBase">
+		<defName>CFAR_JagerRecon</defName>
+		<label>Jäger recon</label><!--KR : 예거 정찰병-->
+		<titleRequired>CFAR_RankE</titleRequired>
+		<weaponTags>
+			<li>CFAR_Railgun</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="CFAR_JagerBase">
+		<defName>CFAR_JagerOfficer</defName>
+		<label>Jäger officer</label><!--KR : 예거 장교-->
+		<titleRequired>CFAR_RankF</titleRequired>
+		<weaponTags>
+			<li>CFAR_Pistol</li>
+		</weaponTags>
+	</PawnKindDef>
+
+<!--================ Reichswehr - Flottelegat ================-->
+
+	<PawnKindDef ParentName="CFAR_OfficerBase">
+		<combatPower>50</combatPower>
+		<factionHostileOnDeath>true</factionHostileOnDeath>
+		<factionLeader>true</factionLeader>
+		<defName>CFAR_Flottelegat</defName>
+		<label>Flottelegat</label>
+		<labelFemale>Flottelegatin</labelFemale>
+		<titleRequired>CFAR_RankL</titleRequired>
+		<minGenerationAge>20</minGenerationAge>
+		<maxGenerationAge>25</maxGenerationAge>
+		<apparelTags>
+			<li>CFAR_MilitaryPlanetary</li>
+		</apparelTags>
+		<apparelMoney>2500~3500</apparelMoney>
+		<weaponTags Inherit="False">
+			<li>CFAR_Pistol</li>
+		</weaponTags>
+		<weaponMoney>660~1300</weaponMoney>
+		<backstoryFiltersOverride>
+			<li>
+				<categoriesChildhood>
+					<li>CFAR_Cadet</li>
+				</categoriesChildhood>
+				<categoriesAdulthood>
+					<li>CFAR_RW_LineOfficer</li>
+				</categoriesAdulthood>
+			</li>
+		</backstoryFiltersOverride>
+		<initialResistanceRange>5~15</initialResistanceRange>
+		<initialWillRange>0.5~1.5</initialWillRange>
+	</PawnKindDef>
+</Defs>

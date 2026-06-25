@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<BackstoryDef Name="CFAR_Child" Abstract="True">
+		<requiresSpawnCategory>true</requiresSpawnCategory>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>CFAR_Child</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+<!--================ Status : None ================-->
+
+<!--======== Slum ========-->
+
+	<BackstoryDef ParentName="CFAR_Child">
+		<defName>CFAR_StreetUrchin1</defName>
+		<title>street urchin</title>
+		<titleShort>urchin</titleShort>
+		<description>[PAWN_nameDef] grew up in the slums, where [PAWN_pronoun] learned how to swing a knife before [PAWN_pronoun] could properly speak. With everything and everyone potentially hostile, [PAWN_pronoun] couldn't trust anyone with [PAWN_possessive] wounds.</description>
+		<skillGains>
+			<Melee>4</Melee>
+			<Medicine>2</Medicine>
+			<Social>-2</Social>
+		</skillGains>
+		<requiredWorkTags>
+			<li>Violent</li>
+			<li>Caring</li>
+		</requiredWorkTags>
+		<workDisables>
+			<li>Artistic</li>
+			<li>Intellectual</li>
+		</workDisables>
+		<spawnCategories>
+			<li>CFAR_ChildNone</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+<!--======== Street ========-->
+
+	<BackstoryDef ParentName="CFAR_Child">
+		<defName>CFAR_StreetPerformer1</defName>
+		<title>street performer</title>
+		<titleShort>streetling</titleShort>
+		<description>[PAWN_nameDef] was a child performer. [PAWN_pronoun] would approach families or groups of officers with a charming smile, performing parlor tricks and making them laugh—earning bread in [PAWN_possessive] jar in exchange.</description>
+		<skillGains>
+			<Artistic>3</Artistic>
+			<Social>3</Social>
+			<Intellectual>-2</Intellectual>
+		</skillGains>
+		<requiredWorkTags>
+			<li>Artistic</li>
+		</requiredWorkTags>
+		<spawnCategories>
+			<li>CFAR_ChildNone</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+<!--================ Status : Low ================-->
+
+<!--======== Labor ========-->
+
+	<BackstoryDef ParentName="CFAR_Child">
+		<defName>CFAR_DockChild1</defName>
+		<title>dock child</title>
+		<titleShort>dockhand</titleShort>
+		<description>WIP</description>
+		<skillGains>
+			<Social>2</Social>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_ChildLow</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+<!--================ Status : Middle ================-->
+
+<!--======== Urban ========-->
+
+	<BackstoryDef ParentName="CFAR_Child">
+		<defName>CFAR_AcademyChild1</defName>
+		<title>academy child</title>
+		<titleShort>student</titleShort>
+		<description>WIP</description>
+		<skillGains>
+			<Intellectual>3</Intellectual>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_ChildMid</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+<!--================ Status : High ================-->
+
+<!--======== Urban ========-->
+
+	<!--<BackstoryDef ParentName="CFAR_Child">
+		<defName>CFAR_StreetChild1</defName>
+		<title>street child</title>
+		<titleShort>streetling</titleShort>
+		<description>WIP</description>
+		<skillGains>
+			<Social>2</Social>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_ChildHigh</li>
+		</spawnCategories>
+	</BackstoryDef>-->
+
+<!--================ Status : Noble ================-->
+
+<!--======== Urban ========-->
+
+	<BackstoryDef ParentName="CFAR_Child">
+		<defName>CFAR_PatricianChild1</defName>
+		<title>patrician child</title>
+		<titleShort>patrician</titleShort>
+		<description>WIP</description>
+		<skillGains>
+			<Social>4</Social>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_ChildNoble</li>
+		</spawnCategories>
+	</BackstoryDef>
+</Defs>

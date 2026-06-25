@@ -11,11 +11,11 @@
 					<value>
 						<fixedIdeo>true</fixedIdeo>
 						<ideoName>Reichsmandat</ideoName>
-						<ideoDescription>The Reichsmandat is the governing doctrine of the Arellian Kaiserinreich, defining duty, hierarchy, and responsibility as the foundations of imperial strength. It teaches that order is sustained through discipline, reason, and loyalty guided by judgment. Authority exists to serve the Reich’s continuity, and respect for command is inseparable from accountability.\n\nSubjects of the Kaiserinreich are expected to serve according to their station, uphold the chain of command, and exercise discernment in the execution of orders—especially in moments of crisis. The Reichsmandat warns that obedience without reason breeds decay and tyranny, and charges every citizen to act in the true interest of the Reich when circumstances exceed instruction.\n\nCommand is granted by merit, proven capability, and the Kaiserin’s sanction. Those entrusted with authority bear obligation rather than privilege, and are expected to lead with restraint, foresight, and responsibility. Aggression is directed; conquest is obligation, not excess. Through disciplined judgment and unity of purpose, the Arellian Kaiserinreich endures.</ideoDescription>
+						<ideoDescription>WIP</ideoDescription>
 						<deityPresets>
 							<li>
 								<nameType>
-									<name>Aria Erisis</name><type>Empress of Steel</type>
+									<name>Aria Erisis</name><type>Kaiserin of Steel</type>
 								</nameType>
 								<gender>Female</gender>
 								<iconPath>UI/Deities/DeityGeneric</iconPath>
@@ -53,23 +53,14 @@
 							<li>Nudity_Female_UncoveredGroinChestHairOrFaceDisapproved</li>
 							<li>ApparelDesired_Strong_Subordinate</li>
 							<li>ApparelDesired_Soft_Subordinate</li>
+
+							<li MayRequire="Ludeon.RimWorld.Biotech">Bloodfeeders_Revered</li>
+							<li MayRequire="Ludeon.RimWorld.Biotech">ChildLabor_Encouraged</li>
+							<li MayRequire="Ludeon.RimWorld.Biotech">GrowthVat_Prohibited</li>
+							<li MayRequire="Ludeon.RimWorld.Biotech">MechanoidLabor_Enhanced</li>
+							<li MayRequire="Ludeon.RimWorld.Biotech">PreferredXenotype</li>
 						</disallowedPrecepts>
 					</value>
-				</li>
-				<li Class="PatchOperationFindMod">
-					<mods>
-						<li>Biotech</li>
-					</mods>
-					<match Class="PatchOperationAdd">
-						<xpath>Defs/FactionDef[defName="CFAR_Kaiserinreich"]/disallowedPrecepts</xpath>
-						<value>
-							<li>Bloodfeeders_Revered</li>
-							<li>ChildLabor_Encouraged</li>
-							<li>GrowthVat_Prohibited</li>
-							<li>MechanoidLabor_Enhanced</li>
-							<li>PreferredXenotype</li>
-						</value>
-					</match>
 				</li>
 			</operations>
 		</match>

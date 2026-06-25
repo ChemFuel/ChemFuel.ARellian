@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<BackstoryDef Name="CFAR_Mercenary" Abstract="True">
+		<requiresSpawnCategory>true</requiresSpawnCategory>
+		<slot>Adulthood</slot>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</BackstoryDef>
+
+<!--================ Enlisted ================-->
+
+<!--======== Freikorps ========-->
+
+	<BackstoryDef ParentName="CFAR_Mercenary">
+		<defName>CFAR_FC_Neutral1</defName>
+		<title>Freikorps mercenary</title>
+		<titleShort>mercenary</titleShort>
+		<description>[PAWN_nameDef] was a Freikorps mercenary. While some clans disregarded morality for profit, [PAWN_possessive] clan was among the more moderate ones, insisting that certain lines were not to be crossed.</description>
+		<skillGains>
+			<Shooting>8</Shooting>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_FC_Neutral</li>
+		</spawnCategories>
+	</BackstoryDef>
+</Defs>

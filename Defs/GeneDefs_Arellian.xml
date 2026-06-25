@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<XenotypeDef>
+		<defName>CFAR_Arellian</defName>
+		<label>Arellian</label>
+		<description>WIP</description>
+		<descriptionShort>Arellians are aggressive, disciplined, and nearly unbreakable. Their enhanced healing, strong immunity, and sharp night vision make them ideal soldiers and subjects of the Arellian Kaiserinreich.</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/BaseArellian</iconPath>
+		<inheritable>true</inheritable>
+		<nameMaker>CFAR_PawnNamer_C</nameMaker>
+		<nameMakerFemale>CFAR_PawnNamerFemale_C</nameMakerFemale>
+		<chanceToUseNameMaker>1</chanceToUseNameMaker>
+		<factionlessGenerationWeight>0.25</factionlessGenerationWeight>
+		<genes>
+			<li>Eyes_Arellian</li>
+			<li>Ears_Arellian</li>
+			<li>Aggression_HyperAggressive</li>
+			<li>DarkVision</li>
+			<li>PsychicAbility_Dull</li>
+			<li>WoundHealing_Fast</li>
+			<li>Immunity_Strong</li>
+		</genes>
+	</XenotypeDef>
+
+<!--================ Genes ================-->
+
+<!--======== Basic ========-->
+
+	<GeneDef ParentName="GeneEyeColor">
+		<defName>Eyes_Arellian</defName>
+		<label>amber eyes</label>
+		<labelShortAdj>amber-eyed</labelShortAdj>
+		<description>Carriers of this gene have rich amber eyes.</description>
+		<iconPath>UI/Icons/Genes/Gene_ArellianEyes</iconPath>
+		<forcedHeadTypes>
+			<li>CFAR_Normal_Plain</li>
+			<li>CFAR_Normal_Freckles</li>
+			<li>CFAR_Gaunt_Normal</li>
+		</forcedHeadTypes>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPaths>
+					<li>Things/Pawn/Arellian/Heads/Eyes/Idle</li>
+					<li>Things/Pawn/Arellian/Heads/Eyes/Determined</li>
+				</texPaths>
+				<texPathsFemale>
+					<li>Things/Pawn/Arellian/Heads/Eyes/Idle</li>
+					<li>Things/Pawn/Arellian/Heads/Eyes/Curious</li>
+					<li>Things/Pawn/Arellian/Heads/Eyes/Gaki</li>
+					<li>Things/Pawn/Arellian/Heads/Eyes/Relaxed</li>
+					<li>Things/Pawn/Arellian/Heads/Eyes/Determined</li>
+				</texPathsFemale>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<useRottenColor>true</useRottenColor>
+				<parentTagDef>Head</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>53</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>1</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneEarsBase">
+		<defName>Ears_Arellian</defName>
+		<label>long cat ears</label>
+		<description>Carriers of this gene have long, fluffy cat ears.</description>
+		<iconPath>UI/Icons/Genes/Gene_ArellianEar</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPaths>
+					<li>Things/Pawn/Arellian/Heads/Ears/A</li>
+					<li>Things/Pawn/Arellian/Heads/Ears/B</li>
+					<li>Things/Pawn/Arellian/Heads/Ears/C</li>
+				</texPaths>
+				<colorType>Hair</colorType>
+				<parentTagDef>Head</parentTagDef>
+				<useRottenColor>true</useRottenColor>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<drawData>
+					<defaultData>
+						<layer>72</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>1</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneVoiceBase">
+		<defName>Voice_Arellian</defName>
+		<label>cat voice</label>
+		<description>Carriers of this gene are known for making cat-like voices.</description>
+		<iconPath>UI/Icons/Genes/Gene_ArellianVoice</iconPath>
+		<soundDeath>Pawn_Cat_Death</soundDeath>
+		<soundWounded>Pawn_Cat_Injured</soundWounded>
+	</GeneDef>
+</Defs>
