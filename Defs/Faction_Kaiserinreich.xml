@@ -24,7 +24,7 @@
 		<permanentEnemyToEveryoneExceptPlayer>true</permanentEnemyToEveryoneExceptPlayer>
 		<canRequestOrbitalTrader>true</canRequestOrbitalTrader>
 		<fixedLeaderKinds><li>CFAR_Flottelegat</li></fixedLeaderKinds>
-		<basicMemberKind>CFAR_JagerAssault</basicMemberKind>
+		<basicMemberKind>CFAR_FusilierAssault</basicMemberKind>
 		<backstoryFilters>
 			<li>
 				<categoriesChildhood>
@@ -77,40 +77,62 @@
 					<Elephant>1</Elephant>
 				</carriers>
 				<guards>
-					<CFAR_JagerAssault>5</CFAR_JagerAssault>
+					<CFAR_JagerAssault>10</CFAR_JagerAssault>
 					<CFAR_JagerHeavy>3</CFAR_JagerHeavy>
-					<CFAR_JagerRecon>1</CFAR_JagerRecon>
-					<CFAR_JagerOfficer>1</CFAR_JagerOfficer>
+					<CFAR_JagerLtn>2</CFAR_JagerLtn>
 				</guards>
 			</li>
 			<li>
-				<!--Reichswehr-->
+				<!--Füsilier Only-->
+				<kindDef>Combat</kindDef>
+				<options>
+					<CFAR_FusilierAssault>10</CFAR_FusilierAssault>
+					<CFAR_FusilierHeavy>3</CFAR_FusilierHeavy>
+					<CFAR_FusilierLtn>2</CFAR_FusilierLtn>
+					<CFAR_FusilierHptm>1</CFAR_FusilierHptm>
+				</options>
+			</li>
+			<li>
+				<!--Füsilier + Jäger-->
+				<kindDef>Combat</kindDef>
+				<options>
+					<CFAR_FusilierAssault>8</CFAR_FusilierAssault>
+					<CFAR_FusilierHeavy>3</CFAR_FusilierHeavy>
+					<CFAR_FusilierLtn>2</CFAR_FusilierLtn>
+					<CFAR_FusilierHptm>1</CFAR_FusilierHptm>
+					<CFAR_JagerAssault>4</CFAR_JagerAssault>
+					<CFAR_JagerHeavy>2</CFAR_JagerHeavy>
+					<CFAR_JagerLtn>1</CFAR_JagerLtn>
+				</options>
+			</li>
+			<li>
+				<!--Jäger Only-->
 				<kindDef>Combat</kindDef>
 				<disallowedStrategies>
-					<li>ImmediateAttackBreaching</li>
-					<li>ImmediateAttackBreachingSmart</li>
+					<li>Siege</li>
 				</disallowedStrategies>
 				<options>
-					<CFAR_JagerAssault>5</CFAR_JagerAssault>
+					<CFAR_JagerAssault>10</CFAR_JagerAssault>
 					<CFAR_JagerHeavy>3</CFAR_JagerHeavy>
-					<CFAR_JagerRecon>1</CFAR_JagerRecon>
-					<CFAR_JagerOfficer>1</CFAR_JagerOfficer>
+					<CFAR_JagerLtn>2</CFAR_JagerLtn>
 				</options>
 			</li>
 			<li>
 				<kindDef>Peaceful</kindDef>
 				<options>
-					<CFAR_JagerAssault>4</CFAR_JagerAssault>
-					<CFAR_JagerOfficer>1</CFAR_JagerOfficer>
+					<CFAR_FusilierAssault>10</CFAR_FusilierAssault>
+					<CFAR_FusilierHeavy>3</CFAR_FusilierHeavy>
+					<CFAR_FusilierLtn>2</CFAR_FusilierLtn>
+					<CFAR_FusilierHptm>1</CFAR_FusilierHptm>
 				</options>
 			</li>
 			<li>
 				<kindDef>Settlement</kindDef>
 				<options>
-					<CFAR_JagerAssault>5</CFAR_JagerAssault>
-					<CFAR_JagerHeavy>3</CFAR_JagerHeavy>
-					<CFAR_JagerRecon>1</CFAR_JagerRecon>
-					<CFAR_JagerOfficer>1</CFAR_JagerOfficer>
+					<CFAR_FusilierAssault>10</CFAR_FusilierAssault>
+					<CFAR_FusilierHeavy>3</CFAR_FusilierHeavy>
+					<CFAR_FusilierLtn>2</CFAR_FusilierLtn>
+					<CFAR_FusilierHptm>1</CFAR_FusilierHptm>
 				</options>
 			</li>
 		</pawnGroupMakers>
