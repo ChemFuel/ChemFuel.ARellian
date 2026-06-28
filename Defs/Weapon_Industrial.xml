@@ -11,13 +11,10 @@
 		</graphicData>
 		<projectile>
 			<damageDef>Bullet</damageDef>
-			<damageAmountBase>12</damageAmountBase>
-			<stoppingPower>1</stoppingPower>
+			<damageAmountBase>10</damageAmountBase>
+			<stoppingPower>5</stoppingPower>
 			<armorPenetrationBase>0.20</armorPenetrationBase>
 			<speed>75</speed>
-			<extraDamages>
-				<li><def>Stun</def><amount>4</amount><armorPenetration>0.75</armorPenetration></li>
-			</extraDamages>
 		</projectile>
 	</ThingDef>
 
