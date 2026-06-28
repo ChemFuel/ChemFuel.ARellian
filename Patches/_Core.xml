@@ -4,21 +4,17 @@
 
 	<Operation Class="PatchOperationSequence">
 		<operations>
-			<!--<li Class="PatchOperationConditional">
-				<xpath>Defs/ThoughtDef[defName="ObservedLayingCorpse" or defName="ObservedLayingRottingCorpse" or defName="WitnessedDeathAlly" or defName="WitnessedDeathNonAlly"]/nullifyingHediffs</xpath>
-				<match Class="PatchOperationAdd">
-					<xpath>Defs/ThoughtDef[defName="ObservedLayingCorpse" or defName="ObservedLayingRottingCorpse" or defName="WitnessedDeathAlly" or defName="WitnessedDeathNonAlly"]/nullifyingHediffs</xpath>
-					<value>
-						<li>CFAR_CombatChip</li>
-					</value>
-				</match>
-				<nomatch Class="PatchOperationAdd">
-					<xpath>Defs/ThoughtDef[defName="ObservedLayingCorpse" or defName="ObservedLayingRottingCorpse" or defName="WitnessedDeathAlly" or defName="WitnessedDeathNonAlly"]</xpath>
-					<value>
-						<nullifyingHediffs><li>CFAR_CombatChip</li></nullifyingHediffs>
-					</value>
-				</nomatch>
-			</li>-->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/RaidStrategyDef[defName="StageThenAttack"]/selectionWeightCurvesPerFaction</xpath>
+				<value>
+					<li>
+						<faction>CFAR_Kaiserinreich</faction>
+						<selectionWeightPerPointsCurve><points>
+							<li>(0, 0)</li> <!-- Constant 0 -->
+						</points></selectionWeightPerPointsCurve>
+					</li>
+				</value>
+			</li>
 			<li Class="PatchOperationConditional">
 				<xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[1]/options</xpath>
 				<match Class="PatchOperationAdd">
