@@ -8,8 +8,11 @@
 			<!--li>CFAR_None</li>
 			<li>CFAR_Low</li>
 			<li>CFAR_Mid</li>
-			<li>CFAR_High</li-->
-			<!--li>CFAR_Pirate</li>
+			<li>CFAR_High</li>
+			<li>CFAR_Noble</li>
+			<li>CFAR_Royal</li>
+
+			<li>CFAR_Pirate</li>
 			<li>CFAR_Deserter</li-->
 		</spawnCategories>
 	</BackstoryDef>
@@ -205,4 +208,21 @@
 			<li>CFAR_Noble</li>
 		</spawnCategories>
 	</BackstoryDef-->
+
+<!--================ Status : Royal ================-->
+
+<!--======== Urban ========-->
+
+	<BackstoryDef ParentName="CFAR_Child">
+		<defName>CFAR_RoyalHeir1</defName>
+		<title>WIP</title>
+		<titleShort>WIP</titleShort>
+		<description>WIP</description>
+		<skillGains>
+			<Social>4</Social>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_Royal</li>
+		</spawnCategories>
+	</BackstoryDef>
 </Defs>
