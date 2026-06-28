@@ -78,18 +78,16 @@
 	</ThingDef>
 
 	<ThingDef ParentName="BaseBullet">
-		<defName>Proj_CFAR_RFGEMP</defName>
-		<label>EMP grenade</label>
-		<thingClass>Projectile_Explosive</thingClass>
-		<tickerType>Normal</tickerType>
+		<defName>Proj_CFAR_IonizedShot</defName>
+		<label>ionized shot</label>
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Big</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<projectile>
 			<damageDef>EMP</damageDef>
-			<explosionRadius>3.5</explosionRadius>
-			<speed>25</speed>
+			<damageAmountBase>100</damageAmountBase>
+			<speed>125</speed>
 		</projectile>
 	</ThingDef>
 
@@ -468,7 +466,7 @@
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<recipeMaker>
-			<researchPrerequisite>PrecisionRifling</researchPrerequisite>
+			<researchPrerequisite>ChargedShot</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>8</Crafting>
 			</skillRequirements>
@@ -504,7 +502,7 @@
 				<burstShotCount>1</burstShotCount>
 				<warmupTime>2.5</warmupTime>
 				<range>47.9</range>
-				<soundCast>Shot_SniperRifle</soundCast>
+				<soundCast>Shot_TurretSniper</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>12</muzzleFlashScale>
 			</li>
@@ -534,7 +532,7 @@
 		</tools>
 		<comps Inherit="False">
 			<li Class="CompProperties_EquippableAbility">
-				<abilityDef>Ability_CFAR_EMPShot</abilityDef>
+				<abilityDef>Ability_CFAR_IonizedCharge</abilityDef>
 			</li>
 			<li Class="CompProperties_Forbiddable"/>
 			<li Class="CompProperties_Styleable"/>
@@ -549,7 +547,7 @@
 			</li>
 			<li Class="CompProperties_Explosive">
 				<explosiveRadius>1.9</explosiveRadius>
-				<explosiveDamageType>EMP</explosiveDamageType>
+				<explosiveDamageType>Bomb</explosiveDamageType>
 				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
 			</li>
 		</comps>
@@ -586,26 +584,23 @@
 	</AbilityDef>
 
 	<AbilityDef>
-		<defName>Ability_CFAR_EMPShot</defName>
-		<label>launch EMP grenade</label>
-		<description>Launch a rifle grenade that releases a burst of electromagnetic energy, stunning mechanical targets.</description>
+		<defName>Ability_CFAR_IonizedCharge</defName>
+		<label>ionized charge</label>
+		<description>Fire an ionized charge that releases a burst of electromagnetic energy, stunning mechanical targets.</description>
 		<iconPath>UI/Commands/LaunchEMPShell</iconPath>
 		<cooldownTicksRange>225~275</cooldownTicksRange>
 		<aiCanUse>true</aiCanUse>
 		<verbProperties>
 			<verbClass>Verb_CastAbility</verbClass>
-			<range>15.9</range>
-			<warmupTime>0.75</warmupTime>
-			<forcedMissRadius>0.9</forcedMissRadius>
-			<soundCast>Shot_IncendiaryLauncher</soundCast>
+			<range>47.9</range>
+			<warmupTime>1.5</warmupTime>
+			<soundCast>ChargeLance_Fire</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
 			<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
-			<targetParams>
-				<canTargetLocations>true</canTargetLocations>
-			</targetParams>
 		</verbProperties>
 		<comps>
 			<li Class="CompProperties_AbilityLaunchProjectile">
-				<projectileDef>Proj_CFAR_RFGEMP</projectileDef>
+				<projectileDef>Proj_CFAR_IonizedShot</projectileDef>
 			</li>
 		</comps>
 	</AbilityDef>
