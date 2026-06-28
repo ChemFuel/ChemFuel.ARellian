@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-<!--================================ Reichswehr ================================-->
+<!--================================ Base - Kaiserinreich ================================-->
 
 	<PawnKindDef Name="CFAR_KaiserinreichBase" Abstract="True">
 		<race>Human</race>
@@ -18,7 +18,7 @@
 		<initialWillRange>0.5~1</initialWillRange>
 	</PawnKindDef>
 
-<!--================================ Reichswehr ================================-->
+<!--================================ Base - Reichswehr ================================-->
 
 	<PawnKindDef Name="CFAR_SoldierBase" ParentName="CFAR_KaiserinreichBase" Abstract="True">
 		<combatPower>150</combatPower>
@@ -63,28 +63,91 @@
 		<initialWillRange>1.5~2.5</initialWillRange>
 	</PawnKindDef>
 
-<!--================ Reichswehr - Trooper ================-->
+<!--================ Reichswehr - Landwehr ================-->
+
+	<PawnKindDef Name="CFAR_FusilierBase" ParentName="CFAR_SoldierBase" Abstract="True">
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<apparelRequired>
+			<li>Apparel_CFAR_ArmorFusilier</li>
+			<li>Apparel_CFAR_HelmetFusilier</li>
+		</apparelRequired>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="CFAR_FusilierBase">
+		<defName>CFAR_FusilierAssault</defName>
+		<label>Füsilier assault</label><!--KR : 퓌질리어 돌격병-->
+		<titleSelectOne>
+			<li>CFAR_RankB</li>
+			<li>CFAR_RankC</li>
+		</titleSelectOne>
+		<weaponTags>
+			<li>CFAR_Shotgun</li>
+			<li>CFAR_AssaultRifle</li>
+		</weaponTags>
+		<backstoryFiltersOverride>
+			<li>
+				<categoriesChildhood>
+					<li>CFAR_None</li>
+					<li>CFAR_Low</li>
+					<li>CFAR_Mid</li>
+				</categoriesChildhood>
+				<categoriesAdulthood>
+					<li>CFAR_JagerTrooper</li>
+				</categoriesAdulthood>
+			</li>
+		</backstoryFiltersOverride>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="CFAR_FusilierBase">
+		<defName>CFAR_FusilierHeavy</defName>
+		<label>Füsilier heavy</label><!--KR : 퓌질리어 중화기병-->
+		<titleSelectOne>
+			<li>CFAR_RankB</li>
+			<li>CFAR_RankC</li>
+		</titleSelectOne>
+		<weaponTags>
+			<li>CFAR_MachineGun</li>
+		</weaponTags>
+		<backstoryFiltersOverride>
+			<li>
+				<categoriesChildhood>
+					<li>CFAR_None</li>
+					<li>CFAR_Low</li>
+					<li>CFAR_Mid</li>
+				</categoriesChildhood>
+				<categoriesAdulthood>
+					<li>CFAR_JagerTrooper</li>
+				</categoriesAdulthood>
+			</li>
+		</backstoryFiltersOverride>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="CFAR_FusilierBase">
+		<defName>CFAR_FusilierRecon</defName>
+		<label>Füsilier recon</label><!--KR : 퓌질리어 정찰병-->
+		<titleRequired>CFAR_RankE</titleRequired>
+		<weaponTags>
+			<li>CFAR_Railgun</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="CFAR_FusilierBase">
+		<defName>CFAR_FusilierOfficer</defName>
+		<label>Füsilier officer</label><!--KR : 퓌질리어 장교-->
+		<titleRequired>CFAR_RankF</titleRequired>
+		<weaponTags>
+			<li>CFAR_Pistol</li>
+		</weaponTags>
+	</PawnKindDef>
+
+<!--================ Raummarine Jagerkorps ================-->
 
 	<PawnKindDef Name="CFAR_JagerBase" ParentName="CFAR_SoldierBase" Abstract="True">
 		<forceNormalGearQuality>true</forceNormalGearQuality>
 		<apparelRequired>
-			<li>Apparel_CFAR_UniformField</li>
 			<li>Apparel_CFAR_ArmorJager</li>
 			<li>Apparel_CFAR_HelmetJager</li>
 		</apparelRequired>
-		<apparelTags>
-			<li>CFAR_Uniform</li>
-		</apparelTags>
-		<backstoryFiltersOverride>
-			<li>
-				<categoriesChildhood>
-					<li>CFAR_Child</li>
-				</categoriesChildhood>
-				<categoriesAdulthood>
-					<li>CFAR_RW_LineTrooper</li>
-				</categoriesAdulthood>
-			</li>
-		</backstoryFiltersOverride>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="CFAR_JagerBase">
