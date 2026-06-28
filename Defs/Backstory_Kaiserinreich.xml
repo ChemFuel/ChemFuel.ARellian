@@ -90,7 +90,7 @@
 
 	<BackstoryDef ParentName="CFAR_SoldierBase">
 		<defName>CFAR_FusilierTrooper2</defName>
-		<title>füsilier<title>
+		<title>füsilier</title>
 		<titleShort>füsilier</titleShort>
 		<description>WIP</description>
 		<skillGains>
@@ -196,7 +196,7 @@
 
 	<BackstoryDef ParentName="CFAR_SoldierBase">
 		<defName>CFAR_JagerTrooper2</defName>
-		<title>jäger<title>
+		<title>jäger</title>
 		<titleShort>jäger</titleShort>
 		<description>[PAWN_nameDef] served as a trooper in the Reichswehr Jägerkorps. Trained for ship-to-ship combat, [PAWN_pronoun] fought in the narrow corridors of friendly and hostile vessels alike, where every breach could decide the battle.</description>
 		<skillGains>
