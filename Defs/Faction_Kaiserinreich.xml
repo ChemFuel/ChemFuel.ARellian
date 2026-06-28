@@ -137,7 +137,8 @@
 			</li>
 		</pawnGroupMakers>
 		<xenotypeSet><xenotypeChances>
-			<CFAR_Arellian>999</CFAR_Arellian>
+			<Genie>0.02</Genie>
+			<CFAR_Arellian>0.9</CFAR_Arellian>
 		</xenotypeChances></xenotypeSet>
 		<disallowedRaidAgeRestrictions>
 			<li>Children</li>
