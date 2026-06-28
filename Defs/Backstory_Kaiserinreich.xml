@@ -9,11 +9,28 @@
 		<bodyTypeFemale>Female</bodyTypeFemale>
 	</BackstoryDef>
 
-<!--================================ Reichswehr ================================-->
+	<BackstoryDef Name="CFAR_FlottelegatBase" Abstract="True">
+		<requiresSpawnCategory>true</requiresSpawnCategory>
+		<slot>Adulthood</slot>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<title>flottelegat</title>
+		<titleFemale>flottelegatin</titleFemale>
+		<titleShort>flottelegat</titleShort>
+		<titleShortFemale>flottelegatin</titleShortFemale>
+		<requiredWorkTags>
+			<li>Artistic</li>
+			<li>Social</li>
+			<li>Intellectual</li>
+		</requiredWorkTags>
+		<spawnCategories>
+			<li>CFAR_Flottelegat</li>
+		</spawnCategories>
+	</BackstoryDef>
 
-<!--================ Soldier ================-->
+<!--================ Reichswehr ================-->
 
-	<BackstoryDef Name="CFAR_RW_Soldier" Abstract="True">
+	<BackstoryDef Name="CFAR_SoldierBase" Abstract="True">
 		<requiresSpawnCategory>true</requiresSpawnCategory>
 		<slot>Adulthood</slot>
 		<bodyTypeMale>Male</bodyTypeMale>
@@ -25,41 +42,12 @@
 			<li>Mining</li>
 			<li>ManualDumb</li>
 		</requiredWorkTags>
-	</BackstoryDef>
-
-<!--======== Jäger ========-->
-
-	<BackstoryDef ParentName="CFAR_RW_Soldier">
-		<defName>CFAR_JagerTrooper1</defName>
-		<title>jäger</title>
-		<titleShort>jäger</titleShort>
-		<description>[PAWN_nameDef] served as a trooper in the Reichswehr Jägerkorps. Whether defending a breach or creating one aboard a hostile vessel, [PAWN_pronoun] was always in the thick of battle.</description>
-		<skillGains>
-			<Shooting>6</Shooting>
-			<Melee>8</Melee>
-		</skillGains>
 		<spawnCategories>
-			<li>CFAR_JagerTrooper</li>
+			<li>CFAR_Soldier</li>
 		</spawnCategories>
 	</BackstoryDef>
 
-	<BackstoryDef ParentName="CFAR_RW_Soldier">
-		<defName>CFAR_JagerTrooper2</defName>
-		<title>jäger<title>
-		<titleShort>jäger</titleShort>
-		<description>[PAWN_nameDef] served as a trooper in the Reichswehr Jägerkorps. Trained for ship-to-ship combat, [PAWN_pronoun] fought in the narrow corridors of friendly and hostile vessels alike, where every breach could decide the battle.</description>
-		<skillGains>
-			<Shooting>6</Shooting>
-			<Melee>8</Melee>
-		</skillGains>
-		<spawnCategories>
-			<li>CFAR_JagerTrooper</li>
-		</spawnCategories>
-	</BackstoryDef>
-
-<!--================ Officer (Company-grade) ================-->
-
-	<BackstoryDef Name="CFAR_RW_CompanyOfficer" Abstract="True">
+	<BackstoryDef Name="CFAR_LtnBase" Abstract="True">
 		<requiresSpawnCategory>true</requiresSpawnCategory>
 		<slot>Adulthood</slot>
 		<bodyTypeMale>Male</bodyTypeMale>
@@ -69,37 +57,190 @@
 			<li>Social</li>
 			<li>Intellectual</li>
 		</requiredWorkTags>
-	</BackstoryDef>
-
-<!--======== Line Officer ========-->
-
-	<BackstoryDef ParentName="CFAR_RW_CompanyOfficer">
-		<defName>CFAR_RW_LineOfficer1</defName>
-		<title>Reichswehr line officer</title>
-		<titleShort>officer</titleShort>
-		<description>[PAWN_nameDef] served as a line officer of the Reichswehr. At the cadet academy, [PAWN_pronoun] trained in tactics, leadership, marksmanship, and swordplay.</description>
-		<skillGains>
-			<Shooting>6</Shooting>
-			<Melee>6</Melee>
-			<Social>4</Social>
-		</skillGains>
 		<spawnCategories>
-			<li>CFAR_RW_LineOfficer</li>
+			<li>CFAR_Ltn</li>
 		</spawnCategories>
 	</BackstoryDef>
 
-	<BackstoryDef ParentName="CFAR_RW_CompanyOfficer">
-		<defName>CFAR_RW_LineOfficer2</defName>
-		<title>Reichswehr line officer</title>
-		<titleShort>officer</titleShort>
-		<description>[PAWN_nameDef] served as a line officer of the Reichswehr. After graduating from cadet school, [PAWN_pronoun] swore that one day [PAWN_pronoun] would achieve the rank of Archgroßadmiral.</description>
+	<BackstoryDef Name="CFAR_HptmBase" ParentName="CFAR_LtnBase" Abstract="True">
+		<spawnCategories>
+			<li>CFAR_Hptm</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+<!--================================ Reichswehr ================================-->
+
+<!--======================== Füsilier ========================-->
+
+<!--================ Trooper ================-->
+
+	<BackstoryDef ParentName="CFAR_SoldierBase">
+		<defName>CFAR_FusilierTrooper1</defName>
+		<title>füsilier</title>
+		<titleShort>füsilier</titleShort>
+		<description>WIP</description>
+		<skillGains>
+			<Shooting>6</Shooting>
+			<Melee>4</Melee>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_FusilierTrooper</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="CFAR_SoldierBase">
+		<defName>CFAR_FusilierTrooper2</defName>
+		<title>füsilier<title>
+		<titleShort>füsilier</titleShort>
+		<description>WIP</description>
+		<skillGains>
+			<Shooting>5</Shooting>
+			<Melee>5</Melee>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_FusilierTrooper</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+<!--================ Leutnant ================-->
+
+	<BackstoryDef ParentName="CFAR_LtnBase">
+		<defName>CFAR_FusilierLtn1</defName>
+		<title>füsilier officer</title>
+		<titleShort>leutnant</titleShort>
+		<description>WIP</description>
 		<skillGains>
 			<Shooting>6</Shooting>
 			<Melee>6</Melee>
+			<Social>2</Social>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_FusilierLtn</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="CFAR_LtnBase">
+		<defName>CFAR_FusilierLtn2</defName>
+		<title>füsilier officer</title>
+		<titleShort>leutnant</titleShort>
+		<description>WIP</description>
+		<skillGains>
+			<Shooting>5</Shooting>
+			<Melee>5</Melee>
 			<Social>4</Social>
 		</skillGains>
 		<spawnCategories>
-			<li>CFAR_RW_LineOfficer</li>
+			<li>CFAR_FusilierLtn</li>
 		</spawnCategories>
+	</BackstoryDef>
+
+<!--================ Hauptmann ================-->
+
+	<BackstoryDef ParentName="CFAR_HptmBase">
+		<defName>CFAR_FusilierHptm1</defName>
+		<title>füsilier commander</title>
+		<titleShort>hauptmann</titleShort>
+		<description>WIP</description>
+		<skillGains>
+			<Shooting>6</Shooting>
+			<Melee>6</Melee>
+			<Social>2</Social>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_FusilierHptm</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="CFAR_HptmBase">
+		<defName>CFAR_FusilierHptm2</defName>
+		<title>füsilier commander</title>
+		<titleShort>hauptmann</titleShort>
+		<description>WIP</description>
+		<skillGains>
+			<Shooting>5</Shooting>
+			<Melee>5</Melee>
+			<Social>4</Social>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_FusilierHptm</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+<!--================================ Raummarine ================================-->
+
+<!--======================== Admiralität ========================-->
+
+<!--================ Crew ================-->
+
+<!--================ Officer ================-->
+
+<!--================ Captain ================-->
+
+<!--======================== Jäger ========================-->
+
+<!--================ Trooper ================-->
+
+	<BackstoryDef ParentName="CFAR_SoldierBase">
+		<defName>CFAR_JagerTrooper1</defName>
+		<title>jäger</title>
+		<titleShort>jäger</titleShort>
+		<description>[PAWN_nameDef] served as a trooper in the Reichswehr Jägerkorps. Whether defending a breach or creating one aboard a hostile vessel, [PAWN_pronoun] was always in the thick of battle.</description>
+		<skillGains>
+			<Shooting>8</Shooting>
+			<Melee>6</Melee>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_JagerTrooper</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="CFAR_SoldierBase">
+		<defName>CFAR_JagerTrooper2</defName>
+		<title>jäger<title>
+		<titleShort>jäger</titleShort>
+		<description>[PAWN_nameDef] served as a trooper in the Reichswehr Jägerkorps. Trained for ship-to-ship combat, [PAWN_pronoun] fought in the narrow corridors of friendly and hostile vessels alike, where every breach could decide the battle.</description>
+		<skillGains>
+			<Shooting>7</Shooting>
+			<Melee>7</Melee>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_JagerTrooper</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+<!--================================ Kaiserinreich ================================-->
+
+<!--======================== Noble ========================-->
+
+<!--================ Flottelegat ================-->
+
+	<BackstoryDef ParentName="CFAR_FlottelegatBase">
+		<defName>CFAR_Flottelegat1</defName>
+		<description>WIP</description>
+		<skillGains>
+			<Artistic>8</Artistic>
+			<Social>6</Social>
+			<Intellectual>6</Intellectual>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="CFAR_SoldierBase">
+		<defName>CFAR_Flottelegat2</defName>
+		<description>WIP</description>
+		<skillGains>
+			<Artistic>6</Artistic>
+			<Social>8</Social>
+			<Intellectual>6</Intellectual>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="CFAR_SoldierBase">
+		<defName>CFAR_Flottelegat3</defName>
+		<description>WIP</description>
+		<skillGains>
+			<Artistic>6</Artistic>
+			<Social>6</Social>
+			<Intellectual>8</Intellectual>
+		</skillGains>
 	</BackstoryDef>
 </Defs>
