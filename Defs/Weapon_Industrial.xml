@@ -12,7 +12,7 @@
 		<projectile>
 			<damageDef>Bullet</damageDef>
 			<damageAmountBase>10</damageAmountBase>
-			<stoppingPower>5</stoppingPower>
+			<stoppingPower>1.5</stoppingPower>
 			<armorPenetrationBase>0.20</armorPenetrationBase>
 			<speed>75</speed>
 		</projectile>
@@ -29,7 +29,7 @@
 			<damageDef>Bullet</damageDef>
 			<damageAmountBase>20</damageAmountBase>
 			<stoppingPower>3</stoppingPower>
-			<armorPenetrationBase>0.20</armorPenetrationBase>
+			<armorPenetrationBase>0.25</armorPenetrationBase>
 			<speed>55</speed>
 		</projectile>
 	</ThingDef>
@@ -43,9 +43,25 @@
 		</graphicData>
 		<projectile>
 			<damageDef>Bullet</damageDef>
+			<damageAmountBase>12</damageAmountBase>
+			<stoppingPower>1</stoppingPower>
+			<armorPenetrationBase>0.25</armorPenetrationBase>
+			<speed>100</speed>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_CFAR_MG</defName>
+		<label>MG bullet</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
 			<damageAmountBase>14</damageAmountBase>
-			<stoppingPower>1.5</stoppingPower>
-			<armorPenetrationBase>0.35</armorPenetrationBase>
+			<stoppingPower>2</stoppingPower>
+			<armorPenetrationBase>0.30</armorPenetrationBase>
 			<speed>100</speed>
 		</projectile>
 	</ThingDef>
@@ -229,10 +245,9 @@
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_CFAR_Shotgun</defaultProjectile>
-				<burstShotCount>2</burstShotCount>
-				<ticksBetweenBurstShots>15</ticksBetweenBurstShots>
-				<warmupTime>1</warmupTime>
-				<range>13.9</range>
+				<burstShotCount>1</burstShotCount>
+				<warmupTime>0.9</warmupTime>
+				<range>18.9</range>
 				<soundCast>Shot_Shotgun</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>10</muzzleFlashScale>
@@ -278,8 +293,8 @@
 
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
 		<defName>Gun_CFAR_AssaultRifle</defName>
-		<label>Arellian Assault Rifle</label><!--GG117-->
-		<description>The GG117 is the standard service rifle of the Reichswehr. Designed to meet the demands of modern warfare, it remains reliable, accurate, and effective against pirates, insects, and mechanoids alike.</description>
+		<label>Arellian Assault Rifle</label><!--G117-->
+		<description>The G117 is the standard service rifle of the Reichswehr. Designed to meet the demands of modern warfare, it remains reliable, accurate, and effective against pirates, insects, and mechanoids alike.</description>
 		<tickerType>Normal</tickerType>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_AssaultRifle</texPath>
@@ -417,7 +432,7 @@
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_CFAR_AR</defaultProjectile>
+				<defaultProjectile>Bullet_CFAR_MG</defaultProjectile>
 				<burstShotCount>20</burstShotCount>
 				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
 				<warmupTime>1.5</warmupTime>
