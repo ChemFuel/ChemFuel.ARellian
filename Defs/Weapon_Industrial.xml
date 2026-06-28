@@ -29,7 +29,7 @@
 			<damageDef>Bullet</damageDef>
 			<damageAmountBase>20</damageAmountBase>
 			<stoppingPower>3</stoppingPower>
-			<armorPenetrationBase>0.18</armorPenetrationBase>
+			<armorPenetrationBase>0.20</armorPenetrationBase>
 			<speed>55</speed>
 		</projectile>
 	</ThingDef>
@@ -45,7 +45,7 @@
 			<damageDef>Bullet</damageDef>
 			<damageAmountBase>14</damageAmountBase>
 			<stoppingPower>1.5</stoppingPower>
-			<armorPenetrationBase>0.25</armorPenetrationBase>
+			<armorPenetrationBase>0.35</armorPenetrationBase>
 			<speed>100</speed>
 		</projectile>
 	</ThingDef>
