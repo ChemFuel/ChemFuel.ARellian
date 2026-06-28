@@ -10,8 +10,13 @@
 					<xpath>Defs/FactionDef[defName="CFAR_Kaiserinreich"]</xpath>
 					<value>
 						<layerWhitelist>
+							<li>Surface</li>
 							<li>Orbit</li>
 						</layerWhitelist>
+						<arrivalLayerWhitelist>
+							<li>Surface</li>
+							<li>Orbit</li>
+						</arrivalLayerWhitelist>
 					</value>
 				</li>
 			</operations>
