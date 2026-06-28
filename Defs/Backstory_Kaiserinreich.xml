@@ -224,7 +224,7 @@
 		</skillGains>
 	</BackstoryDef>
 
-	<BackstoryDef ParentName="CFAR_SoldierBase">
+	<BackstoryDef ParentName="CFAR_FlottelegatBase">
 		<defName>CFAR_Flottelegat2</defName>
 		<description>WIP</description>
 		<skillGains>
@@ -234,7 +234,7 @@
 		</skillGains>
 	</BackstoryDef>
 
-	<BackstoryDef ParentName="CFAR_SoldierBase">
+	<BackstoryDef ParentName="CFAR_FlottelegatBase">
 		<defName>CFAR_Flottelegat3</defName>
 		<description>WIP</description>
 		<skillGains>
