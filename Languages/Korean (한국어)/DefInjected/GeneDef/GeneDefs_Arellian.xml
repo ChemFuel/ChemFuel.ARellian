@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+	<Eyes_Arellian.label>금색 눈</Eyes_Arellian.label>
+	<Eyes_Arellian.labelShortAdj>금색 눈</Eyes_Arellian.labelShortAdj>
+	<Eyes_Arellian.description>이 유전자의 보유자는 금색 눈을 가지게 됩니다.</Eyes_Arellian.description>
+
+	<Ears_Arellian.label>긴 고양이 귀</Ears_Arellian.label>
+	<Ears_Arellian.description>이 유전자의 보유자는 길고 복슬복슬한 고양이 귀를 가집니다.</Ears_Arellian.description>
+
+	<Voice_Arellian.label>고양이 목소리</Voice_Arellian.label>
+	<Voice_Arellian.description>이 유전자의 보유자는 고양이 같은 소리를 냅니다.</Voice_Arellian.description>
+</LanguageData>

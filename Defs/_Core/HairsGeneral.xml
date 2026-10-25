@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <StyleItemCategoryDef>
+    <defName>AR_HairCategory</defName>
+    <label>Arellian</label>
+  </StyleItemCategoryDef>
+
+<!-- ==================== Hair - Female ==================== -->
+
+	<HairDef>
+		<defName>AR_Bob</defName>
+		<label>Arellian bob</label>
+		<styleGender>Female</styleGender>
+		<texPath>Things/Pawn/Arellian/Hairs/Bob/Bob</texPath>
+		<category>AR_HairCategory</category>
+		<styleTags>
+			<li>AR_HairTag</li>
+			<li>HairShort</li>
+		</styleTags>
+	</HairDef>
+
+	<HairDef>
+		<defName>AR_Pony</defName>
+		<label>Arellian ponytail</label>
+		<styleGender>Female</styleGender>
+		<texPath>Things/Pawn/Arellian/Hairs/Pony/Pony</texPath>
+		<category>AR_HairCategory</category>
+		<styleTags>
+			<li>AR_HairTag</li>
+			<li>HairShort</li>
+		</styleTags>
+	</HairDef>
+
+</Defs>

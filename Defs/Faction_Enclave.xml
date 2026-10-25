@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<FactionDef ParentName="FactionBase">
+		<techLevel>Spacer</techLevel>
+		<defName>CFAR_Enclave</defName>
+		<label>Arellian Enclave</label>
+		<fixedName>Arellian Enclave</fixedName>
+		<description>WIP</description>
+		<categoryTag>CFAR_Enclave</categoryTag>
+		<pawnSingular>pirate</pawnSingular>
+		<pawnsPlural>pirates</pawnsPlural>
+		<!--allowedCultures><li>CFAR_Culture</li></allowedCultures-->
+		<colorSpectrum><li>(255,103,0)</li></colorSpectrum>
+		<factionIconPath>World/WorldObjects/Expanding/CFAR_Kaiserinreich</factionIconPath>
+		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<maxCountAtGameStart>1</maxCountAtGameStart>
+		<maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>118</configurationListOrderPriority>
+		<hidden>true</hidden>
+		<permanentEnemy>true</permanentEnemy>
+		<hostileToFactionlessHumanlikes>true</hostileToFactionlessHumanlikes>
+		<fixedLeaderKinds><li>CFAR_Flottelegat</li></fixedLeaderKinds>
+		<basicMemberKind>CFAR_FusilierAssault</basicMemberKind>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>Pirate</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+		<allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+		<arrivalModeBlacklist>
+			<li>RandomDrop</li>
+		</arrivalModeBlacklist>
+		<raidLootMaker>OutlanderRaidLootMaker</raidLootMaker>
+		<maxPawnCostPerTotalPointsCurve>
+			<points>
+				<li>(0,35)</li>
+				<li>(70, 50)</li>
+				<li>(700, 100)</li>
+				<li>(1300, 150)</li>
+				<li>(100000, 10000)</li>
+			</points>
+		</maxPawnCostPerTotalPointsCurve>
+		<pawnGroupMakers>
+			<li>
+				<!-- Ranged and Melee -->
+				<kindDef>Combat</kindDef>
+				<options>
+					<Drifter>10</Drifter>
+					<Thrasher>3</Thrasher>
+					<Scavenger>10</Scavenger>
+					<Pirate>10</Pirate>
+					<Grenadier_EMP>0.25</Grenadier_EMP>
+					<Grenadier_Smoke>0.25</Grenadier_Smoke>
+					<Grenadier_Destructive>2</Grenadier_Destructive>
+					<Mercenary_Gunner>10</Mercenary_Gunner>
+					<Mercenary_Heavy>6</Mercenary_Heavy>
+					<Mercenary_Slasher>3</Mercenary_Slasher>
+					<Mercenary_Sniper>7</Mercenary_Sniper>
+					<Mercenary_Elite>10</Mercenary_Elite>
+					<PirateBoss>5</PirateBoss>
+				</options>
+			</li>
+			<li>
+				<kindDef>Peaceful</kindDef>
+				<options>
+					<Thrasher>3</Thrasher>
+					<Pirate>10</Pirate>
+					<Grenadier_Destructive>2</Grenadier_Destructive>
+					<Mercenary_Slasher>3</Mercenary_Slasher>
+					<Mercenary_Sniper>10</Mercenary_Sniper>
+					<Mercenary_Gunner>10</Mercenary_Gunner>
+					<Mercenary_Elite>10</Mercenary_Elite>
+					<PirateBoss>10</PirateBoss>
+				</options>
+			</li>
+			<li>
+				<kindDef>Settlement</kindDef>
+				<options>
+					<Thrasher>3</Thrasher>
+					<Pirate>10</Pirate>
+					<Grenadier_Destructive>2</Grenadier_Destructive>
+					<Mercenary_Slasher>3</Mercenary_Slasher>
+					<Mercenary_Sniper>10</Mercenary_Sniper>
+					<Mercenary_Gunner>10</Mercenary_Gunner>
+					<Mercenary_Elite>10</Mercenary_Elite>
+					<PirateBoss>10</PirateBoss>
+				</options>
+			</li>
+			<li MayRequire="Ludeon.Rimworld.Ideology">
+				<kindDef>Miners</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<Miner>1</Miner>
+				</options>
+			</li>
+			<li MayRequire="Ludeon.Rimworld.Ideology">
+				<kindDef>Hunters</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<Hunter>1</Hunter>
+				</options>
+			</li>
+			<li MayRequire="Ludeon.Rimworld.Ideology">
+				<kindDef>Loggers</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<Logger>1</Logger>
+				</options>
+			</li>
+			<li MayRequire="Ludeon.Rimworld.Ideology">
+				<kindDef>Farmers</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<Farmer>1</Farmer>
+				</options>
+			</li>
+		</pawnGroupMakers>
+		<xenotypeSet><xenotypeChances>
+			<Genie>0.025</Genie>
+			<CFAR_Arellian>0.85</CFAR_Arellian>
+		</xenotypeChances></xenotypeSet>
+
+		<requiredMemes>
+			<li MayRequire="Ludeon.Rimworld.Ideology">Raider</li>
+			<li MayRequire="Ludeon.Rimworld.Ideology">Supremacist</li>
+		</requiredMemes>
+		<disallowedMemes>
+			<li MayRequire="Ludeon.Rimworld.Ideology">PainIsVirtue</li>
+			<li MayRequire="Ludeon.Rimworld.Ideology">Nudism</li>
+			<li MayRequire="Ludeon.Rimworld.Ideology">Blindsight</li>
+		</disallowedMemes>
+		<disallowedPrecepts>
+			<li MayRequire="Ludeon.Rimworld.Ideology">Bloodfeeders_Revered</li>
+			<li MayRequire="Ludeon.Rimworld.Ideology">PreferredXenotype</li>
+			<li MayRequire="Ludeon.Rimworld.Ideology">ApparelDesired_Strong_Subordinate</li>
+			<li MayRequire="Ludeon.Rimworld.Ideology">ApparelDesired_Soft_Subordinate</li>
+		</disallowedPrecepts>
+
+		<layerWhitelist>
+			<li MayRequire="Ludeon.Rimworld.Odyssey">Surface</li>
+		</layerWhitelist>
+		<arrivalLayerWhitelist>
+			<li MayRequire="Ludeon.Rimworld.Odyssey">Surface</li>
+			<li MayRequire="Ludeon.Rimworld.Odyssey">Orbit</li>
+		</arrivalLayerWhitelist>
+	</FactionDef>
+</Defs>

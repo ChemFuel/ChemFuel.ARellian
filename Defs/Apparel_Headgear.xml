@@ -2,6 +2,136 @@
 <Defs>
 <!--================ Industrial Apparel ================-->
 
+<!--======== Cap Base ========-->
+
+	<ThingDef ParentName="HatMakeableBase" Name="CFAR_CapBase" Abstract="True">
+		<techLevel>Industrial</techLevel>
+		<uiIconScale>1.5</uiIconScale>
+		<recipeMaker>
+			<researchPrerequisite>ComplexClothing</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<statBases>
+			<MaxHitPoints>80</MaxHitPoints>
+			<WorkToMake>4000</WorkToMake>
+			<Mass>0.14</Mass>
+			<StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.30</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.30</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>0.8</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">0.1</SuppressionPower>
+		</equippedStatOffsets>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+			<renderSkipFlags>
+				<li>None</li>
+			</renderSkipFlags>
+			<bodyPartGroups>
+				<li>UpperHead</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+		<tradeTags>
+			<li>BasicClothing</li>
+			<li>CFAR_Apparel</li>
+		</tradeTags>
+	</ThingDef>
+
+<!--======== Field Caps ========-->
+
+	<ThingDef ParentName="CFAR_CapBase"> <!-- M43 field cap -->
+		<defName>Apparel_CFAR_CapField</defName>
+		<label>Arellian field cap</label>
+		<description>WIP</description>
+		<graphicData>
+			<texPath>Things/Pawn/Arellian/Apparel/CapSoldier/Hat</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<recipeMaker>
+			<displayPriority>1160</displayPriority>
+		</recipeMaker>
+		<costStuffCount>25</costStuffCount>
+		<equippedStatOffsets>
+			<Terror MayRequire="Ludeon.RimWorld.Ideology">1</Terror>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
+			<PainShockThreshold>0.10</PainShockThreshold>
+		</equippedStatOffsets>
+		<apparel>
+			<wornGraphicPath>Things/Pawn/Arellian/Apparel/CapSoldier/Hat</wornGraphicPath>
+			<tags>
+				<li>CFAR_Soldier</li>
+			</tags>
+		</apparel>
+	</ThingDef>
+
+	<ThingDef ParentName="CFAR_CapBase"> <!-- Austro-Hungarian mountaineer -->
+		<defName>Apparel_CFAR_CapOfficer</defName>
+		<label>Arellian officer cap</label>
+		<description>WIP</description>
+		<graphicData>
+			<texPath>Things/Pawn/Arellian/Apparel/CapOfficer/Hat</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<recipeMaker>
+			<displayPriority>1161</displayPriority>
+		</recipeMaker>
+		<costStuffCount>35</costStuffCount>
+		<equippedStatOffsets>
+			<Terror MayRequire="Ludeon.RimWorld.Ideology">2</Terror>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.2</SlaveSuppressionOffset>
+			<PainShockThreshold>0.05</PainShockThreshold>
+			<SocialImpact>0.10</SocialImpact>
+		</equippedStatOffsets>
+		<apparel>
+			<wornGraphicPath>Things/Pawn/Arellian/Apparel/CapOfficer/Hat</wornGraphicPath>
+			<tags>
+				<li>CFAR_Officer</li>
+			</tags>
+		</apparel>
+	</ThingDef>
+
+	<ThingDef ParentName="CFAR_CapBase"> <!-- Crusher cap -->
+		<defName>Apparel_CFAR_CapCommander</defName>
+		<label>Arellian commander cap</label>
+		<description>WIP</description>
+		<graphicData>
+			<texPath>Things/Pawn/Arellian/Apparel/CapCommander/Hat</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<recipeMaker>
+			<displayPriority>1162</displayPriority>
+		</recipeMaker>
+		<costStuffCount>50</costStuffCount>
+		<equippedStatOffsets>
+			<Terror MayRequire="Ludeon.RimWorld.Ideology">3</Terror>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
+			<PainShockThreshold>0.05</PainShockThreshold>
+			<SocialImpact>0.20</SocialImpact>
+		</equippedStatOffsets>
+		<apparel>
+			<wornGraphicPath>Things/Pawn/Arellian/Apparel/CapCommander/Hat</wornGraphicPath>
+			<tags>
+				<li>CFAR_Commander</li>
+			</tags>
+		</apparel>
+	</ThingDef>
+
 <!--======== Arellian Visor Base ========-->
 
 	<ThingDef ParentName="ArmorMachineableBase" Name="CFAR_VisorBase" Abstract="True">
@@ -34,6 +164,7 @@
 		<apparel>
 			<wearPerDay>0</wearPerDay>
 			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
 			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
 			<bodyPartGroups>
 				<li>Eyes</li>

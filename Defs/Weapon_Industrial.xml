@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 <!--======== BulletDefs ========-->
+<!--[ 18 ] [ 24-32 ] [ 42-54 ] [ +68 ]-->
+<!--Brk1: Light Pen-->
+<!--Brk2: Midium pen-->
+<!--Brk3: Heavy Pen-->
+<!--Brk4: Anti-Tank-->
 
 	<ThingDef ParentName="BaseBullet">
 		<defName>Bullet_CFAR_Pistol</defName>
@@ -11,31 +16,32 @@
 		</graphicData>
 		<projectile>
 			<damageDef>Bullet</damageDef>
-			<damageAmountBase>10</damageAmountBase>
-			<stoppingPower>1.5</stoppingPower>
-			<armorPenetrationBase>0.20</armorPenetrationBase>
+			<damageAmountBase>12</damageAmountBase>
+			<stoppingPower>2</stoppingPower>
+			<armorPenetrationBase>0.24</armorPenetrationBase>
 			<speed>75</speed>
 		</projectile>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseBullet">
 		<defName>Bullet_CFAR_Shotgun</defName>
-		<label>shotgun blast</label>
+		<label>shotgun pellet</label>
 		<graphicData>
-			<texPath>Things/Projectile/Bullet_Shotgun</texPath>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.75</drawSize>
 		</graphicData>
 		<projectile>
 			<damageDef>Bullet</damageDef>
-			<damageAmountBase>20</damageAmountBase>
+			<damageAmountBase>3</damageAmountBase>
 			<stoppingPower>3</stoppingPower>
-			<armorPenetrationBase>0.20</armorPenetrationBase>
+			<armorPenetrationBase>0.18</armorPenetrationBase>
 			<speed>55</speed>
 		</projectile>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseBullet">
-		<defName>Bullet_CFAR_ARI</defName>
+		<defName>Bullet_CFAR_AR</defName>
 		<label>rifle bullet</label>
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Small</texPath>
@@ -44,14 +50,26 @@
 		<projectile>
 			<damageDef>Bullet</damageDef>
 			<damageAmountBase>12</damageAmountBase>
-			<stoppingPower>1</stoppingPower>
-			<armorPenetrationBase>0.25</armorPenetrationBase>
+			<stoppingPower>1.5</stoppingPower>
+			<armorPenetrationBase>0.24</armorPenetrationBase>
 			<speed>100</speed>
+		</projectile>
+	</ThingDef>
+	<ThingDef ParentName="BaseFragGrenadeProjectile">
+		<defName>Proj_CFAR_RFGFG</defName>
+		<label>frag grenade</label>
+		<projectile Inherit="False">
+			<damageDef>Bomb</damageDef>
+			<damageAmountBase>50</damageAmountBase>
+			<stoppingPower>5</stoppingPower>
+			<explosionRadius>1.9</explosionRadius>
+			<armorPenetrationBase>0.32</armorPenetrationBase>
+			<speed>25</speed>
 		</projectile>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseBullet">
-		<defName>Bullet_CFAR_ARII</defName>
+		<defName>Bullet_CFAR_MG</defName>
 		<label>rifle bullet</label>
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Small</texPath>
@@ -60,51 +78,39 @@
 		<projectile>
 			<damageDef>Bullet</damageDef>
 			<damageAmountBase>14</damageAmountBase>
-			<stoppingPower>2</stoppingPower>
-			<armorPenetrationBase>0.30</armorPenetrationBase>
+			<stoppingPower>3</stoppingPower>
+			<armorPenetrationBase>0.32</armorPenetrationBase>
 			<speed>100</speed>
 		</projectile>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseBullet">
-		<defName>Bullet_CFAR_RG</defName>
-		<label>railgun bullet</label>
+		<defName>Bullet_CFAR_AC</defName>
+		<label>autocannon shell</label>
+		<thingClass>CFAR.Projectile_AutocannonShell</thingClass>
+		<tickerType>Normal</tickerType>
 		<graphicData>
-			<texPath>Things/Projectile/Bullet_Big</texPath>
+			<texPath>Things/Projectile/Rocket_Swarm</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<projectile>
-			<damageDef>Bullet</damageDef>
-			<damageAmountBase>35</damageAmountBase>
-			<stoppingPower>3</stoppingPower>
-			<armorPenetrationBase>0.75</armorPenetrationBase>
-			<speed>150</speed>
-		</projectile>
-	</ThingDef>
-
-	<ThingDef ParentName="BaseFragGrenadeProjectile">
-		<defName>Proj_CFAR_RFGFG</defName>
-		<label>frag grenade</label>
-		<projectile Inherit="False">
-			<stoppingPower>5</stoppingPower>
-			<explosionRadius>1.9</explosionRadius>
+			<!-- Explosion damage -->
 			<damageDef>Bomb</damageDef>
-			<speed>25</speed>
+			<stoppingPower>8</stoppingPower>
+			<explosionRadius>2.4</explosionRadius>
+			<explosionDelay>0</explosionDelay>
+			<soundExplode>Explosion_Bomb</soundExplode>
+			<armorPenetrationBase>0.18</armorPenetrationBase>
+			<speed>100</speed>
 		</projectile>
-	</ThingDef>
-
-	<ThingDef ParentName="BaseBullet">
-		<defName>Proj_CFAR_IonizedShot</defName>
-		<label>ionized shot</label>
-		<graphicData>
-			<texPath>Things/Projectile/Bullet_Big</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<projectile>
-			<damageDef>EMP</damageDef>
-			<damageAmountBase>100</damageAmountBase>
-			<speed>125</speed>
-		</projectile>
+		<modExtensions>
+			<li Class="CFAR.AutocannonDamageExtension">
+				<!-- Direct impact damage -->
+				<directDamageDef>Bullet</directDamageDef>
+				<directDamage>30</directDamage>
+				<directArmorPenetration>0.54</directArmorPenetration>
+			</li>
+		</modExtensions>
 	</ThingDef>
 
 <!--======== WeaponDefs ========-->
@@ -123,22 +129,21 @@
 			</recipeUsers>
 			<unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
 		</recipeMaker>
-		<weaponTags>
-			<li>CFAR_GunIndustrial</li>
-		</weaponTags>
 		<tradeTags>
-			<li>WeaponRanged</li>
+			<li>ExoticMisc</li>
+			<li>CFAR_WeaponRanged</li>
 		</tradeTags>
 	</ThingDef>
 
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
 		<defName>Gun_CFAR_Pistol</defName>
-		<label>Arellian Pistol</label>
+		<label>Arellian pistol</label>
 		<description>WIP</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_Pistol</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
+		<uiIconScale>1.25</uiIconScale>
 		<soundInteract>Interact_Autopistol</soundInteract>
 		<recipeMaker>
 			<researchPrerequisite>BlowbackOperation</researchPrerequisite>
@@ -148,21 +153,25 @@
 			<displayPriority>1180</displayPriority>
 		</recipeMaker>
 		<statBases>
-			<MarketValue>180</MarketValue>
-			<WorkToMake>6000</WorkToMake>
+			<MarketValue>170</MarketValue>
+			<WorkToMake>5000</WorkToMake>
 			<Mass>1.8</Mass>
 			<AccuracyTouch>0.85</AccuracyTouch>
 			<AccuracyShort>0.75</AccuracyShort>
 			<AccuracyMedium>0.50</AccuracyMedium>
 			<AccuracyLong>0.25</AccuracyLong>
-			<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>1.00</RangedWeapon_Cooldown>
 		</statBases>
+		<equippedStatOffsets>
+			<Terror MayRequire="Ludeon.RimWorld.Ideology">1</Terror>
+			<SocialImpact>0.1</SocialImpact>
+		</equippedStatOffsets>
 		<weaponTags>
 			<li>CFAR_Pistol</li>
 		</weaponTags>
 		<costList>
 			<Steel>30</Steel>
-			<Uranium>1</Uranium>
+			<Uranium>3</Uranium>
 			<ComponentIndustrial>2</ComponentIndustrial>
 		</costList>
 		<verbs>
@@ -202,13 +211,13 @@
 			</li>
 		</tools>
 		<tradeTags>
-			<li>CFAR_WeaponRanged</li>
+			<li>CFAR_RangedSidearm</li>
 		</tradeTags>
 	</ThingDef>
 
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
 		<defName>Gun_CFAR_Shotgun</defName>
-		<label>Arellian Shotgun</label><!--JG12-->
+		<label>Arellian shotgun</label><!--JG12-->
 		<description>WIP</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_Shotgun</texPath>
@@ -223,31 +232,32 @@
 			<displayPriority>1181</displayPriority>
 		</recipeMaker>
 		<statBases>
-			<MarketValue>410</MarketValue>
-			<WorkToMake>20000</WorkToMake>
-			<Mass>4</Mass>
+			<MarketValue>360</MarketValue>
+			<WorkToMake>18000</WorkToMake>
+			<Mass>4.25</Mass>
 			<AccuracyTouch>0.80</AccuracyTouch>
-			<AccuracyShort>0.85</AccuracyShort>
-			<AccuracyMedium>0.75</AccuracyMedium>
-			<AccuracyLong>0.60</AccuracyLong>
-			<RangedWeapon_Cooldown>1.25</RangedWeapon_Cooldown>
+			<AccuracyShort>0.75</AccuracyShort>
+			<AccuracyMedium>0.50</AccuracyMedium>
+			<AccuracyLong>0.20</AccuracyLong>
+			<RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
 		</statBases>
 		<weaponTags>
 			<li>CFAR_Shotgun</li>
 		</weaponTags>
 		<costList>
-			<Steel>60</Steel>
-			<Uranium>5</Uranium>
+			<Steel>70</Steel>
+			<Uranium>3</Uranium>
 			<ComponentIndustrial>4</ComponentIndustrial>
 		</costList>
 		<verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
+			<li Class="CFAR.Verb_PropertiesPelletShot">
+				<verbClass>CFAR.Verb_PelletShoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_CFAR_Shotgun</defaultProjectile>
 				<burstShotCount>1</burstShotCount>
+				<pelletCount>8</pelletCount>
 				<warmupTime>1</warmupTime>
-				<range>18.9</range>
+				<range>25.9</range>
 				<soundCast>Shot_Shotgun</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>10</muzzleFlashScale>
@@ -275,25 +285,15 @@
 					</extraMeleeDamages>
 				</surpriseAttack>
 			</li>
-			<li>
-				<label>bayonet</label>
-				<capacities>
-					<li>Stab</li>
-					<li>Cut</li>
-				</capacities>
-				<power>16</power>
-				<cooldownTime>2</cooldownTime>
-				<armorPenetration>0.24</armorPenetration>
-			</li>
 		</tools>
 		<tradeTags>
-			<li>CFAR_WeaponRanged</li>
+			<li>CFAR_RangedPrimary</li>
 		</tradeTags>
 	</ThingDef>
 
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
 		<defName>Gun_CFAR_AssaultRifle</defName>
-		<label>Arellian Assault Rifle</label><!--G117-->
+		<label>Arellian assault rifle</label><!--G117-->
 		<description>The G117 is the standard service rifle of the Reichswehr. Designed to meet the demands of modern warfare, it remains reliable, accurate, and effective against pirates, insects, and mechanoids alike.</description>
 		<tickerType>Normal</tickerType>
 		<graphicData>
@@ -309,12 +309,12 @@
 			</skillRequirements>
 		</recipeMaker>
 		<statBases>
-			<MarketValue>750</MarketValue>
+			<MarketValue>820</MarketValue>
 			<WorkToMake>50000</WorkToMake>
 			<Mass>7</Mass>
-			<AccuracyTouch>0.65</AccuracyTouch>
-			<AccuracyShort>0.70</AccuracyShort>
-			<AccuracyMedium>0.75</AccuracyMedium>
+			<AccuracyTouch>0.75</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>0.70</AccuracyMedium>
 			<AccuracyLong>0.60</AccuracyLong>
 			<RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
 		</statBases>
@@ -323,18 +323,17 @@
 		</weaponTags>
 		<costList>
 			<Steel>85</Steel>
-			<Uranium>5</Uranium>
-			<ComponentIndustrial>8</ComponentIndustrial>
-			<Chemfuel>80</Chemfuel>
+			<Uranium>4</Uranium>
+			<ComponentIndustrial>7</ComponentIndustrial>
 		</costList>
 		<verbs>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_CFAR_ARI</defaultProjectile>
+				<defaultProjectile>Bullet_CFAR_AR</defaultProjectile>
 				<burstShotCount>4</burstShotCount>
 				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-				<warmupTime>0.8</warmupTime>
+				<warmupTime>1</warmupTime>
 				<range>31.9</range>
 				<soundCast>Shot_AssaultRifle</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
@@ -365,8 +364,15 @@
 			</li>
 		</tools>
 		<comps Inherit="False">
-			<li Class="CompProperties_EquippableAbility">
+			<li Class="CompProperties_EquippableAbilityReloadable">
 				<abilityDef>Ability_CFAR_FragGrenade</abilityDef>
+				<maxCharges>3</maxCharges>
+				<soundReload>Standard_Reload</soundReload>
+				<chargeNoun>reload grenade</chargeNoun>
+				<ammoDef>Steel</ammoDef>
+				<ammoCountPerCharge>25</ammoCountPerCharge>
+				<baseReloadTicks>60</baseReloadTicks>
+				<replenishAfterCooldown>false</replenishAfterCooldown>
 			</li>
 			<li Class="CompProperties_Forbiddable"/>
 			<li Class="CompProperties_Styleable"/>
@@ -386,13 +392,13 @@
 			</li>
 		</comps>
 		<tradeTags>
-			<li>CFAR_WeaponRanged</li>
+			<li>CFAR_RangedPrimary</li>
 		</tradeTags>
 	</ThingDef>
 
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
 		<defName>Gun_CFAR_MachineGun</defName>
-		<label>Arellian Machine Gun</label><!--MG21-->
+		<label>Arellian machine gun</label><!--MG21-->
 		<description>The MG21 is the standard "light" machine gun of the Reichswehr. Despite weighing 12.5 kilograms, it is considered highly portable by Reichswehr standards. Its exceptional rate of fire makes it a formidable suppressive weapon, but its indiscriminate bullet distribution has also earned it the nickname "Meat Chopper" among Reichswehr personnel.</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_MachineGun</texPath>
@@ -408,14 +414,14 @@
 			<displayPriority>1183</displayPriority>
 		</recipeMaker>
 		<statBases>
-			<MarketValue>1070</MarketValue>
-			<WorkToMake>55000</WorkToMake>
+			<MarketValue>1040</MarketValue>
+			<WorkToMake>50000</WorkToMake>
 			<Mass>12.5</Mass>
-			<AccuracyTouch>0.35</AccuracyTouch>
-			<AccuracyShort>0.45</AccuracyShort>
-			<AccuracyMedium>0.35</AccuracyMedium>
-			<AccuracyLong>0.20</AccuracyLong>
-			<RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+			<AccuracyTouch>0.50</AccuracyTouch>
+			<AccuracyShort>0.65</AccuracyShort>
+			<AccuracyMedium>0.40</AccuracyMedium>
+			<AccuracyLong>0.25</AccuracyLong>
+			<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
 		</statBases>
 		<equippedStatOffsets>
 			<MoveSpeed>-0.36</MoveSpeed>
@@ -423,20 +429,23 @@
 		<weaponTags>
 			<li>CFAR_MachineGun</li>
 		</weaponTags>
+		<weaponClasses>
+			<li>RangedHeavy</li>
+		</weaponClasses>
 		<costList>
-			<Steel>100</Steel>
+			<Steel>75</Steel>
 			<Uranium>20</Uranium>
-			<ComponentIndustrial>12</ComponentIndustrial>
+			<ComponentIndustrial>8</ComponentIndustrial>
 		</costList>
 		<verbs>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_CFAR_ARII</defaultProjectile>
-				<burstShotCount>20</burstShotCount>
-				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
-				<warmupTime>1.5</warmupTime>
-				<range>31.9</range>
+				<defaultProjectile>Bullet_CFAR_MG</defaultProjectile>
+				<burstShotCount>16</burstShotCount>
+				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+				<warmupTime>1.25</warmupTime>
+				<range>34.9</range>
 				<soundCast>Shot_Minigun</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
 				<muzzleFlashScale>10</muzzleFlashScale>
@@ -450,11 +459,6 @@
 				</capacities>
 				<power>9</power>
 				<cooldownTime>2</cooldownTime>
-				<surpriseAttack>
-					<extraMeleeDamages>
-						<li><def>Stun</def><amount>12</amount></li>
-					</extraMeleeDamages>
-				</surpriseAttack>
 			</li>
 			<li>
 				<label>stock</label>
@@ -466,60 +470,68 @@
 			</li>
 		</tools>
 		<tradeTags>
-			<li>CFAR_WeaponRanged</li>
+			<li>CFAR_RangedSupport</li>
 		</tradeTags>
 	</ThingDef>
 
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
-		<defName>Gun_CFAR_Railgun</defName>
-		<label>Arellian Railgun</label>
+		<defName>Gun_CFAR_Autocannon</defName>
+		<label>Arellian autocannon</label>
 		<description>WIP</description>
 		<tickerType>Normal</tickerType>
 		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_SniperRifle</texPath>
+			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_MachineGun</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
+		<equippedAngleOffset>45</equippedAngleOffset>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<recipeMaker>
-			<researchPrerequisite>ChargedShot</researchPrerequisite>
+			<researchPrerequisite>PrecisionRifling</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>8</Crafting>
 			</skillRequirements>
-			<displayPriority>1184</displayPriority>
+			<displayPriority>1183</displayPriority>
 		</recipeMaker>
 		<statBases>
-			<MarketValue>1020</MarketValue>
-			<WorkToMake>60000</WorkToMake>
-			<Mass>8</Mass>
-			<AccuracyTouch>0.55</AccuracyTouch>
+			<MarketValue>1040</MarketValue>
+			<WorkToMake>50000</WorkToMake>
+			<Mass>12.5</Mass>
+			<AccuracyTouch>0.65</AccuracyTouch>
 			<AccuracyShort>0.75</AccuracyShort>
-			<AccuracyMedium>0.90</AccuracyMedium>
-			<AccuracyLong>0.95</AccuracyLong>
-			<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+			<AccuracyMedium>0.65</AccuracyMedium>
+			<AccuracyLong>0.45</AccuracyLong>
+			<RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
 		</statBases>
 		<equippedStatOffsets>
-			<MoveSpeed>-0.24</MoveSpeed>
+			<MoveSpeed>-0.36</MoveSpeed>
 		</equippedStatOffsets>
 		<weaponTags>
-			<li>CFAR_Railgun</li>
+			<li>CFAR_Autocannon</li>
 		</weaponTags>
+		<weaponClasses>
+			<li>RangedHeavy</li>
+		</weaponClasses>
 		<costList>
-			<Steel>80</Steel>
-			<Uranium>10</Uranium>
+			<Steel>75</Steel>
+			<Uranium>20</Uranium>
 			<ComponentIndustrial>8</ComponentIndustrial>
-			<ComponentSpacer>1</ComponentSpacer>
 		</costList>
 		<verbs>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_CFAR_RG</defaultProjectile>
+				<defaultProjectile>Bullet_CFAR_AC</defaultProjectile>
 				<burstShotCount>1</burstShotCount>
-				<warmupTime>2.5</warmupTime>
-				<range>47.9</range>
+				<warmupTime>1.75</warmupTime>
+				<range>31.9</range>
+				<forcedMissRadius>0.01</forcedMissRadius>
+				<ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
 				<soundCast>Shot_TurretSniper</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
-				<muzzleFlashScale>12</muzzleFlashScale>
+				<muzzleFlashScale>10</muzzleFlashScale>
 			</li>
 		</verbs>
 		<tools>
@@ -531,44 +543,17 @@
 				<power>9</power>
 				<cooldownTime>2</cooldownTime>
 			</li>
-			<li>
-				<label>stock</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2</cooldownTime>
-				<surpriseAttack>
-					<extraMeleeDamages>
-						<li><def>Stun</def><amount>12</amount></li>
-					</extraMeleeDamages>
-				</surpriseAttack>
-			</li>
 		</tools>
-		<comps Inherit="False">
-			<li Class="CompProperties_EquippableAbility">
-				<abilityDef>Ability_CFAR_IonizedCharge</abilityDef>
-			</li>
-			<li Class="CompProperties_Forbiddable"/>
-			<li Class="CompProperties_Styleable"/>
-			<li Class="CompProperties_Biocodable"/>
-			<li>
-				<compClass>CompQuality</compClass>
-			</li>
-			<li Class="CompProperties_Art">
-				<nameMaker>NamerArtWeaponGun</nameMaker>
-				<descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
-				<minQualityForArtistic>Excellent</minQualityForArtistic>
-			</li>
+		<tradeTags>
+			<li>CFAR_RangedSupport</li>
+		</tradeTags>
+		<comps>
 			<li Class="CompProperties_Explosive">
-				<explosiveRadius>1.9</explosiveRadius>
+				<explosiveRadius>3.9</explosiveRadius>
 				<explosiveDamageType>Bomb</explosiveDamageType>
 				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
 			</li>
 		</comps>
-		<tradeTags>
-			<li>CFAR_WeaponRanged</li>
-		</tradeTags>
 	</ThingDef>
 
 <!--======== AbilityDefs ========-->
@@ -578,13 +563,14 @@
 		<label>launch frag grenade</label>
 		<description>Launch a frag grenade.</description>
 		<iconPath>UI/Commands/LaunchFragGrenade</iconPath>
-		<cooldownTicksRange>225~275</cooldownTicksRange>
 		<aiCanUse>true</aiCanUse>
+		<showOnCharacterCard>false</showOnCharacterCard>
 		<verbProperties>
 			<verbClass>Verb_CastAbility</verbClass>
 			<range>15.9</range>
 			<warmupTime>0.75</warmupTime>
-			<forcedMissRadius>0.9</forcedMissRadius>
+			<forcedMissRadius>1.9</forcedMissRadius>
+			<ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
 			<soundCast>Shot_IncendiaryLauncher</soundCast>
 			<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
 			<targetParams>
@@ -594,28 +580,6 @@
 		<comps>
 			<li Class="CompProperties_AbilityLaunchProjectile">
 				<projectileDef>Proj_CFAR_RFGFG</projectileDef>
-			</li>
-		</comps>
-	</AbilityDef>
-
-	<AbilityDef>
-		<defName>Ability_CFAR_IonizedCharge</defName>
-		<label>ionized charge</label>
-		<description>Fire an ionized charge that releases a burst of electromagnetic energy, stunning mechanical targets.</description>
-		<iconPath>UI/Commands/LaunchEMPShell</iconPath>
-		<cooldownTicksRange>225~275</cooldownTicksRange>
-		<aiCanUse>true</aiCanUse>
-		<verbProperties>
-			<verbClass>Verb_CastAbility</verbClass>
-			<range>47.9</range>
-			<warmupTime>1.5</warmupTime>
-			<soundCast>ChargeLance_Fire</soundCast>
-			<soundCastTail>GunTail_Medium</soundCastTail>
-			<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
-		</verbProperties>
-		<comps>
-			<li Class="CompProperties_AbilityLaunchProjectile">
-				<projectileDef>Proj_CFAR_IonizedShot</projectileDef>
 			</li>
 		</comps>
 	</AbilityDef>

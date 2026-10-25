@@ -2,136 +2,6 @@
 <Defs>
 <!--================ Industrial Apparel ================-->
 
-<!--======== Cap Base ========-->
-
-	<ThingDef ParentName="HatMakeableBase" Name="CFAR_CapBase" Abstract="True">
-		<techLevel>Industrial</techLevel>
-		<recipeMaker>
-			<researchPrerequisite>ComplexClothing</researchPrerequisite>
-			<skillRequirements>
-				<Crafting>4</Crafting>
-			</skillRequirements>
-		</recipeMaker>
-		<stuffCategories>
-			<li>Fabric</li>
-			<li>Leathery</li>
-		</stuffCategories>
-		<statBases>
-			<MaxHitPoints>80</MaxHitPoints>
-			<WorkToMake>4000</WorkToMake>
-			<Mass>0.1</Mass>
-			<StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
-			<StuffEffectMultiplierInsulation_Cold>0.10</StuffEffectMultiplierInsulation_Cold>
-			<StuffEffectMultiplierInsulation_Heat>0.40</StuffEffectMultiplierInsulation_Heat>
-			<EquipDelay>0.5</EquipDelay>
-		</statBases>
-		<equippedStatOffsets>
-			<SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">0.1</SuppressionPower>
-		</equippedStatOffsets>
-		<apparel>
-			<countsAsClothingForNudity>false</countsAsClothingForNudity>
-			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
-			<bodyPartGroups>
-				<li>UpperHead</li>
-			</bodyPartGroups>
-			<layers>
-				<li>Overhead</li>
-			</layers>
-			<defaultOutfitTags>
-				<li>Soldier</li>
-			</defaultOutfitTags>
-			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
-		</apparel>
-		<colorGenerator Class="ColorGenerator_StandardApparel" />
-		<tradeTags>
-			<li>BasicClothing</li>
-			<li>CFAR_Apparel</li>
-		</tradeTags>
-	</ThingDef>
-
-<!--======== Field Caps ========-->
-
-	<ThingDef ParentName="CFAR_CapBase">
-		<defName>Apparel_CFAR_CapField</defName>
-		<label>Arellian field cap</label>
-		<description>WIP</description>
-		<recipeMaker>
-			<displayPriority>1160</displayPriority>
-		</recipeMaker>
-		<costStuffCount>25</costStuffCount>
-		<graphicData>
-			<texPath>Things/Pawn/Arellian/Apparel/UniformField/Cap/Hat</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>0.80</drawSize>
-		</graphicData>
-		<equippedStatOffsets>
-			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
-			<PainShockThreshold>0.10</PainShockThreshold>
-		</equippedStatOffsets>
-		<apparel>
-			<wornGraphicPath>Things/Pawn/Arellian/Apparel/UniformField/Cap/Hat</wornGraphicPath>
-			<tags>
-				<li>CFAR_Soldier</li>
-			</tags>
-		</apparel>
-	</ThingDef>
-
-	<ThingDef ParentName="CFAR_CapBase">
-		<defName>Apparel_CFAR_CapOfficer</defName>
-		<label>Arellian officer cap</label>
-		<description>WIP</description>
-		<graphicData>
-			<texPath>Things/Pawn/Arellian/Apparel/UniformOfficer/Officer/Hat</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>0.80</drawSize>
-		</graphicData>
-		<recipeMaker>
-			<displayPriority>1161</displayPriority>
-		</recipeMaker>
-		<costStuffCount>30</costStuffCount>
-		<costList>
-			<Gold>10</Gold>
-		</costList>
-		<equippedStatOffsets>
-			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.15</SlaveSuppressionOffset>
-			<SocialImpact>0.10</SocialImpact>
-		</equippedStatOffsets>
-		<apparel>
-			<wornGraphicPath>Things/Pawn/Arellian/Apparel/UniformOfficer/Officer/Hat</wornGraphicPath>
-			<tags>
-				<li>CFAR_Officer</li>
-			</tags>
-		</apparel>
-	</ThingDef>
-
-	<ThingDef ParentName="CFAR_CapBase">
-		<defName>Apparel_CFAR_CapCommand</defName>
-		<label>Arellian command cap</label>
-		<description>WIP</description>
-		<graphicData>
-			<texPath>Things/Pawn/Arellian/Apparel/UniformOfficer/Command/Hat</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>0.80</drawSize>
-		</graphicData>
-		<recipeMaker>
-			<displayPriority>1162</displayPriority>
-		</recipeMaker>
-		<costStuffCount>30</costStuffCount>
-		<costList>
-			<Gold>20</Gold>
-		</costList>
-		<equippedStatOffsets>
-			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.2</SlaveSuppressionOffset>
-			<SocialImpact>0.20</SocialImpact>
-		</equippedStatOffsets>
-		<apparel>
-			<wornGraphicPath>Things/Pawn/Arellian/Apparel/UniformOfficer/Command/Hat</wornGraphicPath>
-			<tags>
-				<li>CFAR_HighOfficer</li>
-			</tags>
-		</apparel>
-	</ThingDef>
-
 <!--======== Reichswehr Uniforms ========-->
 
 	<ThingDef ParentName="ApparelMakeableBase">
@@ -143,11 +13,11 @@
 			<researchPrerequisite>ComplexClothing</researchPrerequisite>
 			<displayPriority>1172</displayPriority>
 			<skillRequirements>
-				<Crafting>6</Crafting>
+				<Crafting>4</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<graphicData>
-			<texPath>Things/Pawn/Arellian/Apparel/UniformField/Apparel</texPath>
+			<texPath>Things/Pawn/Arellian/Apparel/UniformShirt/Apparel</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<costStuffCount>50</costStuffCount>
@@ -168,8 +38,9 @@
 			<EquipDelay>3</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
-			<PainShockThreshold>0.1</PainShockThreshold>
+			<Terror MayRequire="Ludeon.RimWorld.Ideology">1</Terror>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
+			<PainShockThreshold>0.1</PainShockThreshold>
 		</equippedStatOffsets>
 		<apparel>
 			<bodyPartGroups>
@@ -178,7 +49,7 @@
 				<li>Shoulders</li>
 				<li>Arms</li>
 			</bodyPartGroups>
-			<wornGraphicPath>Things/Pawn/Arellian/Apparel/UniformField/Apparel</wornGraphicPath>
+			<wornGraphicPath>Things/Pawn/Arellian/Apparel/UniformShirt/Apparel</wornGraphicPath>
 			<layers>
 				<li>OnSkin</li>
 			</layers>
@@ -186,11 +57,18 @@
 				<li>CFAR_Uniform</li>
 			</tags>
 			<defaultOutfitTags>
-				<li>Soldier</li>
+				<li>CFAR_Trooper</li>
+				<li>CFAR_Soldier</li>
+				<li>CFAR_Officer</li>
+				<li>CFAR_Commander</li>
 			</defaultOutfitTags>
 			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
 		</apparel>
-		<colorGenerator Class="ColorGenerator_StandardApparel" />
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li><only>(255,255,255)</only></li>
+			</options>
+		</colorGenerator>
 		<tradeTags>
 			<li>BasicClothing</li>
 			<li>CFAR_Apparel</li>
@@ -199,18 +77,18 @@
 
 	<ThingDef ParentName="ApparelMakeableBase">
 		<techLevel>Industrial</techLevel>
-		<defName>Apparel_CFAR_UniformOfficer</defName>
-		<label>Arellian officer uniform</label>
+		<defName>Apparel_CFAR_UniformCoat</defName>
+		<label>Arellian field coat</label>
 		<description>WIP</description>
 		<recipeMaker>
 			<researchPrerequisite>ComplexClothing</researchPrerequisite>
 			<displayPriority>1172</displayPriority>
 			<skillRequirements>
-				<Crafting>6</Crafting>
+				<Crafting>4</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<graphicData>
-			<texPath>Things/Pawn/Arellian/Apparel/UniformOfficer/Apparel</texPath>
+			<texPath>Things/Pawn/Arellian/Apparel/UniformShirt/Apparel</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<costStuffCount>50</costStuffCount>
@@ -222,17 +100,18 @@
 			<li>ApparelMisc</li>
 		</thingCategories>
 		<statBases>
-			<WorkToMake>3000</WorkToMake>
-			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>8000</WorkToMake>
+			<MaxHitPoints>200</MaxHitPoints>
 			<Mass>0.4</Mass>
-			<StuffEffectMultiplierArmor>0.20</StuffEffectMultiplierArmor>
-			<StuffEffectMultiplierInsulation_Cold>0.25</StuffEffectMultiplierInsulation_Cold>
-			<StuffEffectMultiplierInsulation_Heat>0.15</StuffEffectMultiplierInsulation_Heat>
+			<StuffEffectMultiplierArmor>0.30</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.85</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.60</StuffEffectMultiplierInsulation_Heat>
 			<EquipDelay>3</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
-			<PainShockThreshold>0.1</PainShockThreshold>
+			<Terror MayRequire="Ludeon.RimWorld.Ideology">1</Terror>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
+			<PainShockThreshold>0.1</PainShockThreshold>
 		</equippedStatOffsets>
 		<apparel>
 			<bodyPartGroups>
@@ -241,19 +120,24 @@
 				<li>Shoulders</li>
 				<li>Arms</li>
 			</bodyPartGroups>
-			<wornGraphicPath>Things/Pawn/Arellian/Apparel/UniformOfficer/Apparel</wornGraphicPath>
+			<wornGraphicPath>Things/Pawn/Arellian/Apparel/UniformShirt/Apparel</wornGraphicPath>
 			<layers>
-				<li>OnSkin</li>
+				<li>Shell</li>
 			</layers>
 			<tags>
-				<li>CFAR_Uniform</li>
+				<li>CFAR_Officer</li>
+				<li>CFAR_Commander</li>
 			</tags>
 			<defaultOutfitTags>
 				<li>Soldier</li>
 			</defaultOutfitTags>
 			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
 		</apparel>
-		<colorGenerator Class="ColorGenerator_StandardApparel" />
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li><only>(255,255,255)</only></li>
+			</options>
+		</colorGenerator>
 		<tradeTags>
 			<li>BasicClothing</li>
 			<li>CFAR_Apparel</li>
@@ -262,161 +146,10 @@
 
 <!--================ Armor ================-->
 
-<!--======== T0 Armor ========-->
-
 	<ThingDef ParentName="ArmorHelmetMakeableBase">
 		<techLevel>Spacer</techLevel>
-		<defName>Apparel_CFAR_HelmetFusilier</defName>
-		<label>Arellian füsilier helmet</label>
-		<description>WIP</description>
-		<recipeMaker>
-			<displayPriority>1160</displayPriority>
-			<skillRequirements>
-				<Crafting>5</Crafting>
-			</skillRequirements>
-			<researchPrerequisite>FlakArmor</researchPrerequisite>
-			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
-		</recipeMaker>
-		<graphicData>
-			<texPath>Things/Pawn/Arellian/Apparel/ArmorFusilier/Helmet/Hat</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>0.80</drawSize>
-		</graphicData>
-		<uiIconScale>1.15</uiIconScale>
-		<costList>
-			<Steel>40</Steel>
-			<Plasteel>15</Plasteel>
-			<Chemfuel>15</Chemfuel>
-			<ComponentIndustrial>2</ComponentIndustrial>
-		</costList>
-		<statBases>
-			<MarketValue>380</MarketValue>
-			<WorkToMake>12000</WorkToMake>
-			<Mass>1</Mass>
-			<MaxHitPoints>170</MaxHitPoints>
-			<Flammability>0.6</Flammability>
-			<ArmorRating_Sharp>0.90</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.40</ArmorRating_Heat>
-			<Insulation_Cold>2</Insulation_Cold>
-			<Insulation_Heat>0</Insulation_Heat>
-			<EquipDelay>2</EquipDelay>
-		</statBases>
-		<equippedStatOffsets>
-			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
-			<ToxicEnvironmentResistance>0.80</ToxicEnvironmentResistance>
-		</equippedStatOffsets>
-		<apparel>
-			<developmentalStageFilter>Adult</developmentalStageFilter>
-			<countsAsClothingForNudity>false</countsAsClothingForNudity>
-			<wornGraphicPath>Things/Pawn/Arellian/Apparel/ArmorFusilier/Helmet/Hat</wornGraphicPath>
-			<layers>
-				<li>Overhead</li>
-			</layers>
-			<bodyPartGroups>
-				<li>FullHead</li>
-			</bodyPartGroups>
-			<tags>
-				<li>CFAR_Fusilier</li>
-			</tags>
-			<defaultOutfitTags>
-				<li>Soldier</li>
-			</defaultOutfitTags>
-			<useDeflectMetalEffect>true</useDeflectMetalEffect>
-			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
-		</apparel>
-		<colorGenerator Class="ColorGenerator_Options">
-			<options>
-				<li><only>(0.75,0.75,0.75)</only></li>
-			</options>
-		</colorGenerator>
-		<tradeTags>
-			<li>Armor</li>
-			<li>CFAR_Armor</li>
-		</tradeTags>
-	</ThingDef>
-
-	<ThingDef ParentName="ArmorMachineableBase">
-		<techLevel>Spacer</techLevel>
-		<defName>Apparel_CFAR_ArmorFusilier</defName>
-		<label>Arellian füsilier armor</label>
-		<description>WIP</description>
-		<recipeMaker>
-			<displayPriority>1160</displayPriority>
-			<skillRequirements>
-				<Crafting>5</Crafting>
-			</skillRequirements>
-			<researchPrerequisite>FlakArmor</researchPrerequisite>
-			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
-		</recipeMaker>
-		<graphicData>
-			<texPath>Things/Pawn/Arellian/Apparel/ArmorFusilier/Apparel</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>0.90</drawSize>
-		</graphicData>
-		<costList>
-			<Steel>80</Steel>
-			<Plasteel>40</Plasteel>
-			<ComponentIndustrial>4</ComponentIndustrial>
-		</costList>
-		<statBases>
-			<MarketValue>870</MarketValue>
-			<WorkToMake>22500</WorkToMake>
-			<MaxHitPoints>380</MaxHitPoints>
-			<Mass>8</Mass>
-			<Flammability>0.6</Flammability>
-			<ArmorRating_Sharp>0.90</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.40</ArmorRating_Heat>
-			<Insulation_Cold>18</Insulation_Cold>
-			<Insulation_Heat>4</Insulation_Heat>
-			<EquipDelay>10</EquipDelay>
-		</statBases>
-		<equippedStatOffsets>
-			<MoveSpeed>-0.12</MoveSpeed>
-			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
-		</equippedStatOffsets>
-		<thingCategories>
-			<li>ApparelArmor</li>
-		</thingCategories>
-		<apparel>
-			<wornGraphicPath>Things/Pawn/Arellian/Apparel/ArmorFusilier/Apparel</wornGraphicPath>
-			<bodyPartGroups>
-				<li>Neck</li>
-				<li>Shoulders</li>
-				<li>Torso</li>
-				<li>Arms</li>
-				<li>Legs</li>
-			</bodyPartGroups>
-			<layers>
-				<li>Middle</li>
-			</layers>
-			<tags>
-				<li>CFAR_Fusilier</li>
-			</tags>
-			<defaultOutfitTags>
-				<li>Soldier</li>
-			</defaultOutfitTags>
-			<useDeflectMetalEffect>true</useDeflectMetalEffect>
-			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
-		</apparel>
-		<colorGenerator Class="ColorGenerator_Options">
-			<options>
-				<li><only>(0.75,0.75,0.75)</only></li>
-			</options>
-		</colorGenerator>
-	    <tradeTags>
-			<li>Armor</li>
-			<li>CFAR_Armor</li>
-		</tradeTags>
-	</ThingDef>
-
-<!--======== T1 Armor ========-->
-
-	<ThingDef ParentName="ArmorHelmetMakeableBase">
-		<techLevel>Spacer</techLevel>
-		<defName>Apparel_CFAR_HelmetJager</defName>
-		<label>Arellian jäger helmet</label>
+		<defName>Apparel_CFAR_HelmetTrooper</defName>
+		<label>Arellian trooper helmet</label>
 		<description>WIP</description>
 		<recipeMaker>
 			<displayPriority>1161</displayPriority>
@@ -433,7 +166,7 @@
 			</recipeUsers>
 		</recipeMaker>
 		<graphicData>
-			<texPath>Things/Pawn/Arellian/Apparel/ArmorJager/Helmet/Hat</texPath>
+			<texPath>Things/Pawn/Arellian/Apparel/TrooperHelmet/Hat</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.80</drawSize>
 		</graphicData>
@@ -457,16 +190,17 @@
 			<EquipDelay>3</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
-			<ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+			<Terror MayRequire="Ludeon.RimWorld.Ideology">1</Terror>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.68</VacuumResistance>
+			<ShootingAccuracyPawn>3</ShootingAccuracyPawn>
 			<ToxicEnvironmentResistance>0.80</ToxicEnvironmentResistance>
-			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.65</VacuumResistance>
 		</equippedStatOffsets>
 		<apparel>
 			<wearPerDay>0.01</wearPerDay>
 			<developmentalStageFilter>Adult</developmentalStageFilter>
 			<countsAsClothingForNudity>false</countsAsClothingForNudity>
-			<wornGraphicPath>Things/Pawn/Arellian/Apparel/ArmorJager/Helmet/Hat</wornGraphicPath>
+			<wornGraphicPath>Things/Pawn/Arellian/Apparel/TrooperHelmet/Hat</wornGraphicPath>
 			<layers>
 				<li>Overhead</li>
 			</layers>
@@ -474,7 +208,7 @@
 				<li>FullHead</li>
 			</bodyPartGroups>
 			<tags>
-				<li>CFAR_Jager</li>
+				<li>CFAR_Trooper</li>
 			</tags>
 			<defaultOutfitTags>
 				<li>Soldier</li>
@@ -485,13 +219,14 @@
 		</apparel>
 		<colorGenerator Class="ColorGenerator_Options">
 			<options>
-				<li><only>(0.75,0.75,0.75)</only></li>
+				<li><only>(255,255,255)</only></li>
 			</options>
 		</colorGenerator>
 		<comps>
 			<li Class="CompProperties_Biocodable"/>
 		</comps>
 		<tradeTags>
+			<li>ExoticMisc</li>
 			<li>HiTechArmor</li>
 			<li>CFAR_Armor</li>
 		</tradeTags>
@@ -499,8 +234,8 @@
 
 	<ThingDef ParentName="ArmorMachineableBase">
 		<techLevel>Spacer</techLevel>
-		<defName>Apparel_CFAR_ArmorJager</defName>
-		<label>Arellian jäger armor</label>
+		<defName>Apparel_CFAR_ArmorTrooper</defName>
+		<label>Arellian trooper armor</label>
 		<description>WIP</description>
 		<recipeMaker>
 			<displayPriority>1161</displayPriority>
@@ -517,7 +252,7 @@
 			</recipeUsers>
 		</recipeMaker>
 		<graphicData>
-			<texPath>Things/Pawn/Arellian/Apparel/ArmorJager/Apparel</texPath>
+			<texPath>Things/Pawn/Arellian/Apparel/TrooperArmor/Armor</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.90</drawSize>
 		</graphicData>
@@ -541,9 +276,11 @@
 			<EquipDelay>12</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
-			<ToxicEnvironmentResistance>0.15</ToxicEnvironmentResistance>
-			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.30</VacuumResistance>
+			<Terror MayRequire="Ludeon.RimWorld.Ideology">2</Terror>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.32</VacuumResistance>
+			<IncomingDamageFactor>0.90</IncomingDamageFactor>
+			<ToxicEnvironmentResistance>0.15</ToxicEnvironmentResistance>
 		</equippedStatOffsets>
 		<thingCategories>
 			<li>ApparelArmor</li>
@@ -551,7 +288,7 @@
 		<apparel>
 			<wearPerDay>0.01</wearPerDay>
 			<developmentalStageFilter>Adult</developmentalStageFilter>
-			<wornGraphicPath>Things/Pawn/Arellian/Apparel/ArmorJager/Apparel</wornGraphicPath>
+			<wornGraphicPath>Things/Pawn/Arellian/Apparel/TrooperArmor/Armor</wornGraphicPath>
 			<bodyPartGroups>
 				<li>Neck</li>
 				<li>Shoulders</li>
@@ -564,7 +301,7 @@
 				<li>Shell</li>
 			</layers>
 			<tags>
-				<li>CFAR_Jager</li>
+				<li>CFAR_Trooper</li>
 			</tags>
 			<defaultOutfitTags>
 				<li>Soldier</li>
@@ -577,13 +314,14 @@
 		</apparel>
 		<colorGenerator Class="ColorGenerator_Options">
 			<options>
-				<li><only>(0.75,0.75,0.75)</only></li>
+				<li><only>(255,255,255)</only></li>
 			</options>
 		</colorGenerator>
 		<comps>
 			<li Class="CompProperties_Biocodable"/>
 		</comps>
 	    <tradeTags>
+			<li>ExoticMisc</li>
 			<li>HiTechArmor</li>
 			<li>CFAR_Armor</li>
 		</tradeTags>

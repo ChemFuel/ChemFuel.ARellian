@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!--================================ Kaiserinreich ================================-->
+
+	<BackstoryDef Name="CFAR_PirateBase" Abstract="True">
+		<requiresSpawnCategory>true</requiresSpawnCategory>
+		<slot>Adulthood</slot>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+	</BackstoryDef>
+
+	<BackstoryDef Name="CFAR_DeserterBase" Abstract="True">
+		<requiresSpawnCategory>true</requiresSpawnCategory>
+		<slot>Adulthood</slot>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+	</BackstoryDef>
+
+<!--================================ Enclave ================================-->
+
+<!--======================== Deserter ========================-->
+
+<!--================ Trooper ================-->
+
+	<BackstoryDef ParentName="CFAR_DeserterBase">
+		<defName>CFAR_DeserterTrooper1</defName>
+		<title>AWOL trooper</title>
+		<titleShort>deserter</titleShort>
+		<description>WIP</description>
+		<skillGains>
+			<Shooting>6</Shooting>
+			<Melee>4</Melee>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_DeserterTrooper</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="CFAR_DeserterBase">
+		<defName>CFAR_DeserterTrooper2</defName>
+		<title>füsilier</title>
+		<titleShort>füsilier</titleShort>
+		<description>WIP</description>
+		<skillGains>
+			<Shooting>5</Shooting>
+			<Melee>5</Melee>
+		</skillGains>
+		<spawnCategories>
+			<li>CFAR_FusilierTrooper</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+</Defs>

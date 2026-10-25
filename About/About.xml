@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ModMetaData>
+	<name>[CF] Arellian Beta 1.7</name>
+	<packageId>ChemFuel.ARellian</packageId>
+	<author>ChemFuel</author>
+	<supportedVersions>
+		<li>1.7</li>
+	</supportedVersions>
+<description>Mod Version: 0.04 Unofficial (Oct 25, 2026)
+Stage: Open Beta (⚠ Very unstable. Expect bugs, missing content, and balance changes.)
+
+The Arellians are a genetically-engineered feline xenotype originating from the glitterworld empire known as the Kaiserinreich. Highly disciplined, technologically advanced, and deeply militarized, they bring industrial and spacer-grade equipment, military ranks, and their own imperial faction to the Rim.
+
+Whether you earn noble titles through loyal service or simply loot their equipment from the battlefield, the Kaiserinreich is a formidable presence.
+
+This mod is currently in active development. Feedback, bug reports, and balance suggestions are greatly appreciated.
+</description>
+	<modDependencies>
+		<li>
+			<packageId>Ludeon.RimWorld.Biotech</packageId>
+			<displayName>Biotech</displayName>
+			<steamWorkshopUrl>https://store.steampowered.com/app/1826140/RimWorldBiotech/</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<incompatibleWith>
+		<li>ChemFuel.ARellian.Lite</li>
+	</incompatibleWith>
+	<forceLoadAfter>
+		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.RimWorld.Royalty</li>
+		<li>Ludeon.RimWorld.Ideology</li>
+		<li>Ludeon.RimWorld.Biotech</li>
+		<li>Ludeon.RimWorld.Anomaly</li>
+		<li>Ludeon.RimWorld.Odyssey</li>
+	</forceLoadAfter>
+</ModMetaData>
