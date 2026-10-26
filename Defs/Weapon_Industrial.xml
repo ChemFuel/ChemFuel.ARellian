@@ -513,7 +513,8 @@
 		</weaponClasses>
 		<costList>
 			<Steel>75</Steel>
-			<Uranium>20</Uranium>
+			<Uranium>10</Uranium>
+			<Chemfuel>100</Chemfuel>
 			<ComponentIndustrial>8</ComponentIndustrial>
 		</costList>
 		<verbs>
