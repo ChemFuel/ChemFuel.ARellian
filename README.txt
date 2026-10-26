@@ -25,3 +25,20 @@ Roadmap Oct26_2026
   - Texture: Need to draw
   - Stat adjustment: Needed
   - Description: Needed
+- Field Uniform
+  - Texture: Need to draw
+  - Stat adjustment: Needed
+  - Description: Needed
+- Field Coat
+  - Texture: Need to draw
+  - Stat adjustment: Needed
+  - Description: Needed
+
+[Armor]
+- Trooper Helmet
+  - Stat adjustment: Needed
+  - Description: Needed
+- Trooper Armor
+  - Texture: Need to draw
+  - Stat adjustment: Needed
+  - Description: Needed
