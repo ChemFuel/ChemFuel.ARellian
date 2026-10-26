@@ -2,32 +2,6 @@
 <Defs>
 <!--================================ Kaiserinreich ================================-->
 
-	<BackstoryDef Name="CFAR_Reichsvolk" Abstract="True">
-		<requiresSpawnCategory>true</requiresSpawnCategory>
-		<slot>Adulthood</slot>
-		<bodyTypeMale>Male</bodyTypeMale>
-		<bodyTypeFemale>Female</bodyTypeFemale>
-	</BackstoryDef>
-
-	<BackstoryDef Name="CFAR_FlottelegatBase" Abstract="True">
-		<requiresSpawnCategory>true</requiresSpawnCategory>
-		<slot>Adulthood</slot>
-		<bodyTypeMale>Male</bodyTypeMale>
-		<bodyTypeFemale>Female</bodyTypeFemale>
-		<title>flottelegat</title>
-		<titleFemale>flottelegatin</titleFemale>
-		<titleShort>flottelegat</titleShort>
-		<titleShortFemale>flottelegatin</titleShortFemale>
-		<requiredWorkTags>
-			<li>Artistic</li>
-			<li>Social</li>
-			<li>Intellectual</li>
-		</requiredWorkTags>
-		<spawnCategories>
-			<li>CFAR_Flottelegat</li>
-		</spawnCategories>
-	</BackstoryDef>
-
 <!--================ Reichswehr ================-->
 
 	<BackstoryDef Name="CFAR_SoldierBase" Abstract="True">
@@ -43,7 +17,7 @@
 			<li>ManualDumb</li>
 		</requiredWorkTags>
 		<spawnCategories>
-			<li>CFAR_Soldier</li>
+			<li>CFAR_BaseTag</li>
 		</spawnCategories>
 	</BackstoryDef>
 
@@ -62,7 +36,16 @@
 		</spawnCategories>
 	</BackstoryDef>
 
-	<BackstoryDef Name="CFAR_HptmBase" ParentName="CFAR_LtnBase" Abstract="True">
+	<BackstoryDef Name="CFAR_HptmBase" Abstract="True">
+		<requiresSpawnCategory>true</requiresSpawnCategory>
+		<slot>Adulthood</slot>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<requiredWorkTags>
+			<li>Violent</li>
+			<li>Social</li>
+			<li>Intellectual</li>
+		</requiredWorkTags>
 		<spawnCategories>
 			<li>CFAR_Hptm</li>
 		</spawnCategories>
@@ -168,20 +151,14 @@
 
 <!--================================ Raummarine ================================-->
 
-<!--======================== Admiralität ========================-->
+<!--======================== Crew ========================-->
 
 <!--================ Crew ================-->
 
-<!--================ Officer ================-->
-
-<!--================ Captain ================-->
-
-<!--======================== Jäger ========================-->
-
-<!--================ Trooper ================-->
+<!--======================== Jägerkorps ========================-->
 
 	<BackstoryDef ParentName="CFAR_SoldierBase">
-		<defName>CFAR_JagerTrooper1</defName>
+		<defName>CFAR_Jager1</defName>
 		<title>jäger</title>
 		<titleShort>jäger</titleShort>
 		<description>[PAWN_nameDef] served as a trooper in the Reichswehr Jägerkorps. Whether defending a breach or creating one aboard a hostile vessel, [PAWN_pronoun] was always in the thick of battle.</description>
@@ -195,7 +172,7 @@
 	</BackstoryDef>
 
 	<BackstoryDef ParentName="CFAR_SoldierBase">
-		<defName>CFAR_JagerTrooper2</defName>
+		<defName>CFAR_Jager2</defName>
 		<title>jäger</title>
 		<titleShort>jäger</titleShort>
 		<description>[PAWN_nameDef] served as a trooper in the Reichswehr Jägerkorps. Trained for ship-to-ship combat, [PAWN_pronoun] fought in the narrow corridors of friendly and hostile vessels alike, where every breach could decide the battle.</description>
@@ -208,39 +185,37 @@
 		</spawnCategories>
 	</BackstoryDef>
 
-<!--================ Leutnant ================-->
-
-	<BackstoryDef ParentName="CFAR_LtnBase">
-		<defName>CFAR_JagerLtn1</defName>
-		<title>jäger</title>
-		<titleShort>jäger</titleShort>
-		<description>WIP</description>
-		<skillGains>
-			<Shooting>8</Shooting>
-			<Melee>6</Melee>
-		</skillGains>
-		<spawnCategories>
-			<li>CFAR_JagerLtn</li>
-		</spawnCategories>
-	</BackstoryDef>
-
-	<BackstoryDef ParentName="CFAR_LtnBase">
-		<defName>CFAR_JagerLtn2</defName>
-		<title>jäger</title>
-		<titleShort>jäger</titleShort>
-		<description>WIP</description>
-		<skillGains>
-			<Shooting>7</Shooting>
-			<Melee>7</Melee>
-		</skillGains>
-		<spawnCategories>
-			<li>CFAR_JagerLtn</li>
-		</spawnCategories>
-	</BackstoryDef>
-
 <!--================================ Kaiserinreich ================================-->
 
+<!--======================== Plebeian ========================-->
+
+	<BackstoryDef Name="CFAR_Reichsvolk" Abstract="True">
+		<requiresSpawnCategory>true</requiresSpawnCategory>
+		<slot>Adulthood</slot>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+	</BackstoryDef>
+
 <!--======================== Noble ========================-->
+
+	<BackstoryDef Name="CFAR_FlottelegatBase" Abstract="True">
+		<requiresSpawnCategory>true</requiresSpawnCategory>
+		<slot>Adulthood</slot>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<title>flottelegat</title>
+		<titleFemale>flottelegatin</titleFemale>
+		<titleShort>flottelegat</titleShort>
+		<titleShortFemale>flottelegatin</titleShortFemale>
+		<requiredWorkTags>
+			<li>Artistic</li>
+			<li>Social</li>
+			<li>Intellectual</li>
+		</requiredWorkTags>
+		<spawnCategories>
+			<li>CFAR_Flottelegat</li>
+		</spawnCategories>
+	</BackstoryDef>
 
 <!--================ Flottelegat ================-->
 
