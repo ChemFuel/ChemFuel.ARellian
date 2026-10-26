@@ -299,7 +299,7 @@
 			<li>Apparel_CFAR_VisorCombat</li>
 		</apparelRequired>
 		<weaponTags>
-			<li>CFAR_Railgun</li>
+			<li>CFAR_AssaultRifle</li>
 		</weaponTags>
 		<backstoryFiltersOverride Inherit="False">
 			<li>
@@ -307,7 +307,7 @@
 					<li>CFAR_Reichswehr</li>
 				</categoriesChildhood>
 				<categoriesAdulthood>
-					<li>CFAR_JagerLtn</li>
+					<li>CFAR_Jager</li>
 				</categoriesAdulthood>
 			</li>
 		</backstoryFiltersOverride>
