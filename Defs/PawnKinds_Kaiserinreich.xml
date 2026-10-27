@@ -25,7 +25,7 @@
 		<minTitleRequired MayRequire="Ludeon.Rimworld.Royalty">CFAR_RankB</minTitleRequired>
 		<gearHealthRange>0.75~1.25</gearHealthRange>
 		<apparelMoney>5000~10000</apparelMoney>
-		<weaponMoney>2000~3000</weaponMoney>
+		<weaponMoney>500~3000</weaponMoney>
 		<apparelTags>
 			<li>CFAR_Uniform</li>
 		</apparelTags>
