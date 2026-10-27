@@ -38,7 +38,6 @@
 			<EquipDelay>3</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
-			<Terror MayRequire="Ludeon.RimWorld.Ideology">1</Terror>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
 			<PainShockThreshold>0.1</PainShockThreshold>
 		</equippedStatOffsets>
@@ -109,7 +108,6 @@
 			<EquipDelay>3</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
-			<Terror MayRequire="Ludeon.RimWorld.Ideology">1</Terror>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
 			<PainShockThreshold>0.1</PainShockThreshold>
 		</equippedStatOffsets>
@@ -190,7 +188,6 @@
 			<EquipDelay>3</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
-			<Terror MayRequire="Ludeon.RimWorld.Ideology">1</Terror>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
 			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.68</VacuumResistance>
 			<ShootingAccuracyPawn>3</ShootingAccuracyPawn>
@@ -276,7 +273,6 @@
 			<EquipDelay>12</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
-			<Terror MayRequire="Ludeon.RimWorld.Ideology">2</Terror>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
 			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.32</VacuumResistance>
 			<IncomingDamageFactor>0.90</IncomingDamageFactor>
