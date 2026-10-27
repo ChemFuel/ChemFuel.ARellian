@@ -25,7 +25,7 @@
 		<minTitleRequired MayRequire="Ludeon.Rimworld.Royalty">CFAR_RankB</minTitleRequired>
 		<gearHealthRange>0.75~1.25</gearHealthRange>
 		<apparelMoney>5000~10000</apparelMoney>
-		<weaponMoney>500~3000</weaponMoney>
+		<weaponMoney>200~3000</weaponMoney>
 		<apparelTags>
 			<li>CFAR_Uniform</li>
 		</apparelTags>
@@ -130,6 +130,7 @@
 		<weaponTags>
 			<li>CFAR_Pistol</li>
 		</weaponTags>
+		<weaponMoney>200~300</weaponMoney>
 		<backstoryFiltersOverride Inherit="False">
 			<li>
 				<categoriesChildhood>
@@ -161,6 +162,7 @@
 			<li>CFAR_Shotgun</li>
 			<li>CFAR_AssaultRifle</li>
 		</weaponTags>
+		<weaponMoney>400~1365</weaponMoney>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="CFAR_BaseFusilier">
@@ -183,6 +185,7 @@
 			<li>CFAR_MachineGun</li>
 			<li>CFAR_Autocannon</li>
 		</weaponTags>
+		<weaponMoney>1070~3180</weaponMoney>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="CFAR_BaseFusilier">
@@ -200,6 +203,7 @@
 		<weaponTags>
 			<li>CFAR_AssaultRifle</li>
 		</weaponTags>
+		<weaponMoney>910~1365</weaponMoney>
 		<backstoryFiltersOverride Inherit="False">
 			<li>
 				<categoriesChildhood>
@@ -229,6 +233,7 @@
 		<weaponTags>
 			<li>CFAR_Pistol</li>
 		</weaponTags>
+		<weaponMoney>200~300</weaponMoney>
 		<backstoryFiltersOverride Inherit="False">
 			<li>
 				<categoriesChildhood>
@@ -262,6 +267,7 @@
 		<weaponTags>
 			<li>CFAR_MachineGun</li>
 		</weaponTags>
+		<weaponMoney>1070~1605</weaponMoney>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="CFAR_BaseJager">
@@ -283,6 +289,7 @@
 		<weaponTags>
 			<li>CFAR_Autocannon</li>
 		</weaponTags>
+		<weaponMoney>2120~3180</weaponMoney>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="CFAR_BaseJager">
@@ -301,6 +308,7 @@
 		<weaponTags>
 			<li>CFAR_AssaultRifle</li>
 		</weaponTags>
+		<weaponMoney>910~1365</weaponMoney>
 		<backstoryFiltersOverride Inherit="False">
 			<li>
 				<categoriesChildhood>
@@ -332,7 +340,7 @@
 		<weaponTags Inherit="False">
 			<li>CFAR_Pistol</li>
 		</weaponTags>
-		<weaponMoney>660~1300</weaponMoney>
+		<weaponMoney>200~500</weaponMoney>
 		<backstoryFiltersOverride><!--WIP-->
 			<li>
 				<categories>

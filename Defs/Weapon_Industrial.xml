@@ -607,7 +607,7 @@
 				<warmupTime>1.75</warmupTime>
 				<range>37.9</range>
 				<forcedMissRadius>0.01</forcedMissRadius>
-				<ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+				<ai_AvoidFriendlyFireRadius>8</ai_AvoidFriendlyFireRadius>
 				<targetParams>
 					<canTargetLocations>true</canTargetLocations>
 				</targetParams>
@@ -652,7 +652,7 @@
 			<range>15.9</range>
 			<warmupTime>0.75</warmupTime>
 			<forcedMissRadius>1.9</forcedMissRadius>
-			<ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+			<ai_AvoidFriendlyFireRadius>2.5</ai_AvoidFriendlyFireRadius>
 			<soundCast>Shot_IncendiaryLauncher</soundCast>
 			<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
 			<targetParams>

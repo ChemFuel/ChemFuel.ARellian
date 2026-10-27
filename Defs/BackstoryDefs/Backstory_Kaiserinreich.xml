@@ -194,6 +194,52 @@
 		<slot>Adulthood</slot>
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
+		<spawnCategories>
+			<li>CFAR_Colonist</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="CFAR_Reichsvolk">
+		<defName>CFAR_Farmer1</defName>
+		<title>farmer</title>
+		<titleShort>farmer</titleShort>
+		<description>WIP</description>
+		<skillGains>
+			<Plants>8</Plants>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="CFAR_Reichsvolk">
+		<defName>CFAR_Farmer2</defName>
+		<title>farmer</title>
+		<titleShort>farmer</titleShort>
+		<description>WIP</description>
+		<skillGains>
+			<Shooting>4</Shooting>
+			<Plants>6</Plants>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="CFAR_Reichsvolk">
+		<defName>CFAR_Rancher1</defName>
+		<title>rancher</title>
+		<titleShort>rancher</titleShort>
+		<description>WIP</description>
+		<skillGains>
+			<Animals>8</Animals>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="CFAR_Reichsvolk">
+		<defName>CFAR_Rancher2</defName>
+		<title>rancher</title>
+		<titleShort>rancher</titleShort>
+		<description>WIP</description>
+		<skillGains>
+			<Cooking>2</Cooking>
+			<Animals>4</Animals>
+			<Medicine>2</Medicine>
+		</skillGains>
 	</BackstoryDef>
 
 <!--======================== Noble ========================-->
