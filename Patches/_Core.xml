@@ -24,15 +24,6 @@
 					</value>
 				</match>
 			</li>
-			<li Class="PatchOperationConditional">
-				<xpath>Defs/FactionDef[defName="Pirate"]/pawnGroupMakers/li[1]/options | Defs/FactionDef[defName="Pirate"]/pawnGroupMakers/li[3]/options</xpath>
-				<match Class="PatchOperationAdd">
-					<xpath>Defs/FactionDef[defName="Pirate"]/pawnGroupMakers/li[1]/options | Defs/FactionDef[defName="Pirate"]/pawnGroupMakers/li[3]/options</xpath>
-					<value>
-						<CFAR_MercPirate>0.01</CFAR_MercPirate>
-					</value>
-				</match>
-			</li>
 		</operations>
 	</Operation>
 </Patch>

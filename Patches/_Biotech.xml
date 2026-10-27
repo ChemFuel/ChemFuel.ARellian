@@ -10,7 +10,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/GeneDef[defName="Head_Gaunt"]/forcedHeadTypes</xpath>
 					<value>
-						<li>CFAR_Gaunt_Normal</li>
+						<li>CFAR_Gaunt_Plain</li>
 					</value>
 				</li>
 				<!--Mercenary Pawnkind-->
