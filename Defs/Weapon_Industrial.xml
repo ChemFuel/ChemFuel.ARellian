@@ -481,12 +481,11 @@
 			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_MachineGun</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
-		<equippedAngleOffset>45</equippedAngleOffset>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<recipeMaker>
 			<researchPrerequisite>PrecisionRifling</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>8</Crafting>
+				<Crafting>6</Crafting>
 			</skillRequirements>
 			<displayPriority>1184</displayPriority>
 		</recipeMaker>
@@ -504,7 +503,7 @@
 			<MoveSpeed>-0.24</MoveSpeed>
 		</equippedStatOffsets>
 		<weaponTags>
-			<li>CFAR_Autocannon</li>
+			<li>CFAR_Flamethrower</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>RangedHeavy</li>
