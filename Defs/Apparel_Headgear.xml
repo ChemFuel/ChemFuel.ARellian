@@ -68,7 +68,6 @@
 		</recipeMaker>
 		<costStuffCount>25</costStuffCount>
 		<equippedStatOffsets>
-			<Terror MayRequire="Ludeon.RimWorld.Ideology">1</Terror>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
 			<PainShockThreshold>0.10</PainShockThreshold>
 		</equippedStatOffsets>
@@ -93,7 +92,6 @@
 		</recipeMaker>
 		<costStuffCount>35</costStuffCount>
 		<equippedStatOffsets>
-			<Terror MayRequire="Ludeon.RimWorld.Ideology">2</Terror>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.2</SlaveSuppressionOffset>
 			<PainShockThreshold>0.05</PainShockThreshold>
 			<SocialImpact>0.10</SocialImpact>
@@ -119,7 +117,6 @@
 		</recipeMaker>
 		<costStuffCount>50</costStuffCount>
 		<equippedStatOffsets>
-			<Terror MayRequire="Ludeon.RimWorld.Ideology">3</Terror>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
 			<PainShockThreshold>0.05</PainShockThreshold>
 			<SocialImpact>0.20</SocialImpact>
