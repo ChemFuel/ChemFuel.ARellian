@@ -4,9 +4,10 @@
 	<packageId>ChemFuel.ARellian</packageId>
 	<author>ChemFuel</author>
 	<supportedVersions>
+		<li>1.6</li><!--Check if the backwards support works-->
 		<li>1.7</li>
 	</supportedVersions>
-<description>Mod Version: 0.04a Unofficial (Oct 27, 2026)
+<description>Mod Version: 0.04b Unofficial (? ?, ?)
 Stage: Open Beta (⚠ Very unstable. Expect bugs, missing content, and balance changes.)
 
 The Arellians are a genetically-engineered feline xenotype originating from the glitterworld empire known as the Kaiserinreich. Highly disciplined, technologically advanced, and deeply militarized, they bring industrial and spacer-grade equipment, military ranks, and their own imperial faction to the Rim.
