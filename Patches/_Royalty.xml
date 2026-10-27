@@ -6,6 +6,12 @@
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="CFAR_FusilierHptm"]/apparelRequired/li[4]</xpath>
+					<value>
+						<li>Apparel_PackBroadshield</li>
+					</value>
+				</li>
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/QuestScriptDef[defName="Util_ChooseRandomQuestHelperKind"]/root/nodes/li[1]/choices</xpath>
 					<value>

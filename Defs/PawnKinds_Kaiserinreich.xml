@@ -199,6 +199,7 @@
 			<li>Apparel_CFAR_UniformField</li>
 			<li>Apparel_CFAR_HelmetTrooper</li>
 			<li>Apparel_CFAR_ArmorTrooper</li>
+			<li>Apparel_SmokepopBelt</li>
 		</apparelRequired>
 		<weaponTags>
 			<li>CFAR_AssaultRifle</li>
@@ -229,6 +230,7 @@
 			<li>Apparel_CFAR_UniformField</li>
 			<li>Apparel_CFAR_HelmetTrooper</li>
 			<li>Apparel_CFAR_ArmorTrooper</li>
+			<li>Apparel_SmokepopBelt</li>
 		</apparelRequired>
 		<weaponTags>
 			<li>CFAR_Pistol</li>
@@ -304,6 +306,7 @@
 			<li>Apparel_CFAR_HelmetTrooper</li>
 			<li>Apparel_CFAR_ArmorTrooper</li>
 			<li>Apparel_CFAR_VisorCombat</li>
+			<li>Apparel_SmokepopBelt</li>
 		</apparelRequired>
 		<weaponTags>
 			<li>CFAR_AssaultRifle</li>
