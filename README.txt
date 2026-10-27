@@ -1,49 +1,49 @@
 Roadmap Oct27_2026
 [Weaponry]
 - Autopistol
-  - Description: Needed
   - Custom ability: "Officer's presence (WIP)"
-- Shotgun
-  - Texture: Need to draw
   - Description: Needed
+- Shotgun
+  - Description: Needed
+  - Texture: Need to draw
 - Assault Rifle
   - Description: Needed
 - Machine Gun
+  - Description: Needed
   - Texture: Need to redraw (Not urgent)
+- Flamethrower <-- Might wanna reclassify this as an utility pack
   - Description: Needed
-- Flamethrower
-  - Texture: Need to draw
   - Stat: Needed
-  - Description: Needed
-- Autocannon
   - Texture: Need to draw
+- Autocannon
   - Description: Needed
+  - Texture: Need to draw
 
 [Apparel]
 - Field Cap
-  - Stat adjustment: Needed
   - Description: Needed
+  - Stat adjustment: Needed
 - Officer Cap
-  - Stat adjustment: Needed
   - Description: Needed
+  - Stat adjustment: Needed
 - Commander Cap
-  - Texture: Need to draw
-  - Stat adjustment: Needed
   - Description: Needed
+  - Stat adjustment: Needed
+  - Texture: Need to draw
 - Field Uniform
-  - Texture: Need to draw
-  - Stat adjustment: Needed
   - Description: Needed
+  - Stat adjustment: Needed
+  - Texture: Need to draw
 - Field Coat
-  - Texture: Need to draw
-  - Stat adjustment: Needed
   - Description: Needed
+  - Stat adjustment: Needed
+  - Texture: Need to draw
 
 [Armor]
 - Trooper Helmet
-  - Stat adjustment: Needed
   - Description: Needed
+  - Stat adjustment: Needed
 - Trooper Armor
-  - Texture: Need to draw
-  - Stat adjustment: Needed
   - Description: Needed
+  - Stat adjustment: Needed
+  - Texture: Need to draw
