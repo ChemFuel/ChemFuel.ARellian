@@ -155,7 +155,7 @@
 		<statBases>
 			<MarketValue>200</MarketValue>
 			<WorkToMake>5000</WorkToMake>
-			<Mass>1.8</Mass>
+			<Mass>1.92</Mass>
 			<AccuracyTouch>0.85</AccuracyTouch>
 			<AccuracyShort>0.75</AccuracyShort>
 			<AccuracyMedium>0.50</AccuracyMedium>
@@ -163,7 +163,6 @@
 			<RangedWeapon_Cooldown>1.00</RangedWeapon_Cooldown>
 		</statBases>
 		<equippedStatOffsets>
-			<Terror MayRequire="Ludeon.RimWorld.Ideology">1</Terror>
 			<SocialImpact>0.1</SocialImpact>
 		</equippedStatOffsets>
 		<weaponTags>
@@ -232,9 +231,9 @@
 			<displayPriority>1181</displayPriority>
 		</recipeMaker>
 		<statBases>
-			<MarketValue>380</MarketValue>
+			<MarketValue>400</MarketValue>
 			<WorkToMake>18000</WorkToMake>
-			<Mass>4.25</Mass>
+			<Mass>4.18</Mass>
 			<AccuracyTouch>0.80</AccuracyTouch>
 			<AccuracyShort>0.75</AccuracyShort>
 			<AccuracyMedium>0.50</AccuracyMedium>
@@ -245,7 +244,7 @@
 			<li>CFAR_Shotgun</li>
 		</weaponTags>
 		<costList>
-			<Steel>60</Steel>
+			<Steel>70</Steel>
 			<Uranium>5</Uranium>
 			<ComponentIndustrial>3</ComponentIndustrial>
 		</costList>
@@ -311,7 +310,7 @@
 		<statBases>
 			<MarketValue>910</MarketValue>
 			<WorkToMake>45000</WorkToMake>
-			<Mass>7</Mass>
+			<Mass>4.25</Mass>
 			<AccuracyTouch>0.75</AccuracyTouch>
 			<AccuracyShort>0.80</AccuracyShort>
 			<AccuracyMedium>0.70</AccuracyMedium>
@@ -416,7 +415,7 @@
 		<statBases>
 			<MarketValue>1070</MarketValue>
 			<WorkToMake>50000</WorkToMake>
-			<Mass>12.5</Mass>
+			<Mass>12.46</Mass>
 			<AccuracyTouch>0.50</AccuracyTouch>
 			<AccuracyShort>0.65</AccuracyShort>
 			<AccuracyMedium>0.45</AccuracyMedium>
@@ -474,6 +473,88 @@
 		</tradeTags>
 	</ThingDef>
 
+	<!--<ThingDef ParentName="Base_CFAR_GunIndustrial">
+		<defName>Gun_CFAR_Flamethrower</defName>
+		<label>Arellian flamethrower</label>
+		<description>WIP</description>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_MachineGun</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<equippedAngleOffset>45</equippedAngleOffset>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<recipeMaker>
+			<researchPrerequisite>PrecisionRifling</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+			<displayPriority>1184</displayPriority>
+		</recipeMaker>
+		<statBases>
+			<MarketValue>1180</MarketValue>
+			<WorkToMake>40000</WorkToMake>
+			<Mass>7.35</Mass>
+			<AccuracyTouch>0.65</AccuracyTouch>
+			<AccuracyShort>0.75</AccuracyShort>
+			<AccuracyMedium>0.65</AccuracyMedium>
+			<AccuracyLong>0.45</AccuracyLong>
+			<RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.24</MoveSpeed>
+		</equippedStatOffsets>
+		<weaponTags>
+			<li>CFAR_Autocannon</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>RangedHeavy</li>
+		</weaponClasses>
+		<costList>
+			<Steel>60</Steel>
+			<Chemfuel>75</Chemfuel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_CFAR_AC</defaultProjectile>
+				<burstShotCount>1</burstShotCount>
+				<warmupTime>1.75</warmupTime>
+				<range>31.9</range>
+				<forcedMissRadius>0.01</forcedMissRadius>
+				<ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<soundCast>Shot_TurretSniper</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>10</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tradeTags>
+			<li>CFAR_RangedSupport</li>
+		</tradeTags>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>3.9</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+			</li>
+		</comps>
+	</ThingDef>-->
+
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
 		<defName>Gun_CFAR_Autocannon</defName>
 		<label>Arellian autocannon</label>
@@ -495,7 +576,7 @@
 		<statBases>
 			<MarketValue>2120</MarketValue>
 			<WorkToMake>60000</WorkToMake>
-			<Mass>15</Mass>
+			<Mass>17</Mass>
 			<AccuracyTouch>0.65</AccuracyTouch>
 			<AccuracyShort>0.75</AccuracyShort>
 			<AccuracyMedium>0.65</AccuracyMedium>
@@ -503,7 +584,7 @@
 			<RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
 		</statBases>
 		<equippedStatOffsets>
-			<MoveSpeed>-0.36</MoveSpeed>
+			<MoveSpeed>-0.48</MoveSpeed>
 		</equippedStatOffsets>
 		<weaponTags>
 			<li>CFAR_Autocannon</li>
@@ -524,7 +605,7 @@
 				<defaultProjectile>Bullet_CFAR_AC</defaultProjectile>
 				<burstShotCount>1</burstShotCount>
 				<warmupTime>1.75</warmupTime>
-				<range>31.9</range>
+				<range>37.9</range>
 				<forcedMissRadius>0.01</forcedMissRadius>
 				<ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
 				<targetParams>
