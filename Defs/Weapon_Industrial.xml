@@ -136,8 +136,8 @@
 
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
 		<defName>Gun_CFAR_Pistol</defName>
-		<label>Arellian pistol</label>
-		<description>WIP</description>
+		<label>Arellian autopistol</label>
+		<description>A medium-caliber autopistol designed for Arellian officers and gravship crew. While its clunky reloading mechanism makes it somewhat longer to aim compared to conventional autopistols, the unmistakeable silouette helps subordinates notice an <color=00FFFF>officer's prescence</color> immediately.\n\nAbility: <color=00FFFF>Officer's prescence</color></description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_Pistol</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -178,7 +178,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_CFAR_Pistol</defaultProjectile>
 				<burstShotCount>1</burstShotCount>
-				<warmupTime>0.3</warmupTime>
+				<warmupTime>0.4</warmupTime>
 				<range>25.9</range>
 				<soundCast>Shot_Autopistol</soundCast>
 				<soundCastTail>GunTail_Light</soundCastTail>
