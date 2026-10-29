@@ -3,21 +3,20 @@
   <AbilityDef>
     <defName>CFAR_OfficersPresence</defName>
     <label>officers presence</label>
-    <description>Create an aura that boosts the combat skills of everyone nearby. The effect lasts 24 hours and remains attached to the leader for the duration.</description>
+    <description>Create an aura that boosts the combat skills of everyone nearby. The effect lasts 6 hours and remains attached to the leader for the duration.</description>
     <jobDef>CastAbilityOnThing</jobDef>
     <targetRequired>False</targetRequired>
+    <hostile>False</hostile>
+    <showOnCharacterCard>False</showOnCharacterCard>
+    <aiCanUse>True</aiCanUse>
     <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
     <iconPath>UI/Abilities/CombatCommand</iconPath>
     <warmupMoteSocialSymbol>UI/Abilities/CombatCommand</warmupMoteSocialSymbol>
-    <stunTargetWhileCasting>True</stunTargetWhileCasting>
     <showPsycastEffects>False</showPsycastEffects>
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
-    <groupDef>Leader</groupDef>
     <hotKey>Misc12</hotKey>
-    <uiOrder>3</uiOrder>
     <warmupStartSound>CombatCommand_Warmup</warmupStartSound>
-    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
     <statBases>
       <Ability_Duration>1000</Ability_Duration>
       <Ability_EffectRadius>9.9</Ability_EffectRadius>
