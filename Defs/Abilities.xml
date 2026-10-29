@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <AbilityDef>
-    <defName>CFAR_OfficersPresence</defName>
-    <label>officers presence</label>
-    <description>Create an aura that boosts the combat skills of everyone nearby. The effect lasts 6 hours and remains attached to the leader for the duration.</description>
-    <jobDef>CastAbilityOnThing</jobDef>
-    <targetRequired>False</targetRequired>
-    <hostile>False</hostile>
-    <showOnCharacterCard>False</showOnCharacterCard>
-    <aiCanUse>True</aiCanUse>
-    <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
-    <iconPath>UI/Abilities/CombatCommand</iconPath>
-    <warmupMoteSocialSymbol>UI/Abilities/CombatCommand</warmupMoteSocialSymbol>
-    <showPsycastEffects>False</showPsycastEffects>
-    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
-    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
-    <hotKey>Misc12</hotKey>
-    <warmupStartSound>CombatCommand_Warmup</warmupStartSound>
-    <statBases>
-      <Ability_Duration>1000</Ability_Duration>
-      <Ability_EffectRadius>9.9</Ability_EffectRadius>
-    </statBases>
-    <verbProperties>
-      <verbClass>Verb_CastAbility</verbClass>
-      <warmupTime>0.5</warmupTime>
-      <range>9.9</range>
-      <drawAimPie>False</drawAimPie>
-      <requireLineOfSight>False</requireLineOfSight>
-      <targetParams>
-        <canTargetSelf>true</canTargetSelf>
-        <canTargetPawns>false</canTargetPawns>
-        <canTargetBuildings>false</canTargetBuildings>
-        <canTargetAnimals>false</canTargetAnimals>
-        <canTargetHumans>false</canTargetHumans>
-        <canTargetMechs>false</canTargetMechs>
-      </targetParams>
-    </verbProperties>
+	<AbilityDef MayRequire="Ludeon.RimWorld.Ideology>
+		<defName>CFAR_OfficersPresence</defName>
+		<label>officer's presence</label>
+		<description>Create an aura that boosts the combat skills of everyone nearby. The effect lasts 6 hours and remains attached to the leader for the duration.</description>
+		<jobDef>CastAbilityOnThing</jobDef>
+		<targetRequired>False</targetRequired>
+		<hostile>False</hostile>
+		<showOnCharacterCard>False</showOnCharacterCard>
+		<aiCanUse>True</aiCanUse>
+		<canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+		<iconPath>UI/Abilities/CombatCommand</iconPath>
+		<warmupMoteSocialSymbol>UI/Abilities/CombatCommand</warmupMoteSocialSymbol>
+		<showPsycastEffects>False</showPsycastEffects>
+		<displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+		<hotKey>Misc12</hotKey>
+		<warmupStartSound>CombatCommand_Warmup</warmupStartSound>
+		<statBases>
+			<Ability_Duration>1000</Ability_Duration>
+			<Ability_EffectRadius>9.9</Ability_EffectRadius>
+		</statBases>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<warmupTime>0.5</warmupTime>
+			<range>9.9</range>
+			<drawAimPie>False</drawAimPie>
+			<requireLineOfSight>False</requireLineOfSight>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetAnimals>false</canTargetAnimals>
+				<canTargetHumans>false</canTargetHumans>
+				<canTargetMechs>false</canTargetMechs>
+			</targetParams>
+	</verbProperties>
     <comps>
       <li Class="CompProperties_AbilityGiveHediff">
         <compClass>CompAbilityEffect_GiveHediff</compClass>
