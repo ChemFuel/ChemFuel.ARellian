@@ -51,12 +51,21 @@
 		<initialWillRange>1~2</initialWillRange>
 	</PawnKindDef>
 
+<!--================ Fusilier ================-->
+
+<!--======== Base ========-->
+
 	<PawnKindDef Name="CFAR_BaseFusilier" ParentName="CFAR_BaseSoldier" Abstract="True">
 		<combatPower>150</combatPower>
 		<itemQuality>Normal</itemQuality>
 		<apparelTags>
 			<li>CFAR_Trooper</li>
 		</apparelTags>
+		<apparelRequired>
+			<li>Apparel_CFAR_UniformField</li>
+			<li>Apparel_CFAR_HelmetTrooper</li>
+			<li>Apparel_CFAR_ArmorTrooper</li>
+		</apparelRequired>
 		<specificApparelRequirements>
 			<li>
 				<colorGenerator Class="ColorGenerator_Options">
@@ -79,6 +88,143 @@
 			</li>
 		</backstoryFiltersOverride>
 	</PawnKindDef>
+
+<!--======== PawnKindDef ========-->
+
+	<PawnKindDef ParentName="CFAR_BaseFusilier">
+		<isFighter>false</isFighter>
+		<trader>true</trader>
+		<combatPower>60</combatPower>
+		<defName>CFAR_TradeOfficer</defName>
+		<label>Logistics officer</label><!--KR : 군수장교-->
+		<titleRequired MayRequire="Ludeon.Rimworld.Royalty">CFAR_RankF</titleRequired>
+		<apparelTags>
+			<li>CFAR_Officer</li>
+		</apparelTags>
+		<apparelRequired Inherit="False">
+			<li>Apparel_CFAR_CapOfficer</li>
+			<li>Apparel_CFAR_UniformField</li>
+			<li>Apparel_CFAR_UniformCoat</li>
+		</apparelRequired>
+		<weaponTags>
+			<li>CFAR_Pistol</li>
+		</weaponTags>
+		<weaponMoney>200~300</weaponMoney>
+		<backstoryFiltersOverride Inherit="False">
+			<li>
+				<categoriesChildhood>
+					<li>CFAR_Reichswehr</li>
+				</categoriesChildhood>
+				<categoriesAdulthood>
+					<li>CFAR_FusilierLtn</li>
+				</categoriesAdulthood>
+			</li>
+		</backstoryFiltersOverride>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="CFAR_BaseFusilier">
+		<defName>CFAR_LineTrooper</defName>
+		<label>Reichsschütze</label><!--KR : 퓌질리어 소총수-->
+		<titleSelectOne>
+			<li MayRequire="Ludeon.Rimworld.Royalty">CFAR_RankB</li>
+			<li MayRequire="Ludeon.Rimworld.Royalty">CFAR_RankC</li>
+		</titleSelectOne>
+		<weaponTags>
+			<li>CFAR_AssaultRifle</li>
+		</weaponTags>
+		<weaponMoney>560~1365</weaponMoney>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="CFAR_BaseFusilier">
+		<defName>CFAR_FusilierSGTrooper</defName>
+		<label>Füsilier shotgun trooper</label><!--KR : 퓌질리어 돌격병-->
+		<titleSelectOne>
+			<li MayRequire="Ludeon.Rimworld.Royalty">CFAR_RankB</li>
+			<li MayRequire="Ludeon.Rimworld.Royalty">CFAR_RankC</li>
+		</titleSelectOne>
+		<weaponTags>
+			<li>CFAR_Shotgun</li>
+		</weaponTags>
+		<weaponMoney>560~1365</weaponMoney>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="CFAR_BaseFusilier">
+		<defName>CFAR_FusilierHeavy</defName>
+		<label>Füsilier heavy</label><!--KR : 퓌질리어 중화기병-->
+		<titleSelectOne>
+			<li MayRequire="Ludeon.Rimworld.Royalty">CFAR_RankB</li>
+			<li MayRequire="Ludeon.Rimworld.Royalty">CFAR_RankC</li>
+		</titleSelectOne>
+		<apparelTags>
+			<li>CFAR_Fusilier</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>Apparel_CFAR_VisorCombat</li>
+		</apparelRequired>
+		<weaponTags>
+			<li>CFAR_MachineGun</li>
+			<li>CFAR_Autocannon</li>
+		</weaponTags>
+		<weaponMoney>1070~3180</weaponMoney>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="CFAR_BaseFusilier">
+		<defName>CFAR_FusilierLtn</defName>
+		<label>Füsilier officer</label><!--KR : 퓌질리어 장교-->
+		<titleRequired MayRequire="Ludeon.Rimworld.Royalty">CFAR_RankE</titleRequired>
+		<apparelTags>
+			<li>CFAR_Fusilier</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>Apparel_SmokepopBelt</li>
+		</apparelRequired>
+		<weaponTags>
+			<li>CFAR_AssaultRifle</li>
+		</weaponTags>
+		<weaponMoney>910~1365</weaponMoney>
+		<backstoryFiltersOverride Inherit="False">
+			<li>
+				<categoriesChildhood>
+					<li>CFAR_Reichswehr</li>
+				</categoriesChildhood>
+				<categoriesAdulthood>
+					<li>CFAR_FusilierLtn</li>
+				</categoriesAdulthood>
+			</li>
+		</backstoryFiltersOverride>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="CFAR_BaseFusilier">
+		<minGenerationAge>25</minGenerationAge>
+		<maxGenerationAge>40</maxGenerationAge>
+		<defName>CFAR_FusilierHptm</defName>
+		<label>Füsilier commander</label><!--KR : 퓌질리어 지휘관-->
+		<titleRequired MayRequire="Ludeon.Rimworld.Royalty">CFAR_RankF</titleRequired>
+		<apparelTags>
+			<li>CFAR_Fusilier</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>Apparel_SmokepopBelt</li>
+		</apparelRequired>
+		<weaponTags>
+			<li>CFAR_Pistol</li>
+		</weaponTags>
+		<weaponMoney>200~300</weaponMoney>
+		<backstoryFiltersOverride Inherit="False">
+			<li>
+				<categoriesChildhood>
+					<li>CFAR_Reichswehr</li>
+				</categoriesChildhood>
+				<categoriesAdulthood>
+					<li>CFAR_FusilierHptm</li>
+				</categoriesAdulthood>
+			</li>
+		</backstoryFiltersOverride>
+	</PawnKindDef>
+
+<!--================ Jager ================-->
+
+<!--======== Base ========-->
 
 	<PawnKindDef Name="CFAR_BaseJager" ParentName="CFAR_BaseSoldier" Abstract="True">
 		<combatPower>200</combatPower>
@@ -110,145 +256,7 @@
 		</backstoryFiltersOverride>
 	</PawnKindDef>
 
-<!--================ Fusilier ================-->
-
-	<PawnKindDef ParentName="CFAR_BaseFusilier">
-		<isFighter>false</isFighter>
-		<trader>true</trader>
-		<combatPower>60</combatPower>
-		<defName>CFAR_TradeOfficer</defName>
-		<label>Logistics officer</label><!--KR : 군수장교-->
-		<titleRequired MayRequire="Ludeon.Rimworld.Royalty">CFAR_RankF</titleRequired>
-		<apparelTags>
-			<li>CFAR_Officer</li>
-		</apparelTags>
-		<apparelRequired>
-			<li>Apparel_CFAR_CapOfficer</li>
-			<li>Apparel_CFAR_UniformField</li>
-			<li>Apparel_CFAR_UniformCoat</li>
-		</apparelRequired>
-		<weaponTags>
-			<li>CFAR_Pistol</li>
-		</weaponTags>
-		<weaponMoney>200~300</weaponMoney>
-		<backstoryFiltersOverride Inherit="False">
-			<li>
-				<categoriesChildhood>
-					<li>CFAR_Reichswehr</li>
-				</categoriesChildhood>
-				<categoriesAdulthood>
-					<li>CFAR_FusilierLtn</li>
-				</categoriesAdulthood>
-			</li>
-		</backstoryFiltersOverride>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="CFAR_BaseFusilier">
-		<defName>CFAR_FusilierAssault</defName>
-		<label>Füsilier assault</label><!--KR : 퓌질리어 돌격병-->
-		<titleSelectOne>
-			<li MayRequire="Ludeon.Rimworld.Royalty">CFAR_RankB</li>
-			<li MayRequire="Ludeon.Rimworld.Royalty">CFAR_RankC</li>
-		</titleSelectOne>
-		<apparelTags>
-			<li>CFAR_Fusilier</li>
-		</apparelTags>
-		<apparelRequired>
-			<li>Apparel_CFAR_UniformField</li>
-			<li>Apparel_CFAR_HelmetTrooper</li>
-			<li>Apparel_CFAR_ArmorTrooper</li>
-		</apparelRequired>
-		<weaponTags>
-			<li>CFAR_Shotgun</li>
-			<li>CFAR_AssaultRifle</li>
-		</weaponTags>
-		<weaponMoney>400~1365</weaponMoney>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="CFAR_BaseFusilier">
-		<defName>CFAR_FusilierHeavy</defName>
-		<label>Füsilier heavy</label><!--KR : 퓌질리어 중화기병-->
-		<titleSelectOne>
-			<li MayRequire="Ludeon.Rimworld.Royalty">CFAR_RankB</li>
-			<li MayRequire="Ludeon.Rimworld.Royalty">CFAR_RankC</li>
-		</titleSelectOne>
-		<apparelTags>
-			<li>CFAR_Fusilier</li>
-		</apparelTags>
-		<apparelRequired>
-			<li>Apparel_CFAR_UniformField</li>
-			<li>Apparel_CFAR_HelmetTrooper</li>
-			<li>Apparel_CFAR_ArmorTrooper</li>
-			<li>Apparel_CFAR_VisorCombat</li>
-		</apparelRequired>
-		<weaponTags>
-			<li>CFAR_MachineGun</li>
-			<li>CFAR_Autocannon</li>
-		</weaponTags>
-		<weaponMoney>1070~3180</weaponMoney>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="CFAR_BaseFusilier">
-		<defName>CFAR_FusilierLtn</defName>
-		<label>Füsilier officer</label><!--KR : 퓌질리어 장교-->
-		<titleRequired MayRequire="Ludeon.Rimworld.Royalty">CFAR_RankE</titleRequired>
-		<apparelTags>
-			<li>CFAR_Fusilier</li>
-		</apparelTags>
-		<apparelRequired>
-			<li>Apparel_CFAR_UniformField</li>
-			<li>Apparel_CFAR_HelmetTrooper</li>
-			<li>Apparel_CFAR_ArmorTrooper</li>
-			<li>Apparel_SmokepopBelt</li>
-		</apparelRequired>
-		<weaponTags>
-			<li>CFAR_AssaultRifle</li>
-		</weaponTags>
-		<weaponMoney>910~1365</weaponMoney>
-		<backstoryFiltersOverride Inherit="False">
-			<li>
-				<categoriesChildhood>
-					<li>CFAR_Reichswehr</li>
-				</categoriesChildhood>
-				<categoriesAdulthood>
-					<li>CFAR_FusilierLtn</li>
-				</categoriesAdulthood>
-			</li>
-		</backstoryFiltersOverride>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="CFAR_BaseFusilier">
-		<minGenerationAge>25</minGenerationAge>
-		<maxGenerationAge>40</maxGenerationAge>
-		<defName>CFAR_FusilierHptm</defName>
-		<label>Füsilier commander</label><!--KR : 퓌질리어 지휘관-->
-		<titleRequired MayRequire="Ludeon.Rimworld.Royalty">CFAR_RankF</titleRequired>
-		<apparelTags>
-			<li>CFAR_Fusilier</li>
-		</apparelTags>
-		<apparelRequired>
-			<li>Apparel_CFAR_UniformField</li>
-			<li>Apparel_CFAR_HelmetTrooper</li>
-			<li>Apparel_CFAR_ArmorTrooper</li>
-			<li>Apparel_SmokepopBelt</li>
-		</apparelRequired>
-		<weaponTags>
-			<li>CFAR_Pistol</li>
-		</weaponTags>
-		<weaponMoney>200~300</weaponMoney>
-		<backstoryFiltersOverride Inherit="False">
-			<li>
-				<categoriesChildhood>
-					<li>CFAR_Reichswehr</li>
-				</categoriesChildhood>
-				<categoriesAdulthood>
-					<li>CFAR_FusilierHptm</li>
-				</categoriesAdulthood>
-			</li>
-		</backstoryFiltersOverride>
-	</PawnKindDef>
-
-<!--================ Jager ================-->
+<!--======== PawnKindDef ========-->
 
 	<PawnKindDef ParentName="CFAR_BaseJager">
 		<defName>CFAR_JagerAssault</defName>

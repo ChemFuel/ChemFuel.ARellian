@@ -6,12 +6,21 @@
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
+			<!--ThingDef-->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Gun_CFAR_Pistol"]/description</xpath>
+					<value>
+						<description>A medium-caliber autopistol designed for Arellian officers and gravship crew. While it takes somewhat longer to aim compared to conventional autopistols, the iconic silouette helps subordinates notice an officer's presence immediately.\n\nAbility: Officer's presence</description>
+					</value>
+				</li>
+			<!--PawnKindDef-->
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/PawnKindDef[defName="CFAR_FusilierHptm"]/apparelRequired/li[4]</xpath>
 					<value>
 						<li>Apparel_PackBroadshield</li>
 					</value>
 				</li>
+			<!--QuestScriptDef-->
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/QuestScriptDef[defName="Util_ChooseRandomQuestHelperKind"]/root/nodes/li[1]/choices</xpath>
 					<value>

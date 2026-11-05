@@ -137,7 +137,7 @@
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
 		<defName>Gun_CFAR_Pistol</defName>
 		<label>Arellian autopistol</label>
-		<description>A medium-caliber autopistol designed for Arellian officers and gravship crew. While its clunky reloading mechanism makes it somewhat longer to aim compared to conventional autopistols, the unmistakeable silouette helps subordinates notice an <color=00FFFF>officer's prescence</color> immediately.\n\nAbility: <color=00FFFF>Officer's prescence</color></description>
+		<description>A medium-caliber autopistol designed for Arellian officers and gravship crew. While it takes somewhat longer to aim compared to conventional autopistols, the iconic silouette helps subordinates notice an officer immediately.</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_Pistol</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -221,6 +221,7 @@
 			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_Shotgun</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
+		<equippedAngleOffset>45</equippedAngleOffset>
 		<soundInteract>Interact_Shotgun</soundInteract>
 		<recipeMaker>
 			<researchPrerequisite>Gunsmithing</researchPrerequisite>
@@ -230,8 +231,8 @@
 			<displayPriority>1181</displayPriority>
 		</recipeMaker>
 		<statBases>
-			<MarketValue>400</MarketValue>
-			<WorkToMake>18000</WorkToMake>
+			<MarketValue>560</MarketValue>
+			<WorkToMake>26000</WorkToMake>
 			<Mass>4.18</Mass>
 			<AccuracyTouch>0.80</AccuracyTouch>
 			<AccuracyShort>0.75</AccuracyShort>
@@ -243,7 +244,7 @@
 			<li>CFAR_Shotgun</li>
 		</weaponTags>
 		<costList>
-			<Steel>70</Steel>
+			<Steel>120</Steel>
 			<Uranium>5</Uranium>
 			<ComponentIndustrial>3</ComponentIndustrial>
 		</costList>
@@ -255,7 +256,7 @@
 				<burstShotCount>1</burstShotCount>
 				<pelletCount>8</pelletCount>
 				<warmupTime>1</warmupTime>
-				<range>25.9</range>
+				<range>21.9</range>
 				<soundCast>Shot_Shotgun</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>10</muzzleFlashScale>
@@ -263,11 +264,30 @@
 		</verbs>
 		<tools>
 			<li>
-				<label>barrel</label>
+				<label>point</label>
 				<capacities>
-					<li>Blunt</li>
+					<li>Stab</li>
 				</capacities>
-				<power>9</power>
+				<power>16</power>
+				<extraMeleeDamages>
+					<li><def>Scratch</def><amount>2</amount><chance>0.5</chance></li>
+					<li><def>Scratch</def><amount>2</amount><chance>0.5</chance></li>
+					<li><def>Scratch</def><amount>2</amount><chance>0.5</chance></li>
+					<li><def>Scratch</def><amount>2</amount><chance>0.5</chance></li>
+				</extraMeleeDamages>
+				<armorPenetration>0.24</armorPenetration>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>edge</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>16</power>
+				<extraMeleeDamages>
+					<li><def>Scratch</def><amount>2</amount><chance>0.5</chance></li>
+					<li><def>Scratch</def><amount>2</amount><chance>0.5</chance></li>
+				</extraMeleeDamages>
 				<cooldownTime>2</cooldownTime>
 			</li>
 			<li>
@@ -472,87 +492,6 @@
 		</tradeTags>
 	</ThingDef>
 
-	<!--<ThingDef ParentName="Base_CFAR_GunIndustrial">
-		<defName>Gun_CFAR_Flamethrower</defName>
-		<label>Arellian flamethrower</label>
-		<description>WIP</description>
-		<tickerType>Normal</tickerType>
-		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/CFAR_MachineGun</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<soundInteract>Interact_Rifle</soundInteract>
-		<recipeMaker>
-			<researchPrerequisite>PrecisionRifling</researchPrerequisite>
-			<skillRequirements>
-				<Crafting>6</Crafting>
-			</skillRequirements>
-			<displayPriority>1184</displayPriority>
-		</recipeMaker>
-		<statBases>
-			<MarketValue>1180</MarketValue>
-			<WorkToMake>40000</WorkToMake>
-			<Mass>7.35</Mass>
-			<AccuracyTouch>0.65</AccuracyTouch>
-			<AccuracyShort>0.75</AccuracyShort>
-			<AccuracyMedium>0.65</AccuracyMedium>
-			<AccuracyLong>0.45</AccuracyLong>
-			<RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
-		</statBases>
-		<equippedStatOffsets>
-			<MoveSpeed>-0.24</MoveSpeed>
-		</equippedStatOffsets>
-		<weaponTags>
-			<li>CFAR_Flamethrower</li>
-		</weaponTags>
-		<weaponClasses>
-			<li>RangedHeavy</li>
-		</weaponClasses>
-		<costList>
-			<Steel>60</Steel>
-			<Chemfuel>75</Chemfuel>
-			<ComponentIndustrial>5</ComponentIndustrial>
-		</costList>
-		<verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_CFAR_AC</defaultProjectile>
-				<burstShotCount>1</burstShotCount>
-				<warmupTime>1.75</warmupTime>
-				<range>31.9</range>
-				<forcedMissRadius>0.01</forcedMissRadius>
-				<ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
-				<targetParams>
-					<canTargetLocations>true</canTargetLocations>
-				</targetParams>
-				<soundCast>Shot_TurretSniper</soundCast>
-				<soundCastTail>GunTail_Heavy</soundCastTail>
-				<muzzleFlashScale>10</muzzleFlashScale>
-			</li>
-		</verbs>
-		<tools>
-			<li>
-				<label>barrel</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-		</tools>
-		<tradeTags>
-			<li>CFAR_RangedSupport</li>
-		</tradeTags>
-		<comps>
-			<li Class="CompProperties_Explosive">
-				<explosiveRadius>3.9</explosiveRadius>
-				<explosiveDamageType>Bomb</explosiveDamageType>
-				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
-			</li>
-		</comps>
-	</ThingDef>-->
-
 	<ThingDef ParentName="Base_CFAR_GunIndustrial">
 		<defName>Gun_CFAR_Autocannon</defName>
 		<label>Arellian autocannon</label>
@@ -569,7 +508,7 @@
 			<skillRequirements>
 				<Crafting>8</Crafting>
 			</skillRequirements>
-			<displayPriority>1185</displayPriority>
+			<displayPriority>1184</displayPriority>
 		</recipeMaker>
 		<statBases>
 			<MarketValue>2120</MarketValue>
