@@ -1,8 +1,9 @@
-Roadmap Oct27_2026
+Roadmap Nov09_2026
 [Weaponry]
 - Autopistol
   - Custom ability: "Officer's presence (WIP)"
   - Description: Needed
+  - Effect: Pain threshold, incoming damage, healing
 - Shotgun
   - Description: Needed
   - Texture: Need to draw
@@ -11,10 +12,6 @@ Roadmap Oct27_2026
 - Machine Gun
   - Description: Needed
   - Texture: Need to redraw (Not urgent)
-- Flamethrower <-- Might wanna reclassify this as an utility pack
-  - Description: Needed
-  - Stat: Needed
-  - Texture: Need to draw
 - Autocannon
   - Description: Needed
   - Texture: Need to draw
